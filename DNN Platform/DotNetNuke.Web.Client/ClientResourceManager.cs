@@ -43,6 +43,7 @@ namespace DotNetNuke.Web.Client.ClientResourceManagement
     using ClientDependency.Core;
     using System.Collections.Generic;
     using System.Threading;
+    using System.Globalization;
 
     /// <summary>
     /// Provides the ability to request that client resources (JavaScript and CSS) be loaded on the client browser.
@@ -406,6 +407,17 @@ namespace DotNetNuke.Web.Client.ClientResourceManagement
             {
                 fileExists = true;
             }
+
+            //START persian-dnnsoftware
+            if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css") && !filePath.Contains("http"))
+            {
+                string text2 = filePath.Replace(".css", ".rtl.css");
+                if (FileExists(page, text2))
+                {
+                    filePath = text2;
+                }
+            }
+            //END persian-dnnsoftware
 
             if (fileExists || FileExists(page, filePath))
             {

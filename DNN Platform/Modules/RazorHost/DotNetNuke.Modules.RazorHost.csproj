@@ -27,6 +27,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -205,8 +206,13 @@
     <Content Include="App_LocalResources\EditScript.ascx.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_LocalResources\AddScript.ascx.fa-IR.resx" />
     <EmbeddedResource Include="App_LocalResources\AddScript.ascx.resx" />
     <Content Include="App_LocalResources\CreateModule.ascx.resx" />
+    <Content Include="App_LocalResources\CreateModule.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\EditScript.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\RazorHost.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Settings.ascx.fa-IR.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

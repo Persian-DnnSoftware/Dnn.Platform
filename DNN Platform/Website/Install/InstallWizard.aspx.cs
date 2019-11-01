@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNuke® - http://www.dotnetnuke.com
+// DotNetNukeï¿½ - http://www.dotnetnuke.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -228,7 +228,10 @@ namespace DotNetNuke.Services.Install
             string cultureCode;
             if (string.IsNullOrEmpty(PageLocale.Value) && string.IsNullOrEmpty(_culture))
             {
-                cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(_supportedLanguages);
+                //START persian-dnnsoftware
+                cultureCode = "fa-IR";
+                //cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(_supportedLanguages);
+                //END persian-dnnsoftware
             }
             else if (string.IsNullOrEmpty(PageLocale.Value) && !string.IsNullOrEmpty(_culture))
             {
@@ -766,6 +769,18 @@ namespace DotNetNuke.Services.Install
                     var lastItem = languageList.Items[languageList.Items.Count - 1];
                     lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
                 }
+
+                //START persian-dnnsoftware
+                if (languageList.FindItemByValue("fa-IR") == null)
+                {
+                    var myCIintl = new CultureInfo("fa-IR", true);
+                    var li = new ListItem { Value = @"fa-IR", Text = myCIintl.NativeName };
+                    languageList.AddItem(li.Text, li.Value);
+                    var lastItem = languageList.Items[languageList.Items.Count - 1];
+                    lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
+                }
+                //END persian-dnnsoftware
+
                 var item = languageList.FindItemByValue(_culture);
                 languageList.SelectedIndex = item != null ? languageList.Items.IndexOf(item) : languageList.Items.IndexOf(languageList.FindItemByValue("en-US"));
             }
@@ -941,7 +956,23 @@ namespace DotNetNuke.Services.Install
 
             SetBrowserLanguage();
             LocalizePage();
-            
+
+            //START persian-dnnsoftware
+            string defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css";
+            if (PageLocale.Value == "fa-IR")
+            {
+                defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.rtl.css";
+                Body.Attributes.Add("class", "rtl");
+            }
+
+            System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();
+            css.Href = defaultCSSPath;
+            css.Attributes["rel"] = "stylesheet";
+            css.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css);
+
+            //End persian-dnnsoftware
+
             base.OnLoad(e);
             visitSite.Click += VisitSiteClick;           
 

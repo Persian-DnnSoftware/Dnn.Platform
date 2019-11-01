@@ -181,9 +181,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 	ProjectSection(SolutionItems) = preProject
 		DNN Platform\Website\Templates\Blank Website.template = DNN Platform\Website\Templates\Blank Website.template
 		DNN Platform\Website\Templates\Blank Website.template.en-US.resx = DNN Platform\Website\Templates\Blank Website.template.en-US.resx
+		..\..\Dnndev.me_9.3.1\Portals\_default\Blank Website.template.fa-IR.resx = ..\..\Dnndev.me_9.3.1\Portals\_default\Blank Website.template.fa-IR.resx
 		DNN Platform\Website\Templates\Blank Website.template.resources = DNN Platform\Website\Templates\Blank Website.template.resources
 		DNN Platform\Website\Templates\Default Website.template = DNN Platform\Website\Templates\Default Website.template
 		DNN Platform\Website\Templates\Default Website.template.en-US.resx = DNN Platform\Website\Templates\Default Website.template.en-US.resx
+		..\..\Dnndev.me_9.3.1\Portals\_default\Default Website.template.fa-IR.resx = ..\..\Dnndev.me_9.3.1\Portals\_default\Default Website.template.fa-IR.resx
 		DNN Platform\Website\Templates\Default Website.template.resources = DNN Platform\Website\Templates\Default Website.template.resources
 	EndProjectSection
 EndProject

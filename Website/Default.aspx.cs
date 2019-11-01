@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNuke® - http://www.dotnetnuke.com
+// DotNetNukeï¿½ - http://www.dotnetnuke.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -594,7 +594,12 @@ namespace DotNetNuke.Framework
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-
+            //START persian-dnnsoftware
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+            {
+                Body.Attributes.Add("class", "rtl ");
+            }
+            //END persian-dnnsoftware
             //set global page settings
             InitializePage();
 

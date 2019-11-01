@@ -202,6 +202,7 @@
     </None>
     <None Include="App_LocalResources\View.ascx.resx" />
     <Content Include="Module.build" />
+    <Content Include="module.rtl.css" />
     <Content Include="packages.config" />
     <None Include="SocialGroups.dnn">
       <SubType>Designer</SubType>
@@ -245,7 +246,13 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_LocalResources\CreateSettings.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Edit.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\ListSettings.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\SharedResources.fa-IR.resx" />
+    <Content Include="App_LocalResources\View.ascx.fa-IR.resx" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\CreateSettings.ascx.resx" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNuke® - http://www.dotnetnuke.com
+// DotNetNukeï¿½ - http://www.dotnetnuke.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -20,12 +20,13 @@
 #endregion
 #region Usings
 
+using DotNetNuke.Common;
 using System;
+using System.Globalization;
+using System.IO;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-
-using DotNetNuke.Common;
 
 #endregion
 
@@ -82,6 +83,12 @@ namespace DotNetNuke.UI.Skins.Controls
                     objLink.ID = Globals.CreateValidID(Name);
                     objLink.Attributes["rel"] = "stylesheet";
                     objLink.Attributes["type"] = "text/css";
+                    //START persian-dnnsoftware
+                    if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && File.Exists(base.Server.MapPath(skinpath + StyleSheet.Replace(".css", ".rtl.css"))))
+                    {
+                        StyleSheet = StyleSheet.Replace(".css", ".rtl.css");
+                    }
+                    //END persian-dnnsoftware
                     objLink.Href = skinpath + StyleSheet;
                     if (Media != "")
                     {
