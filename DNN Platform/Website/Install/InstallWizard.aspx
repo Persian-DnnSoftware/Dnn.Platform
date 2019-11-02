@@ -8,7 +8,7 @@
     <title></title>
     <asp:PlaceHolder runat="server" ID="ClientDependencyHeadCss"></asp:PlaceHolder>
     <asp:PlaceHolder runat="server" ID="ClientDependencyHeadJs"></asp:PlaceHolder>
-    <link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?refresh" />
+<%--    <link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?refresh" />--%>
     <link rel="stylesheet" type="text/css" href="Install.css?refresh" />
     <link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnn.PasswordStrength.css?refresh" />
      <!--[if IE]>
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../Resources/Shared/scripts/dnn.jquery.tooltip.js"></script>
     <asp:placeholder id="SCRIPTS" runat="server"></asp:placeholder>
 </head>
-<body>
+<body id="Body" runat="server">
     <asp:placeholder runat="server" id="ClientResourceIncludes" />
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scManager" runat="server" EnablePageMethods="true"></asp:ScriptManager>
