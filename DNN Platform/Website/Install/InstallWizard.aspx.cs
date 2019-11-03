@@ -17,7 +17,7 @@
 // THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
 // CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 // DEALINGS IN THE SOFTWARE.
-#ENDregion
+#endregion
 #region Usings
 
 using System;
@@ -53,7 +53,7 @@ using DotNetNuke.Web.Client.ClientResourceManagement;
 using DotNetNuke.Web.UI.WebControls;
 using Globals = DotNetNuke.Common.Globals;
 
-#ENDregion
+#endregion
 
 namespace DotNetNuke.Services.Install
 {
@@ -97,7 +97,7 @@ namespace DotNetNuke.Services.Install
         //private static bool _isValidInput = false;
         private static object _lock = new object();
 
-        #ENDregion
+        #endregion
 
         #region Private Properties
         private static string StatusFile
@@ -108,7 +108,7 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-        #ENDregion
+        #endregion
 
         #region Protected Members
 
@@ -210,7 +210,7 @@ namespace DotNetNuke.Services.Install
             get { return File.Exists(Path.Combine(Globals.ApplicationMapPath, "Licenses\\Dnn_Corp_License.pdf")); }
         }
 
-        #ENDregion
+        #endregion
 
         #region IClientAPICallbackEventHandler Members
 
@@ -219,7 +219,7 @@ namespace DotNetNuke.Services.Install
             return ProcessAction(eventArgument);
         }
 
-        #ENDregion
+        #endregion
 
         #region Private Methods
 
@@ -348,7 +348,7 @@ namespace DotNetNuke.Services.Install
                 }
                 switch (_currentStep.Status)
                 {
-                    case StepStatus.AppReSTART:
+                    case StepStatus.AppRestart:
                         _installerRunning = false;
                         HttpContext.Current.Response.Redirect(HttpContext.Current.Request.RawUrl, true);
                         break;
@@ -381,7 +381,7 @@ namespace DotNetNuke.Services.Install
         private string InstallDatabase()
         {
             var strProviderPath = _dataProvider.GetProviderPath();
-            var strErrorMessage = strProviderPath.STARTsWith("ERROR:")
+            var strErrorMessage = strProviderPath.StartsWith("ERROR:")
                 ? strProviderPath
                 : Upgrade.Upgrade.InstallDatabase(BaseVersion, strProviderPath, InstallTemplate, false);
             if (string.IsNullOrEmpty(strErrorMessage))
@@ -389,7 +389,7 @@ namespace DotNetNuke.Services.Install
                 //Get Next Version
                 strErrorMessage = GetNextScriptVersion(strProviderPath, BaseVersion);
             }
-            else if (!strErrorMessage.STARTsWith("ERROR:"))
+            else if (!strErrorMessage.StartsWith("ERROR:"))
             {
                 strErrorMessage = "ERROR: " + string.Format(LocalizeString("ScriptError"), Upgrade.Upgrade.GetLogFile(strProviderPath, BaseVersion));
             }
@@ -402,7 +402,7 @@ namespace DotNetNuke.Services.Install
             var version = new Version(strVersion);
             var strScriptFile = Null.NullString;
             var strProviderPath = _dataProvider.GetProviderPath();
-            if (!strProviderPath.STARTsWith("ERROR:"))
+            if (!strProviderPath.StartsWith("ERROR:"))
             {
                 //Install Version
                 strScriptFile = Upgrade.Upgrade.GetScriptFile(strProviderPath, version);
@@ -559,7 +559,7 @@ namespace DotNetNuke.Services.Install
         {
             var success = false;
             _connectionResult = CheckDatabaseConnection(_connectionConfig);
-            if (!_connectionResult.STARTsWith("ERROR:"))
+            if (!_connectionResult.StartsWith("ERROR:"))
                 success = true;
 
             return success;
@@ -568,7 +568,7 @@ namespace DotNetNuke.Services.Install
         private static string CheckDatabaseConnection(ConnectionConfig connectionConfig)
         {
             _connectionResult = InstallController.Instance.TestDatabaseConnection(connectionConfig);
-            if (_connectionResult.STARTsWith("ERROR:"))
+            if (_connectionResult.StartsWith("ERROR:"))
                 return _connectionResult;
 
             var connectionString = _connectionResult;
@@ -714,7 +714,7 @@ namespace DotNetNuke.Services.Install
                         {
                             var myCIintl = new CultureInfo(cultureCode, true);
                             version = version.Insert(4, ".").Insert(2, ".");
-                            var package = new PackageInfo { Name = "LanguagePack-" + myCIintl.Name, FriENDlyName = myCIintl.NativeName };
+                            var package = new PackageInfo { Name = "LanguagePack-" + myCIintl.Name, FriendlyName = myCIintl.NativeName };
                             package.Name = myCIintl.NativeName;
                             package.Description = cultureCode;
                             Version ver;
@@ -826,7 +826,7 @@ namespace DotNetNuke.Services.Install
             Config.Touch();
             HttpContext.Current.Response.Redirect("../Default.aspx");
         }
-        #ENDregion 
+        #endregion 
 
         #region Protected Methods
 
@@ -866,7 +866,7 @@ namespace DotNetNuke.Services.Install
             HttpContext.Current.Server.Transfer("~/ErrorPage.aspx");
         }
 
-        #ENDregion
+        #endregion
 
         #region Event Handlers
 
@@ -897,9 +897,9 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-        protected override void OnPreRENDer(EventArgs e)
+        protected override void OnPreRender(EventArgs e)
         {
-            base.OnPreRENDer(e);
+            base.OnPreRender(e);
 
             if (!SupportLocalization)
             {
@@ -914,7 +914,7 @@ namespace DotNetNuke.Services.Install
             var optionsAsJsonString = Json.Serialize(options);
             var script = string.Format("dnn.initializePasswordStrength('.{0}', {1});{2}",
                 "password-strength", optionsAsJsonString, Environment.NewLine);
-            Page.ClientScript.RegisterSTARTupScript(GetType(), "PasswordStrength", script, true);
+            Page.ClientScript.RegisterStartupScript(GetType(), "PasswordStrength", script, true);
 
             txtConfirmPassword.CssClass = "password-confirm";
             var confirmPasswordOptions = new DnnConfirmPasswordOptions()
@@ -929,7 +929,7 @@ namespace DotNetNuke.Services.Install
             var confirmOptionsAsJsonString = Json.Serialize(confirmPasswordOptions);
             var confirmScript = string.Format("dnn.initializePasswordComparer({0});{1}", confirmOptionsAsJsonString, Environment.NewLine);
 
-            Page.ClientScript.RegisterSTARTupScript(GetType(), "ConfirmPassword", confirmScript, true);
+            Page.ClientScript.RegisterStartupScript(GetType(), "ConfirmPassword", confirmScript, true);
         }
 
         /// -----------------------------------------------------------------------------
@@ -996,13 +996,13 @@ namespace DotNetNuke.Services.Install
                 templateList.Items.Remove(templateList.FindItemByValue("Mobile Website.template"));
             }
 
-            if (HttpContext.Current.Request.RawUrl.ENDsWith("&initiateinstall"))
+            if (HttpContext.Current.Request.RawUrl.EndsWith("&initiateinstall"))
             {
                 var synchConnectionString = new SynchConnectionStringStep();
                 synchConnectionString.Execute();
                 Response.Redirect(HttpContext.Current.Request.RawUrl.Replace("&initiateinstall", "&executeinstall"), true);
             }
-            else if (HttpContext.Current.Request.RawUrl.ENDsWith("&executeinstall"))
+            else if (HttpContext.Current.Request.RawUrl.EndsWith("&executeinstall"))
             {
                 try
                 {
@@ -1079,7 +1079,7 @@ namespace DotNetNuke.Services.Install
                     //Ensure connection strings are in synch
                     var synchConnectionString = new SynchConnectionStringStep();
                     synchConnectionString.Execute();
-                    if (synchConnectionString.Status == StepStatus.AppReSTART) Response.Redirect(HttpContext.Current.Request.RawUrl, true);
+                    if (synchConnectionString.Status == StepStatus.AppRestart) Response.Redirect(HttpContext.Current.Request.RawUrl, true);
 
                     txtUsername.Text = _installConfig.SuperUser.UserName;
                     txtEmail.Text = _installConfig.SuperUser.Email;
@@ -1161,7 +1161,7 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-        #ENDregion
+        #endregion
 
         #region WebMethods
 
@@ -1212,8 +1212,8 @@ namespace DotNetNuke.Services.Install
                     {
                         if (lines[i].Contains("[ERROR]"))
                         {
-                            sb.AppEND(lines[i]);
-                            sb.AppEND("<br/>");
+                            sb.Append(lines[i]);
+                            sb.Append("<br/>");
                             errorLogged = true;
                         }
                     }
@@ -1340,7 +1340,7 @@ namespace DotNetNuke.Services.Install
             }
 
             var result = CheckDatabaseConnection(connectionConfig);
-            var validConnection = !result.STARTsWith("ERROR:");
+            var validConnection = !result.StartsWith("ERROR:");
             if (validConnection)
             {
                 UpdateDatabaseInstallConfig(installInfo);
@@ -1377,6 +1377,6 @@ namespace DotNetNuke.Services.Install
             return isRunning;
         }
 
-        #ENDregion
+        #endregion
     }
 }
