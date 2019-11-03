@@ -54,7 +54,7 @@ namespace DotNetNuke.Services.Upgrade.InternalController.Steps
 
             var installConfig = InstallController.Instance.GetInstallConfig();
             string culture = installConfig.InstallCulture;
-          
+            
             if (culture.ToLowerInvariant() != "en-us" && culture.ToLowerInvariant() != "fa-ir") //persian-dnnsoftware
             {
 	            try

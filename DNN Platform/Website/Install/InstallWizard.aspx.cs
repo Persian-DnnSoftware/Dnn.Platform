@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNuke� - http://www.dotnetnuke.com
+// DotNetNuke® - http://www.dotnetnuke.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -17,7 +17,7 @@
 // THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
 // CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 // DEALINGS IN THE SOFTWARE.
-#endregion
+#ENDregion
 #region Usings
 
 using System;
@@ -53,7 +53,7 @@ using DotNetNuke.Web.Client.ClientResourceManagement;
 using DotNetNuke.Web.UI.WebControls;
 using Globals = DotNetNuke.Common.Globals;
 
-#endregion
+#ENDregion
 
 namespace DotNetNuke.Services.Install
 {
@@ -76,7 +76,7 @@ namespace DotNetNuke.Services.Install
         // Hide Licensing Step for Community Edition
         private static readonly bool IsProOrEnterprise = (File.Exists(HttpContext.Current.Server.MapPath("~\\bin\\DotNetNuke.Professional.dll")) || File.Exists(HttpContext.Current.Server.MapPath("~\\bin\\DotNetNuke.Enterprise.dll")));
         private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(InstallWizard));
-        
+
         private readonly DataProvider _dataProvider = DataProvider.Instance();
         private const string LocalesFile = "/Install/App_LocalResources/Locales.xml";
         protected static readonly string StatusFilename = "installstat.log.resources.txt";
@@ -84,8 +84,8 @@ namespace DotNetNuke.Services.Install
         private Version _dataBaseVersion;
         private XmlDocument _installTemplate;
         private static string[] _supportedLanguages;
-        
-		private static ConnectionConfig _connectionConfig;
+
+        private static ConnectionConfig _connectionConfig;
         private static string _connectionResult;
         private static InstallConfig _installConfig;
         private static string _culture;
@@ -97,7 +97,7 @@ namespace DotNetNuke.Services.Install
         //private static bool _isValidInput = false;
         private static object _lock = new object();
 
-        #endregion
+        #ENDregion
 
         #region Private Properties
         private static string StatusFile
@@ -108,11 +108,11 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-		#endregion
+        #ENDregion
 
-		#region Protected Members
+        #region Protected Members
 
-		protected Version ApplicationVersion
+        protected Version ApplicationVersion
         {
             get
             {
@@ -210,7 +210,7 @@ namespace DotNetNuke.Services.Install
             get { return File.Exists(Path.Combine(Globals.ApplicationMapPath, "Licenses\\Dnn_Corp_License.pdf")); }
         }
 
-        #endregion
+        #ENDregion
 
         #region IClientAPICallbackEventHandler Members
 
@@ -219,7 +219,7 @@ namespace DotNetNuke.Services.Install
             return ProcessAction(eventArgument);
         }
 
-        #endregion
+        #ENDregion
 
         #region Private Methods
 
@@ -228,16 +228,13 @@ namespace DotNetNuke.Services.Install
             string cultureCode;
             if (string.IsNullOrEmpty(PageLocale.Value) && string.IsNullOrEmpty(_culture))
             {
-                //START persian-dnnsoftware
                 cultureCode = "fa-IR";
-                //cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(_supportedLanguages);
-                //END persian-dnnsoftware
             }
             else if (string.IsNullOrEmpty(PageLocale.Value) && !string.IsNullOrEmpty(_culture))
             {
                 cultureCode = _culture;
             }
-            else 
+            else
             {
                 cultureCode = PageLocale.Value;
             }
@@ -295,7 +292,7 @@ namespace DotNetNuke.Services.Install
                 }
             }
         }
-        
+
         private static void LaunchAutoInstall()
         {
             if (Globals.Status == Globals.UpgradeStatus.None)
@@ -334,7 +331,7 @@ namespace DotNetNuke.Services.Install
             foreach (var step in _steps)
             {
                 _currentStep = step.Key;
-                
+
                 if (_currentStep.GetType().Name == "ActivateLicenseStep" && !IsProOrEnterprise) continue;
 
                 try
@@ -351,7 +348,7 @@ namespace DotNetNuke.Services.Install
                 }
                 switch (_currentStep.Status)
                 {
-                    case StepStatus.AppRestart:
+                    case StepStatus.AppReSTART:
                         _installerRunning = false;
                         HttpContext.Current.Response.Redirect(HttpContext.Current.Request.RawUrl, true);
                         break;
@@ -361,7 +358,7 @@ namespace DotNetNuke.Services.Install
                             CurrentStepActivity(string.Format(Localization.Localization.GetString("ErrorInStep", "~/Install/App_LocalResources/InstallWizard.aspx.resx")
                                                                                                   , _currentStep.Errors.Count > 0 ? string.Join(",", _currentStep.Errors.ToArray()) : _currentStep.Details));
 
-							_installerRunning = false;
+                            _installerRunning = false;
                             return;
                         }
                         break;
@@ -384,7 +381,7 @@ namespace DotNetNuke.Services.Install
         private string InstallDatabase()
         {
             var strProviderPath = _dataProvider.GetProviderPath();
-            var strErrorMessage = strProviderPath.StartsWith("ERROR:")
+            var strErrorMessage = strProviderPath.STARTsWith("ERROR:")
                 ? strProviderPath
                 : Upgrade.Upgrade.InstallDatabase(BaseVersion, strProviderPath, InstallTemplate, false);
             if (string.IsNullOrEmpty(strErrorMessage))
@@ -392,7 +389,7 @@ namespace DotNetNuke.Services.Install
                 //Get Next Version
                 strErrorMessage = GetNextScriptVersion(strProviderPath, BaseVersion);
             }
-            else if (!strErrorMessage.StartsWith("ERROR:"))
+            else if (!strErrorMessage.STARTsWith("ERROR:"))
             {
                 strErrorMessage = "ERROR: " + string.Format(LocalizeString("ScriptError"), Upgrade.Upgrade.GetLogFile(strProviderPath, BaseVersion));
             }
@@ -405,7 +402,7 @@ namespace DotNetNuke.Services.Install
             var version = new Version(strVersion);
             var strScriptFile = Null.NullString;
             var strProviderPath = _dataProvider.GetProviderPath();
-            if (!strProviderPath.StartsWith("ERROR:"))
+            if (!strProviderPath.STARTsWith("ERROR:"))
             {
                 //Install Version
                 strScriptFile = Upgrade.Upgrade.GetScriptFile(strProviderPath, version);
@@ -459,7 +456,7 @@ namespace DotNetNuke.Services.Install
                 //TODO - do something                
             }
         }
-        
+
         private static void GetInstallerLocales()
         {
             var filePath = Globals.ApplicationMapPath + LocalesFile.Replace("/", "\\");
@@ -498,14 +495,14 @@ namespace DotNetNuke.Services.Install
         private void LocalizePage()
         {
             Page.Title = LocalizeString("PageTitle");
-            lblIntroDetail.Text = LocalizeString("IntroDetail");      
+            lblIntroDetail.Text = LocalizeString("IntroDetail");
         }
 
         private static string LocalizeStringStatic(string key)
         {
             return Localization.Localization.GetString(key, LocalResourceFile, _culture);
         }
-        
+
         /// <summary>
         /// TestDataBaseInstalled checks whether the Database is the current version
         /// </summary>
@@ -515,8 +512,8 @@ namespace DotNetNuke.Services.Install
             var success = !(DatabaseVersion == null || DatabaseVersion.Major != ApplicationVersion.Major || DatabaseVersion.Minor != ApplicationVersion.Minor || DatabaseVersion.Build != ApplicationVersion.Build);
             return success;
         }
-       
-		private void SetupDatabaseInfo()
+
+        private void SetupDatabaseInfo()
         {
             //Try to use connection information in DotNetNuke.Install.Config. If not found use from web.config
             _connectionConfig = _installConfig.Connection;
@@ -562,19 +559,19 @@ namespace DotNetNuke.Services.Install
         {
             var success = false;
             _connectionResult = CheckDatabaseConnection(_connectionConfig);
-            if (!_connectionResult.StartsWith("ERROR:"))
+            if (!_connectionResult.STARTsWith("ERROR:"))
                 success = true;
 
             return success;
         }
 
-		private static string CheckDatabaseConnection(ConnectionConfig connectionConfig)
+        private static string CheckDatabaseConnection(ConnectionConfig connectionConfig)
         {
-            _connectionResult = InstallController.Instance.TestDatabaseConnection(connectionConfig);		    
-            if (_connectionResult.StartsWith("ERROR:"))
+            _connectionResult = InstallController.Instance.TestDatabaseConnection(connectionConfig);
+            if (_connectionResult.STARTsWith("ERROR:"))
                 return _connectionResult;
 
-            var connectionString = _connectionResult;            
+            var connectionString = _connectionResult;
             var details = Localization.Localization.GetString("IsAbleToPerformDatabaseActionsCheck", LocalResourceFile);
             if (!InstallController.Instance.IsAbleToPerformDatabaseActions(connectionString))
                 _connectionResult = "ERROR: " + string.Format(Localization.Localization.GetString("IsAbleToPerformDatabaseActions", LocalResourceFile), details);
@@ -596,7 +593,7 @@ namespace DotNetNuke.Services.Install
                 string strError = Config.UpdateMachineKey();
                 if (String.IsNullOrEmpty(strError))
                 {
-                    //send a new request to the application to initiate step 2
+                    //sEND a new request to the application to initiate step 2
                     HttpContext.Current.Response.Redirect(HttpContext.Current.Request.RawUrl, true);
                 }
                 else
@@ -693,64 +690,64 @@ namespace DotNetNuke.Services.Install
                 var xmlDoc = new XmlDocument { XmlResolver = null };
                 xmlDoc.Load(myResponseReader);
                 var languages = xmlDoc.SelectNodes("available/language");
-	            var packages = new List<PackageInfo>();
+                var packages = new List<PackageInfo>();
 
-				if (languages != null)
-				{
-					foreach (XmlNode language in languages)
-					{
-						string cultureCode = "";
-						string version = "";
-						foreach (XmlNode child in language.ChildNodes)
-						{
-							if (child.Name == "culturecode")
-							{
-								cultureCode = child.InnerText;
-							}
-
-							if (child.Name == "version")
-							{
-								version = child.InnerText;
-							}
-						}
-						if (!string.IsNullOrEmpty(cultureCode) && !string.IsNullOrEmpty(version) && version.Length == 6)
-						{
-							var myCIintl = new CultureInfo(cultureCode, true);
-							version = version.Insert(4, ".").Insert(2, ".");
-							var package = new PackageInfo { Name = "LanguagePack-" + myCIintl.Name, FriendlyName = myCIintl.NativeName };
-							package.Name = myCIintl.NativeName;
-							package.Description = cultureCode;
-							Version ver;
-							Version.TryParse(version, out ver);
-							package.Version = ver;
-
-							if (packages.Any(p => p.Name == package.Name))
-							{
-								var existPackage = packages.First(p => p.Name == package.Name);
-								if (package.Version > existPackage.Version)
-								{
-									packages.Remove(existPackage);
-									packages.Add(package);
-								}
-							}
-							else
-							{
-								packages.Add(package);
-							}
-						}
-					}
-				}
-				foreach (var package in packages)
+                if (languages != null)
                 {
-					var li = new ListItem { Value = package.Description, Text = package.Name };
-		            languageList.AddItem(li.Text, li.Value);
-		            var lastItem = languageList.Items[languageList.Items.Count - 1];
-					if (DotNetNukeContext.Current.Application.Version.Major != package.Version.Major
-						|| DotNetNukeContext.Current.Application.Version.Minor != package.Version.Minor
-						|| DotNetNukeContext.Current.Application.Version.Build != package.Version.Build)
-		            {
-						lastItem.Attributes.Add("onclick", "javascript:LegacyLangaugePack('" + package.Version + "');");
-		            }
+                    foreach (XmlNode language in languages)
+                    {
+                        string cultureCode = "";
+                        string version = "";
+                        foreach (XmlNode child in language.ChildNodes)
+                        {
+                            if (child.Name == "culturecode")
+                            {
+                                cultureCode = child.InnerText;
+                            }
+
+                            if (child.Name == "version")
+                            {
+                                version = child.InnerText;
+                            }
+                        }
+                        if (!string.IsNullOrEmpty(cultureCode) && !string.IsNullOrEmpty(version) && version.Length == 6)
+                        {
+                            var myCIintl = new CultureInfo(cultureCode, true);
+                            version = version.Insert(4, ".").Insert(2, ".");
+                            var package = new PackageInfo { Name = "LanguagePack-" + myCIintl.Name, FriENDlyName = myCIintl.NativeName };
+                            package.Name = myCIintl.NativeName;
+                            package.Description = cultureCode;
+                            Version ver;
+                            Version.TryParse(version, out ver);
+                            package.Version = ver;
+
+                            if (packages.Any(p => p.Name == package.Name))
+                            {
+                                var existPackage = packages.First(p => p.Name == package.Name);
+                                if (package.Version > existPackage.Version)
+                                {
+                                    packages.Remove(existPackage);
+                                    packages.Add(package);
+                                }
+                            }
+                            else
+                            {
+                                packages.Add(package);
+                            }
+                        }
+                    }
+                }
+                foreach (var package in packages)
+                {
+                    var li = new ListItem { Value = package.Description, Text = package.Name };
+                    languageList.AddItem(li.Text, li.Value);
+                    var lastItem = languageList.Items[languageList.Items.Count - 1];
+                    if (DotNetNukeContext.Current.Application.Version.Major != package.Version.Major
+                        || DotNetNukeContext.Current.Application.Version.Minor != package.Version.Minor
+                        || DotNetNukeContext.Current.Application.Version.Build != package.Version.Build)
+                    {
+                        lastItem.Attributes.Add("onclick", "javascript:LegacyLangaugePack('" + package.Version + "');");
+                    }
                 }
             }
             catch (Exception)
@@ -764,23 +761,21 @@ namespace DotNetNuke.Services.Install
                 if (languageList.FindItemByValue("en-US") == null)
                 {
                     var myCIintl = new CultureInfo("en-US", true);
-                    var li = new ListItem {Value = @"en-US", Text = myCIintl.NativeName};
+                    var li = new ListItem { Value = @"en-US", Text = myCIintl.NativeName };
                     languageList.AddItem(li.Text, li.Value);
                     var lastItem = languageList.Items[languageList.Items.Count - 1];
                     lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
                 }
-
-                //START persian-dnnsoftware
+                // START persian-dnnsoftware
                 if (languageList.FindItemByValue("fa-IR") == null)
                 {
                     var myCIintl = new CultureInfo("fa-IR", true);
-                    var li = new ListItem { Value = @"fa-IR", Text = myCIintl.NativeName };
+                    var li = new ListItem { Value = "fa-IR", Text = myCIintl.NativeName };
                     languageList.AddItem(li.Text, li.Value);
                     var lastItem = languageList.Items[languageList.Items.Count - 1];
                     lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
                 }
-                //END persian-dnnsoftware
-
+                // END persian-dnnsoftware
                 var item = languageList.FindItemByValue(_culture);
                 languageList.SelectedIndex = item != null ? languageList.Items.IndexOf(item) : languageList.Items.IndexOf(languageList.FindItemByValue("en-US"));
             }
@@ -798,19 +793,19 @@ namespace DotNetNuke.Services.Install
         }
 
 
-        private static void VisitSiteClick(object sender, EventArgs eventArgs)
-        {    
+        private static void VisitSiteClick(object sENDer, EventArgs eventArgs)
+        {
             //Delete the status file.
             try
             {
                 File.Delete(StatusFile);
-                
+
             }
             catch (Exception)
             {
                 //Do nothing
             }
-            
+
             //delete the initial install config -check readonly status first
             try
             {
@@ -820,8 +815,8 @@ namespace DotNetNuke.Services.Install
                     //make sure file is not read-only
                     File.SetAttributes(installConfig, FileAttributes.Normal);
                     File.Delete(installConfig);
-                } 
-            
+                }
+
             }
             catch (Exception)
             {
@@ -831,7 +826,7 @@ namespace DotNetNuke.Services.Install
             Config.Touch();
             HttpContext.Current.Response.Redirect("../Default.aspx");
         }
-        #endregion 
+        #ENDregion 
 
         #region Protected Methods
 
@@ -864,14 +859,14 @@ namespace DotNetNuke.Services.Install
         {
             return Localization.Localization.GetString(key, LocalResourceFile, _culture);
         }
-        
+
         protected override void OnError(EventArgs e)
         {
             HttpContext.Current.Response.Clear();
             HttpContext.Current.Server.Transfer("~/ErrorPage.aspx");
         }
 
-        #endregion
+        #ENDregion
 
         #region Event Handlers
 
@@ -902,9 +897,9 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-        protected override void OnPreRender(EventArgs e)
+        protected override void OnPreRENDer(EventArgs e)
         {
-            base.OnPreRender(e);
+            base.OnPreRENDer(e);
 
             if (!SupportLocalization)
             {
@@ -914,12 +909,12 @@ namespace DotNetNuke.Services.Install
 
             passwordContainer.CssClass = "password-strength-container";
             txtPassword.CssClass = "password-strength";
-                
+
             var options = new DnnPaswordStrengthOptions();
             var optionsAsJsonString = Json.Serialize(options);
             var script = string.Format("dnn.initializePasswordStrength('.{0}', {1});{2}",
                 "password-strength", optionsAsJsonString, Environment.NewLine);
-            Page.ClientScript.RegisterStartupScript(GetType(), "PasswordStrength", script, true);
+            Page.ClientScript.RegisterSTARTupScript(GetType(), "PasswordStrength", script, true);
 
             txtConfirmPassword.CssClass = "password-confirm";
             var confirmPasswordOptions = new DnnConfirmPasswordOptions()
@@ -934,7 +929,7 @@ namespace DotNetNuke.Services.Install
             var confirmOptionsAsJsonString = Json.Serialize(confirmPasswordOptions);
             var confirmScript = string.Format("dnn.initializePasswordComparer({0});{1}", confirmOptionsAsJsonString, Environment.NewLine);
 
-            Page.ClientScript.RegisterStartupScript(GetType(), "ConfirmPassword", confirmScript, true);
+            Page.ClientScript.RegisterSTARTupScript(GetType(), "ConfirmPassword", confirmScript, true);
         }
 
         /// -----------------------------------------------------------------------------
@@ -956,13 +951,16 @@ namespace DotNetNuke.Services.Install
 
             SetBrowserLanguage();
             LocalizePage();
-
-            //START persian-dnnsoftware
+            // START persian-dnnsoftware
             string defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css";
             if (PageLocale.Value == "fa-IR")
             {
                 defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.rtl.css";
                 Body.Attributes.Add("class", "rtl");
+            }
+            else
+            {
+                Body.Attributes.Add("class", "");
             }
 
             System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();
@@ -971,10 +969,20 @@ namespace DotNetNuke.Services.Install
             css.Attributes["type"] = "text/css";
             Page.Header.Controls.Add(css);
 
-            //End persian-dnnsoftware
+            System.Web.UI.HtmlControls.HtmlLink css2 = new System.Web.UI.HtmlControls.HtmlLink();
+            css2.Href = Globals.ApplicationPath + "/Install/Install.css";
+            css2.Attributes["rel"] = "stylesheet";
+            css2.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css2);
 
+            System.Web.UI.HtmlControls.HtmlLink css3 = new System.Web.UI.HtmlControls.HtmlLink();
+            css3.Href = Globals.ApplicationPath + "/Resources/Shared/stylesheets/dnn.PasswordStrength.css";
+            css3.Attributes["rel"] = "stylesheet";
+            css3.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css3);
+            // END persian-dnnsoftware
             base.OnLoad(e);
-            visitSite.Click += VisitSiteClick;           
+            visitSite.Click += VisitSiteClick;
 
             //Create Status Files
             if (!File.Exists(StatusFile)) File.CreateText(StatusFile).Close();
@@ -988,13 +996,13 @@ namespace DotNetNuke.Services.Install
                 templateList.Items.Remove(templateList.FindItemByValue("Mobile Website.template"));
             }
 
-            if (HttpContext.Current.Request.RawUrl.EndsWith("&initiateinstall"))
+            if (HttpContext.Current.Request.RawUrl.ENDsWith("&initiateinstall"))
             {
                 var synchConnectionString = new SynchConnectionStringStep();
                 synchConnectionString.Execute();
                 Response.Redirect(HttpContext.Current.Request.RawUrl.Replace("&initiateinstall", "&executeinstall"), true);
             }
-            else if (HttpContext.Current.Request.RawUrl.EndsWith("&executeinstall"))
+            else if (HttpContext.Current.Request.RawUrl.ENDsWith("&executeinstall"))
             {
                 try
                 {
@@ -1007,7 +1015,7 @@ namespace DotNetNuke.Services.Install
                     _installerRunning = true;
                     LaunchAutoInstall();
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     //Redirect back to first page
                     Response.Redirect(HttpContext.Current.Request.RawUrl.Replace("&executeinstall", ""), true);
@@ -1015,7 +1023,7 @@ namespace DotNetNuke.Services.Install
             }
             else if (!Page.IsPostBack)
             {
-                if (_installerRunning )
+                if (_installerRunning)
                 {
                     LaunchAutoInstall();
                 }
@@ -1060,7 +1068,7 @@ namespace DotNetNuke.Services.Install
                         return;
                     }
 
-                    //Adding ClientDependency Resources config to web.config                    
+                    //Adding ClientDepENDency Resources config to web.config                    
                     if (!ClientResourceManager.IsInstalled() && ValidatePermissions().Item1)
                     {
                         ClientResourceManager.AddConfiguration();
@@ -1071,7 +1079,7 @@ namespace DotNetNuke.Services.Install
                     //Ensure connection strings are in synch
                     var synchConnectionString = new SynchConnectionStringStep();
                     synchConnectionString.Execute();
-                    if (synchConnectionString.Status == StepStatus.AppRestart) Response.Redirect(HttpContext.Current.Request.RawUrl, true);
+                    if (synchConnectionString.Status == StepStatus.AppReSTART) Response.Redirect(HttpContext.Current.Request.RawUrl, true);
 
                     txtUsername.Text = _installConfig.SuperUser.UserName;
                     txtEmail.Text = _installConfig.SuperUser.Email;
@@ -1128,7 +1136,7 @@ namespace DotNetNuke.Services.Install
                     {
                         string strVersion = Path.GetFileNameWithoutExtension(Convert.ToString(arrVersions[i]));
                         var version = new Version(strVersion);
-                        
+
                         strErrorMessage += Upgrade.Upgrade.UpgradeApplication(strProviderPath, version, false);
 
                         //delete files which are no longer used
@@ -1153,7 +1161,7 @@ namespace DotNetNuke.Services.Install
             }
         }
 
-        #endregion
+        #ENDregion
 
         #region WebMethods
 
@@ -1172,7 +1180,7 @@ namespace DotNetNuke.Services.Install
                                             {installDatabase, 20},
                                             {installExtensions, 25},
                                             {new InitializeHostSettingsStep(), 5},
-											{new UpdateLanguagePackStep(), 5},
+                                            {new UpdateLanguagePackStep(), 5},
                                             {installSite, 20},
                                             {createSuperUser, 5},
                                             {new AddFcnModeStep(), 1},
@@ -1188,7 +1196,7 @@ namespace DotNetNuke.Services.Install
         }
 
         [System.Web.Services.WebMethod]
-        public static object GetInstallationLog(int startRow)
+        public static object GetInstallationLog(int STARTRow)
         {
             var data = string.Empty;
             var logFile = InstallController.Instance.InstallerLogName;
@@ -1196,23 +1204,23 @@ namespace DotNetNuke.Services.Install
             {
                 var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Portals", "_default", "logs", logFile));
                 var errorLogged = false;
-                if (lines.Length > startRow)
+                if (lines.Length > STARTRow)
                 {
-                    var count = Math.Min(lines.Length - startRow, 500);
+                    var count = Math.Min(lines.Length - STARTRow, 500);
                     var sb = new System.Text.StringBuilder();
-                    for (var i = startRow; i < startRow + count; i++)
+                    for (var i = STARTRow; i < STARTRow + count; i++)
                     {
                         if (lines[i].Contains("[ERROR]"))
                         {
-                            sb.Append(lines[i]);
-                            sb.Append("<br/>");
+                            sb.AppEND(lines[i]);
+                            sb.AppEND("<br/>");
                             errorLogged = true;
                         }
                     }
 
                     data = sb.ToString();
                 }
-                if (errorLogged ==false)
+                if (errorLogged == false)
                 {
                     Localization.Localization.GetString("NoErrorsLogged", "~/Install/App_LocalResources/InstallWizard.aspx.resx");
                 }
@@ -1223,59 +1231,59 @@ namespace DotNetNuke.Services.Install
 
             return data;
         }
-		
-		[System.Web.Services.WebMethod]
+
+        [System.Web.Services.WebMethod]
         public static Tuple<bool, string> ValidateInput(Dictionary<string, string> installInfo)
         {
             var result = true;
-		    var errorMsg=string.Empty;
-            
+            var errorMsg = string.Empty;
+
             // Check Required Fields
-            if (!installInfo.ContainsKey("acceptTerms") || installInfo["acceptTerms"] != "Y" || 
+            if (!installInfo.ContainsKey("acceptTerms") || installInfo["acceptTerms"] != "Y" ||
                 installInfo["username"] == string.Empty || installInfo["password"] == string.Empty || installInfo["confirmPassword"] == string.Empty
                  || installInfo["websiteName"] == string.Empty || installInfo["email"] == string.Empty)
             {
                 result = false;
-		        errorMsg = LocalizeStringStatic("InputErrorMissingRequiredFields");
-		    }
-			else if (installInfo["password"] != installInfo["confirmPassword"])
-			{
-				result = false;
-				errorMsg = LocalizeStringStatic("PasswordMismatch");
-			}
+                errorMsg = LocalizeStringStatic("InputErrorMissingRequiredFields");
+            }
+            else if (installInfo["password"] != installInfo["confirmPassword"])
+            {
+                result = false;
+                errorMsg = LocalizeStringStatic("PasswordMismatch");
+            }
 
-		    if (result)
-		    {
+            if (result)
+            {
                 UpdateInstallConfig(installInfo);
                 new SynchConnectionStringStep().Execute();
-		    }
+            }
             return new Tuple<bool, string>(result, errorMsg);
         }
 
-		[System.Web.Services.WebMethod]
-		public static Tuple<bool, string> ValidatePermissions()
-		{
-			var permissionsValid = true;
-			var errorMessage = string.Empty;
+        [System.Web.Services.WebMethod]
+        public static Tuple<bool, string> ValidatePermissions()
+        {
+            var permissionsValid = true;
+            var errorMessage = string.Empty;
 
-			var verifiers = new List<FileSystemPermissionVerifier>
+            var verifiers = new List<FileSystemPermissionVerifier>
                                 {
                                     new FileSystemPermissionVerifier(HttpContext.Current.Server.MapPath("~"), 3),
                                     new FileSystemPermissionVerifier(HttpContext.Current.Server.MapPath("~/App_Data"), 3)
                                 };
 
-			var failedList = verifiers.Where(v => !v.VerifyAll()).ToArray();
-			if (failedList.Any())
-			{
-				permissionsValid = false;
-			}
+            var failedList = verifiers.Where(v => !v.VerifyAll()).ToArray();
+            if (failedList.Any())
+            {
+                permissionsValid = false;
+            }
 
-			if (!permissionsValid)
-			{
-				errorMessage = string.Format(LocalizeStringStatic("FileAndFolderPermissionCheckFailed"), string.Join("; ", (from v in verifiers select v.BasePath)));
-			}
-			return new Tuple<bool, string>(permissionsValid, errorMessage);
-		}
+            if (!permissionsValid)
+            {
+                errorMessage = string.Format(LocalizeStringStatic("FileAndFolderPermissionCheckFailed"), string.Join("; ", (from v in verifiers select v.BasePath)));
+            }
+            return new Tuple<bool, string>(permissionsValid, errorMessage);
+        }
 
         [System.Web.Services.WebMethod]
         public static bool ValidatePassword(string password)
@@ -1292,7 +1300,7 @@ namespace DotNetNuke.Services.Install
             if (nonAlnumCount < Membership.MinRequiredNonAlphanumericCharacters) result = false;
 
             return result;
-        }      
+        }
 
         [System.Web.Services.WebMethod]
         public static bool VerifyDatabaseConnectionOnLoad()
@@ -1332,7 +1340,7 @@ namespace DotNetNuke.Services.Install
             }
 
             var result = CheckDatabaseConnection(connectionConfig);
-            var validConnection = !result.StartsWith("ERROR:");
+            var validConnection = !result.STARTsWith("ERROR:");
             if (validConnection)
             {
                 UpdateDatabaseInstallConfig(installInfo);
@@ -1352,9 +1360,9 @@ namespace DotNetNuke.Services.Install
         {
             bool isRunning;
 
-            if (_installerRunning || InstallBlocker.Instance.IsInstallInProgress()) 
+            if (_installerRunning || InstallBlocker.Instance.IsInstallInProgress())
             {
-                isRunning =  true;
+                isRunning = true;
             }
             else if (File.Exists(StatusFile))
             {
@@ -1369,6 +1377,6 @@ namespace DotNetNuke.Services.Install
             return isRunning;
         }
 
-        #endregion
-    } 
+        #ENDregion
+    }
 }

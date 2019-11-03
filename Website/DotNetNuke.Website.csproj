@@ -638,6 +638,9 @@
     <Content Include="DesktopModules\Admin\Authentication\module.rtl.css" />
     <Content Include="DesktopModules\Admin\SearchResults\module.rtl.css" />
     <Content Include="DesktopModules\Admin\Security\module.rtl.css" />
+    <Content Include="images\installer-feedback-states-sprite.rtl.png" />
+    <Content Include="images\InstallWizardBg.rtl.png" />
+    <Content Include="images\modal-resize-icn.rtl.png" />
     <Content Include="js\PersianCalendar.css" />
     <Content Include="js\PersianCalendar.js" />
     <Content Include="Licenses\Castle Core %28Apache%29.txt.resources" />
@@ -3549,6 +3552,9 @@
   <ItemGroup>
     <Content Include="DesktopModules\Admin\EditExtension\App_LocalResources\AuthenticationEditor.ascx.fa-IR.resx" />
     <Content Include="DesktopModules\Admin\EditExtension\App_LocalResources\EditExtension.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Install\Language\installlanguage.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
