@@ -66,17 +66,20 @@ namespace DotNetNuke.Common.Utilities
             //Get the short date pattern for the culture
             string FormatString = DateTimeFormatInfo.CurrentInfo.ShortDatePattern;
             //START persian-dnnsoftware
-            if (CultureInfo.CurrentCulture.ToString() == "fa-IR")
-			{
-				if (!Field.Page.ClientScript.IsClientScriptIncludeRegistered("PersianCalendar.js"))
-				{
-					ClientAPI.RegisterClientScriptBlock(Field.Page, "PersianCalendar.js", "<script src=\"" + ClientAPI.ScriptPath + "PersianCalendar.js\"></script>");
-					ClientAPI.RegisterClientScriptBlock(Field.Page, "PersianCalendar.css", "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + ClientAPI.ScriptPath + "PersianCalendar.css\" />");
-				}
-			}
-			else if (!Field.Page.ClientScript.IsClientScriptIncludeRegistered("PopupCalendar.js"))
-			{
-                ScriptManager.RegisterClientScriptInclude(Field.Page, Field.Page.GetType(), "PopupCalendar.js", ClientAPI.ScriptPath + "PopupCalendar.js");
+            if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
+            {
+                if (!Field.Page.ClientScript.IsClientScriptIncludeRegistered("PersianCalendar.js"))
+                {
+                    ClientAPI.RegisterClientScriptBlock(Field.Page, "PersianCalendar.js", ("<script src=\"" + ClientAPI.ScriptPath + "PersianCalendar.js\"></script>"));
+                    ClientAPI.RegisterClientScriptBlock(Field.Page, "PersianCalendar.css", ("<link rel=\"stylesheet\" type=\"text/css\" href=\"" + ClientAPI.ScriptPath + "PersianCalendar.css\" />"));
+                }
+            }
+            else
+            {
+                if (!Field.Page.ClientScript.IsClientScriptIncludeRegistered("PopupCalendar.js"))
+                {
+                    ScriptManager.RegisterClientScriptInclude(Field.Page, Field.Page.GetType(), "PopupCalendar.js", ClientAPI.ScriptPath + "PopupCalendar.js");
+                }
             }
             //END persian-dnnsoftware
             string strToday = ClientAPI.GetSafeJSString(Localization.GetString("Today"));

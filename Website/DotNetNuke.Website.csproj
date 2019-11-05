@@ -3554,7 +3554,7 @@
     <Content Include="DesktopModules\Admin\EditExtension\App_LocalResources\EditExtension.ascx.fa-IR.resx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Install\Language\installlanguage.resources" />
+    <Content Include="Install\Language\installlanguage.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

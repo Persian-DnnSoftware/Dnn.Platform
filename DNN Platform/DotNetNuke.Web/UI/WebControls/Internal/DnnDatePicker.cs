@@ -80,9 +80,8 @@ namespace DotNetNuke.Web.UI.WebControls.Internal
                 ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/pikaday.js");
             }
             //END persian-dnnsoftware
-            //START persian-dnnsoftware
             ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/pikaday.jquery.js");
-
+            //START persian-dnnsoftware
             if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
             {
                 ClientResourceManager.RegisterStyleSheet(Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.css");
