@@ -241,8 +241,11 @@ Task("ExternalExtensions")
 		DownloadFile("https://github.com/dnnsoftware/ClientDependency/archive/" + targetBranchCdf + ".zip", buildDirFullPath + "clientdependency.zip");
 
 		//pb
-        Information("Downloading: {0}", "https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip");
-		DownloadFile("https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip", buildDirFullPath + "Dnn.AdminExperience.zip");
+        //Information("Downloading: {0}", "https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip"); //Persian-DnnSoftware
+		//https://github.com/Persian-DnnSoftware/Dnn.AdminExperience/archive/v9.4.1.zip
+		Information("Downloading: {0}", "https://github.com/Persian-DnnSoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip");
+		//DownloadFile("https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip", buildDirFullPath + "Dnn.AdminExperience.zip");
+		DownloadFile("https://github.com/Persian-DnnSoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip", buildDirFullPath + "Dnn.AdminExperience.zip"); //Persian-DnnSoftware
 
 		Information("Decompressing: {0}", "CK Editor");
 		Unzip(buildDirFullPath + "ckeditor.zip", buildDirFullPath + "Providers/");
