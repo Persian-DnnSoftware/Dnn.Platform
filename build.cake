@@ -32,7 +32,7 @@ var targetBranchCp = Argument("CpBranch", "development");
 var buildDir = Directory("./src/");
 var artifactDir = Directory("./Artifacts/");
 var tempDir = Directory("./Temp/");
-var clientTempDir = Directory("./../Persian.Dnn.Platform/"); //persian-dnnsoftware
+var clientTempDir = Directory("./../Dnn.AdminExperience/"); //persian-dnnsoftware
 var buildDirFullPath = System.IO.Path.GetFullPath(buildDir.ToString()) + "\\";
 
 // Define versioned files (manifests) to backup and revert on build
