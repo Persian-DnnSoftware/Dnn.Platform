@@ -20,7 +20,9 @@ dnnModule.DigitalAssetsSearchBox = function ($, $scope, servicesFramework) {
     
     function doSearch(currentFolderId, pattern, startIndex, numItems, sortExpression, before, done, fail, always) {
         var contentServiceUrl = servicesFramework.getServiceRoot('DigitalAssets') + 'ContentService/';
-        
+
+        pattern = "*" + pattern + "*";/* persian-dnnsoftware */
+         
         before();
         $.ajax({
             url: contentServiceUrl + "SearchFolderContent",

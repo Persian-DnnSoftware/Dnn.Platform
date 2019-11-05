@@ -630,6 +630,7 @@
       <DependentUpon>Logoff.ascx</DependentUpon>
     </Compile>
     <Content Include="admin\Menus\ModuleActions\dnnQuickSettings.js" />
+    <Content Include="admin\Menus\ModuleActions\font-awesome.min.css" />
     <Content Include="admin\Menus\ModuleActions\ModuleActions.less" />
     <Content Include="admin\Menus\ModuleActions\ModuleActions.rtl.css" />
     <Content Include="admin\Modules\module.rtl.css" />
@@ -638,6 +639,9 @@
     <Content Include="DesktopModules\Admin\Authentication\module.rtl.css" />
     <Content Include="DesktopModules\Admin\SearchResults\module.rtl.css" />
     <Content Include="DesktopModules\Admin\Security\module.rtl.css" />
+    <Content Include="Icons\Sigma\BreadcrumbArrows_16x16_Gray.rtl.png" />
+    <Content Include="Icons\Sigma\Cancel_16X16_Standard_dark.png" />
+    <Content Include="Icons\Sigma\Checked_16x16_Standard_dark.png" />
     <Content Include="images\installer-feedback-states-sprite.rtl.png" />
     <Content Include="images\InstallWizardBg.rtl.png" />
     <Content Include="images\modal-resize-icn.rtl.png" />
@@ -658,6 +662,10 @@
     <Content Include="Licenses\PetaPoco %28Apache%29.txt.resources" />
     <Content Include="Licenses\Pikaday %28MIT%29.txt.resources" />
     <Content Include="Licenses\QuickIO.NET %28Ms-PL%29.txt.resources" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.eot" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.ttf" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.woff" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.woff2" />
     <None Include="compilerconfig.json" />
     <Compile Include="DesktopModules\Admin\EditExtension\AuthenticationEditor.ascx.cs">
       <DependentUpon>AuthenticationEditor.ascx</DependentUpon>
@@ -881,6 +889,7 @@
     <Content Include="Resources\Shared\components\DatePicker\pikaday.css" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.jquery.js" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.js" />
+    <Content Include="Resources\Shared\components\DropDownList\Images\tree-sprite.rtl.png" />
     <Content Include="Resources\Shared\components\SimpleMDE\codemirror.css" />
     <Content Include="Resources\Shared\components\SimpleMDE\marked.js" />
     <Content Include="Resources\Shared\components\SimpleMDE\simplemde.css" />
