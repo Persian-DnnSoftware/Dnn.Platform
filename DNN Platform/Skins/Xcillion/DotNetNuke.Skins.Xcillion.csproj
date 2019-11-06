@@ -135,6 +135,7 @@
     <Content Include="Skin\Home.jpg" />
     <Content Include="Skin\Images\arrow-right.png" />
     <Content Include="Skin\Images\breadcrumb-arrow.png" />
+    <Content Include="Skin\Images\breadcrumb-arrow.rtl.png" />
     <Content Include="Skin\Images\logo.png" />
     <Content Include="Skin\Images\message_icon.png" />
     <Content Include="Skin\Images\message_icon_old.png" />

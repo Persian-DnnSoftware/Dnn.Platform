@@ -166,7 +166,20 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
             var label = labels.eq(i);
             currentTool.is(':visible') ? label.show() : label.hide();
             if (nextTool.length > 0) {
-                label.width(nextTool.position().left - currentTool.position().left);
+                //START persian-dnnsoftware
+                if ($('body').hasClass('r' + 't' + 'l')) {
+                    label.width(currentTool.position().left - nextTool.position().left);
+                } else {
+                    label.width(nextTool.position().left - currentTool.position().left);
+                }
+                //END persian-dnnsoftware
+
+                //START persian-dnnsoftware  set buttom default image
+                if ($('body').hasClass('r' + 't' + 'l')) {
+                    var toggleButton = $("#DigitalAssetsToggleLeftPaneBtnId span", "#" + controls.scopeWrapperId);
+                    toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
+                }
+                //END persian-dnnsoftware
             }
         }
     }
@@ -341,18 +354,33 @@ dnnModule.digitalAssets = function ($, $find, $telerik, dnnModal) {
         var loadingPanel = $(".dnnModuleDigitalAssetsMainLoading", "#" + controls.scopeWrapperId);
         var left;
 
-        if (!leftPane.is(":visible")) {
-            toggleButton.css("background-image", "url(" + settings.toggleLeftPaneHideImageUrl + ")");
-            leftPane.animate({ width: 'toggle' }, 500, treeViewRefreshScrollbars);
-            left = 220;
+        //START persian-dnnsoftware
+        if ($('body').hasClass('r' + 't' + 'l')) {
+            if (!leftPane.is(":visible")) {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500, treeViewRefreshScrollbars);
+                left = 220;
+            } else {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneHideImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500);
+                left = 0;
+            }
+            contentPane.animate({ 'margin-right': left }, 500, 'swing', moreItemsHint);
+            loadingPanel.css({ 'right': left });
         } else {
-            toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
-            leftPane.animate({ width: 'toggle' }, 500);
-            left = 0;
+            if (!leftPane.is(":visible")) {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneHideImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500, treeViewRefreshScrollbars);
+                left = 220;
+            } else {
+                toggleButton.css("background-image", "url(" + settings.toggleLeftPaneShowImageUrl + ")");
+                leftPane.animate({ width: 'toggle' }, 500);
+                left = 0;
+            }
+            contentPane.animate({ 'margin-left': left }, 500, 'swing', moreItemsHint);
+            loadingPanel.css({ 'left': left });
         }
-
-        contentPane.animate({ 'margin-left': left }, 500, 'swing', moreItemsHint);
-        loadingPanel.css({ 'left': left });
+        //END persian-dnnsoftware
     }
 
     function moreItemsHint() {

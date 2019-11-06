@@ -32,6 +32,7 @@ var targetBranchCp = Argument("CpBranch", "development");
 var buildDir = Directory("./src/");
 var artifactDir = Directory("./Artifacts/");
 var tempDir = Directory("./Temp/");
+var clientTempDir = Directory("./../Dnn.AdminExperience/"); //persian-dnnsoftware
 var buildDirFullPath = System.IO.Path.GetFullPath(buildDir.ToString()) + "\\";
 
 // Define versioned files (manifests) to backup and revert on build
@@ -241,8 +242,11 @@ Task("ExternalExtensions")
 		DownloadFile("https://github.com/dnnsoftware/ClientDependency/archive/" + targetBranchCdf + ".zip", buildDirFullPath + "clientdependency.zip");
 
 		//pb
-        Information("Downloading: {0}", "https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip");
-		DownloadFile("https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip", buildDirFullPath + "Dnn.AdminExperience.zip");
+        //Information("Downloading: {0}", "https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip"); //Persian-DnnSoftware
+		//https://github.com/Persian-DnnSoftware/Dnn.AdminExperience/archive/v9.4.1.zip
+		Information("Downloading: {0}", "https://github.com/Persian-DnnSoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip");
+		//DownloadFile("https://github.com/dnnsoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip", buildDirFullPath + "Dnn.AdminExperience.zip");//Persian-DnnSoftware
+		DownloadFile("https://github.com/Persian-DnnSoftware/Dnn.AdminExperience/archive/" + targetBranchCp + ".zip", buildDirFullPath + "Dnn.AdminExperience.zip"); 
 
 		Information("Decompressing: {0}", "CK Editor");
 		Unzip(buildDirFullPath + "ckeditor.zip", buildDirFullPath + "Providers/");
@@ -250,9 +254,8 @@ Task("ExternalExtensions")
 		Information("Decompressing: {0}", "CDF");
 		Unzip(buildDirFullPath + "clientdependency.zip", buildDirFullPath + "Modules");
 	
-		Information("Decompressing: {0}", "Admin Experience");
-		Unzip(buildDirFullPath + "Dnn.AdminExperience.zip", tempDir);
-
+		Information("Decompressing: {0}", "Admin Experience"); 
+		Unzip(buildDirFullPath + "Dnn.AdminExperience.zip", tempDir); 
 
 		//look for solutions and start building them
 		var externalSolutions = GetFiles("./src/**/*.sln");
@@ -279,7 +282,8 @@ Task("ExternalExtensions")
 		}
 
 
-		externalSolutions = GetFiles("./" + tempDir.ToString() + "/**/*.sln");
+		externalSolutions = GetFiles("./" + tempDir.ToString() + "/**/*.sln"); //persian-dnnsoftware
+		
 
 		Information("Found {0} solutions.", externalSolutions.Count);
 	
@@ -312,7 +316,9 @@ Task("ExternalExtensions")
 		//Information("Copying {1} Artifacts from {0}", "CDF", fileCounter);
 		//CopyFiles("./src/Modules/ClientDependency-dnn/ClientDependency.Core/bin/Release/ClientDependency.Core.*", "./Website/bin");
 	
-		var files = GetFiles("./" + tempDir.ToString() + "/*/Website/Install/Module/*_Install.zip");
+		var files = GetFiles("./" + tempDir.ToString() + "/*/Website/Install/Module/*_Install.zip"); 
+		
+		
 		Information("Copying {1} Artifacts from {0}", "AdminExperience", files.Count);
 		CopyFiles(files, "./Website/Install/Module/");
 	});

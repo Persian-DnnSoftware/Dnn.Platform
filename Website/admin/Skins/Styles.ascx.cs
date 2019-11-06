@@ -84,9 +84,10 @@ namespace DotNetNuke.UI.Skins.Controls
                     objLink.Attributes["rel"] = "stylesheet";
                     objLink.Attributes["type"] = "text/css";
                     //START persian-dnnsoftware
-                    if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && File.Exists(base.Server.MapPath(skinpath + StyleSheet.Replace(".css", ".rtl.css"))))
+                    if (System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
                     {
-                        StyleSheet = StyleSheet.Replace(".css", ".rtl.css");
+                        if (System.IO.File.Exists(Server.MapPath(skinpath + StyleSheet.Replace(".css", ".rtl.css"))))
+                            StyleSheet = StyleSheet.Replace(".css", ".rtl.css");
                     }
                     //END persian-dnnsoftware
                     objLink.Href = skinpath + StyleSheet;

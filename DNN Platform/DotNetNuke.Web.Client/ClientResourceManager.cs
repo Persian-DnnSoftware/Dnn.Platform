@@ -409,13 +409,11 @@ namespace DotNetNuke.Web.Client.ClientResourceManagement
             }
 
             //START persian-dnnsoftware
-            if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css") && !filePath.Contains("http"))
+            if ((System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http"))
             {
-                string text2 = filePath.Replace(".css", ".rtl.css");
-                if (FileExists(page, text2))
-                {
-                    filePath = text2;
-                }
+                string locfile = filePath.Replace(".css", ".rtl.css");
+                if (FileExists(page, locfile))
+                    filePath = locfile;
             }
             //END persian-dnnsoftware
 

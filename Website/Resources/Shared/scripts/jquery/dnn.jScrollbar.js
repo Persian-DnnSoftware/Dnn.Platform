@@ -50,7 +50,13 @@
             this._$scrollbarY.on('mousedown.perfect-scroll', $.proxy(this._onMouseDownY, this));
 
             this._scrollbarXBottom = parseInt(this._$scrollbarX.css('bottom'), 10);
-            this._scrollbarYRight = parseInt(this._$scrollbarY.css('right'), 10);
+            //START persian-dnnsoftware
+            if ($('body').hasClass('r' + 't' + 'l')) {
+                this._scrollbarYRight = parseInt(this._$scrollbarY.css('left'), 10);
+            } else {
+                this._scrollbarYRight = parseInt(this._$scrollbarY.css('right'), 10);
+            }
+            //END persian-dnnsoftware
 
             if (this.$element.mousewheel) {
                 this.$element.mousewheel($.proxy(this._onMouseWheel, this));

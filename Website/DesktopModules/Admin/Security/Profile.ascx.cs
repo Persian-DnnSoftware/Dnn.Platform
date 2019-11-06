@@ -185,8 +185,11 @@ namespace DesktopModules.Admin.Security
             var basePage = Page as PageBase;
             if (basePage != null)
             {
-				//Check if culture is RTL
-                ProfileProperties.LabelMode = basePage.PageCulture.TextInfo.IsRightToLeft ? LabelMode.Right : LabelMode.Left;
+                //Check if culture is RTL
+                //START persian-dnnsoftware
+                //ProfileProperties.LabelMode = basePage.PageCulture.TextInfo.IsRightToLeft ? LabelMode.Right : LabelMode.Left;
+                ProfileProperties.LabelMode = LabelMode.Left;
+                //END persian-dnnsoftware
             }
             ProfileProperties.LocalResourceFile = LocalResourceFile;
         }

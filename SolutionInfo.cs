@@ -36,5 +36,5 @@ using System.Reflection;
 [assembly: AssemblyTrademark("DNN")]
 
 [assembly: AssemblyVersion("9.4.1.0")]
-[assembly: AssemblyFileVersion("9.4.1.28")]
-[assembly: AssemblyInformationalVersion("9.4.1+Branch.v9.4.1-persian.Sha.005c33baa45db624b2438569ab5ca6c6fa71b18a")]
+[assembly: AssemblyFileVersion("9.4.1.34")]
+[assembly: AssemblyInformationalVersion("9.4.1+Branch.v9.4.1-persian.Sha.d36633e16baf3a42a5e0c4bd91d35afeca2058b6")]
