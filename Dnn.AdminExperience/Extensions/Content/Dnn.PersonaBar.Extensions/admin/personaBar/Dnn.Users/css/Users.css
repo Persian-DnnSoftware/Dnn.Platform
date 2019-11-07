@@ -1,2 +1,13 @@
-﻿body {
+﻿/*persian-dnnsoftware*/
+.rtl .passwordStrengthLabel {
+    position: absolute;
+    bottom: 30px;
+    left: 1em;
+    right: unset !important;
+    font-weight: 700;
+    text-align: left !important;
+}
+
+.rtl .passwordStrength {
+    top: -23px;
 }
