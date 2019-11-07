@@ -593,7 +593,7 @@ namespace DotNetNuke.Services.Install
                 string strError = Config.UpdateMachineKey();
                 if (String.IsNullOrEmpty(strError))
                 {
-                    //sEND a new request to the application to initiate step 2
+                    //send a new request to the application to initiate step 2
                     HttpContext.Current.Response.Redirect(HttpContext.Current.Request.RawUrl, true);
                 }
                 else
@@ -793,7 +793,7 @@ namespace DotNetNuke.Services.Install
         }
 
 
-        private static void VisitSiteClick(object sENDer, EventArgs eventArgs)
+        private static void VisitSiteClick(object sender, EventArgs eventArgs)
         {
             //Delete the status file.
             try
@@ -1068,7 +1068,7 @@ namespace DotNetNuke.Services.Install
                         return;
                     }
 
-                    //Adding ClientDepENDency Resources config to web.config                    
+                    //Adding ClientDependency Resources config to web.config               
                     if (!ClientResourceManager.IsInstalled() && ValidatePermissions().Item1)
                     {
                         ClientResourceManager.AddConfiguration();
@@ -1196,7 +1196,7 @@ namespace DotNetNuke.Services.Install
         }
 
         [System.Web.Services.WebMethod]
-        public static object GetInstallationLog(int STARTRow)
+        public static object GetInstallationLog(int startRow)
         {
             var data = string.Empty;
             var logFile = InstallController.Instance.InstallerLogName;
@@ -1204,11 +1204,11 @@ namespace DotNetNuke.Services.Install
             {
                 var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Portals", "_default", "logs", logFile));
                 var errorLogged = false;
-                if (lines.Length > STARTRow)
+                if (lines.Length > startRow)
                 {
-                    var count = Math.Min(lines.Length - STARTRow, 500);
+                    var count = Math.Min(lines.Length - startRow, 500);
                     var sb = new System.Text.StringBuilder();
-                    for (var i = STARTRow; i < STARTRow + count; i++)
+                    for (var i = startRow; i < startRow + count; i++)
                     {
                         if (lines[i].Contains("[ERROR]"))
                         {
