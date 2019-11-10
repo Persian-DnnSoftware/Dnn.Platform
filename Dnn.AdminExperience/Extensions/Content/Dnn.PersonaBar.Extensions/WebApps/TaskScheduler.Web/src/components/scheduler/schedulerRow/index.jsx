@@ -2,17 +2,23 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Collapsible, SvgIcons } from "@dnnsoftware/dnn-react-common";
+
 import "./style.less";
 import resx from "../../../resources";
 import {
     task as TaskActions
 } from "../../../actions";
 import util from "../../../utils";
+//START persian-dnnsoftware
+import moment from "moment-jalali";
+//END persian-dnnsoftware
 
 /*eslint-disable quotes*/
 const svgIcon = require(`!raw-loader!./../../svg/checkmark.svg`).default;
 const svgIcon2 = require(`!raw-loader!./../../svg/history.svg`).default;
-
+//START persian-dnnsoftware
+const cultureInfo =window.parent['personaBarSettings']['culture'];
+//END persian-dnnsoftware
 class SchedulerRow extends Component {
     constructor() {
         super();
@@ -81,6 +87,7 @@ class SchedulerRow extends Component {
             <div className={"collapsible-component-scheduler" + (opened ? " row-opened" : "")}>
                 <div className={"collapsible-header-scheduler " + !opened} >
                     <div className={"row"}>
+
                         <div title={props.name} className="schedule-item item-row-name">
                             {props.name}&nbsp; </div>
                         <div className="schedule-item item-row-frequency">
@@ -88,7 +95,11 @@ class SchedulerRow extends Component {
                         <div className="schedule-item item-row-retryTimeLapse">
                             {props.retryTimeLapse}</div>
                         <div className="schedule-item item-row-nextStart">
-                            {props.nextStart}&nbsp; </div>
+                        {/* START persian-dnnsoftware */}
+                        {/* props.nextStart &nbsp; */}
+                            {cultureInfo == 'fa-IR' ? 1900 < moment(props.nextStart).format("YYYY") ? moment(props.nextStart).format("jYYYY/jMM/jDD HH:mm:ss") : props.nextStart : props.nextStart}&nbsp;
+                        {/* END persian-dnnsoftware */}
+                        </div>
                         <div className="schedule-item item-row-enabled">
                             {this.getEnabledDisplay()}</div>
                         {props.id !== "add" &&
@@ -101,6 +112,7 @@ class SchedulerRow extends Component {
                             <div className={opened && props.panelIndex === 0 ? "edit-icon-active" : "edit-icon"} title={resx.get("ControlTitle_edit")} dangerouslySetInnerHTML={{ __html: SvgIcons.EditIcon }} onClick={this.toggle.bind(this, 0)}>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <Collapsible autoScroll={true} isOpened={opened} style={{ float: "left", width: "100%" }}>{opened && props.children}</Collapsible>

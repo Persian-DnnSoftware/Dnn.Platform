@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import styles from "./style.less";
-
+import moment from "moment-jalali";
 /*eslint-disable quotes*/
 const svgIcon = require(`!raw-loader!./svg/checkmark.svg`).default;
+//START persian-dnnsoftware
+const cultureInfo =window.parent['personaBarSettings']['culture'];
+//END persian-dnnsoftware
 
 class TaskHistoryItemRow extends Component {
     constructor() {
@@ -71,13 +74,43 @@ class TaskHistoryItemRow extends Component {
     getStartEndDisplay() {
         let display = "<span>&nbsp;</span>";
         if (this.props.startDate) {
-            display = "<p>S: " + this.props.startDate + "</p>";
+            //display += "<p>S: " + this.props.startDate + "</p>";
+            //START persian-dnnsoftware
+            if(cultureInfo =='fa-IR'){
+                if(1900<moment(this.props.startDate).format("YYYY")){
+                    display = "<p>شروع: " + moment(this.props.startDate).format("jYYYY/jMM/jDD HH:mm:ss") + "</p>";
+                }
+            }
+            else{
+                display += "<p>S: " + this.props.startDate + "</p>";
+            }
+            //END persian-dnnsoftware
         }
         if (this.props.endDate) {
-            display += "<p>E: " + this.props.endDate + "</p>";
+            //display += "<p>E: " + this.props.endDate + "</p>";
+            //START persian-dnnsoftware
+            if(cultureInfo =='fa-IR'){
+                if(1900<moment(this.props.endDate).format("YYYY")){
+                    display += "<p>پایان: " + moment(this.props.endDate).format("jYYYY/jMM/jDD HH:mm:ss") + "</p>";
+                }
+            }
+            else{
+                display += "<p>E: " + this.props.endDate + "</p>";
+            }
+            //END persian-dnnsoftware
         }
         if (this.props.nextStart) {
-            display += "<p>N: " + this.props.nextStart + "</p>";
+            //display += "<p>N: " + this.props.nextStart + "</p>";
+            //START persian-dnnsoftware
+            if(cultureInfo =='fa-IR'){
+                if(1900<moment(this.props.nextStart).format("YYYY")){
+                    display += "<p>بعدی: " + moment(this.props.nextStart).format("jYYYY/jMM/jDD HH:mm:ss") + "</p>";
+                }
+            }
+            else{
+                display += "<p>E: " + this.props.nextStart + "</p>";
+            }
+            //END persian-dnnsoftware
         }
         return <div dangerouslySetInnerHTML={{ __html: display }}></div>;
     }
