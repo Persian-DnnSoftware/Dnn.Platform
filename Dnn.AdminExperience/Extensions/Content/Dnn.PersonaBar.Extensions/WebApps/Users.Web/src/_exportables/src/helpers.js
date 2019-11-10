@@ -1,11 +1,32 @@
 /* eslint-disable no-useless-escape */
 import utilities from "utils";
-import Moment from "moment";
+//import Moment from "moment";
+//START persian-dnnsoftware
+import Moment from "moment-jalali";
+//END persian-dnnsoftware
 
+//START persian-dnnsoftware
+const cultureInfo =window.parent['personaBarSettings']['culture'];
+//END persian-dnnsoftware
 export function formatDate(dateValue, longformat) {
     if (!dateValue) {
         return "";
     }
+    //return window.isRtl && null != e && moment.loadPersian(), !0 === t ? moment(e).format("jYYYY/jM/jD (hh:mm:ss a)") : moment(e).format("jYYYY/jM/jD")
+    //START persian-dnnsoftware
+    if(cultureInfo==="fa-IR"){
+        if(dateValue!==null){
+            Moment.loadPersian()
+            if(longformat!==0){
+                console.log({'longformat!==0':longformat,'dateValue' :dateValue });
+                return Moment(dateValue).format("jYYYY/jM/jD (hh:mm:ss a)");
+            }else{
+                console.log({'0=longformat':longformat, '0=dateValue':dateValue});
+                return Moment(dateValue).format("jYYYY/jM/jD");
+            }
+        }
+    }
+    //END persian-dnnsoftware
     let date = new Date(dateValue);
     let yearValue = date.getFullYear();
     if (yearValue < 1900) {

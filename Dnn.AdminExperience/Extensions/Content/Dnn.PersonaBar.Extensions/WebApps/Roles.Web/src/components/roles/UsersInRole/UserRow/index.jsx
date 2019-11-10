@@ -10,6 +10,14 @@ import {
     roleUsers as RoleUsersActions
 } from "../../../../actions";
 
+//START persian-dnnsoftware
+import moment from "moment-jalali";
+//END persian-dnnsoftware
+
+//START persian-dnnsoftware
+const cultureInfo =window.parent['personaBarSettings']['culture'];
+//END persian-dnnsoftware
+
 class UserRow extends Component {
 
     constructor() {
@@ -26,8 +34,20 @@ class UserRow extends Component {
     }
 
     formateDate(dateValue) {
-        let date = new Date(dateValue);
 
+        try{
+        if(cultureInfo==="fa-IR"){
+            if(dateValue!==null){
+            moment.loadPersian();
+            //return moment(dateValue).format("jYYYY/jM/jD");
+            }
+        }
+        }finally {
+                console.log('err');
+        }
+        
+        let date = new Date(dateValue);
+        
         let dayValue = date.getDate(),
             monthValue = date.getMonth() + 1,
             yearValue = date.getFullYear();
@@ -37,6 +57,7 @@ class UserRow extends Component {
         }
 
         return monthValue + "/" + dayValue + "/" + yearValue;
+        
     }
     onStartTimeClick(userRole, index) {
         this.setState({ editIndex: index, editCommand: "startTime", isCalendarVisible: true });
