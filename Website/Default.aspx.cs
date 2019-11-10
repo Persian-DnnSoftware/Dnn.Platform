@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNuke® - http://www.dotnetnuke.com
+// DotNetNuke® - https://www.dnnsoftware.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -30,6 +30,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using Microsoft.Extensions.DependencyInjection;
+
+using DotNetNuke.Abstractions;
 
 using DotNetNuke.Application;
 using DotNetNuke.Common.Utilities;
@@ -77,6 +80,13 @@ namespace DotNetNuke.Framework
 
         private static readonly Regex HeaderTextRegex = new Regex("<meta([^>])+name=('|\")robots('|\")",
             RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.Compiled);
+
+        protected INavigationManager NavigationManager { get; }
+
+        public DefaultPage()
+        {
+            NavigationManager = Globals.DependencyProvider.GetRequiredService<INavigationManager>();
+        }
 
         #region Properties
 
@@ -178,14 +188,14 @@ namespace DotNetNuke.Framework
 
         /// -----------------------------------------------------------------------------
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <remarks>
         /// - Obtain PortalSettings from Current Context
         /// - redirect to a specific tab based on name
         /// - if first time loading this page then reload to avoid caching
         /// - set page title and stylesheet
-        /// - check to see if we should show the Assembly Version in Page Title 
+        /// - check to see if we should show the Assembly Version in Page Title
         /// - set the background image if there is one selected
         /// - set META tags, copyright, keywords and description
         /// </remarks>
@@ -221,7 +231,7 @@ namespace DotNetNuke.Framework
                                 break;
                         }
                     }
-                    Response.Redirect(Globals.NavigateURL(tab.TabID, Null.NullString, parameters.ToArray()), true);
+                    Response.Redirect(NavigationManager.NavigateURL(tab.TabID, Null.NullString, parameters.ToArray()), true);
                 }
                 else
                 {
@@ -280,7 +290,7 @@ namespace DotNetNuke.Framework
             {
                 metaPanel.Controls.Add(new LiteralControl(PortalSettings.PageHeadText));
             }
-            
+
             //set page title
             if (UrlUtils.InPopUp())
             {
@@ -311,7 +321,7 @@ namespace DotNetNuke.Framework
                             break;
                     }
                     var title = Localization.LocalizeControlTitle(control);
-                    
+
                     strTitle.Append(string.Concat(" > ", PortalSettings.ActiveTab.LocalizedTabName));
                     strTitle.Append(string.Concat(" > ", title));
                 }
@@ -644,7 +654,7 @@ namespace DotNetNuke.Framework
                 {
                     if (PortalSettings.HomeTabId > 0)
                     {
-                        Response.Redirect(Globals.NavigateURL(PortalSettings.HomeTabId), true);
+                        Response.Redirect(NavigationManager.NavigateURL(PortalSettings.HomeTabId), true);
                     }
                     else
                     {
@@ -668,7 +678,7 @@ namespace DotNetNuke.Framework
                 }
                 else //other modes just depend on the default alias
                 {
-                    if (string.Compare(PortalSettings.PortalAlias.HTTPAlias, PortalSettings.DefaultPortalAlias, StringComparison.InvariantCulture ) != 0) 
+                    if (string.Compare(PortalSettings.PortalAlias.HTTPAlias, PortalSettings.DefaultPortalAlias, StringComparison.InvariantCulture ) != 0)
                         primaryHttpAlias = PortalSettings.DefaultPortalAlias;
                 }
                 if (primaryHttpAlias != null && string.IsNullOrEmpty(CanonicalLinkUrl))//a primary http alias was identified
@@ -712,7 +722,7 @@ namespace DotNetNuke.Framework
             //add Favicon
             ManageFavicon();
 
-            //ClientCallback Logic 
+            //ClientCallback Logic
             ClientAPI.HandleClientAPICallbackEvent(this);
 
             //add viewstateuserkey to protect against CSRF attacks

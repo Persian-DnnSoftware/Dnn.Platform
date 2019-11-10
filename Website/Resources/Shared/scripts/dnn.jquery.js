@@ -496,8 +496,8 @@
                             .css('visibility', 'hidden')
                             .draggable('destroy');
                     } else {
-                    helpSelector.css({ "left": '0', "top": '0' })
-                        .css('visibility', 'hidden')
+                        helpSelector.css({ "left": '0', "top": '0' })
+                            .css('visibility', 'hidden')
                             .draggable('destroy');
                     }
                     //END persian-dnnsoftware
@@ -2134,7 +2134,7 @@
                     }
                     //START persian-dnnsoftware
                     //if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur") {
-                        if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur" || event.which == 1548 || event.which == 1563) {
+                    if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur" || event.which == 1548 || event.which == 1563) {
                         //END persian-dnnsoftware
                         event.preventDefault();
                         if (!clickedOnAutoComplete) {
@@ -4309,9 +4309,38 @@
             }
         });
     };
+
+    var handlerSendVerificationMailLink = function() {
+        $(document.body).on('click', 'a.send-verification-mail', function(e) {
+            e.preventDefault();
+
+            var service = $.dnnSF();
+            var url = service.getServiceRoot('InternalServices') + 'NewUserNotificationService/SendVerificationMail';
+            var antiForgeryToken = $('input[name="__RequestVerificationToken"]').val();
+            url += '?__RequestVerificationToken=' + antiForgeryToken;
+
+            $.ajax({
+                url: url,
+                beforeSend: service ? service.setModuleHeaders : null,
+                success: function(data) {
+                    $.dnnAlert({ text: data.Result });
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    if (xhr && xhr.responseText) {
+                        $.dnnAlert({ text: eval('(' + xhr.responseText + ')').Message });
+                    }
+                },
+                type: 'POST',
+                dataType: 'json',
+                contentType: "application/json"
+            });
+        });
+    };
+
     window.__rgDataDivScrollTopPersistArray = [];
     $(document).ajaxComplete(dnnInitCustomisedCtrls);
     Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(saveRgDataDivScrollTop);
     Sys.WebForms.PageRequestManager.getInstance().add_endRequest(dnnInitCustomisedCtrls);
     $(dnnInitCustomisedCtrls);
+    handlerSendVerificationMailLink();
 })(jQuery);

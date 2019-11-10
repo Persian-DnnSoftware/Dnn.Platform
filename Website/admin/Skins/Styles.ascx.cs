@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNuke� - http://www.dotnetnuke.com
+// DotNetNuke® - https://www.dnnsoftware.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -20,13 +20,12 @@
 #endregion
 #region Usings
 
-using DotNetNuke.Common;
 using System;
-using System.Globalization;
-using System.IO;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+
+using DotNetNuke.Common;
 
 #endregion
 

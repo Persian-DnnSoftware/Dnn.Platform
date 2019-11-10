@@ -389,7 +389,6 @@
         var sterm = dnn.searchResult.queryOptions.searchTerm;
         var advancedTerm = dnn.searchResult.queryOptions.advancedTerm;
         if ((!sterm || $.trim(sterm).length <= 1) && (!advancedTerm || $.trim(advancedTerm).length <= 1)) {
-            dnn.searchResult.renderResults(null);
             return;
         }
 
@@ -484,7 +483,7 @@
         } else {
             advancedTextCtrl.html('').hide();
             var w1 = $('#dnnSearchResult_dnnSearchBox_input').next().next().next().width();
-            
+
             //START persian-dnnsoftware
             if ($('body').hasClass('r' + 't' + 'l')) {
                 $('#dnnSearchResult_dnnSearchBox_input').css({
@@ -506,7 +505,6 @@
                 });
             }
             //END persian-dnnsoftware
-
             advancedTextClear.removeClass('dnnShow');
         }
 
