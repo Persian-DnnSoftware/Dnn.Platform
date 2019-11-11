@@ -34,19 +34,21 @@ class UserRow extends Component {
     }
 
     formateDate(dateValue) {
-
-        try{
-        if(cultureInfo==="fa-IR"){
-            if(dateValue!==null){
-            moment.loadPersian();
-            //return moment(dateValue).format("jYYYY/jM/jD");
-            }
-        }
-        }finally {
-                console.log('err');
-        }
+        
+        
+        
+        
         
         let date = new Date(dateValue);
+
+        
+        if(cultureInfo==="fa-IR"){
+            if(1900 < moment(dateValue).format("YYYY")){
+                console.log({'dayValue3':dayValue});
+            moment.loadPersian();
+            return moment(dateValue).format("jYYYY/jM/jD");
+            }
+        }
         
         let dayValue = date.getDate(),
             monthValue = date.getMonth() + 1,
