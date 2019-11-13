@@ -188,18 +188,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KnockoutMapping", "Knockout
 		DNN Platform\JavaScript Libraries\KnockoutMapping\releaseNotes.txt = DNN Platform\JavaScript Libraries\KnockoutMapping\releaseNotes.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{A765907D-1AB9-4CF4-AAAB-FC2F8049EEBA}"
-	ProjectSection(SolutionItems) = preProject
-		DNN Platform\Website\Templates\Blank Website.template = DNN Platform\Website\Templates\Blank Website.template
-		DNN Platform\Website\Templates\Blank Website.template.en-US.resx = DNN Platform\Website\Templates\Blank Website.template.en-US.resx
-		..\..\Dnndev.me_9.3.1\Portals\_default\Blank Website.template.fa-IR.resx = ..\..\Dnndev.me_9.3.1\Portals\_default\Blank Website.template.fa-IR.resx
-		DNN Platform\Website\Templates\Blank Website.template.resources = DNN Platform\Website\Templates\Blank Website.template.resources
-		DNN Platform\Website\Templates\Default Website.template = DNN Platform\Website\Templates\Default Website.template
-		DNN Platform\Website\Templates\Default Website.template.en-US.resx = DNN Platform\Website\Templates\Default Website.template.en-US.resx
-		..\..\Dnndev.me_9.3.1\Portals\_default\Default Website.template.fa-IR.resx = ..\..\Dnndev.me_9.3.1\Portals\_default\Default Website.template.fa-IR.resx
-		DNN Platform\Website\Templates\Default Website.template.resources = DNN Platform\Website\Templates\Default Website.template.resources
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5EC5DBCB-B4AD-453E-896C-E238F0F57FDA}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
