@@ -188,14 +188,14 @@ namespace DotNetNuke.Framework
 
         /// -----------------------------------------------------------------------------
         /// <summary>
-        ///
+        /// 
         /// </summary>
         /// <remarks>
         /// - Obtain PortalSettings from Current Context
         /// - redirect to a specific tab based on name
         /// - if first time loading this page then reload to avoid caching
         /// - set page title and stylesheet
-        /// - check to see if we should show the Assembly Version in Page Title
+        /// - check to see if we should show the Assembly Version in Page Title 
         /// - set the background image if there is one selected
         /// - set META tags, copyright, keywords and description
         /// </remarks>
@@ -290,7 +290,7 @@ namespace DotNetNuke.Framework
             {
                 metaPanel.Controls.Add(new LiteralControl(PortalSettings.PageHeadText));
             }
-
+            
             //set page title
             if (UrlUtils.InPopUp())
             {
@@ -321,7 +321,7 @@ namespace DotNetNuke.Framework
                             break;
                     }
                     var title = Localization.LocalizeControlTitle(control);
-
+                    
                     strTitle.Append(string.Concat(" > ", PortalSettings.ActiveTab.LocalizedTabName));
                     strTitle.Append(string.Concat(" > ", title));
                 }
@@ -604,7 +604,12 @@ namespace DotNetNuke.Framework
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-
+            //START persian-dnnsoftware
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+            {
+                Body.Attributes.Add("class", "rtl ");
+            }
+            //END persian-dnnsoftware
             //set global page settings
             InitializePage();
 
@@ -673,7 +678,7 @@ namespace DotNetNuke.Framework
                 }
                 else //other modes just depend on the default alias
                 {
-                    if (string.Compare(PortalSettings.PortalAlias.HTTPAlias, PortalSettings.DefaultPortalAlias, StringComparison.InvariantCulture ) != 0)
+                    if (string.Compare(PortalSettings.PortalAlias.HTTPAlias, PortalSettings.DefaultPortalAlias, StringComparison.InvariantCulture ) != 0) 
                         primaryHttpAlias = PortalSettings.DefaultPortalAlias;
                 }
                 if (primaryHttpAlias != null && string.IsNullOrEmpty(CanonicalLinkUrl))//a primary http alias was identified
@@ -717,7 +722,7 @@ namespace DotNetNuke.Framework
             //add Favicon
             ManageFavicon();
 
-            //ClientCallback Logic
+            //ClientCallback Logic 
             ClientAPI.HandleClientAPICallbackEvent(this);
 
             //add viewstateuserkey to protect against CSRF attacks
