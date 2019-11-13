@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema_Localized Dnnplus.ir 2018 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LogType.Header" xml:space="preserve">
+    <value>نوع لاگ</value>
+  </data>
+  <data name="Portal.Header" xml:space="preserve">
+    <value>پرتال</value>
+  </data>
+  <data name="Active.Header" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="FileName.Header" xml:space="preserve">
+    <value>نام فایل</value>
+  </data>
+  <data name="Edit.EditText" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>تنظیمات ثبت وقایع</value>
+  </data>
+  <data name="plIsActive.Text" xml:space="preserve">
+    <value>فعال سازی ثبت لاگ</value>
+  </data>
+  <data name="plIsActive.Help" xml:space="preserve">
+    <value>آیا مایل هستید ثبت لاگ ها فعال شود؟</value>
+  </data>
+  <data name="plLogTypeKey.Text" xml:space="preserve">
+    <value>نوع وقایع</value>
+  </data>
+  <data name="plLogTypeKey.Help" xml:space="preserve">
+    <value>کدام نوع از وقایع در این فایل ثبت وقایع باشد</value>
+  </data>
+  <data name="plLogTypePortalID.Text" xml:space="preserve">
+    <value>پرتال</value>
+  </data>
+  <data name="plLogTypePortalID.Help" xml:space="preserve">
+    <value>این لاگ وقایع مرتبط با کدام پرتال است؟</value>
+  </data>
+  <data name="plKeepMostRecent.Text" xml:space="preserve">
+    <value>نگهداری جدیدترین ها</value>
+  </data>
+  <data name="plFileName.Text" xml:space="preserve">
+    <value>نام فایل</value>
+  </data>
+  <data name="plFileName.Help" xml:space="preserve">
+    <value>نام فایل ثبت لاگ را وارد نمایید</value>
+  </data>
+  <data name="plEmailNotificationStatus.Text" xml:space="preserve">
+    <value>فعال سازی هشدار ایمیل</value>
+  </data>
+  <data name="plEmailNotificationStatus.Help" xml:space="preserve">
+    <value>آیا مایل هستید در هنگام رخ دادن این رویداد ایمیلی ارسال گردد؟</value>
+  </data>
+  <data name="plThreshold.Text" xml:space="preserve">
+    <value>آستانه رخداد</value>
+  </data>
+  <data name="plMailFromAddress.Text" xml:space="preserve">
+    <value>آدرس ایمیل فرستنده</value>
+  </data>
+  <data name="plMailFromAddress.Help" xml:space="preserve">
+    <value>آدرس ایمیلی که هشدار ها از طرف آن ارسال می گردد</value>
+  </data>
+  <data name="plMailToAddress.Text" xml:space="preserve">
+    <value>آدرس ایمیل گیرنده</value>
+  </data>
+  <data name="plMailToAddress.Help" xml:space="preserve">
+    <value>آدرس ایمیلی که هشدارها را دریافت می نماید</value>
+  </data>
+  <data name="EmailSettings.Text" xml:space="preserve">
+    <value>تنظیمات هشدار ایمیل</value>
+  </data>
+  <data name="AddContent.Action" xml:space="preserve">
+    <value>افزودن تنظیمات لاگ</value>
+  </data>
+  <data name="ConfigDeleted.Text" xml:space="preserve">
+    <value>تنظیمات انتخاب شده حذف شد.</value>
+  </data>
+  <data name="ConfigUpdated.Text" xml:space="preserve">
+    <value>تنظیمات بروز رسانی شد</value>
+  </data>
+  <data name="ConfigAdded.Text" xml:space="preserve">
+    <value>تنظیمات لاگ اضافه شد</value>
+  </data>
+  <data name="LogEntry.Text" xml:space="preserve">
+    <value>داده لاگ</value>
+  </data>
+  <data name="LogEntries.Text" xml:space="preserve">
+    <value>داده های لاگ</value>
+  </data>
+  <data name="Occurence.Text" xml:space="preserve">
+    <value>رخداد</value>
+  </data>
+  <data name="Occurences.Text" xml:space="preserve">
+    <value>رخدادها</value>
+  </data>
+  <data name="In.Text" xml:space="preserve">
+    <value>در</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>ویرایش تنظیمات </value>
+  </data>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;h1&gt;درباره نمایشگر لاگ&lt;/h1&gt;&lt;p&gt;به شما امکان مشاهده لاگ های ثبت شده برای رویدادهای پورتال را می دهد.&lt;/p&gt;</value>
+  </data>
+  <data name="DeleteError.Text" xml:space="preserve">
+    <value>تنظیمات انتخاب شده نمی تواند حذف گردد. شما می بایست ابتدا تمام داده های لاگ موجود برای این نوع لاگ را حذف نمایید.</value>
+  </data>
+</root>

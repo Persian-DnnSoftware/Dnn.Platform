@@ -28,6 +28,12 @@
     var mainJs = mobi ? 'scripts/main.mobi.js' : 'scripts/main.js';
     var mainCss = mobi ? 'css/main.mobi.css' : 'css/main.css';
 
+    //START dnnsoftware.ir
+    if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+        mainCss = mobi ? 'css/main.mobi.rtl.css' : 'css/main.rtl.css';
+    }
+    //END dnnsoftware.ir
+
     styles.push(mainCss);
 
     addCssToHead(styles, version);

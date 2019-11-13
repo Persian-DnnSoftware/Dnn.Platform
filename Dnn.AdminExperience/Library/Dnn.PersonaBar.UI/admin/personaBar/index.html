@@ -7,6 +7,20 @@
     <style>
         #topLevelMenu .hovermenu > ul, ul.personabarnav {list-style-type: none;}
     </style>
+    <!--START persian-dnnsoftware-->
+    <script type="text/javascript">
+        if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+            addJsToBody('scripts/contrib/moment.rtl.js');
+            addJsToBody('scripts/contrib/moment-jalaali.rtl.js');
+            function addJsToBody(js) {
+                var script = document.createElement('script');
+                script.setAttribute('src', js);
+                document.getElementsByTagName('head')[0].appendChild(script);
+
+            };
+        }
+    </script>
+    <!--END persian-dnnsoftware-->
     <script type="text/javascript">
         window.Sys = !window.Sys ? window.top.Sys : window.Sys;
         window.dnn = !window.dnn ? window.top.dnn : window.dnn;
