@@ -8,10 +8,17 @@ import {
     task as TaskActions
 } from "../../../actions";
 import util from "../../../utils";
+//START persian-dnnsoftware
+import moment from "moment-jalali";
+//END persian-dnnsoftware
+
 
 /*eslint-disable quotes*/
 const svgIcon = require(`!raw-loader!./../../svg/checkmark.svg`).default;
 const svgIcon2 = require(`!raw-loader!./../../svg/history.svg`).default;
+//START persian-dnnsoftware
+const cultureInfo =window.parent['personaBarSettings']['culture'];
+//END persian-dnnsoftware
 
 class SchedulerRow extends Component {
     constructor() {
@@ -88,7 +95,11 @@ class SchedulerRow extends Component {
                         <div className="schedule-item item-row-retryTimeLapse">
                             {props.retryTimeLapse}</div>
                         <div className="schedule-item item-row-nextStart">
-                            {props.nextStart}&nbsp; </div>
+                        {/* START persian-dnnsoftware */}
+                        {/* props.nextStart&nbsp; */}
+                        {cultureInfo == 'fa-IR' ? 1900 < moment(props.nextStart).format("YYYY") ? moment(props.nextStart).format("jYYYY/jMM/jDD HH:mm:ss") : props.nextStart : props.nextStart}&nbsp;
+                        {/* END persian-dnnsoftware */}
+                        </div>
                         <div className="schedule-item item-row-enabled">
                             {this.getEnabledDisplay()}</div>
                         {props.id !== "add" &&
