@@ -1,7 +1,7 @@
 <div dir="rtl" align="right">
 
 
-<img src='Logo.png' />
+<img src='logo.png' />
 
 # نسخه فارسی دی ان ان (DNN)
 
