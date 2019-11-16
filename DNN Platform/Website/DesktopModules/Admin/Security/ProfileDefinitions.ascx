@@ -3,8 +3,8 @@
 <div class="dnnForm dnnProfileProperties">
     <asp:datagrid id="grdProfileProperties" AutoGenerateColumns="false" 
                 width="96%" CellPadding="4" GridLines="None" CssClass="dnnGrid" Runat="server">
-        <headerstyle cssclass="dnnGridHeader" verticalalign="Top"  /><%--dnnsoftware.ir--%>
-        <itemstyle cssclass="dnnGridItem" /><%--dnnsoftware.ir--%>
+        <headerstyle cssclass="dnnGridHeader" verticalalign="Top"  /><%--persian-dnnsoftware--%>
+        <itemstyle cssclass="dnnGridItem" /><%--persian-dnnsoftware--%>
         <alternatingitemstyle cssclass="dnnGridAltItem" />
         <edititemstyle cssclass="dnnFormInput" />
         <selecteditemstyle cssclass="dnnFormError" />

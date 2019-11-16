@@ -255,10 +255,10 @@ namespace DotNetNuke.Services.Localization
         {
             get
             {
-                //START dnnsoftware.ir
+                //START persian-dnnsoftware
                 //return "Pacific Standard Time";
                 return "Iran Standard Time";
-                //END dnnsoftware.ir
+                //END persian-dnnsoftware
             }
         }
 
@@ -778,16 +778,16 @@ namespace DotNetNuke.Services.Localization
         public string GetFixedCurrency(decimal expression, string culture, int numDigitsAfterDecimal)
         {
             string oldCurrentCulture = CurrentUICulture;
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //var newCulture = new CultureInfo(culture);
             var newCulture = Persian.PersianController.NewCultureInfo(culture);
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
             Thread.CurrentThread.CurrentUICulture = newCulture;
             string currencyStr = expression.ToString(newCulture.NumberFormat.CurrencySymbol);
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //var oldCulture = new CultureInfo(oldCurrentCulture);
             var oldCulture = Persian.PersianController.NewCultureInfo(oldCurrentCulture);
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
             Thread.CurrentThread.CurrentUICulture = oldCulture;
             return currencyStr;
         }
@@ -795,16 +795,16 @@ namespace DotNetNuke.Services.Localization
         public string GetFixedDate(DateTime expression, string culture)
         {
             string oldCurrentCulture = CurrentUICulture;
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //var newCulture = new CultureInfo(culture);
             var newCulture = Persian.PersianController.NewCultureInfo(culture);
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
             Thread.CurrentThread.CurrentUICulture = newCulture;
             string dateStr = expression.ToString(newCulture.DateTimeFormat.FullDateTimePattern);
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //var oldCulture = new CultureInfo(oldCurrentCulture);
             var oldCulture = Persian.PersianController.NewCultureInfo(oldCurrentCulture);
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
             Thread.CurrentThread.CurrentUICulture = oldCulture;
             return dateStr;
         }
@@ -900,10 +900,10 @@ namespace DotNetNuke.Services.Localization
 
             // finally set the cookie
             SetLanguage(pageCulture.Name);
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //return pageCulture;
             return Persian.PersianController.NewCultureInfo(pageCulture);
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
         }
 
         /// <summary>
@@ -979,10 +979,10 @@ namespace DotNetNuke.Services.Localization
             if (!String.IsNullOrEmpty(portalSettings.DefaultLanguage))
             {
                 // As the portal default language can never be disabled, we know this language is available and enabled
-                //START dnnsoftware.ir
+                //START persian-dnnsoftware
                 //culture = new CultureInfo(portalSettings.DefaultLanguage);
                 culture = Persian.PersianController.NewCultureInfo(portalSettings.DefaultLanguage);
-                //END dnnsoftware.ir
+                //END persian-dnnsoftware
             }
             else
             {
@@ -995,10 +995,10 @@ namespace DotNetNuke.Services.Localization
                 {
                     foreach (string localeCode in enabledLocales.Keys)
                     {
-                        //START dnnsoftware.ir
+                        //START persian-dnnsoftware
                         //culture = new CultureInfo(localeCode);
                         culture = Persian.PersianController.NewCultureInfo(localeCode);
-                        //END dnnsoftware.ir
+                        //END persian-dnnsoftware
                         break;
                     }
                 }
@@ -1042,10 +1042,10 @@ namespace DotNetNuke.Services.Localization
             if (!String.IsNullOrEmpty(language))
             {
                 if (LocaleController.Instance.IsEnabled(ref language, portalId))
-                    //START dnnsoftware.ir
+                    //START persian-dnnsoftware
                     //culture = new CultureInfo(language);
                     culture = Persian.PersianController.NewCultureInfo(language);
-                //END dnnsoftware.ir
+                //END persian-dnnsoftware
                 else
                 {
                     string preferredLanguage = language.Split('-')[0];
@@ -1058,10 +1058,10 @@ namespace DotNetNuke.Services.Localization
                     {
                         if (localeCode.Split('-')[0] == preferredLanguage.Split('-')[0])
                         {
-                            //START dnnsoftware.ir
+                            //START persian-dnnsoftware
                             //culture = new CultureInfo(localeCode);
                             culture = Persian.PersianController.NewCultureInfo(localeCode);
-                            //END dnnsoftware.ir
+                            //END persian-dnnsoftware
                             break;
                         }
                     }

@@ -148,7 +148,7 @@ div#installation-steps > p > span{
 span.states-icons{
     width: 25px;
     height: 16px;
-    background-image: url("../images/installer-feedback-states-sprite.png");/*dnnsoftware.ir*/
+    background-image: url("../images/installer-feedback-states-sprite.png");/*persian-dnnsoftware*/
     background-repeat: no-repeat;
 }
 
@@ -342,7 +342,7 @@ a.videoLink:hover {
     border-top: 7px solid red;
 }
 
-/* ===========   dnnsoftware.ir   =========== */
+/* ===========   persian-dnnsoftware   =========== */
 
 .rtl .install {
     background-color: white;
@@ -350,7 +350,7 @@ a.videoLink:hover {
     margin-top: 20px;
 	box-shadow: 5px 5px 20px grey;
 	/*IE8*/ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#808080')";
-    text-align:right;/*dnnsoftware.ir*/
+    text-align:right;/*persian-dnnsoftware*/
 }
 
 .rtl div#tabs .installIntro {
@@ -425,7 +425,7 @@ a.videoLink:hover {
 .rtl span.states-icons{
     width: 25px;
     height: 16px;
-    background-image: url("../images/installer-feedback-states-sprite.rtl.png");/*dnnsoftware.ir*/
+    background-image: url("../images/installer-feedback-states-sprite.rtl.png");/*persian-dnnsoftware*/
     background-repeat: no-repeat;
 }
 
@@ -438,7 +438,7 @@ a.videoLink:hover {
 }
 
 .rtl p.step-done > span.states-icons{
-    background-position: 8px 4px;/*dnnsoftware.ir*/
+    background-position: 8px 4px;/*persian-dnnsoftware*/
 }
 
 .rtl p.step-error > span.states-icons{
@@ -480,7 +480,7 @@ a.videoLink:hover {
     padding-right: 24px;
 	margin-left: auto;
     margin-right: 20px;
-    background-position:100% 0;/*dnnsoftware.ir*/
+    background-position:100% 0;/*persian-dnnsoftware*/
 }
 
 .rtl .accept-terms input#chkAcceptTerms + span {
@@ -497,7 +497,7 @@ a.videoLink:hover {
     right: 15px;
 }
 
-/* ===========   dnnsoftware.ir   =========== */
+/* ===========   persian-dnnsoftware   =========== */
 
 .rtl #txtWebsiteName {
 	text-align:right;

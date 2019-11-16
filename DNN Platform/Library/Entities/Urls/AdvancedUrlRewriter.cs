@@ -2514,7 +2514,7 @@ namespace DotNetNuke.Entities.Urls
             // URL validation 
             // check for ".." escape characters commonly used by hackers to traverse the folder tree on the server 
             // the application should always use the exact relative location of the resource it is requesting 
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             var regx = new Regex("[\\\\/]\\.\\.[\\\\/]", RegexOptions.Compiled);
             string url = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? "";
             if (!regx.Match(request.Url.AbsolutePath).Success && !regx.Match(url).Success)
@@ -2526,7 +2526,7 @@ namespace DotNetNuke.Entities.Urls
             //{
             //    throw new HttpException(404, "Not Found");
             //}
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
         }
 
         private static bool CheckForRedirects(Uri requestUri, 

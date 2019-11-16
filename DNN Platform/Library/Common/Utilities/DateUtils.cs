@@ -119,7 +119,7 @@ namespace DotNetNuke.Common.Utilities
         /// <returns>String representing the required date for display</returns>
         public static string CalculateDateForDisplay(DateTime date)
         {
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             string tempdate = date.ToString("yyyy/MM/dd HH:mm:ss");
             DateTime _date = GetDatabaseUtcTime();
             TimeSpan utcTimeDifference;
@@ -128,7 +128,7 @@ namespace DotNetNuke.Common.Utilities
                 date = DateTime.Parse(tempdate);
 
             utcTimeDifference = _date - date;
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
 
             //var utcTimeDifference = GetDatabaseUtcTime() - date;
 

@@ -1,7 +1,7 @@
 ﻿@font-face { font-family: IRANSans; font-style: normal; font-weight: normal; src: url('fonts/IRANSansWeb_Light.eot'); src: url('fonts/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), url('fonts/IRANSansWeb_Light.woff2') format('woff2'), url('fonts/IRANSansWeb_Light.woff') format('woff'), url('fonts/IRANSansWeb_Light.ttf') format('truetype'); }
 @font-face { font-family: IRANSans; font-style: normal; font-weight: bold; src: url('fonts/IRANSansWeb_Medium.eot'); src: url('fonts/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), url('fonts/IRANSansWeb_Medium.woff2') format('woff2'), url('fonts/IRANSansWeb_Medium.woff') format('woff'), url('fonts/IRANSansWeb_Medium.ttf') format('truetype'); }
 * { margin: 0; padding: 0; font-family: IRANSans, tahoma; font-size: 12px; }
-body { height: 100%; overflow: hidden; background: none transparent; direction: rtl; /*dnnsoftware.ir*/ }
+body { height: 100%; overflow: hidden; background: none transparent; direction: rtl; /*persian-dnnsoftware*/ }
 .clear { clear: both; }
 .left { float: right; }
 .right { float: left; }
@@ -95,7 +95,7 @@ span.dnnFormError:after { position: absolute; bottom: -7px; right: 15px; content
 .flat li.focus { background: #1c465e; position: relative; z-index: 3; color: #fff; }
 .flat li.active { background: #1c465e; color: #fff; }
 .personabar { width: 80px; background-color: #3d3c3c; height: 100%; position: fixed; top: 0; right: -100px; z-index: 1000; display: none; }
-.personabar .personabarLogo { width: 80px; height: 103px; background: #515050 url('../images/Logo.png') no-repeat center center; /*dnnsoftware.ir*/ -ms-background-size: 32px auto; background-size: 32px auto; position: relative; }
+.personabar .personabarLogo { width: 80px; height: 103px; background: #515050 url('../images/Logo.png') no-repeat center center; /*persian-dnnsoftware*/ -ms-background-size: 32px auto; background-size: 32px auto; position: relative; }
 .personabar .personabarLogo:hover { background-color: #2f2f2f; }
 .personabar .personabarLogo a.update { text-decoration: none; text-transform: uppercase; font-size: 7px; /*font-family:pb_semibold;*/ display: none; position: absolute; bottom: 8px; width: 100%; text-align: center; }
 .personabar .personabarLogo a.update.normal-update { color: #21a3da; display: block; }

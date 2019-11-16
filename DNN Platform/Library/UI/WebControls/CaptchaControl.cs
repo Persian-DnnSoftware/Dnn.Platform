@@ -63,7 +63,7 @@ namespace DotNetNuke.UI.WebControls
 		private const int EXPIRATION_DEFAULT = 120;
 		private const int LENGTH_DEFAULT = 6;
 		private const string RENDERURL_DEFAULT = "ImageChallenge.captcha.aspx";
-		private const string CHARS_DEFAULT = "0123456789";//dnnsoftware.ir //"abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+		private const string CHARS_DEFAULT = "0123456789";//persian-dnnsoftware //"abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
         #endregion
 

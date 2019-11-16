@@ -84,7 +84,7 @@ namespace DotNetNuke.Services.ClientCapability
         public virtual IClientCapability GetClientCapability(HttpRequest httpRequest)
         {
             IClientCapability clientCapability = GetClientCapability(httpRequest.UserAgent);
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             try
             {
                 FacebookRequest facebookdetails = FacebookRequestController.GetFacebookDetailsFromRequest(httpRequest);
@@ -96,7 +96,7 @@ namespace DotNetNuke.Services.ClientCapability
             }
 
             //clientCapability.FacebookRequest = FacebookRequestController.GetFacebookDetailsFromRequest(httpRequest);
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
 
             return clientCapability;
         }

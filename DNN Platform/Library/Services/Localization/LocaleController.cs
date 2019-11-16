@@ -87,10 +87,10 @@ namespace DotNetNuke.Services.Localization
         /// <returns>culture list.</returns>
         public List<CultureInfo> GetCultures(Dictionary<string, Locale> locales)
         {
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //return locales.Values.Select(locale => new CultureInfo(locale.Code)).ToList();
             return locales.Values.Select(locale => Persian.PersianController.NewCultureInfo(locale.Code)).ToList();
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
         }
 
         /// <summary>

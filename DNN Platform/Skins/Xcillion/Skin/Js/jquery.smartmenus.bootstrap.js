@@ -9,17 +9,17 @@
             var i = a(this);
 
             var isRightToLeft = false;
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             if ($('body').hasClass('rtl') || $('html').attr("lang") == 'fa-IR')
                 isRightToLeft = true;
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
             i.addClass("sm").smartmenus({
                 subMenusSubOffsetX: 2,
                 subMenusSubOffsetY: -6,
                 subIndicators: !1,
                 collapsibleShowFunction: null,
                 collapsibleHideFunction: null,
-                rightToLeftSubMenus: isRightToLeft,//i.hasClass("navbar-right"),//dnnsoftware.ir
+                rightToLeftSubMenus: isRightToLeft,//i.hasClass("navbar-right"),//persian-dnnsoftware
                 bottomToTopSubMenus: i.closest(".navbar").hasClass("navbar-fixed-bottom")
             }).bind({
                 "show.smapi": function (s, i) {
@@ -45,11 +45,11 @@
             s(), a(window).bind("resize.smartmenus" + e.rootId, s)
         })
     }), a.SmartMenus.prototype.isCollapsible = function () {
-        //START dnnsoftware.ir
+        //START persian-dnnsoftware
         if ($('body').hasClass('rtl') || $('html').attr("lang") == 'fa-IR')
             return "right" != this.$firstLink.parent().css("float")
         else
             return "left" != this.$firstLink.parent().css("float")
-        //END dnnsoftware.ir
+        //END persian-dnnsoftware
     }
 }(jQuery);
