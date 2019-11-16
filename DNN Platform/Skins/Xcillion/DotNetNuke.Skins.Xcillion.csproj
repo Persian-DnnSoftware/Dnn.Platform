@@ -27,6 +27,7 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -122,15 +123,19 @@
     <Content Include="Skin\Admin.jpg" />
     <Content Include="Skin\Bootstrap\css\bootstrap.css" />
     <Content Include="Skin\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Skin\Bootstrap\css\bootstrap.min.rtl.css" />
+    <Content Include="Skin\Bootstrap\css\bootstrap.rtl.css" />
     <Content Include="Skin\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Skin\Bootstrap\js\bootstrap.min.js" />
     <Content Include="Skin\Common\AddFiles.ascx" />
     <Content Include="Skin\Css\font-awesome.min.css" />
     <Content Include="Skin\Css\jquery.smartmenus.bootstrap.css" />
+    <Content Include="Skin\Css\jquery.smartmenus.bootstrap.rtl.css" />
     <Content Include="Skin\Home.ascx" />
     <Content Include="Skin\Home.jpg" />
     <Content Include="Skin\Images\arrow-right.png" />
     <Content Include="Skin\Images\breadcrumb-arrow.png" />
+    <Content Include="Skin\Images\breadcrumb-arrow.rtl.png" />
     <Content Include="Skin\Images\logo.png" />
     <Content Include="Skin\Images\message_icon.png" />
     <Content Include="Skin\Images\message_icon_old.png" />
@@ -165,6 +170,7 @@
     <Content Include="Skin\Js\scripts.js" />
     <Content Include="Skin\Menus\MainMenu\MainMenu-menudef.xml" />
     <Content Include="Skin\Menus\MainMenu\MainMenu.css" />
+    <Content Include="Skin\Menus\MainMenu\MainMenu.rtl.css" />
     <Content Include="Skin\Menus\MainMenu\MainMenu.txt" />
     <Content Include="Skin\PopUp.ascx" />
     <Content Include="Skin\skin.css" />
@@ -188,6 +194,7 @@
     <Content Include="Skin.build" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Skin\skin.rtl.css" />
     <Content Include="web.config" />
   </ItemGroup>
   <PropertyGroup>

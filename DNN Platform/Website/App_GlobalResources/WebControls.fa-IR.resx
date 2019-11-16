@@ -163,18 +163,6 @@
   <data name="CriteriaAtLeastNSpecialChars.Text">
     <value>حداقل {0} کاراکتر ویژه (!,@,#,%)</value>
   </data>
-  <data name="CriteriaOneLowerCaseLetter.Text">
-    <value>یک کاراکتر با حروف کوچک</value>
-  </data>
-  <data name="CriteriaOneNumber.Text">
-    <value>یک عدد</value>
-  </data>
-  <data name="CriteriaOneUpperCaseLetter.Text">
-    <value>یک کاراکتر با حروف بزرگ</value>
-  </data>
-  <data name="CriteriaSpecialChar.Text">
-    <value>کاراکتر ویژه (!,@,#,%)</value>
-  </data>
   <data name="PasswordStrengthFair.Text">
     <value>معمولی</value>
   </data>
@@ -201,9 +189,6 @@
   </data>
   <data name="FileUpload.DecompressLabel.Text">
     <value>بازکردن فایل‌های فشرده</value>
-  </data>
-  <data name="FileUpload.DialogHeader.Text">
-    <value>یکی از روش‌های زیر را برای آپلود فایل‌ها انتخاب نمایید</value>
   </data>
   <data name="FileUpload.DragAndDropAreaTitle.Text">
     <value>فایل‌های خود را اینجا رها کنید یا بر روی دکمه انتخاب کلیک نمایید</value>
@@ -270,5 +255,17 @@
   </data>
   <data name="ShowMoreFormatString.Text">
     <value>موارد &lt;b&gt;1&lt;/b&gt;-&lt;b&gt;{0}&lt;/b&gt; خارج از &lt;b&gt;{1}&lt;/b&gt;</value>
+  </data>
+  <data name="ConfirmPasswordMatched.Text">
+    <value>کلمه‌عبور با تکرار آن مطابقت دارد</value>
+  </data>
+  <data name="CriteriaValidationExpression.Text">
+    <value>عبارت منطقی: {0}</value>
+  </data>
+  <data name="PasswordRulesBodyText.Text">
+    <value>شامل حداقل {0} کاراکتر، 1 حرف بزرگ، 1 عدد و {1} باشد.</value>
+  </data>
+  <data name="PasswordRulesHeadText.Text">
+    <value>شرایط کلمه‌عبور:</value>
   </data>
 </root>
