@@ -70,10 +70,21 @@ namespace DotNetNuke.Web.UI.WebControls.Internal
             JavaScript.RequestRegistration(CommonJs.jQuery);
 
             ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/moment.min.js");
-            ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/pikaday.js");
+            //Right to Left Layout
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+                ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.js");
+            else
+                ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/pikaday.js");
+            //END dnnsoftware.ir
+
             ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/pikaday.jquery.js");
 
-            ClientResourceManager.RegisterStyleSheet(Page, "~/Resources/Shared/components/DatePicker/pikaday.css");
+            //Right to Left Layout
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+                ClientResourceManager.RegisterStyleSheet(Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.css");
+            else
+                ClientResourceManager.RegisterStyleSheet(Page, "~/Resources/Shared/components/DatePicker/pikaday.css");
+            //END dnnsoftware.ir
 
             RegisterClientResources();
         }

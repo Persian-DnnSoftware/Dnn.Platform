@@ -185,8 +185,11 @@ namespace DesktopModules.Admin.Security
             var basePage = Page as PageBase;
             if (basePage != null)
             {
-				//Check if culture is RTL
-                ProfileProperties.LabelMode = basePage.PageCulture.TextInfo.IsRightToLeft ? LabelMode.Right : LabelMode.Left;
+                //Check if culture is RTL
+                //START dnnsoftware.ir
+                //ProfileProperties.LabelMode = basePage.PageCulture.TextInfo.IsRightToLeft ? LabelMode.Right : LabelMode.Left;
+                ProfileProperties.LabelMode = LabelMode.Left;
+                //END dnnsoftware.ir
             }
             ProfileProperties.LocalResourceFile = LocalResourceFile;
         }

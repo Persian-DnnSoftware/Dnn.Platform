@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 // Review the values of the assembly attributes
 
-[assembly: AssemblyTitle("DotNetNuke.Website")]
+[assembly: AssemblyTitle("DotNetNuke.Website - persian-dnnsoftware")]
 [assembly: AssemblyDescription("Open Source Web Application Framework")]
 [assembly: ComVisible(false)]
 
