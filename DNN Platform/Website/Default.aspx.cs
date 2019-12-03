@@ -605,6 +605,14 @@ namespace DotNetNuke.Framework
         {
             base.OnInit(e);
 
+            //START persian-dnnsoftware
+
+            //Right to Left Layout
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+                Body.Attributes.Add("class", "rtl ");
+
+            //END persian-dnnsoftware
+
             //set global page settings
             InitializePage();
 

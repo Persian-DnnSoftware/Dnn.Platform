@@ -35,6 +35,9 @@ Disallow: /Resources/SkinWidgets/
 Disallow: /Resources/TabStrip/
 Disallow: /Resources/Widgets/
 Disallow: /Activity-Feed/userId/	# Do not index user profiles
+Disallow: /*?returnurl=
+Disallow: /activity-feed/
+Disallow: /*postid
 
 User-agent: msnbot
 Disallow: /admin/
@@ -66,6 +69,9 @@ Disallow: /Resources/SkinWidgets/
 Disallow: /Resources/TabStrip/
 Disallow: /Resources/Widgets/
 Disallow: /Activity-Feed/userId/	# Do not index user profiles
+Disallow: /*?returnurl=
+Disallow: /activity-feed/
+Disallow: /*postid
 Crawl-delay: 5
 
 User-agent: Slurp
@@ -99,6 +105,9 @@ Disallow: /Resources/SkinWidgets/
 Disallow: /Resources/TabStrip/
 Disallow: /Resources/Widgets/
 Disallow: /Activity-Feed/userId/	# Do not index user profiles
+Disallow: /*?returnurl=
+Disallow: /activity-feed/
+Disallow: /*postid
 Crawl-delay: 5
 
 User-agent: Googlebot
@@ -115,9 +124,21 @@ Disallow: /contest/
 Disallow: /controls/
 Disallow: /Documentation/
 Disallow: /HttpModules/
+Disallow: /images/
 Disallow: /Install/
 Disallow: /Providers/
+Disallow: /Resources/ContentRotator/
+Disallow: /Resources/ControlPanel/
+Disallow: /Resources/Dashboard/
+Disallow: /Resources/FeedBrowser/
+Disallow: /Resources/OpenForceAd/
+Disallow: /Resources/SkinWidgets/
+Disallow: /Resources/TabStrip/
+Disallow: /Resources/Widgets/
 Disallow: /Activity-Feed/userId/	# Do not index user profiles
+Disallow: /*?returnurl=
+Disallow: /activity-feed/
+Disallow: /*postid
 
 User-agent: Yahoo Pipes 1.0
 Disallow: /admin/
@@ -149,6 +170,9 @@ Disallow: /Resources/SkinWidgets/
 Disallow: /Resources/TabStrip/
 Disallow: /Resources/Widgets/
 Disallow: /Activity-Feed/userId/	# Do not index user profiles
+Disallow: /*?returnurl=
+Disallow: /activity-feed/
+Disallow: /*postid
 
 
 # End of robots.txt file
