@@ -2514,12 +2514,20 @@ namespace DotNetNuke.Entities.Urls
             // URL validation 
             // check for ".." escape characters commonly used by hackers to traverse the folder tree on the server 
             // the application should always use the exact relative location of the resource it is requesting 
-            var strURL = request.Url.AbsolutePath;
-            var strDoubleDecodeURL = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? "";
-            if (UrlSlashesRegex.Match(strURL).Success || UrlSlashesRegex.Match(strDoubleDecodeURL).Success)
-            {
-                throw new HttpException(404, "Not Found");
-            }
+
+            //START persian-dnnsoftware
+            var regx = new Regex("[\\\\/]\\.\\.[\\\\/]", RegexOptions.Compiled);
+            string url = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? "";
+            if (!regx.Match(request.Url.AbsolutePath).Success && !regx.Match(url).Success)
+                return;
+            app.Context.Response.Redirect(app.Context.Request.Url.Host.ToString(), true);
+            //var strURL = request.Url.AbsolutePath;
+            //var strDoubleDecodeURL = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? "";
+            //if (UrlSlashesRegex.Match(strURL).Success || UrlSlashesRegex.Match(strDoubleDecodeURL).Success)
+            //{
+            //    throw new HttpException(404, "Not Found");
+            //}
+            //END persian-dnnsoftware
         }
 
         private static bool CheckForRedirects(Uri requestUri, 

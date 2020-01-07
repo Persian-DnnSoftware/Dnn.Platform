@@ -1,4 +1,8 @@
-﻿@charset "UTF-8";
+﻿@import url('bootstrap/css/bootstrap.min.css');
+@import url('css/jquery.smartmenus.bootstrap.css');
+@import url('Menus/MainMenu/MainMenu.css');
+
+@charset "UTF-8";
 em, small {
     letter-spacing: 0
 }
@@ -1591,15 +1595,4 @@ footer .links-list ul li a:before {
     -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
 }
-
-/*------------------- User Profile --------------------------*/
-#UserProfileImg
-{
-	margin-bottom: 15px;
-}
-.UserProfileControls ul {
-    margin-left: 0;
-}
-.UserProfileControls ul li {
-    display: inline-block;
-}
+/*------------------- Language --------------------------*/

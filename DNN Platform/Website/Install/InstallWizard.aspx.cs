@@ -1,6 +1,6 @@
 #region Copyright
 // 
-// DotNetNukeÂ® - https://www.dnnsoftware.com
+// DotNetNuke® - http://www.dotnetnuke.com
 // Copyright (c) 2002-2018
 // by DotNetNuke Corporation
 // 
@@ -205,6 +205,11 @@ namespace DotNetNuke.Services.Install
             get { return _installConfig.SupportLocalization; }
         }
 
+        protected bool DisplayBanners
+        {
+            get { return _installConfig.DisplayBanners; }
+        }
+
         protected bool NeedAcceptTerms
         {
             get { return File.Exists(Path.Combine(Globals.ApplicationMapPath, "Licenses\\Dnn_Corp_License.pdf")); }
@@ -228,7 +233,10 @@ namespace DotNetNuke.Services.Install
             string cultureCode;
             if (string.IsNullOrEmpty(PageLocale.Value) && string.IsNullOrEmpty(_culture))
             {
-                cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(_supportedLanguages);
+                //START persian-dnnsoftware
+                cultureCode = "fa-IR";
+                //cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(_supportedLanguages);
+                //END persian-dnnsoftware
             }
             else if (string.IsNullOrEmpty(PageLocale.Value) && !string.IsNullOrEmpty(_culture))
             {
@@ -525,6 +533,7 @@ namespace DotNetNuke.Services.Install
             if (_connectionConfig != null)
             {
                 txtDatabaseServerName.Text = _connectionConfig.Server;
+                txtDatabaseObjectQualifier.Text = _connectionConfig.Qualifier;
 
                 //SQL Express Or SQL Server
                 if (!string.IsNullOrEmpty(_connectionConfig.File))
@@ -766,6 +775,18 @@ namespace DotNetNuke.Services.Install
                     var lastItem = languageList.Items[languageList.Items.Count - 1];
                     lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
                 }
+
+                //START persian-dnnsoftware
+                if (languageList.FindItemByValue("fa-IR") == null)
+                {
+                    var myCIintl = new CultureInfo("fa-IR", true);
+                    var li = new ListItem { Value = @"fa-IR", Text = myCIintl.NativeName };
+                    languageList.AddItem(li.Text, li.Value);
+                    var lastItem = languageList.Items[languageList.Items.Count - 1];
+                    lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
+                }
+                //END persian-dnnsoftware
+
                 var item = languageList.FindItemByValue(_culture);
                 languageList.SelectedIndex = item != null ? languageList.Items.IndexOf(item) : languageList.Items.IndexOf(languageList.FindItemByValue("en-US"));
             }
@@ -896,6 +917,8 @@ namespace DotNetNuke.Services.Install
                 languageFlags.Visible = false;
                 languagesRow.Attributes.Add("style", "display: none");
             }
+            banners.Visible = DisplayBanners;
+
 
             passwordContainer.CssClass = "password-strength-container";
             txtPassword.CssClass = "password-strength";
@@ -941,7 +964,34 @@ namespace DotNetNuke.Services.Install
 
             SetBrowserLanguage();
             LocalizePage();
-            
+
+            //START persian-dnnsoftware
+            string defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css";
+            if (PageLocale.Value == "fa-IR")
+            {
+                defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.rtl.css";
+                Body.Attributes.Add("class", "rtl");
+            }
+
+            System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();
+            css.Href = defaultCSSPath;
+            css.Attributes["rel"] = "stylesheet";
+            css.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css);
+
+            System.Web.UI.HtmlControls.HtmlLink css2 = new System.Web.UI.HtmlControls.HtmlLink();
+            css2.Href = Globals.ApplicationPath + "/Install/Install.css";
+            css2.Attributes["rel"] = "stylesheet";
+            css2.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css2);
+
+            System.Web.UI.HtmlControls.HtmlLink css3 = new System.Web.UI.HtmlControls.HtmlLink();
+            css3.Href = Globals.ApplicationPath + "/Resources/Shared/stylesheets/dnn.PasswordStrength.css";
+            css3.Attributes["rel"] = "stylesheet";
+            css3.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css3);
+            //END persian-dnnsoftware
+
             base.OnLoad(e);
             visitSite.Click += VisitSiteClick;           
 
