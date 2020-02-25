@@ -1,23 +1,7 @@
-#region Copyright
+﻿// 
+// Copyright (c) .NET Foundation. All rights reserved.
+// Licensed under the MIT License. See LICENSE file in the project root for full license information.
 // 
-// DotNetNuke® - https://www.dnnsoftware.com
-// Copyright (c) 2002-2018
-// by DotNetNuke Corporation
-// 
-// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
-// documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
-// the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
-// to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be included in all copies or substantial portions 
-// of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
-// TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
-// CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
-// DEALINGS IN THE SOFTWARE.
-#endregion
 #region Usings
 
 using System;
@@ -228,13 +212,13 @@ namespace DotNetNuke.Services.Install
             string cultureCode;
             if (string.IsNullOrEmpty(PageLocale.Value) && string.IsNullOrEmpty(_culture))
             {
-                cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(_supportedLanguages);
+                cultureCode = "fa-IR";
             }
             else if (string.IsNullOrEmpty(PageLocale.Value) && !string.IsNullOrEmpty(_culture))
             {
                 cultureCode = _culture;
             }
-            else 
+            else
             {
                 cultureCode = PageLocale.Value;
             }
@@ -761,7 +745,7 @@ namespace DotNetNuke.Services.Install
                 if (languageList.FindItemByValue("en-US") == null)
                 {
                     var myCIintl = new CultureInfo("en-US", true);
-                    var li = new ListItem {Value = @"en-US", Text = myCIintl.NativeName};
+                    var li = new ListItem { Value = @"en-US", Text = myCIintl.NativeName };
                     languageList.AddItem(li.Text, li.Value);
                     var lastItem = languageList.Items[languageList.Items.Count - 1];
                     lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
@@ -980,7 +964,7 @@ namespace DotNetNuke.Services.Install
             css3.Attributes["rel"] = "stylesheet";
             css3.Attributes["type"] = "text/css";
             Page.Header.Controls.Add(css3);
-            // END persian-
+            // END persian-dnnsoftware
             base.OnLoad(e);
             visitSite.Click += VisitSiteClick;           
 

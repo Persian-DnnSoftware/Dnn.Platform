@@ -3588,6 +3588,9 @@
     <Content Include="DesktopModules\Admin\ViewProfile\App_LocalResources\SharedResources.fa-IR.resx" />
     <Content Include="DesktopModules\Admin\ViewProfile\App_LocalResources\ViewProfile.ascx.fa-IR.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Install\Language\installlanguage.resources" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
