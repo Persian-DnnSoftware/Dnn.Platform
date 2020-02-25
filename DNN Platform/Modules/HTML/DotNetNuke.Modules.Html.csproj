@@ -28,6 +28,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -251,6 +252,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\EditHtml.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\HtmlModule.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\MyWork.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Settings.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\SharedResources.fa-IR.resx" />
+    <Content Include="App_LocalResources\Workflow.ascx.fa-IR.resx" />
   </ItemGroup>
   <Import Project="Module.build" />
 </Project>

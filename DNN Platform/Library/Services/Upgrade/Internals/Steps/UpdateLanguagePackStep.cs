@@ -54,10 +54,14 @@ namespace DotNetNuke.Services.Upgrade.InternalController.Steps
 
             var installConfig = InstallController.Instance.GetInstallConfig();
             string culture = installConfig.InstallCulture;
-          
-            if (culture.ToLowerInvariant() != "en-us")
+
+            //START persian-dnnsoftware
+            //if (culture.ToLower() != "en-us")
+            if (culture.ToLowerInvariant() != "en-us" && culture.ToLowerInvariant() != "fa-ir")
             {
-	            try
+            //END persian-dnnsoftware
+                {
+                    try
 	            {
 					//need apply the Licensing module after packages installed, so that we can know whats the edition of install instance. CE/PE/EE
 					var document = Config.Load();

@@ -96,8 +96,11 @@ namespace DotNetNuke.Services.Tokens
                 }
                 else
                 {
-                    RegionInfo country = new RegionInfo(new CultureInfo(ci.Name, false).LCID);
+                    //START persian-dnnsoftware
+                    //RegionInfo country = new RegionInfo(new CultureInfo(ci.Name, false).LCID);
+                    RegionInfo country = new RegionInfo(DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(ci.Name).LCID);
                     return PropertyAccess.FormatString(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(country.EnglishName), format);
+                    //END persian-dnnsoftware
                 }
             }
             if (propertyName.Equals("countrynativename", StringComparison.InvariantCultureIgnoreCase))
@@ -109,7 +112,10 @@ namespace DotNetNuke.Services.Tokens
                 }
                 else
                 {
-                    RegionInfo country = new RegionInfo(new CultureInfo(ci.Name, false).LCID);
+                    //START persian-dnnsoftware
+                    //RegionInfo country = new RegionInfo(new CultureInfo(ci.Name, false).LCID);
+                    RegionInfo country = new RegionInfo(DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(ci.Name).LCID);
+                    //END persian-dnnsoftware
                     return PropertyAccess.FormatString(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(country.NativeName), format);
                 }
 

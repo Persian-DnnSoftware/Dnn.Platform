@@ -138,7 +138,12 @@ namespace DotNetNuke.Security.Roles
                     {
                         preferredLocale = PortalSettings.DefaultLanguage;
                     }
-                    var ci = new CultureInfo(preferredLocale);
+
+                    //START persian-dnnsoftware
+                    //var ci = new CultureInfo(preferredLocale);
+                    var ci = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(preferredLocale);
+                    //END persian-dnnsoftware
+
                     UserRoleInfo objUserRole = RoleController.Instance.GetUserRole(PortalSettings.PortalId, objUser.UserID, objRole.RoleID);
                     Custom.Add(Null.IsNull(objUserRole.EffectiveDate)
                                    ? DateTime.Today.ToString("g", ci)

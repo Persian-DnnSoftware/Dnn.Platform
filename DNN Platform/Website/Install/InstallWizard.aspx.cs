@@ -766,6 +766,16 @@ namespace DotNetNuke.Services.Install
                     var lastItem = languageList.Items[languageList.Items.Count - 1];
                     lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
                 }
+                // START persian-dnnsoftware
+                if (languageList.FindItemByValue("fa-IR") == null)
+                {
+                    var myCIintl = new CultureInfo("fa-IR", true);
+                    var li = new ListItem { Value = "fa-IR", Text = myCIintl.NativeName };
+                    languageList.AddItem(li.Text, li.Value);
+                    var lastItem = languageList.Items[languageList.Items.Count - 1];
+                    lastItem.Attributes.Add("onclick", "javascript:ClearLegacyLangaugePack();");
+                }
+                // END persian-dnnsoftware
                 var item = languageList.FindItemByValue(_culture);
                 languageList.SelectedIndex = item != null ? languageList.Items.IndexOf(item) : languageList.Items.IndexOf(languageList.FindItemByValue("en-US"));
             }
@@ -941,7 +951,36 @@ namespace DotNetNuke.Services.Install
 
             SetBrowserLanguage();
             LocalizePage();
-            
+            // START persian-dnnsoftware
+            string defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css";
+            if (PageLocale.Value == "fa-IR")
+            {
+                defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.rtl.css";
+                Body.Attributes.Add("class", "rtl");
+            }
+            else
+            {
+                Body.Attributes.Add("class", "");
+            }
+
+            System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();
+            css.Href = defaultCSSPath;
+            css.Attributes["rel"] = "stylesheet";
+            css.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css);
+
+            System.Web.UI.HtmlControls.HtmlLink css2 = new System.Web.UI.HtmlControls.HtmlLink();
+            css2.Href = Globals.ApplicationPath + "/Install/Install.css";
+            css2.Attributes["rel"] = "stylesheet";
+            css2.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css2);
+
+            System.Web.UI.HtmlControls.HtmlLink css3 = new System.Web.UI.HtmlControls.HtmlLink();
+            css3.Href = Globals.ApplicationPath + "/Resources/Shared/stylesheets/dnn.PasswordStrength.css";
+            css3.Attributes["rel"] = "stylesheet";
+            css3.Attributes["type"] = "text/css";
+            Page.Header.Controls.Add(css3);
+            // END persian-
             base.OnLoad(e);
             visitSite.Click += VisitSiteClick;           
 

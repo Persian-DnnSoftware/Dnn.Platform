@@ -407,6 +407,15 @@ namespace DotNetNuke.Web.Client.ClientResourceManagement
                 fileExists = true;
             }
 
+            //START persian-dnnsoftware
+            if ((System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http"))
+            {
+                string locfile = filePath.Replace(".css", ".rtl.css");
+                if (FileExists(page, locfile))
+                    filePath = locfile;
+            }
+            //END persian-dnnsoftware
+
             if (fileExists || FileExists(page, filePath))
             {
                 var include = new DnnCssInclude { ForceProvider = provider, Priority = priority, FilePath = filePath, Name = name, Version = version };

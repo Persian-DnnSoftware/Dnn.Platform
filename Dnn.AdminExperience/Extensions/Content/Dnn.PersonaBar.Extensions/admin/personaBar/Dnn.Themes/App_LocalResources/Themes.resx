@@ -258,13 +258,13 @@
   <data name="ThemeLevelSite.Text" xml:space="preserve">
     <value>Site Themes</value>
   </data>
-  <data name="ShowFilterLabel">
+  <data name="ShowFilterLabel" xml:space="preserve">
     <value>Showing:</value>
   </data>
-  <data name="NoThemes">
+  <data name="NoThemes" xml:space="preserve">
     <value>No Themes Found.</value>
   </data>
-  <data name="NoThemesMessage">
+  <data name="NoThemesMessage" xml:space="preserve">
     <value>Try adjusting your search filters or install a new theme to your library.</value>
   </data>
 </root>
