@@ -41,7 +41,7 @@ namespace DotNetNuke.Services.Upgrade.InternalController.Steps
     /// -----------------------------------------------------------------------------    
     public class UpdateLanguagePackStep : BaseInstallationStep
     {
-		private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(UpdateLanguagePackStep));
+        private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(UpdateLanguagePackStep));
         #region Implementation of IInstallationStep
 
         /// <summary>
@@ -59,28 +59,28 @@ namespace DotNetNuke.Services.Upgrade.InternalController.Steps
             //if (culture.ToLower() != "en-us")
             if (culture.ToLowerInvariant() != "en-us" && culture.ToLowerInvariant() != "fa-ir")
             {
-            //END persian-dnnsoftware
-                {
-                    try
-	            {
-					//need apply the Licensing module after packages installed, so that we can know whats the edition of install instance. CE/PE/EE
-					var document = Config.Load();
-					var licensingNode = document.SelectSingleNode("/configuration/system.webServer/modules/add[@name='Licensing']");
-					if (licensingNode != null)
-					{
-						var type = licensingNode.Attributes["type"].Value;
-						var module = Reflection.CreateObject(type, null, false) as IHttpModule;
-						module.Init(HttpContext.Current.ApplicationInstance);
-					}
+                //END persian-dnnsoftware
 
-					InstallController.Instance.IsAvailableLanguagePack(culture);    
-	            }
-	            catch (Exception ex)
-	            {
-					//we shouldn't break the install process when LP download failed, for admin user can install the LP after website created.
-					//so we logged what's wrong here, and user can check it later.
-		            Logger.Error(ex);
-	            }
+                try
+                {
+                    //need apply the Licensing module after packages installed, so that we can know whats the edition of install instance. CE/PE/EE
+                    var document = Config.Load();
+                    var licensingNode = document.SelectSingleNode("/configuration/system.webServer/modules/add[@name='Licensing']");
+                    if (licensingNode != null)
+                    {
+                        var type = licensingNode.Attributes["type"].Value;
+                        var module = Reflection.CreateObject(type, null, false) as IHttpModule;
+                        module.Init(HttpContext.Current.ApplicationInstance);
+                    }
+
+                    InstallController.Instance.IsAvailableLanguagePack(culture);
+                }
+                catch (Exception ex)
+                {
+                    //we shouldn't break the install process when LP download failed, for admin user can install the LP after website created.
+                    //so we logged what's wrong here, and user can check it later.
+                    Logger.Error(ex);
+                }
 
             }
             Status = StepStatus.Done;
