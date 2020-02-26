@@ -260,4 +260,22 @@ Unable to add activation back to your invoice as Connection to license server fa
   <data name="Docs" xml:space="preserve">
     <value>DNN Docs is open source too! Learn how to get started with DNN, follow step-by-step tutorials, and even dig through the API documentation.</value>
   </data>
+  <data name="CheckOutEvoq.Header" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckOutEvoq" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UpgradeToEvoq.Header" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UpgradeToEvoq" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DocumentCenter.Header" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DocumentCenter" xml:space="preserve">
+    <value />
+  </data>
 </root>

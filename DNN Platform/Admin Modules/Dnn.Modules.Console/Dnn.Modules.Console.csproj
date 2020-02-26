@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -99,6 +100,7 @@
     <Content Include="08.00.00.txt" />
     <Content Include="App_LocalResources\ViewConsole.ascx.resx" />
     <Content Include="console.png" />
+    <Content Include="module.rtl.css" />
     <Content Include="Scripts\jquery.console.js" />
     <Content Include="releaseNotes.txt" />
   </ItemGroup>
@@ -146,6 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Settings.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\ViewConsole.ascx.fa-IR.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

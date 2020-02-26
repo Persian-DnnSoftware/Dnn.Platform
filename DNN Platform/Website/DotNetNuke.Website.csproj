@@ -582,6 +582,41 @@
     <Compile Include="admin\Users\ViewProfile.ascx.designer.cs">
       <DependentUpon>ViewProfile.ascx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\Exceptions.fa-IR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exceptions.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\FileUpload.fa-IR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileUpload.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\GlobalResources.fa-IR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalResources.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\List_Country.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>List_Country.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\List_Country.fa-IR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>List_Country.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\SharedResources.fa-IR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedResources.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\WebControls.fa-IR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebControls.fa-IR.resx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -611,7 +646,23 @@
       <DependentUpon>Logoff.ascx</DependentUpon>
     </Compile>
     <Content Include="admin\Menus\ModuleActions\dnnQuickSettings.js" />
+    <Content Include="admin\Menus\ModuleActions\font-awesome.min.css" />
     <Content Include="admin\Menus\ModuleActions\ModuleActions.less" />
+    <Content Include="admin\Menus\ModuleActions\ModuleActions.rtl.css" />
+    <Content Include="admin\Modules\module.rtl.css" />
+    <Content Include="admin\Security\module.rtl.css" />
+    <Content Include="admin\Tabs\module.rtl.css" />
+    <Content Include="DesktopModules\Admin\Authentication\module.rtl.css" />
+    <Content Include="DesktopModules\Admin\SearchResults\module.rtl.css" />
+    <Content Include="DesktopModules\Admin\Security\module.rtl.css" />
+    <Content Include="Icons\Sigma\BreadcrumbArrows_16x16_Gray.rtl.png" />
+    <Content Include="Icons\Sigma\Cancel_16X16_Standard_dark.png" />
+    <Content Include="Icons\Sigma\Checked_16x16_Standard_dark.png" />
+    <Content Include="images\installer-feedback-states-sprite.rtl.png" />
+    <Content Include="images\InstallWizardBg.rtl.png" />
+    <Content Include="images\modal-resize-icn.rtl.png" />
+    <Content Include="js\PersianCalendar.css" />
+    <Content Include="js\PersianCalendar.js" />
     <Content Include="Licenses\Castle Core %28Apache%29.txt.resources" />
     <Content Include="Licenses\LiteDB %28MIT%29.txt.resources" />
     <Content Include="Licenses\Microsoft Data Access Application Block %28Custom%29.txt.resources" />
@@ -626,6 +677,10 @@
     <Content Include="Licenses\PetaPoco %28Apache%29.txt.resources" />
     <Content Include="Licenses\Pikaday %28MIT%29.txt.resources" />
     <Content Include="Licenses\QuickIO.NET %28Ms-PL%29.txt.resources" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.eot" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.ttf" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.woff" />
+    <Content Include="admin\Menus\ModuleActions\fonts\fontawesome-webfont.woff2" />
     <None Include="compilerconfig.json" />
     <Compile Include="DesktopModules\Admin\EditExtension\AuthenticationEditor.ascx.cs">
       <DependentUpon>AuthenticationEditor.ascx</DependentUpon>
@@ -844,9 +899,12 @@
     <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\DropDownList.Default.css" />
     <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\GridView.Default.css" />
     <Content Include="Resources\Shared\components\DatePicker\moment.min.js" />
+    <Content Include="Resources\Shared\components\DatePicker\persian.datepicker.css" />
+    <Content Include="Resources\Shared\components\DatePicker\persian.datepicker.js" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.css" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.jquery.js" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.js" />
+    <Content Include="Resources\Shared\components\DropDownList\Images\tree-sprite.rtl.png" />
     <Content Include="Resources\Shared\components\SimpleMDE\codemirror.css" />
     <Content Include="Resources\Shared\components\SimpleMDE\marked.js" />
     <Content Include="Resources\Shared\components\SimpleMDE\simplemde.css" />
@@ -1232,6 +1290,8 @@
     <Content Include="Resources\Shared\components\TimePicker\Themes\jquery.ui.theme.css" />
     <Content Include="Resources\Shared\stylesheets\dnn.PasswordStrength.css" />
     <Content Include="Resources\Shared\stylesheets\dnndefault\7.0.0\default.css" />
+    <Content Include="Resources\Shared\stylesheets\dnndefault\7.0.0\default.rtl.css" />
+    <Content Include="Resources\Shared\stylesheets\dnndefault\8.0.0\default.rtl.css" />
     <Content Include="Resources\Shared\stylesheets\dnnicons\css\dnnicon.css" />
     <Content Include="Resources\Shared\stylesheets\dnnicons\css\dnnicon.min.css" />
     <Content Include="Resources\Shared\stylesheets\dnnicons\fonts\dnnicon.svg" />
@@ -3400,6 +3460,136 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DesktopModules\Admin\Security\App_LocalResources\DataConsent.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Install\App_LocalResources\Installwizard.aspx.fa-IR.resx" />
+    <Content Include="Install\App_LocalResources\UpgradeWizard.aspx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Modules\App_LocalResources\Export.ascx.fa-IR.resx" />
+    <Content Include="admin\Modules\App_LocalResources\Import.ascx.fa-IR.resx" />
+    <Content Include="admin\Modules\App_LocalResources\ModuleLocalization.ascx.fa-IR.resx" />
+    <Content Include="admin\Modules\App_LocalResources\ModulePermissions.ascx.fa-IR.resx" />
+    <Content Include="admin\Modules\App_LocalResources\ModuleSettings.ascx.fa-IR.resx" />
+    <Content Include="admin\Modules\App_LocalResources\ViewSource.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Portal\App_LocalResources\Privacy.ascx.fa-IR.resx" />
+    <Content Include="admin\Portal\App_LocalResources\Terms.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Security\App_LocalResources\AccessDenied.ascx.fa-IR.resx" />
+    <Content Include="admin\Security\App_LocalResources\PasswordReset.ascx.fa-IR.resx" />
+    <Content Include="admin\Security\App_LocalResources\SendPassword.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Skins\App_LocalResources\Copyright.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Language.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\LinkToFullSite.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\LinkToMobileSite.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\LinkToTabletSite.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Login.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Privacy.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Search.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Tags.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Terms.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\Toast.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\TreeViewMenu.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\User.ascx.fa-IR.resx" />
+    <Content Include="admin\Skins\App_LocalResources\UserAndLogin.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Tabs\App_LocalResources\Export.ascx.fa-IR.resx" />
+    <Content Include="admin\Tabs\App_LocalResources\Import.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Users\App_LocalResources\ViewProfile.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Exceptions.fa-IR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Exceptions.fa-IR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\FileUpload.fa-IR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>FileUpload.fa-IR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GlobalResources.fa-IR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalResources.fa-IR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\List_Country.fa-IR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>List_Country.fa-IR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\SharedResources.fa-IR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>SharedResources.fa-IR.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\WebControls.fa-IR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>WebControls.fa-IR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\List_Country.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>List_Country.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controls\App_LocalResources\Address.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\DualListControl.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\filepickeruploader.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\Help.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\LocaleSelectorControl.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\ModuleAuditControl.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\SkinControl.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\TextEditor.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\URLControl.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\UrlTrackingControl.ascx.fa-IR.resx" />
+    <Content Include="controls\App_LocalResources\User.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopModules\Admin\Authentication\App_LocalResources\Authentication.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Authentication\App_LocalResources\Login.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Authentication\App_LocalResources\Logoff.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopModules\Admin\EditExtension\App_LocalResources\AuthenticationEditor.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\EditExtension\App_LocalResources\EditExtension.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopModules\Admin\SearchResults\App_LocalResources\ResultsSettings.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\SearchResults\App_LocalResources\SearchableModules.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\SearchResults\App_LocalResources\SearchResults.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\EditGroups.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\EditProfileDefinition.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\EditRoles.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\EditUser.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\ManageUsers.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\MemberServices.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\Membership.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\Password.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\Profile.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\ProfileDefinitions.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\Register.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\Roles.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\SecurityRoles.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\SharedResources.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\User.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\Users.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\Security\App_LocalResources\UserSettings.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesktopModules\Admin\ViewProfile\App_LocalResources\Settings.ascx.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\ViewProfile\App_LocalResources\SharedResources.fa-IR.resx" />
+    <Content Include="DesktopModules\Admin\ViewProfile\App_LocalResources\ViewProfile.ascx.fa-IR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Install\Language\installlanguage.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

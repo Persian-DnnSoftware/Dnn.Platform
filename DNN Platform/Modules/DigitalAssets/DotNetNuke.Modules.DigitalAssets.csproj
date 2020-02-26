@@ -23,6 +23,7 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -268,6 +269,7 @@
     <Content Include="Images\indeterminate.gif" />
     <Content Include="Images\manageFolderTypes.png" />
     <Content Include="Images\transparencyBG.jpg" />
+    <Content Include="module.rtl.css" />
     <Content Include="PreviewFieldsControl.ascx" />
     <Content Include="PreviewPanelControl.ascx" />
     <Content Include="EditFolderMapping.ascx" />
@@ -347,6 +349,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\EditFolderMapping.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\FileFieldsControl.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\FileProperties.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\FolderMappings.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\FolderProperties.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\SearchBoxControl.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Settings.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\SharedResources.fa-IR.resx" />
+    <Content Include="App_LocalResources\View.ascx.fa-IR.resx" />
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
