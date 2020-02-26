@@ -44,7 +44,7 @@ namespace DotNetNuke.UI.Skins.Controls
             var user = UserController.Instance.GetCurrentUserInfo();
             //START persian-dnnsoftware
             if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
-                lblDate.Text = !String.IsNullOrEmpty(DateFormat) ? user.LocalTime().ToString(DateFormat, new System.Globalization.CultureInfo("fa-IR")) : user.LocalTime().ToString("dddd، d MMMM yyyy", new System.Globalization.CultureInfo("fa-IR"));
+                lblDate.Text = DateTime.Now.ToString("dddd، d MMMM yyyy");
             else
                 lblDate.Text = !String.IsNullOrEmpty(DateFormat) ? user.LocalTime().ToString(DateFormat) : user.LocalTime().ToLongDateString();
             //END persian-dnnsoftware

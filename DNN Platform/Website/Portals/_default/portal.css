@@ -291,3 +291,130 @@ HR {
 
 .LoginContainer{
 }
+
+
+/* START persian-dnnsoftware */
+
+/* re-style the dnn login */
+
+.LoginPanel {
+    width: auto !important;
+    float: none !important;
+    display: flex !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    justify-content: center;
+}
+
+    .LoginPanel > div {
+        min-width: 300px;
+        max-width: 500px;
+    }
+
+    /* style the form item wrapper */
+
+    .LoginPanel .dnnForm .dnnFormItem {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    /* style the form label */
+
+    .LoginPanel .dnnFormItem > .dnnLabel {
+        margin-top: 0;
+    }
+
+        .LoginPanel .dnnFormItem > .dnnLabel label {
+            display: block;
+        }
+
+    .LoginPanel .dnnLabel {
+        display: block;
+        float: none;
+        position: relative;
+        width: auto;
+        padding-right: 0;
+        margin-right: 0;
+        overflow: visible;
+        text-align: left;
+    }
+
+/* boostrap fix - remove the yellow background from the checkbox field */
+.dnnCheckbox .mark {
+    background: none !important;
+}
+
+/* give the Remember Me checkbox a smaller text size */
+.dnnLoginRememberMe {
+    font-size: 15px;
+}
+
+/* style the login panel text input fields */
+.LoginPanel .dnnLoginService input[type="text"],
+.LoginPanel .dnnLoginService input[type="password"] {
+    width: 100% !important;
+    min-width: 100%;
+    margin: 0;
+    border-radius: 1px;
+    padding: 10px;
+}
+
+/* hide the empty label beside the Reset Password button */
+.LoginPanel .dnnFormItem:last-child span.dnnFormLabel {
+    display: none;
+}
+
+.LoginPanel ul.dnnActions {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* primary action buttons - also used in dnn modal popups */
+
+.dnnPrimaryAction,
+.dnnFormItem input[type="submit"],
+a.dnnPrimaryAction {
+    background: #015488;
+    border: none;
+    color: #ffffff;
+    text-shadow: none;
+    font-weight: 400;
+    box-shadow: none;
+    border-radius: 1px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+    .dnnPrimaryAction:hover,
+    .dnnFormItem input[type="submit"]:hover,
+    a.dnnPrimaryAction:hover {
+        background: #1B6EA2 !important;
+        text-decoration: none !important;
+    }
+
+/* secondary action buttons - also used in dnn modal popups */
+
+.dnnSecondaryAction,
+.dnnFormItem input[type="submit"],
+a.dnnSecondaryAction {
+    background: #f5f5f5;
+    border: none;
+    color: #555;
+    text-shadow: none;
+    font-weight: 400;
+    box-shadow: none;
+    border-radius: 1px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+    .dnnSecondaryAction:hover,
+    .dnnFormItem input[type="submit"]:hover,
+    a.dnnSecondaryAction:hover {
+        background: #f1f1f1 !important;
+        text-decoration: none !important;
+    }
+
+/* END persian-dnnsoftware */
