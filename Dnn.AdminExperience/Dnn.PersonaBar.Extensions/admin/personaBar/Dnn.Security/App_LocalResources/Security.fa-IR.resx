@@ -798,6 +798,9 @@
   <data name="LastName.Header" xml:space="preserve">
     <value>نام خانوادگی</value>
   </data>
+  <data name="ScannerExplanation.Text" xml:space="preserve">
+    <value />
+  </data>
   <data name="Username.Header" xml:space="preserve">
     <value>نام‌کاربری</value>
   </data>
@@ -959,6 +962,12 @@
   </data>
   <data name="TabSettings.Text" xml:space="preserve">
     <value>تنظیمات تب</value>
+  </data>
+  <data name="ModifiedSettingsExplaination.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ModifiedFilesExplaination.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="ModifiedFilesLoadWarning.Text" xml:space="preserve">
     <value>Tool will enumerate all files in your system to show the recently changed files. It may take a while on a site with lots of files.</value>

@@ -1732,4 +1732,61 @@
   <data name="IconFileLarge.Text" xml:space="preserve">
     <value>آیکون بزرگ</value>
   </data>
+  <data name="CustomUrlPortalAlias.Error" xml:space="preserve">
+    <value>لطفا یکی از آدرس های سایت را برای این آدرس سفارشی انتخاب کنید.</value>
+  </data>
+  <data name="SharedModule.Text" xml:space="preserve">
+    <value>اشتراک ماژول: بله</value>
+  </data>
+  <data name="IsNotSharedModule.Text" xml:space="preserve">
+    <value>اشتراک ماژول: خیر</value>
+  </data>
+  <data name="DeleteTranslationConfirm.Text" xml:space="preserve">
+    <value>شما در حال &lt;b&gt;حذف&lt;/b&gt;  این '&lt;b&gt;{0}&lt;/b&gt;' صفحه از ترجمه هستید. آیا از حذف این صفحه مطمئن هستید ؟</value>
+  </data>
+  <data name="IconFile.Help" xml:space="preserve">
+    <value>آیکون صفحه تصویری است که ممکن است توسط پوسته یا منوی شما برای هر صفحه استفاده شود</value>
+  </data>
+  <data name="IconFileLarge.Help" xml:space="preserve">
+    <value>آیکون صفحه تصویری است که ممکن است توسط پوسته یا منوی شما برای هر صفحه استفاده شود</value>
+  </data>
+  <data name="ClickToLocalizeModule_tooltip.Text" xml:space="preserve">
+    <value>برای فعال کردن بومی سازی این ماژول کلیک کنید</value>
+  </data>
+  <data name="ClickToDeLocalizeModule_tooltip.Text" xml:space="preserve">
+    <value>برای غیرفعال کردن بومی سازی این ماژول کلیک کنید</value>
+  </data>
+  <data name="CheckToTranslateModule_tooltip.Text" xml:space="preserve">
+    <value>علامت گذاری به عنوان ماژول ترجمه شده</value>
+  </data>
+  <data name="UnCheckTranslatedModule_tooltip.Text" xml:space="preserve">
+    <value>برداشتن علامت ماژول به عنوان ترجمه درانتظار تایید</value>
+  </data>
+  <data name="CheckToTranslateAllModules_tooltip.Text" xml:space="preserve">
+    <value>علام گذاری تمامی ماژول ها به عنوان ترجمه شده</value>
+  </data>
+  <data name="UnCheckAllTranslatedModules_tooltip.Text" xml:space="preserve">
+    <value>برداشتن علامت تمامی ماژول ها به عنوان ترجمه درانتظار تایید</value>
+  </data>
+  <data name="ClickToLocalizeAllModules_tooltip.Text" xml:space="preserve">
+    <value>برای بومی سازی تمامی ماژول ها کلیک کنید</value>
+  </data>
+  <data name="ClickToDeLocalizeAllModules_tooltip.Text" xml:space="preserve">
+    <value>برای غیرفعال کردن بومی سازی تمامی ماژول ها کلیک کنید</value>
+  </data>
+  <data name="CheckToTransalePage_tooltip.Text" xml:space="preserve">
+    <value>علامت گذاری این صفحه به عنوان ترجمه شده برای این زبان</value>
+  </data>
+  <data name="UnCheckTransaledPage_tooltip.Text" xml:space="preserve">
+    <value>برداشتن علامت گذاری این صفحه به عنوان ترجمه شده برای این زبان</value>
+  </data>
+  <data name="CheckToPublishPage_tooltip.Text" xml:space="preserve">
+    <value>علامت گذاری این صفحه به عنوان منتشر شده برای این زبان</value>
+  </data>
+  <data name="UnCheckPublishedPage_tooltip.Text" xml:space="preserve">
+    <value>برداشتن علامت گذاری این صفحه به عنوان در انتظار تایید برای این زبان</value>
+  </data>
+  <data name="LocalizedSharedModule_tooltip.Text" xml:space="preserve">
+    <value>این یک ماژول مشترک بومه سازی شده است</value>
+  </data>
 </root>

@@ -279,4 +279,10 @@
   <data name="All.Text" xml:space="preserve">
     <value>همه</value>
   </data>
+  <data name="BackToVocabularies.Text" xml:space="preserve">
+    <value>برگشت به واژه‌ها</value>
+  </data>
+  <data name="EditFieldHelper.Text" xml:space="preserve">
+    <value>هنگام اتمام کلید ENTER و برای انصراف کلید ESC را بزنید.</value>
+  </data>
 </root>

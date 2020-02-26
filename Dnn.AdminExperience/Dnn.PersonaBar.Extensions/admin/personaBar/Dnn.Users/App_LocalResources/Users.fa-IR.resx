@@ -1256,4 +1256,46 @@
   <data name="Question.Text" xml:space="preserve">
     <value>سوال امنیتی:</value>
   </data>
+  <data name="cmUnlockUser.Text" xml:space="preserve">
+    <value>بازکردن قبل کاربر</value>
+  </data>
+  <data name="HasAgreedToTerms.Text" xml:space="preserve">
+    <value>موافقت با شرایط</value>
+  </data>
+  <data name="HasNotAgreedToTerms.Text" xml:space="preserve">
+    <value>عدم موافقت با شرایط</value>
+  </data>
+  <data name="RequestedRemoval.Text" xml:space="preserve">
+    <value>درخواست حذف شده ها</value>
+  </data>
+  <data name="HasAgreedToTerms.title" xml:space="preserve">
+    <value>کاربر با شرایط استفاده موافقت نکرده است</value>
+  </data>
+  <data name="HasNotAgreedToTerms.title" xml:space="preserve">
+    <value>کاربر با شرایط استفاده موافقت نکرده است</value>
+  </data>
+  <data name="RequestsRemoval.title" xml:space="preserve">
+    <value>درخواست حذف کاربر از سایت را دارد</value>
+  </data>
+  <data name="HasAgreedToTerms.Help" xml:space="preserve">
+    <value>کاربر با شرایط استفاده و بیانیه حریم خصوصی این سایت از طریق مکانیسم رضایت داده موافقت کرده است</value>
+  </data>
+  <data name="LastConsented.Help" xml:space="preserve">
+    <value>آخرین باری که کاربر با شرایط این سایت موافقت کرده است. اگر شرایط از زمان تغییر کرده باشد ، ممکن است کاربر به دلیل عدم رضایت نشان داده شود</value>
+  </data>
+  <data name="LastConsented.Text" xml:space="preserve">
+    <value>آخرین رضایت در</value>
+  </data>
+  <data name="RemoveDeleted.Btn" xml:space="preserve">
+    <value>حذف کاربران حذف شده</value>
+  </data>
+  <data name="RemoveDeleted.Confirm" xml:space="preserve">
+    <value>آیا مایل به حذف دائمی کاربران حذف شده هستید؟ این عملیات غیرقابل برگشت است.</value>
+  </data>
+  <data name="RemoveDeleted.Done" xml:space="preserve">
+    <value>همه کاربران حذف شده حذف دائمی شده اند</value>
+  </data>
+  <data name="CouldNotRemoveAll.Text" xml:space="preserve">
+    <value>همه کاربران امکان حذف ندارند</value>
+  </data>
 </root>

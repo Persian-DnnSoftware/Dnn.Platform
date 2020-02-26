@@ -1187,7 +1187,7 @@
     <value>حالت</value>
   </data>
   <data name="PagesSuccessfullyLocalized.Text" xml:space="preserve">
-    <value>Pages successfully localized.</value>
+    <value>صفحات با موفقیت بومی سازی شده اند</value>
   </data>
   <data name="PublishedAllTranslatedPages.Text" xml:space="preserve">
     <value>صفحه با موفقیت انتشار یافت.</value>
@@ -1323,5 +1323,104 @@
   </data>
   <data name="Host.Text" xml:space="preserve">
     <value>هاست</value>
+  </data>
+  <data name="UnPublishedAllTranslatedPages.Text" xml:space="preserve">
+    <value>صفحات با موفقیت منتشر نشده اند.</value>
+  </data>
+  <data name="plTermsTabId.Text" xml:space="preserve">
+    <value>صفحه شرایط استفاده</value>
+  </data>
+  <data name="plPrivacyTabId.Text" xml:space="preserve">
+    <value>صفحه بیانیه حریم خصوصی</value>
+  </data>
+  <data name="plCookieMoreLink.Text" xml:space="preserve">
+    <value>لینک موافقت ذخیره سازی کوکی</value>
+  </data>
+  <data name="plShowCookieConsent.Help" xml:space="preserve">
+    <value>نمایش پنجره رضایت کوکی در این سایت. کاربران برای موافقت و بستن آن باید بر روی پنجره کلیک کنند. بعد از این دوباره ظاهر نمی شود</value>
+  </data>
+  <data name="plShowCookieConsent.Text" xml:space="preserve">
+    <value>رضایت کوکی را نشان دهید</value>
+  </data>
+  <data name="TabPrivacy.Text" xml:space="preserve">
+    <value>حریم خصوصی</value>
+  </data>
+  <data name="PrivacyCommunicationSettings.Text" xml:space="preserve">
+    <value>تنظیمات ارتباطی</value>
+  </data>
+  <data name="PrivacyCookieConsentSettings.Text" xml:space="preserve">
+    <value>تنظیمات رضایت کوکی</value>
+  </data>
+  <data name="DataConsentActive.Help" xml:space="preserve">
+    <value>با فعال شدن این گزینه ، کاربران ثبت نام شده مجبور خواهند شد با شرایط و ضوابط این سایت رضایت دهند</value>
+  </data>
+  <data name="DataConsentActive.Text" xml:space="preserve">
+    <value>فعال سازی رضایت داده</value>
+  </data>
+  <data name="DataConsentConsentRedirect.Help" xml:space="preserve">
+    <value>اگر صفحه ای انتخاب شود ، کاربران برای امضای رضایت خود به این صفحه می روند. اگر نه ، دی ان ان صفحه ای پیش فرض را برای این کار ارائه می دهد.</value>
+  </data>
+  <data name="DataConsentConsentRedirect.Text" xml:space="preserve">
+    <value>تغییر مسیر رضایت</value>
+  </data>
+  <data name="DataConsentResetTerms.Text" xml:space="preserve">
+    <value>تنظیم مجدد شرایط و حریم خصوصی</value>
+  </data>
+  <data name="DataConsentResetTerms.Warning" xml:space="preserve">
+    <value>از دکمه زیر استفاده کنید تا همه کاربران را مجبور به پذیرش مجدد شرایط و ضوابط کنید. با تغییر شرایط و ضوابط از این استفاده کنید.</value>
+  </data>
+  <data name="DataConsentSettings.Text" xml:space="preserve">
+    <value>تنظیمات رضایت داده</value>
+  </data>
+  <data name="DataConsentUserDelayedHardDelete.Text" xml:space="preserve">
+    <value>تأخیر حذف فیزیکی</value>
+  </data>
+  <data name="DataConsentUserDeleteAction.Help" xml:space="preserve">
+    <value>مشخص کنید چه اتفاقی بیفتد وقتی کاربر بخواهد پروفایل خود را از سایت حذف کند</value>
+  </data>
+  <data name="DataConsentUserDeleteAction.Text" xml:space="preserve">
+    <value>درخواست حذف کاربری</value>
+  </data>
+  <data name="DataConsentUserHardDelete.Text" xml:space="preserve">
+    <value>حذف فیزیکی</value>
+  </data>
+  <data name="Reset.Text" xml:space="preserve">
+    <value>بازنشانی</value>
+  </data>
+  <data name="Warning.Text" xml:space="preserve">
+    <value>هشدار</value>
+  </data>
+  <data name="GdprResetTerms.Completed" xml:space="preserve">
+    <value>رضایت داده ها برای شرایط و ضوابط بازنشانی شد</value>
+  </data>
+  <data name="GdprResetTerms.Confirm" xml:space="preserve">
+    <value>آیا می خواهید همه رضایت کاربران را دوباره تنظیم کنید و همه را وادار کنید مجدداً با شرایط و ضوابط موافقت کنند؟</value>
+  </data>
+  <data name="Days.Text" xml:space="preserve">
+    <value>روز</value>
+  </data>
+  <data name="Hours.Text" xml:space="preserve">
+    <value>ساعت</value>
+  </data>
+  <data name="Weeks.Text" xml:space="preserve">
+    <value>هفته</value>
+  </data>
+  <data name="DataConsentDelay.ErrorMessage" xml:space="preserve">
+    <value>باید یک عدد صحیح باشد</value>
+  </data>
+  <data name="DataConsentDelay.Text" xml:space="preserve">
+    <value>حذف فیزیکی با تاخیر</value>
+  </data>
+  <data name="DataConsentUserDeleteManual.Text" xml:space="preserve">
+    <value>دستی</value>
+  </data>
+  <data name="Off.Text" xml:space="preserve">
+    <value>غیرفعال</value>
+  </data>
+  <data name="DataConsentResetTerms.Completed" xml:space="preserve">
+    <value>همه شرایط و ضوابط مجدداً تنظیم شده است و همه کاربران مجدداً باید موافقت خود را اعلام کنند.</value>
+  </data>
+  <data name="DataConsentResetTerms.Confirm" xml:space="preserve">
+    <value>آیا می خواهید همه کاربران مجبور به پذیرش مجدد شرایط و ضوابط کنید تا مجدداً با شرایط و ضوابط جدید موافقت کنند؟</value>
   </data>
 </root>
