@@ -205,6 +205,16 @@
     <Content Include="Skin\koi.json" />
     <Content Include="Skin\resource-skin.zip.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Skin\fonts\IRANSansWeb.eot" />
+    <Content Include="Skin\fonts\IRANSansWeb.ttf" />
+    <Content Include="Skin\fonts\IRANSansWeb.woff" />
+    <Content Include="Skin\fonts\IRANSansWeb.woff2" />
+    <Content Include="Skin\fonts\IRANSansWeb_Bold.eot" />
+    <Content Include="Skin\fonts\IRANSansWeb_Bold.ttf" />
+    <Content Include="Skin\fonts\IRANSansWeb_Bold.woff" />
+    <Content Include="Skin\fonts\IRANSansWeb_Bold.woff2" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
