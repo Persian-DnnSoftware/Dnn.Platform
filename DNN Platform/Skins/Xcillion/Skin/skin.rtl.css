@@ -2,6 +2,22 @@
 @import url('css/jquery.smartmenus.bootstrap.rtl.css');
 @import url('Menus/MainMenu/MainMenu.rtl.css');
 
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/IRANSansWeb.eot');
+    src: url('fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/IRANSansWeb_Bold.eot');
+    src: url('fonts/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
 @charset "UTF-8";
 em,
 small {
@@ -203,7 +219,7 @@ input,
 table,
 td,
 th {
-    font-family: Tahoma, Arial, Helvetica, sans-serif
+    font-family: IRANSans, Tahoma, Arial, Helvetica, sans-serif
 }
 .SubHead {
     color: #000
@@ -446,7 +462,7 @@ button.cta-button-primary {
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-family: IRANSans, Tahoma, Arial, Helvetica, sans-serif;
     position: relative;
     display: inline-block;
     font-size: 16px;
@@ -538,7 +554,7 @@ button.cta-button:hover {
     display: block;
     position: absolute;
     top: 0;
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-family: IRANSans, Tahoma, Arial, Helvetica, sans-serif;
     font-size: 22px;
     left: 0;
     padding: 0;
@@ -782,7 +798,7 @@ header {
     }
 }
 #breadcrumb {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-family: IRANSans, Tahoma, Arial, Helvetica, sans-serif;
     border-radius: 0;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -800,13 +816,13 @@ header {
     font-size: 11px;
     color: #626262
 }
-#breadcrumb a:first-child {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-    font-size: 11px!important;
-    font-weight: 400;
-    color: #7b7d82;
-    margin: 0
-}
+    #breadcrumb a:first-child {
+        font-family: IRANSans, Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 11px !important;
+        font-weight: 400;
+        color: #7b7d82;
+        margin: 0
+    }
 #breadcrumb img,
 #breadcrumb span {
     margin-right: 10px
