@@ -1759,4 +1759,37 @@
   <data name="LocalizedSharedModule_tooltip.Text" xml:space="preserve">
     <value>This is a localized shared module</value>
   </data>
+  <data name="Error_EmptyTabName.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error_PathDuplicateWithAlias.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error_TabExists.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error_TabRecycled.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error_UrlPathCleaned.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error_UrlPathNotUnique.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error_StartDateAfterEndDate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Pages.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="System" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Template.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value />
+  </data>
 </root>

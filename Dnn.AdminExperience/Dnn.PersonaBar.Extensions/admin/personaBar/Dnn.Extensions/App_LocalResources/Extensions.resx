@@ -1223,4 +1223,10 @@ Common issues with bad installation files:
   <data name="Loading.Tooltip" xml:space="preserve">
     <value>Your extensions will be here in a just a moment</value>
   </data>
+  <data name="EvoqConnector.Type" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Next.Text" xml:space="preserve">
+    <value />
+  </data>
 </root>

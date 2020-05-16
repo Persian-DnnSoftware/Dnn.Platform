@@ -788,4 +788,7 @@
   <data name="Prompt_RolesCategory.Text" xml:space="preserve">
     <value>Role Commands</value>
   </data>
+  <data name="Roles.Text" xml:space="preserve">
+    <value />
+  </data>
 </root>
