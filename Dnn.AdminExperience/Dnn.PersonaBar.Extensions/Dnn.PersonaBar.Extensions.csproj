@@ -670,6 +670,7 @@
     <Content Include="admin\personaBar\Dnn.Prompt\App_LocalResources\Prompt.fa-IR.resx" />
     <Content Include="admin\personaBar\Dnn.Pages\App_LocalResources\Pages.fa-IR.resx" />
     <Content Include="admin\personaBar\Dnn.Licensing\App_LocalResources\Licensing.fa-IR.resx" />
+    <Content Include="admin\personaBar\Dnn.SiteGroups\App_LocalResources\SiteGroups.fa-IR.resx" />
     <EmbeddedResource Include="Components\Security\Resources\CheckFileExists.resources" />
     <EmbeddedResource Include="Components\Security\Resources\ExecuteCommand.resources" />
     <EmbeddedResource Include="Components\Security\Resources\GetFolderTree.resources" />
