@@ -141,24 +141,6 @@
   <data name="Expires.Header" xml:space="preserve">
     <value>انقضا</value>
   </data>
-  <data name="CheckOutEvoq.Header" xml:space="preserve">
-    <value>بررسی ایوک</value>
-  </data>
-  <data name="CheckOutEvoq" xml:space="preserve">
-    <value>Evoq provides a comprehensive set of features your entire team will use and love. Organizations across the globe rely on Evoq to deliver powerful web experiences.</value>
-  </data>
-  <data name="UpgradeToEvoq.Header" xml:space="preserve">
-    <value>ارتقا</value>
-  </data>
-  <data name="UpgradeToEvoq" xml:space="preserve">
-    <value>Ready to take your web presence to the next level? Start a free trial or schedule a custom demo for your team.</value>
-  </data>
-  <data name="DocumentCenter.Header" xml:space="preserve">
-    <value>مرکز مستندات</value>
-  </data>
-  <data name="DocumentCenter" xml:space="preserve">
-    <value>No matter your questions, DNN's new "Doc Center" is the go-to for answers, tutorials, and product help.</value>
-  </data>
   <data name="LicenseType.Development" xml:space="preserve">
     <value>توسعه</value>
   </data>

@@ -118,78 +118,78 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="nav_SiteGroups.Text" xml:space="preserve">
-    <value>Site Groups</value>
+    <value>گروه‌های سایت</value>
   </data>
   <data name="Cancel.Button" xml:space="preserve">
-    <value>Cancel</value>
+    <value>انصراف</value>
   </data>
   <data name="Save.Button" xml:space="preserve">
-    <value>Save</value>
+    <value>ذخیره</value>
   </data>
   <data name="Add.Button" xml:space="preserve">
-    <value>Add</value>
+    <value>افزودن</value>
   </data>
   <data name="AuthenticationDomain.Label" xml:space="preserve">
-    <value>Authentication Domain:</value>
+    <value>احراز هویت دامنه:</value>
   </data>
   <data name="AuthenticationDomain.Help" xml:space="preserve">
-    <value>Typically not required.</value>
+    <value>به طور معمول نیاز نیست.</value>
   </data>
   <data name="EditModule_Unassigned.Label" xml:space="preserve">
-    <value>Unassigned</value>
+    <value>تخصیص نشده</value>
   </data>
   <data name="EditModule_Assigned.Label" xml:space="preserve">
-    <value>Assigned</value>
+    <value>تخصیص شده</value>
   </data>
   <data name="GroupName.Header" xml:space="preserve">
-    <value>Group Name</value>
+    <value>نام گروه</value>
   </data>
   <data name="GroupName.Label" xml:space="preserve">
-    <value>Group Name:</value>
+    <value>نام گروه:</value>
   </data>
   <data name="GroupName.Help" xml:space="preserve">
-    <value>The name helps to identifier the group.</value>
+    <value>این نام به شناسایی گروه کمک می‌کند.</value>
   </data>
   <data name="GroupName.Required" xml:space="preserve">
-    <value>A group name is required</value>
+    <value>نام گروه اجباری است</value>
   </data>
-   <data name="Description.Label" xml:space="preserve">
-    <value>Description:</value>
+  <data name="Description.Label" xml:space="preserve">
+    <value>توضیحات</value>
   </data>
   <data name="Description.Help" xml:space="preserve">
-    <value>Describe your site group</value>
+    <value>توضیحاتی در خصوص گروه سایت خود وارد کنید</value>
   </data>
   <data name="Edit.Button" xml:space="preserve">
-    <value>Edit</value>
+    <value>ویرایش</value>
   </data>
   <data name="MasterSite.Header" xml:space="preserve">
-    <value>Master Site</value>
+    <value>سایت اصلی</value>
   </data>
   <data name="MasterSite.Label" xml:space="preserve">
-    <value>Master Site:</value>
+    <value>سایت اصلی:</value>
   </data>
   <data name="MasterSite.Help" xml:space="preserve">
-    <value>Master Site</value>
+    <value>سایت اصلی</value>
   </data>
   <data name="ChooseASite.Label" xml:space="preserve">
-    <value>Choose a site</value>
+    <value>انتخاب یک سایت</value>
   </data>
   <data name="NewSiteGroup.Button" xml:space="preserve">
-    <value>New Site Group</value>
+    <value>ایجاد گروه جدید</value>
   </data>
   <data name="SiteGroup.Label" xml:space="preserve">
-    <value>Site Group:</value>
+    <value>گروه سایت:</value>
   </data>
   <data name="Sites.Label" xml:space="preserve">
-    <value>Sites:</value>
+    <value>سایت ها:</value>
   </data>
   <data name="Delete.Button" xml:space="preserve">
-    <value>Delete</value>
+    <value>حذف</value>
   </data>
   <data name="DeleteGroup.Confirm" xml:space="preserve">
-    <value>Are you sure you want to delete this site group?</value>
+    <value>آیا از حذف این گروه سایت مطمئن هستید؟</value>
   </data>
   <data name="NoData.Text" xml:space="preserve">
-    <value>There are no site groups defined yet.</value>
+    <value>هنوز هیچ گروه سایتی تعریف نشده است.</value>
   </data>
 </root>

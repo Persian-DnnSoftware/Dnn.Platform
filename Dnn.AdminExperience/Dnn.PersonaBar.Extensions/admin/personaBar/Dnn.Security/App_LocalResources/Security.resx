@@ -1162,4 +1162,13 @@
   <data name="plDefaultEndUserExtensionWhitelist.Text" xml:space="preserve">
     <value>Default End User Extension Whitelist</value>
   </data>
+  <data name="Redirect.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="plDisplayCopyright.Help" xml:space="preserve">
+    <value />
+  </data>
+  <data name="plDisplayCopyright.Text" xml:space="preserve">
+    <value />
+  </data>
 </root>

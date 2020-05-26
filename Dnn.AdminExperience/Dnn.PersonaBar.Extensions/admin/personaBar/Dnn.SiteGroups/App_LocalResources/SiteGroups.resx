@@ -153,7 +153,7 @@
   <data name="GroupName.Required" xml:space="preserve">
     <value>A group name is required</value>
   </data>
-   <data name="Description.Label" xml:space="preserve">
+  <data name="Description.Label" xml:space="preserve">
     <value>Description:</value>
   </data>
   <data name="Description.Help" xml:space="preserve">
