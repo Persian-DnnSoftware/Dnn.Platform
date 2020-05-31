@@ -170,10 +170,10 @@ namespace DesktopModules.Admin.Security
             if (basePage != null)
             {
                 //Check if culture is RTL
-                //START dnnsoftware.ir
+                //START persian-dnnsoftware
                 //ProfileProperties.LabelMode = basePage.PageCulture.TextInfo.IsRightToLeft ? LabelMode.Right : LabelMode.Left;
                 ProfileProperties.LabelMode = LabelMode.Left;
-                //END dnnsoftware.ir
+                //END persian-dnnsoftware
             }
             ProfileProperties.LocalResourceFile = LocalResourceFile;
         }

@@ -61,10 +61,10 @@ namespace DotNetNuke.Services.Tokens
             set
             {
                 _language = value;
-                //START dnnsoftware.irs
+                //START persian-dnnsoftwares
                 //_formatProvider = new CultureInfo(_language);
                 _formatProvider = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(_language);
-                //END dnnsoftware.ir
+                //END persian-dnnsoftware
             }
         }
 

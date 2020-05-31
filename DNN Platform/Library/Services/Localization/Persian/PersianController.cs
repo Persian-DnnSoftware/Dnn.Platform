@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace DotNetNuke.Services.Localization.Persian
 {
-    public class PersianController // dnnsoftware.ir make class public
+    public class PersianController // persian-dnnsoftware make class public
     {
         public static CultureInfo GetPersianCultureInfo()
         {
@@ -74,12 +74,12 @@ namespace DotNetNuke.Services.Localization.Persian
 
         public static void SetNumberFormatInfo(NumberFormatInfo persianNumberFormatInfo)
         {
-            persianNumberFormatInfo.NumberDecimalSeparator = ".";// dnnsoftware.ir
-            persianNumberFormatInfo.CurrencySymbol = "";// dnnsoftware.ir
-            persianNumberFormatInfo.CurrencyDecimalDigits = 0;// dnnsoftware.ir
+            persianNumberFormatInfo.NumberDecimalSeparator = ".";// persian-dnnsoftware
+            persianNumberFormatInfo.CurrencySymbol = "";// persian-dnnsoftware
+            persianNumberFormatInfo.CurrencyDecimalDigits = 0;// persian-dnnsoftware
         }
 
-        //START dnnsoftware.ir
+        //START persian-dnnsoftware
         public static CultureInfo NewCultureInfo(string cultureCode)
         {
             if (string.IsNullOrEmpty(cultureCode))
@@ -156,7 +156,7 @@ namespace DotNetNuke.Services.Localization.Persian
             CultureInfo.CurrentUICulture.DateTimeFormat = dateTimeFormat;
         }
 
-        //END dnnsoftware.ir
+        //END persian-dnnsoftware
 
     }
 }

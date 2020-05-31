@@ -39,10 +39,10 @@ namespace DotNetNuke.Services.Upgrade.InternalController.Steps
             var installConfig = InstallController.Instance.GetInstallConfig();
             string culture = installConfig.InstallCulture;
 
-            //START dnnsoftware.ir
+            //START persian-dnnsoftware
             //if (culture.ToLower() != "en-us")
             if (culture.ToLowerInvariant() != "en-us" && culture.ToLowerInvariant() != "fa-ir")
-            //END dnnsoftware.ir
+            //END persian-dnnsoftware
             {
                 try
 	            {
