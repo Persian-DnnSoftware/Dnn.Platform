@@ -1,14 +1,10 @@
-﻿// 
-// Copyright (c) .NET Foundation. All rights reserved.
-// Licensed under the MIT License. See LICENSE file in the project root for full license information.
-// 
-using System;
+﻿using System;
 using System.Globalization;
 using System.Reflection;
 
 namespace DotNetNuke.Services.Localization.Persian
 {
-    class PersianController
+    public class PersianController // dnnsoftware.ir make class public
     {
         public static CultureInfo GetPersianCultureInfo()
         {
@@ -59,11 +55,108 @@ namespace DotNetNuke.Services.Localization.Persian
             persianDateTimeFormatInfo.ShortTimePattern = "hh:mm tt";
         }
 
+        public static CultureInfo GetGregorianCultureInfo()
+        {
+            var GregorianCultureInfo = new CultureInfo("ar-SA");
+
+            var cal = new GregorianCalendar();
+
+            FieldInfo fieldInfo = GregorianCultureInfo.GetType().GetField("calendar", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (fieldInfo != null)
+                fieldInfo.SetValue(GregorianCultureInfo, cal);
+
+            FieldInfo info = GregorianCultureInfo.DateTimeFormat.GetType().GetField("calendar", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (info != null)
+                info.SetValue(GregorianCultureInfo.DateTimeFormat, cal);
+
+            return GregorianCultureInfo;
+        }
+
         public static void SetNumberFormatInfo(NumberFormatInfo persianNumberFormatInfo)
         {
-            persianNumberFormatInfo.NumberDecimalSeparator = "/";
-            persianNumberFormatInfo.DigitSubstitution = DigitShapes.NativeNational;
-            persianNumberFormatInfo.NumberNegativePattern = 0;
+            persianNumberFormatInfo.NumberDecimalSeparator = ".";// dnnsoftware.ir
+            persianNumberFormatInfo.CurrencySymbol = "";// dnnsoftware.ir
+            persianNumberFormatInfo.CurrencyDecimalDigits = 0;// dnnsoftware.ir
         }
+
+        //START dnnsoftware.ir
+        public static CultureInfo NewCultureInfo(string cultureCode)
+        {
+            if (string.IsNullOrEmpty(cultureCode))
+            {
+                return null;
+            }
+            if (cultureCode.StartsWith("fa-"))
+            {
+                CultureInfo PersianCultureInfo = GetPersianCultureInfo();
+                return PersianCultureInfo;
+            }
+            if (cultureCode.StartsWith("ar-"))
+            {
+                CultureInfo GregorianCultureInfo = GetGregorianCultureInfo();
+                return GregorianCultureInfo;
+            }
+            return new CultureInfo(cultureCode, false);
+        }
+
+        public static CultureInfo NewCultureInfo(CultureInfo cultureInfo)
+        {
+            if (cultureInfo != null)
+            {
+                if (cultureInfo.Name.StartsWith("fa-"))
+                {
+                    CultureInfo PersianCultureInfo = GetPersianCultureInfo();
+                    return PersianCultureInfo;
+                }
+                if (cultureInfo.Name.StartsWith("ar-"))
+                {
+                    CultureInfo GregorianCultureInfo = GetGregorianCultureInfo();
+                    return GregorianCultureInfo;
+                }
+                return cultureInfo;
+            }
+            return cultureInfo;
+        }
+
+        public static void InvokePersianRadCalendar(System.Web.UI.Page page)
+        {
+            if (page == null)
+                page = (System.Web.UI.Page)System.Web.HttpContext.Current.Handler;
+
+            string script = "<script type=\"text/javascript\">";
+            script += "$(document).ready(function () { if ($('div').hasClass('RadPicker')) {";
+            script += string.Format("$(\"#Body\").append(\"<script src='{0}' type='text/javascript'><\\/script>\");", DotNetNuke.UI.Utilities.ClientAPI.ScriptPath + "PersianRadCalendar.js");
+            script += "}});";
+            script += "</script>";
+            DotNetNuke.UI.Utilities.ClientAPI.RegisterStartUpScript(page, "shamsiRadPicker", script);
+
+        }
+
+        public static void InvokePersianRadEditor(System.Web.UI.Page page)
+        {
+            if (page == null)
+                page = (System.Web.UI.Page)System.Web.HttpContext.Current.Handler;
+
+            string script = "<script type=\"text/javascript\">";
+            script += "$(document).ready(function () { if ($('div').hasClass('RadEditor')) {";
+            script += string.Format("$(\"#Body\").append(\"<script src='{0}' type='text/javascript'><\\/script>\");", DotNetNuke.UI.Utilities.ClientAPI.ScriptPath + "PersianRadEditor.js");
+            script += "}});";
+            script += "</script>";
+            DotNetNuke.UI.Utilities.ClientAPI.RegisterStartUpScript(page, "shamsiRadEditor", script);
+        }
+
+        public static void ChangeDateTimeFormatToEnglish()
+        {
+            CultureInfo info = new CultureInfo("en-US");
+            DateTimeFormatInfo dateTimeFormat = info.DateTimeFormat;
+            dateTimeFormat.AMDesignator = "AM";
+            dateTimeFormat.PMDesignator = "PM";
+            dateTimeFormat.ShortDatePattern = "MM/dd/yyyy";
+            CultureInfo.CurrentCulture.DateTimeFormat = dateTimeFormat;
+            CultureInfo.CurrentUICulture.DateTimeFormat = dateTimeFormat;
+        }
+
+        //END dnnsoftware.ir
+
     }
 }

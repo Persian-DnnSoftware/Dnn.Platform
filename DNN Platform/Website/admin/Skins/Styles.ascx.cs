@@ -66,6 +66,13 @@ namespace DotNetNuke.UI.Skins.Controls
                     objLink.ID = Globals.CreateValidID(Name);
                     objLink.Attributes["rel"] = "stylesheet";
                     objLink.Attributes["type"] = "text/css";
+                    //START dnnsoftware.ir
+                    if (System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+                    {
+                        if (System.IO.File.Exists(Server.MapPath(skinpath + StyleSheet.Replace(".css", ".rtl.css"))))
+                            StyleSheet = StyleSheet.Replace(".css", ".rtl.css");
+                    }
+                    //END dnnsoftware.ir
                     objLink.Href = skinpath + StyleSheet;
                     if (Media != "")
                     {

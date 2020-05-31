@@ -566,6 +566,14 @@ namespace DotNetNuke.Framework
         {
             base.OnInit(e);
 
+            //START dnnsoftware.ir
+
+            //Right to Left Layout
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+                Body.Attributes.Add("class", "rtl ");
+
+            //END dnnsoftware.ir
+
             //set global page settings
             InitializePage();
 

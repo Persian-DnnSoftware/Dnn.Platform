@@ -67,9 +67,19 @@ namespace DotNetNuke.Services.ClientCapability
         /// </summary>
         public virtual IClientCapability GetClientCapability(HttpRequest httpRequest)
         {
-            IClientCapability clientCapability = GetClientCapability(httpRequest.UserAgent);        	
-            clientCapability.FacebookRequest = FacebookRequestController.GetFacebookDetailsFromRequest(httpRequest);
-
+            IClientCapability clientCapability = GetClientCapability(httpRequest.UserAgent);
+            //START dnnsoftware.ir
+            try
+            {
+                FacebookRequest facebookdetails = FacebookRequestController.GetFacebookDetailsFromRequest(httpRequest);
+                clientCapability.FacebookRequest = facebookdetails;
+            }
+            catch (System.Exception ex)
+            {
+                DotNetNuke.Services.Exceptions.Exceptions.LogException(ex);
+            }
+            //clientCapability.FacebookRequest = FacebookRequestController.GetFacebookDetailsFromRequest(httpRequest);
+            //END dnnsoftware.ir
             return clientCapability;
         }
         #endregion

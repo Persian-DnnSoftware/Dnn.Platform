@@ -42,7 +42,13 @@ namespace DotNetNuke.UI.Skins.Controls
                 lblDate.CssClass = CssClass;
             }
             var user = UserController.Instance.GetCurrentUserInfo();
-            lblDate.Text = !String.IsNullOrEmpty(DateFormat) ? user.LocalTime().ToString(DateFormat) : user.LocalTime().ToLongDateString();
+
+            //START dnnsoftware.ir
+            if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
+                lblDate.Text = !String.IsNullOrEmpty(DateFormat) ? user.LocalTime().ToString(DateFormat, new System.Globalization.CultureInfo("fa-IR")) : user.LocalTime().ToString("dddd، d MMMM yyyy", new System.Globalization.CultureInfo("fa-IR"));
+            else
+                lblDate.Text = !String.IsNullOrEmpty(DateFormat) ? user.LocalTime().ToString(DateFormat) : user.LocalTime().ToLongDateString();
+            //END dnnsoftware.ir
         }
     }
 }
