@@ -48,7 +48,7 @@ namespace DotNetNuke.Common.Utilities
             }
             var DayNameString = dayBuilder.ToString().TrimEnd(TrimChars);
             //Get the short date pattern for the culture
-
+            string FormatString = DateTimeFormatInfo.CurrentInfo.ShortDatePattern;
             //START persian-dnnsoftware
             if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
             {
