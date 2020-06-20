@@ -59,9 +59,9 @@ namespace DotNetNuke.Services.Localization.Persian
             persianDateTimeFormatInfo.ShortTimePattern = "hh:mm tt";
         }
 
-        public static CultureInfo GetGregorianCultureInfo()
+        public static CultureInfo GetGregorianCultureInfo(string cultureCode)
         {
-            var GregorianCultureInfo = new CultureInfo("ar-SA");
+            var GregorianCultureInfo = new CultureInfo(cultureCode);
 
             var cal = new GregorianCalendar();
 
@@ -97,7 +97,7 @@ namespace DotNetNuke.Services.Localization.Persian
             }
             if (cultureCode.StartsWith("ar-"))
             {
-                CultureInfo GregorianCultureInfo = GetGregorianCultureInfo();
+                CultureInfo GregorianCultureInfo = GetGregorianCultureInfo(cultureCode);
                 return GregorianCultureInfo;
             }
             return new CultureInfo(cultureCode, false);
@@ -114,7 +114,7 @@ namespace DotNetNuke.Services.Localization.Persian
                 }
                 if (cultureInfo.Name.StartsWith("ar-"))
                 {
-                    CultureInfo GregorianCultureInfo = GetGregorianCultureInfo();
+                    CultureInfo GregorianCultureInfo = GetGregorianCultureInfo(cultureInfo.Name);
                     return GregorianCultureInfo;
                 }
                 return cultureInfo;
