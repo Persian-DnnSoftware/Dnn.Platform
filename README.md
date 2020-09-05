@@ -1,6 +1,6 @@
 <div dir="rtl" align="right">
 
-<img src='logo.png' />
+<img src='https://github.com/Persian-DnnSoftware/Dnn.Platform/raw/development/logo.png' />
 
 # نسخه فارسی دی ان ان (DNN)
 
