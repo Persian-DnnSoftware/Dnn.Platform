@@ -16,6 +16,7 @@
 * محمد ثنامهر
 
 # دانلود DNN فارسی
+* [دانلود نسخه 9.8.0 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.8.0-persian) - (تاریخ انتشار :1399/08/24)
 * [دانلود نسخه 9.7.0 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.7.0-persian) - (تاریخ انتشار :1399/06/10)
 * [دانلود نسخه 9.6.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.6.1-persian)
 * [دانلود نسخه 9.5 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.5.0-persian)
