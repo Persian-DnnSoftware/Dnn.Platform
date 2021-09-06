@@ -742,7 +742,7 @@ namespace DNNConnect.CKEditorProvider.Browser
             return string.Format(
                 "var E = window.parent;E['CKEDITOR'].tools.callFunction({0},'{1}','{2}') ;",
                 funcNum,
-                GlobalObject.escape(fileUrl),
+                fileUrl,
                 errorMsg.Replace("'", "\\'"));
         }
 
