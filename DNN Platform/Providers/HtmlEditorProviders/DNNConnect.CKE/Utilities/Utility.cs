@@ -253,7 +253,7 @@ namespace DNNConnect.CKEditorProvider.Utilities
 
             input = input.Replace("�", string.Empty);
 
-            input = Encoding.ASCII.GetString(Encoding.GetEncoding(1251).GetBytes(input));
+             input = Encoding.UTF8.GetString(Encoding.GetEncoding("utf-8").GetBytes(input));
 
             input = input.Replace("?", string.Empty); // replace the unknown char which created in above.
             input = input.Replace("�", string.Empty);
