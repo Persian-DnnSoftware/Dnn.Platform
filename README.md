@@ -7,6 +7,9 @@
 جامعه DNN فارسی جهت بومی سازی سریع و با کیفیت نسخه فارسی DNN این مخزن را راه اندازی کرده است.<br/>
 دانلود آخرین نسخه DNN فارسی به همراه سورس.
 بومی سازی هسته DNN فارسی با بالاترین کیفیت
+  
+## حمایت از دی ان ان فارسی
+  <a href="https://zarinp.al/Persian-DnnSoftware.ir"><img src='https://www.persian-dnnsoftware.ir/Portals/0/Images/Donate-200.png?ver=fyr_22nW-rkmf1ULsTwYMg%3d%3d' /></a>
 
 ## اعضای تیم
 
