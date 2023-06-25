@@ -19,8 +19,8 @@
 * علی نظری
 
 # دانلود DNN فارسی
-* [دانلود نسخه 9.11.2 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.11.2-persian) - (تاریخ انتشار :1401/01/24)
-* [دانلود نسخه 9.11.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.11.1-persian) - (تاریخ انتشار :1401/12/08)
+* [دانلود نسخه 9.11.2 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.11.2-persian) - (تاریخ انتشار :1402/01/24)
+* [دانلود نسخه 9.11.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.11.1-persian) - (تاریخ انتشار :1402/12/08)
 * [دانلود نسخه 9.11.0 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.11.0-persian) - (تاریخ انتشار :1401/07/17)
 * [دانلود نسخه 9.10.2 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.10.2-persian) - (تاریخ انتشار :1400/08/01)
 * [دانلود نسخه 9.10.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.10.1-persian) - (تاریخ انتشار :1400/06/06)
