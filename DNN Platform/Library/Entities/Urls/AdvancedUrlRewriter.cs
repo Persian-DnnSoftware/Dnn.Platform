@@ -489,6 +489,15 @@ namespace DotNetNuke.Entities.Urls
 
             if (context != null)
             {
+                //START Persian-DnnSoftware
+                //404 Page RLT Bug Fix
+                var portalInfo = PortalController.Instance.GetPortal(Host.HostPortalID);
+                if (portalInfo.CultureCode == "fa-IR")
+                {
+                    var newCulture = Services.Localization.Persian.PersianController.NewCultureInfo(portalInfo.CultureCode);
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+                }
+                //END Persian-DnnSoftware
                 HttpRequest request = context.Request;
                 HttpResponse response = context.Response;
                 HttpServerUtility server = context.Server;
@@ -762,7 +771,15 @@ namespace DotNetNuke.Entities.Urls
 
                                     // 881 : spoof the basePage object so that the client dependency framework
                                     // is satisfied it's working with a page-based handler
-                                    IHttpHandler spoofPage = new CDefault();
+                                    //START Persian-DnnSoftware
+                                    //404 Page RLT Bug Fix
+                                    //IHttpHandler spoofPage = new CDefault();
+                                    var spoofPage = new CDefault();
+                                    if (portalInfo.CultureCode == "fa-IR")
+                                    {
+                                        spoofPage.Culture = "fa-IR";
+                                    }
+                                    //END Persian-DnnSoftware
                                     context.Handler = spoofPage;
                                     server.Transfer("~/" + errUrl, true);
                                 }
