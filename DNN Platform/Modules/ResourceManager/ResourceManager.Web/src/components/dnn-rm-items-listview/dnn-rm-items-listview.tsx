@@ -35,8 +35,10 @@ export class DnnRmItemsListview {
   private getLocalDateString(dateString: string) {
     const date = new Date(dateString);
     return <div class="date">
-      <span>{date.toLocaleDateString()}</span>
-      <span>{date.toLocaleTimeString()}</span>
+      {/* START persian-dnnsoftware */}
+      <span>{ document.documentElement.lang.toLowerCase()!="fa-ir"?date.toLocaleDateString():date.toLocaleDateString("fa-IR")}</span>
+      <span>{document.documentElement.lang.toLowerCase()!="fa-ir"?date.toLocaleTimeString():date.toLocaleTimeString("fa-IR")}</span>
+      {/* END persian-dnnsoftware */}
     </div>
   }
 
