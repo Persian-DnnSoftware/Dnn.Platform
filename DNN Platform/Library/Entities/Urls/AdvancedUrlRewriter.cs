@@ -1440,7 +1440,10 @@ namespace DotNetNuke.Entities.Urls
 
                 /* START Persian-DnnSoftware */
             }
-            catch (Exception) { }
+            catch (Exception)
+            {
+            }
+
             /* END Persian-DnnSoftware */
             return false;
         }

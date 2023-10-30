@@ -294,6 +294,7 @@ namespace DotNetNuke.Services.Install
                 culture = "fa-IR";
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
             }
+
             if (culture.ToLower() == "fa-ir")
             {
                 defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.rtl.css";
@@ -301,7 +302,7 @@ namespace DotNetNuke.Services.Install
             }
             else
             {
-                this.Body.Attributes.Add("class", "");
+                this.Body.Attributes.Add("class", string.Empty);
             }
 
             System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();

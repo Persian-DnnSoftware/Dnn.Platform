@@ -14,6 +14,10 @@ namespace DotNetNuke.UI.Skins.Controls
     {
         private bool useSkinPath = true;
 
+        // Bazrafshan
+        /* Persian-DnnSoftware */
+        private int priority = 10;
+
         public string Condition { get; set; }
 
         public bool IsFirst { get; set; }
@@ -24,8 +28,6 @@ namespace DotNetNuke.UI.Skins.Controls
 
         // Bazrafshan
         /* START Persian-DnnSoftware */
-        private int priority = 10;
-
         public int Priority
         {
             get
@@ -104,7 +106,7 @@ namespace DotNetNuke.UI.Skins.Controls
                     else
                     {
                         string skinfile = skinpath + this.StyleSheet.Replace(".css", ".rtl.css");
-                        skinfile = skinfile.Substring( skinfile.IndexOf("Portals") > 0 ? skinfile.IndexOf("Portals") : skinfile.IndexOf("DesktopModules") > 0 ? skinfile.IndexOf("DesktopModules") : 0);
+                        skinfile = skinfile.Substring(skinfile.IndexOf("Portals") > 0 ? skinfile.IndexOf("Portals") : skinfile.IndexOf("DesktopModules") > 0 ? skinfile.IndexOf("DesktopModules") : 0);
                         var objLink = new HtmlLink();
                         objLink.ID = Globals.CreateValidID(this.Name);
                         objLink.Attributes["rel"] = "stylesheet";

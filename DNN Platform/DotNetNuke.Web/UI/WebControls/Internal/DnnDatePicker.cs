@@ -55,16 +55,26 @@ namespace DotNetNuke.Web.UI.WebControls.Internal
             ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/moment.min.js");
             /* START Persian-DnnSoftware */
             if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
-                ClientResourceManager.RegisterScript(Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.js");
+            {
+                ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.js");
+            }
             else
+            {
                 ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/pikaday.js");
+            }
+
             /* END Persian-DnnSoftware */
             ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/pikaday.jquery.js");
             /* START Persian-DnnSoftware */
             if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
-                ClientResourceManager.RegisterStyleSheet(Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.css");
+            {
+                ClientResourceManager.RegisterStyleSheet(this.Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.css");
+            }
             else
+            {
                 ClientResourceManager.RegisterStyleSheet(this.Page, "~/Resources/Shared/components/DatePicker/pikaday.css");
+            }
+
             /* END Persian-DnnSoftware */
 
             this.RegisterClientResources();
