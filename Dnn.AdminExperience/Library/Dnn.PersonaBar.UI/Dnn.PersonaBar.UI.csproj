@@ -193,6 +193,14 @@
       <Link>stylecop.json</Link>
     </AdditionalFiles>
     <EmbeddedResource Include="admin\personaBar\resources\LocalResources.fa-IR.resources" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Light.eot" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Light.ttf" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Light.woff" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Light.woff2" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Medium.eot" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Medium.ttf" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Medium.woff" />
+    <None Include="admin\personaBar\css\fonts\IRANSansWeb_Medium.woff2" />
     <None Include="admin\personaBar\css\open-sans.semibold.ttf" />
     <None Include="admin\personaBar\css\Roboto-Regular.ttf" />
     <None Include="app.config" />
