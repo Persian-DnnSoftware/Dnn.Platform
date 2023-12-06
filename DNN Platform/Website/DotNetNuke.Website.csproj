@@ -549,11 +549,6 @@
     <Compile Include="admin\Users\ViewProfile.ascx.designer.cs">
       <DependentUpon>ViewProfile.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\WebControls.fa-IR1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WebControls.fa-IR.resx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
