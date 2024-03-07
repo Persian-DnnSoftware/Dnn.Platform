@@ -86,7 +86,19 @@ namespace DotNetNuke.Common.Utilities
         /// <returns>String representing the required date for display.</returns>
         public static string CalculateDateForDisplay(DateTime date)
         {
-            var utcTimeDifference = GetDatabaseUtcTime() - date;
+            /* START Persian-DnnSoftware */
+            string tempdate = date.ToString("yyyy/MM/dd HH:mm:ss");
+            DateTime date1 = GetDatabaseUtcTime();
+            TimeSpan utcTimeDifference;
+
+            if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
+            {
+                date = DateTime.Parse(tempdate);
+            }
+
+            utcTimeDifference = date1 - date;
+            /* END Persian-DnnSoftware */
+            /* var utcTimeDifference = GetDatabaseUtcTime() - date; */
 
             if (utcTimeDifference.TotalSeconds < 60)
             {

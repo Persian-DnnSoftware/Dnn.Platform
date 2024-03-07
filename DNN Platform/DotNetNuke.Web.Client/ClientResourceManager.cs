@@ -428,6 +428,19 @@ namespace DotNetNuke.Web.Client.ClientResourceManagement
                 return;
             }
 
+            /* START Persian-DnnSoftware */
+            /* if ((System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http")) //Comment for 404 Page Bug Fix, CurrentCulture => CurrentUICulture */
+            if ((System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http"))
+            {
+                string locfile = filePath.Replace(".css", ".rtl.css");
+                if (FileExists(page, locfile))
+                {
+                    filePath = locfile;
+                }
+            }
+
+            /* END Persian-DnnSoftware */
+
             var include = new DnnCssInclude { ForceProvider = provider, Priority = priority, FilePath = filePath, Name = name, Version = version };
             if (htmlAttributes != null)
             {
