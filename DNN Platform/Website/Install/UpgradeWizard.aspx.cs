@@ -287,6 +287,43 @@ namespace DotNetNuke.Services.Install
                 this.Response.Redirect("Install.aspx", true);
             }
 
+            /* START Persian-DnnSoftware */
+            string defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css";
+            if (culture == null)
+            {
+                culture = "fa-IR";
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
+            }
+
+            if (culture.ToLower() == "fa-ir")
+            {
+                defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/7.0.0/default.rtl.css";
+                this.Body.Attributes.Add("class", "rtl");
+            }
+            else
+            {
+                this.Body.Attributes.Add("class", string.Empty);
+            }
+
+            System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();
+            css.Href = defaultCSSPath;
+            css.Attributes["rel"] = "stylesheet";
+            css.Attributes["type"] = "text/css";
+            this.SCRIPTS.Controls.Add(css);
+
+            System.Web.UI.HtmlControls.HtmlLink css2 = new System.Web.UI.HtmlControls.HtmlLink();
+            css2.Href = Globals.ApplicationPath + "/Install/Install.css";
+            css2.Attributes["rel"] = "stylesheet";
+            css2.Attributes["type"] = "text/css";
+            this.SCRIPTS.Controls.Add(css2);
+
+            System.Web.UI.HtmlControls.HtmlLink css3 = new System.Web.UI.HtmlControls.HtmlLink();
+            css3.Href = Globals.ApplicationPath + "/Resources/Shared/stylesheets/dnn.PasswordStrength.css";
+            css3.Attributes["rel"] = "stylesheet";
+            css3.Attributes["type"] = "text/css";
+            this.SCRIPTS.Controls.Add(css3);
+            /* END Persian-DnnSoftware */
+
             base.OnLoad(e);
 
             this.pnlAcceptTerms.Visible = this.NeedAcceptTerms;
