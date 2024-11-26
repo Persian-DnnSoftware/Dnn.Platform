@@ -15,7 +15,18 @@ export function formatDate(dateValue, longformat) {
     const localizedFormat = require("dayjs/plugin/localizedFormat");
     dayjs.extend(localizedFormat);
     require("dayjs/locale/" + utilities.getCulture().substring(0,2));
-
+    // /* START Persian-DnnSoftware */
+    // if (window.parent["personaBarSettings"]["culture"] === "fa-IR") {
+        if (utilities.getCulture()==="fa-IR") {
+            return longformat === true?new Date(dateValue).toLocaleString("fa-IR",{
+                year:"numeric",
+                month:"2-digit",
+                day:"2-digit",
+                hour:"2-digit",
+                minute:"2-digit",
+                weekday:"short"}).replace("،","  -  "): new Date(dateValue).toLocaleDateString("fa-IR");
+        }
+    // /* END Persian-DnnSoftware */
     return dayjs(dateValue).locale(utilities.getCulture().substring(0,2)).format(longformat === true ? "LLL" : "L");
 }
 
