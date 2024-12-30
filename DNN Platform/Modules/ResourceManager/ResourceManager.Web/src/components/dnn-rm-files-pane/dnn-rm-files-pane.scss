@@ -3,3 +3,14 @@
   padding-left: 32px;
   overflow-y: auto;
 }
+
+/* START Persian-DnnSoftware */
+@if "body has class $rtl"{
+  :host {
+    display: block;
+    padding-right: 32px;
+    padding-left: unset;
+    overflow-y: auto;
+    }
+}
+/* END Persian-DnnSoftware */
