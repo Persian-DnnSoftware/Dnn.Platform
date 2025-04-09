@@ -32,11 +32,24 @@
 
     var hasCustomEditBarTheme = editBarSettings['editBarTheme'];
     if (hasCustomEditBarTheme){
-        styles.push('../../../../Portals/_default/EditBarTheme.css');
+        /* START Persian-DnnSoftware */
+        //styles.push('../../../../Portals/_default/EditBarTheme.css');
+        if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+            styles.push('../../../../Portals/_default/EditBarTheme.rtl.css');
+        } else {
+            styles.push('../../../../Portals/_default/EditBarTheme.css');
+        }
+        /* END Persian-DnnSoftware */
     }
     else{
         styles.push(themeCss);
     }
+
+    /* START Persian-DnnSoftware */
+    if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+        mainCss = mobi ? 'css/main.mobi.rtl.css' : 'css/main.rtl.css';
+    }
+    /* END Persian-DnnSoftware */
 
     styles.push(mainCss);
 

@@ -138,6 +138,7 @@
     <EmbeddedResource Include="App_LocalResources\SharedResources.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Module.rtl.css" />
     <Content Include="Connector.css" />
     <Content Include="connector.htm" />
     <Content Include="Images\GoogleTagManager_32X32_Standard.png" />

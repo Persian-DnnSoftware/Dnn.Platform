@@ -124,11 +124,21 @@
     </AdditionalFiles>
     <None Include="app.config" />
     <None Include="Dnn.EditBar.UI.dnn" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Light.eot" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Light.ttf" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Light.woff" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Light.woff2" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Medium.eot" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Medium.ttf" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Medium.woff" />
+    <None Include="editBar\css\fonts\IRANSansWeb_Medium.woff2" />
     <None Include="editBar\css\RobotoSlab-Regular.ttf" />
     <None Include="editBar\css\SourceCodePro-Regular.ttf" />
     <None Include="editBar\css\SourceCodePro-Regular.ttf.woff" />
     <None Include="editBar\css\SourceCodePro-Semibold.ttf" />
     <None Include="editBar\css\SourceCodePro-Semibold.ttf.woff" />
+    <Content Include="editBar\css\editBarContainer.rtl.css" />
+    <Content Include="editBar\css\main.rtl.css" />
     <Content Include="editBar\css\WorkflowState.css" />
     <Content Include="editBar\css\CompleteWorkflow.css" />
     <Content Include="editBar\css\DiscardWorkflow.css" />
@@ -137,6 +147,7 @@
     <Content Include="editBar\css\QuickAddModule.css" />
     <Content Include="editBar\css\theme.css" />
     <Content Include="editBar\QuickAddModule.html" />
+    <Content Include="editBar\resources\ContentEditorManager\Styles\ContentEditor.rtl.css" />
     <Content Include="editBar\scripts\WorkflowState.js" />
     <Content Include="editBar\scripts\CompleteWorkflow.js" />
     <Content Include="editBar\scripts\DiscardWorkflow.js" />
