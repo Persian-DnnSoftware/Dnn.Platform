@@ -1077,7 +1077,7 @@ namespace DotNetNuke.Services.Install
             }
 
             // END persian-dnnsoftware
-            if (string.IsNullOrEmpty(this.PageLocale.Value) && string.IsNullOrEmpty(culture))
+            else if (string.IsNullOrEmpty(this.PageLocale.Value) && string.IsNullOrEmpty(culture))
             {
                 cultureCode = !string.IsNullOrEmpty(HttpContext.Current.Request.Params.Get("culture")) ? HttpContext.Current.Request.Params.Get("culture") : TestableLocalization.Instance.BestCultureCodeBasedOnBrowserLanguages(supportedLanguages);
             }
