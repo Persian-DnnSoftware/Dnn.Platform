@@ -1,0 +1,34 @@
+﻿/* persian-dnnsoftware */
+.left {
+    float: right;
+}
+
+.right {
+    float: left;
+}
+
+.dnnLeft {
+    float: right;
+}
+
+.dnnRight {
+    float: left;
+}
+
+.dnnClear {
+    clear: both;
+}
+
+.dnnClear:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
+
+/* سازگاری با IE قدیمی */
+* + html .dnnClear {
+    min-height: 1%;
+}

@@ -8,9 +8,11 @@
     <title></title>
     <asp:PlaceHolder runat="server" ID="ClientDependencyHeadCss"></asp:PlaceHolder>
     <asp:PlaceHolder runat="server" ID="ClientDependencyHeadJs"></asp:PlaceHolder>
-    <link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?refresh" />
+    <%--START persian-dnnsoftware--%>
+    <!--<link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?refresh" />
     <link rel="stylesheet" type="text/css" href="Install.css?refresh" />
-    <link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnn.PasswordStrength.css?refresh" />
+    <link rel="stylesheet" type="text/css" href="../Resources/Shared/stylesheets/dnn.PasswordStrength.css?refresh" /> -->
+    <%--END persian-dnnsoftware--%>
     <link rel="stylesheet" type="text/css" href="../Portals/_default/skins/_default/WebControlSkin/default/combobox.default.css?refresh" />
     <script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery-migrate.min.js"></script>
@@ -22,7 +24,7 @@
     <script type="text/javascript" src="../Resources/Shared/scripts/dnn.jquery.tooltip.js"></script>
     <asp:placeholder id="SCRIPTS" runat="server"></asp:placeholder>
 </head>
-<body>
+<body id="Body" runat="server">
     <asp:placeholder runat="server" id="ClientResourceIncludes" />
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scManager" runat="server" EnablePageMethods="true"></asp:ScriptManager>
@@ -34,6 +36,7 @@
 
     <div id="languageFlags" runat="server" clientidmode="Static">
         <asp:LinkButton  id="lang_en_US" class="flag" runat="server" value="en-US" title="English (United States)" OnClientClick="installWizard.changePageLocale('lang_en_US','en-US');" CausesValidation="false"><img src="../images/flags/en-US.gif" alt="en-US" class="flagimage"/></asp:LinkButton>
+        <asp:LinkButton  id="lang_fa_IR" class="flag" runat="server" value="fa-IR" title="فارسی (ایران)" OnClientClick="installWizard.changePageLocale('lang_fa_IR','fa-IR');" CausesValidation="false"><img src="../images/flags/fa-IR.gif" alt="fa-IR" class="flagimage"/></asp:LinkButton>
         <asp:LinkButton  id="lang_de_DE" class="flag" runat="server" value="de-DE" title="Deutsch (Deutschland)" OnClientClick="installWizard.changePageLocale('lang_de_DE','de-DE');" CausesValidation="false"><img src="../images/flags/de-DE.gif" alt="de-DE" class="flagimage"/></asp:LinkButton>
         <asp:LinkButton  id="lang_es_ES" class="flag" runat="server" value="es-ES" title="Español (España)" OnClientClick="installWizard.changePageLocale('lang_es_ES','es-ES');" CausesValidation="false"><img src="../images/flags/es-ES.gif" alt="es-ES" class="flagimage"/></asp:LinkButton>
         <asp:LinkButton  id="lang_fr_FR" class="flag" runat="server" value="fr-FR" title="Français (France)" OnClientClick="installWizard.changePageLocale('lang_fr_FR','fr-FR');" CausesValidation="false"><img src="../images/flags/fr-FR.gif" alt="fr-FR" class="flagimage"/></asp:LinkButton>

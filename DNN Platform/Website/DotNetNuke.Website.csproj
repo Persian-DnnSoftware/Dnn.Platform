@@ -1227,6 +1227,7 @@
     <Content Include="Resources\Shared\components\TimePicker\Themes\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Resources\Shared\components\TimePicker\Themes\jquery-ui.css" />
     <Content Include="Resources\Shared\components\TimePicker\Themes\jquery.ui.theme.css" />
+    <Content Include="Resources\Shared\fonts\FontIRANSansX.css" />
     <Content Include="Resources\Shared\stylesheets\dnn.PasswordStrength.css" />
     <Content Include="Resources\Shared\stylesheets\dnndefault\7.0.0\default.rtl.css" />
     <Content Include="Resources\Shared\stylesheets\dnndefault\7.0.0\default.css" />
@@ -1280,6 +1281,10 @@
     <Content Include="Install\Config\09.13.04.config" />
     <Content Include="Providers\DataProviders\SqlDataProvider\09.13.04.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\09.13.08.SqlDataProvider" />
+    <Content Include="Resources\Shared\fonts\woff2\IRANSansX-Bold.woff2" />
+    <Content Include="Resources\Shared\fonts\woff2\IRANSansX-Regular.woff2" />
+    <Content Include="Resources\Shared\fonts\woff\IRANSansX-Bold.woff" />
+    <Content Include="Resources\Shared\fonts\woff\IRANSansX-Regular.woff" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

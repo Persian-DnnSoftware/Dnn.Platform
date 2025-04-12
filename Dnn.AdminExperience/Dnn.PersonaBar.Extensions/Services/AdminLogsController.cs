@@ -100,7 +100,7 @@ namespace Dnn.PersonaBar.AdminLogs.Services
                     v.LogPortalName,
                     /* START Persian-DnnSoftware */
                     /* LogCreateDate = v.LogCreateDate.ToString("G", CultureInfo.InvariantCulture), */
-                    LogCreateDate = this.PortalSettings.CultureCode == "fa-IR" ? v.LogCreateDate.ToString("G", DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo("fa-IR")) : v.LogCreateDate.ToString("G", CultureInfo.InvariantCulture),
+                    LogCreateDate = this.PortalSettings.CultureCode == "fa-IR" ? v.LogCreateDate.ToString("G", DotNetNuke.Services.Localization.Persian.PersianController.GetPersianCultureInfo()) : v.LogCreateDate.ToString("G", CultureInfo.InvariantCulture),
                     /* END Persian-DnnSoftware */
                     v.LogProperties.Summary,
                     LogProperties = this.controller.GetPropertiesText(v),
