@@ -317,6 +317,43 @@ namespace DotNetNuke.Services.Install
                 this.Response.Redirect("Install.aspx", true);
             }
 
+            // START persian-dnnsoftware
+            string defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css";
+            if (this.PageLocale.Value == "fa-IR")
+            {
+                defaultCSSPath = "../Resources/Shared/stylesheets/dnndefault/10.0.0/default.rtl.css";
+                this.Body.Attributes.Add("class", "rtl");
+
+                System.Web.UI.HtmlControls.HtmlLink font = new System.Web.UI.HtmlControls.HtmlLink();
+                font.Href = Globals.ApplicationPath + "/Resources/Shared/fonts/FontIRANSansX.css";
+                font.Attributes["rel"] = "stylesheet";
+                font.Attributes["type"] = "text/css";
+                this.Page.Header.Controls.Add(font);
+            }
+            else
+            {
+                this.Body.Attributes.Add("class", string.Empty);
+            }
+
+            System.Web.UI.HtmlControls.HtmlLink css = new System.Web.UI.HtmlControls.HtmlLink();
+            css.Href = defaultCSSPath;
+            css.Attributes["rel"] = "stylesheet";
+            css.Attributes["type"] = "text/css";
+            this.Page.Header.Controls.Add(css);
+
+            System.Web.UI.HtmlControls.HtmlLink css2 = new System.Web.UI.HtmlControls.HtmlLink();
+            css2.Href = Globals.ApplicationPath + "/Install/Install.css";
+            css2.Attributes["rel"] = "stylesheet";
+            css2.Attributes["type"] = "text/css";
+            this.Page.Header.Controls.Add(css2);
+
+            System.Web.UI.HtmlControls.HtmlLink css3 = new System.Web.UI.HtmlControls.HtmlLink();
+            css3.Href = Globals.ApplicationPath + "/Resources/Shared/stylesheets/dnn.PasswordStrength.css";
+            css3.Attributes["rel"] = "stylesheet";
+            css3.Attributes["type"] = "text/css";
+            this.Page.Header.Controls.Add(css3);
+
+            // END persian-dnnsoftware
             base.OnLoad(e);
             this.LocalizePage();
 

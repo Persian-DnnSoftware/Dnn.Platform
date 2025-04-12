@@ -3471,6 +3471,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Licenses\StencilJS %28MIT%29.resources" />
+    <Content Include="Install\App_LocalResources\Installwizard.aspx.fa-IR.resx" />
+    <Content Include="Install\App_LocalResources\UpgradeWizard.aspx.fa-IR.resx" />
     <EmbeddedResource Include="Licenses\Google Fonts %28Apache2%29.txt.resources" />
     <EmbeddedResource Include="Licenses\NUnit3TestAdapter %28MIT%29.txt.resources" />
     <Content Include="Portals\_default\Blank Website.template.en-US.resx" />

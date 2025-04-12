@@ -1,5 +1,4 @@
-﻿/* persian-dnnsoftware */
-.dnnForm {
+﻿.dnnForm {
     width: 100%;
 
     fieldset {
@@ -119,32 +118,24 @@
         border-width: 1px;
     }
 
-    button[disabled],
-    input[disabled] {
+    button[disabled], input[disabled] {
         cursor: default;
         opacity: 0.5;
     }
     /* Active and Focus States */
-    input[type="text"]:active,
-    .dnnFormItem input[type="text"]:focus,
-    input[type="password"]:focus,
-    .dnnFormItem input[type="password"]:active,
-    input[type="email"]:active,
-    .dnnFormItem input[type="email"]:focus,
-    select:active,
-    .dnnFormItem select:focus,
-    textarea:active,
-    .dnnFormItem textarea:focus,
-    input[type="search"]:active,
-    .dnnFormItem input[type="search"]:focus {
+    input[type="text"]:active, .dnnFormItem input[type="text"]:focus,
+    input[type="password"]:focus, .dnnFormItem input[type="password"]:active,
+    input[type="email"]:active, .dnnFormItem input[type="email"]:focus,
+    select:active, .dnnFormItem select:focus,
+    textarea:active, .dnnFormItem textarea:focus,
+    input[type="search"]:active, .dnnFormItem input[type="search"]:focus {
         background: var(--dnn-color-background, #fff);
         border: 1px solid var(--dnn-color-primary, rgba(2,139,255,0.5));
         box-shadow: 0px 0px 3px 0px var(--dnn-color-primary, rgba(2, 139, 255, 0.4));
         color: var(--dnn-color-foreground, #333);
     }
     /* Invalid state */
-    input:invalid,
-    textarea:invalid {
+    input:invalid, textarea:invalid {
         background-color: var(--dnn-color-neutral, #f0dddd);
     }
     /* Error tooltip */
@@ -153,7 +144,7 @@
         position: absolute;
         overflow: visible;
         bottom: 95%;
-        right: 12%;
+        left: 12%;
         width: 200px;
         margin-bottom: 0;
         padding: 0.625rem;
@@ -167,13 +158,13 @@
         &:after {
             position: absolute;
             bottom: -0.4375rem;
-            left: 0.9375rem;
+            right: 0.9375rem;
             content: "";
             width: 0;
             height: 0;
             opacity: 0.75;
-            border-left: 0.4375rem solid transparent;
             border-right: 0.4375rem solid transparent;
+            border-left: 0.4375rem solid transparent;
             border-top: 0.4375rem solid var(--dnn-color-danger, red);
         }
     }
@@ -186,8 +177,8 @@ div.dnnFormGroup {
     width: 65%;
 }
 
-.dnnFormItem button,
-.dnnFormItem input[type="button"],
+/* Display hand cursor for clickable form elements */
+.dnnFormItem button, .dnnFormItem input[type="button"],
 .dnnFormItem input[type="reset"],
 .dnnFormItem input[type="submit"],
 .dnnPrimaryAction,
@@ -209,8 +200,7 @@ div.dnnFormGroup {
     text-align: center;
 }
 
-.dnnFormItem button,
-.dnnFormItem input[type="button"],
+.dnnFormItem button, .dnnFormItem input[type="button"],
 .dnnFormItem input[type="reset"],
 .dnnFormItem input[type="submit"],
 .dnnPrimaryAction,
@@ -242,6 +232,7 @@ div.dnnFormGroup {
 
         a {
             color: var(--dnn-color-danger-contrast, black);
+            ;
         }
     }
 
@@ -312,7 +303,7 @@ div.dnnFormGroup {
     padding: 0.625rem;
     padding-right: 1.875rem;
     border-radius: var(--dnn-controls-radius, 3px);
-    background: rgba( var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), 0.75) url(../../../../../images/pin-icn.png) no-repeat 7px 12px;
+    background: rgba( var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), 0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px top 12px;
     font-size: 0.6875rem;
     color: var(--dnn-color-foreground-contrast, #DDD);
     text-align: right;
@@ -322,7 +313,7 @@ span.dnnFormRequired:after,
 div.dnnFormItem.dnnFormRequired > div.dnnLabel span:after {
     content: "*";
     display: inline-block;
-    margin: 0 0 0 0.3125rem;
+    margin: 0 0.3125rem 0 0;
     color: var(--dnn-color-danger, red);
     font-size: 1rem;
     line-height: 1rem;
@@ -349,10 +340,8 @@ a.dnnFormHelp {
     margin: 0 !important;
 }
 
-.aspNetDisabled,
-a.aspNetDisabled,
-.dnnDisabled,
-a.dnnDisabled {
+.aspNetDisabled, a.aspNetDisabled,
+.dnnDisabled, a.dnnDisabled {
     border: none;
     background-color: var(--dnn-color-neutral, #ebebeb) !important;
     color: var(--dnn-color-neutral-dark, #ccc) !important;
@@ -423,7 +412,7 @@ legend.required:after {
     text-align: right;
 
     li {
-        float: left;
+        float: right;
         margin-left: 0.3125rem;
         list-style: none;
     }
@@ -484,7 +473,7 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     input[type="text"] + a.dnnPrimaryAction,
     input[type="text"] + a.dnnSecondaryAction,
     input[type="text"] + a.dnnTerriaryAction {
-        margin-left: 0.3125rem;
+        margin-right: 0.3125rem;
     }
 
     input[type="checkbox"] + span,
@@ -525,13 +514,13 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     display: inline;
     width: auto;
     padding-left: 0;
-    margin: 0 10px 0 0;
+    margin: 0 0 0 10px;
     text-align: right;
     font-weight: normal;
 }
 
 .dnnFormRadioButtons {
-    float: left;
+    float: right;
     display: block;
     width: auto;
 
@@ -553,10 +542,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     padding-left: 20px;
     margin-left: 18px;
     overflow: visible;
-    text-align: right;
+    text-align: left;
 
     > span {
-        text-align: right;
+        text-align: left;
     }
 
     + span {
@@ -599,7 +588,7 @@ a.pinHelp {
     width: 15px;
     height: 15px;
     opacity: 0.5;
-    background: url(../../../../../images/pin-icn.png) no-repeat 0 0;
+    background: url(../../../../../images/pin-icn.png) no-repeat 100% 0;
     filter: contrast(3);
 }
 
@@ -608,7 +597,7 @@ a.pinHelp:hover {
     opacity: 1;
 }
 
-/* Input Customised Checkbox */
+/* Input Customised Checkbox*/
 .dnnCheckbox {
     display: flex;
     justify-content: center;
@@ -619,12 +608,12 @@ a.pinHelp:hover {
         width: 18px;
         height: 18px;
         background: transparent url(../../../../../images/checkbox.png) no-repeat;
-        background-position: 0px 0px;
+        background-position: left 0px top 0px;
     }
 }
 
 .dnnCheckbox-checked img {
-    background-position: -51px 0px;
+    background-position: left -51px top 0px;
 }
 
 .dnnCheckbox-disabled {
@@ -636,11 +625,11 @@ a.pinHelp:hover {
 }
 
 .dnnCheckbox-error img {
-    background-position: -100px 0px;
+    background-position: left -100px top 0px;
 }
 
 .dnnCheckbox-checked-error img {
-    background-position: -150px 0px;
+    background-position: left -150px top 0px;
 }
 
 .dnnCheckbox-focus {
@@ -667,12 +656,12 @@ a.pinHelp:hover {
         min-width: 20px;
         vertical-align: middle;
         background: transparent url(../../../../../images/radiobutton.png) no-repeat;
-        background-position: -20px 0px; /* تغییر موقعیت برای راستچین */
+        background-position: left 0px top 0px;
     }
 }
 
 .dnnRadiobutton-checked img {
-    background-position: -70px 0px; /* تغییر موقعیت برای راستچین */
+    background-position: left -50px top 0px;
 }
 
 .dnnRadiobutton-disabled img {
@@ -680,11 +669,11 @@ a.pinHelp:hover {
 }
 
 .dnnRadiobutton-checked-error img {
-    background-position: -170px 0px; /* تغییر موقعیت برای راستچین */
+    background-position: left -150px top 0px;
 }
 
 .dnnRadiobutton-error img {
-    background-position: -120px 0px; /* تغییر موقعیت برای راستچین */
+    background-position: left -100px top 0px;
 }
 
 .dnnRadiobutton-focus {
@@ -700,27 +689,30 @@ span.dnnHSRadioButtons {
     display: inline-block;
     padding: 10px;
     margin-bottom: 5px;
-    direction: rtl; /* راستچین کردن محتوا */
 }
 
 table.dnnFormRadioButtons {
     margin-bottom: 5px;
+}
+/* We no longer use Telerik but we need to keep this as we still run logic based on this class name. */
+.RadComboBox_Default .rcbInput {
+    width: 100% !important;
 }
 
 /* Input Customised Tags */
 div.dnnTagsInput {
     display: inline-block;
     margin: 0;
-    padding: 5px 0 0 5px;
+    padding: 5px 5px 0 0;
     border: 1px solid var(--dnn-color-foreground-light, #c9c9c9);
     border-radius: var(--dnn-controls-radius, 3px);
     background: var(--dnn-color-background, #FFF);
-    direction: rtl; /* راستچین کردن محتوا */
+
     span.tag {
         display: block;
-        float: right; /* تغییر به راست برای نمایش برچسب‌ها */
+        float: right;
         padding: 2px 6px 2px 6px;
-        margin-left: 5px; /* تغییر موقعیت برای راستچین */
+        margin-left: 5px;
         margin-bottom: 5px;
         border: 1px solid var(--dnn-color-neutral-dark, #c9c9c9);
         border-radius: var(--dnn-controls-radius, 3px);
@@ -755,7 +747,7 @@ div.dnnTagsInput {
         display: inline-block;
         vertical-align: top;
         height: 1.1875rem;
-        padding: 0.5rem 0 0.1875rem 0.1875rem;
+        padding: 0.5rem 0.1875rem 0.1875rem 0;
         margin-bottom: 0.3125rem;
 
         &:focus, &:active {
@@ -764,7 +756,7 @@ div.dnnTagsInput {
 
         &.dnnTagsInvalid {
             display: block;
-            float: right; /* تغییر به راست برای نمایش ورودی نادرست */
+            float: right;
             margin-left: 5px;
             border: none;
             outline: none;
@@ -779,21 +771,22 @@ div.dnnTagsInput {
 
     div {
         display: block;
-        float: right; /* تغییر به راست برای نمایش بخش‌ها */
+        float: right;
+
         &.dnnTags_filter {
             float: left;
             position: relative;
-            margin: 0 0 0.3125rem 0.3125rem;
+            margin: 0 0.3125rem 0.3125rem 0;
 
             > .dnnTags_filter_label {
                 display: inline-block;
-                border-right: 1px solid #ccc; /* تغییر به راست */
-                padding: 3px 15px 0 10px;
-                margin-left: 3px; /* تغییر موقعیت برای راستچین */
+                border-right: 1px solid #ccc;
+                padding: 3px 10px 0 15px;
+                margin-left: 3px;
                 color: #999;
                 cursor: pointer;
                 background: url(../../../../../images/dnnSpinnerDownArrow.png) no-repeat;
-                background-position: left center; /* تغییر موقعیت آیکون */
+                background-position: left center;
                 height: 22px;
             }
         }
@@ -807,7 +800,7 @@ div.dnnTagsInput {
     background: var(--dnn-color-background, #fff);
     box-shadow: 0 0 25px 0 rgba( var(--dnn-color-foreground-r, 0), var(--dnn-color-foreground-g, 0), var(--dnn-color-foreground-b, 0), 0.75);
     z-index: 100000;
-    direction: rtl; /* راستچین کردن محتوای پنجره */
+
     .dnnFormPopup > * {
         box-sizing: content-box;
     }
@@ -822,10 +815,12 @@ div.dnnTagsInput {
     }
 
     .dnnModalCtrl {
+        /* This is the min/max button and the close button in module popups like the module settings. */
+        /* PNG images are used for the buttons so we need to keep a color that works with white overlay and fixed sizes.*/
         display: block;
         position: absolute;
         top: -30px;
-        left: -30px; /* تغییر موقعیت دکمه‌ها به سمت چپ */
+        left: -30px;
         width: 69px;
         height: 26px;
         border-radius: 10px;
@@ -833,49 +828,49 @@ div.dnnTagsInput {
         box-shadow: 0px 0px 5px #666;
 
         .ui-dialog-titlebar-close {
-            float: left; /* تغییر به چپ برای دکمه بسته */
+            float: left;
             display: block;
             height: 18px;
             width: 30px;
-            margin: 4px 4px 0 1px;
+            margin: 4px 1px 0 4px;
             overflow: hidden;
             border: none;
-            border-top-left-radius: 8px; /* تغییر به سمت چپ */
-            border-bottom-left-radius: 8px; /* تغییر به سمت چپ */
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
             background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-            background-position: 8px 4px;
+            background-position: right 8px top 4px;
             text-indent: -9999em;
             min-width: 0 !important;
 
             &:hover {
                 background: var(--dnn-color-primary, #358EEA) url(../../../../../images/closeBtn.png) no-repeat;
-                background-position: 8px 4px;
+                background-position: right 8px top 4px;
                 cursor: pointer;
             }
         }
 
         a.dnnToggleMax {
-            float: right; /* تغییر به راست برای دکمه بزرگ کردن */
+            float: right;
             display: block;
             height: 18px;
             width: 30px;
-            margin: 4px 0 0 4px;
+            margin: 4px 4px 0 0;
             overflow: hidden;
-            border-top-right-radius: 8px; /* تغییر به سمت راست */
-            border-bottom-right-radius: 8px; /* تغییر به سمت راست */
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
             background: #585858 url(../../../../../images/resizeBtn.png) no-repeat;
-            background-position: 10px 2px;
+            background-position: right 10px top 2px;
             text-indent: -9999em;
 
             &:hover {
                 background: var(--dnn-color-primary, #358EEA) url(../../../../../images/resizeBtn.png) no-repeat;
-                background-position: 10px 2px;
+                background-position: right 10px top 2px;
             }
         }
     }
 
     .ui-resizable-se {
-        float: left; /* تغییر به چپ برای دکمه تغییر اندازه */
+        float: left;
         height: 24px;
         width: 24px;
         background: url(../../../../../images/modal-resize-icn.png) no-repeat bottom;
@@ -901,15 +896,15 @@ div.dnnTagsInput {
 
     .ui-dialog-buttonpane {
         margin: .5em 0 0 0;
-        padding: .3em 1em 0em 0em;
+        padding: .3em 0em 0em 1em;
         overflow: hidden;
         border-width: 1px 0 0 0;
         background-image: none;
-        text-align: right; /* تغییر به راست برای متن دکمه‌ها */
+        text-align: right;
         border-top: 1px solid var(--dnn-color-foreground-light, #ddd);
 
         button {
-            margin: 0.5em 0.4em 0.5em 0em;
+            margin: 0.5em 0em 0.5em 0.4em;
             padding: 0.5em 1em;
             cursor: pointer;
             border: none;
@@ -924,7 +919,7 @@ div.dnnTagsInput {
 }
 
 .dnnPanelLoading {
-    left: 0;
+    right: 0;
     top: 0;
     width: 100%;
     height: 100%;
