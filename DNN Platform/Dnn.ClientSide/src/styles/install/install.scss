@@ -143,41 +143,49 @@ a.dnnDisabledAction:link, a.dnnDisabledAction:visited, a.dnnDisabledAction:activ
     cursor: not-allowed;
     opacity: 0.5;
 }
-#installation-steps{
+#installation-steps {
     background-color: #eee;
     white-space: nowrap;
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    p{
+
+    p {
         white-space: nowrap;
         display: flex;
         color: #666;
+
         .states-icons {
             width: 25px;
             height: 16px;
             background-image: url("../images/installer-feedback-states-sprite.png");
             background-repeat: no-repeat;
         }
+
         &.step-notstarted {
             color: #bbb;
+
             .states-icons {
                 background-position: -1000px -1000px;
             }
         }
+
         &.step-running {
-            .states-icons{
-                background-position: -48px 4px;
+            .states-icons {
+                background-position: -42px 1px;
+                transform: rotate(180deg);
             }
         }
+
         &.step-done {
-            .states-icons{
-                background-position: 0 3px;
+            .states-icons {
+                background-position: 10px 1px;
             }
         }
-        &.step-error{
-            .states-icons{
-                background-position: -99px 3px;
+
+        &.step-error {
+            .states-icons {
+                background-position: -91px 2px;
             }
         }
     }
@@ -247,7 +255,7 @@ body.rtl {
     font-weight: lighter;
     color: grey;
     margin-left: auto;
-    margin-right: -10px;
+    margin-right: 0px;
 }
 
 .rtl .dnnFormItem .installRadioButtons label {
@@ -296,7 +304,7 @@ body.rtl {
     width: 520px;
     float: right;
     margin-left: auto;
-    margin-right: -20px;
+    margin-right: 0px;
 }
 
 .rtl div#installation-progress hr {
@@ -408,5 +416,5 @@ body.rtl {
 }
 
 .rtl #installation-steps p {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }

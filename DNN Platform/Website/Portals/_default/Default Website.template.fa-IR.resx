@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="https://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PortalDescription.Text" xml:space="preserve">
+    <value>قالب پیش‌فرض وب‌سایت</value>
+</data>
+<data name="Setting.DefaultLanguage.Text" xml:space="preserve">
+    <value>fa-IR</value>
+</data>
+<data name="Setting.FooterText.Text" xml:space="preserve">
+    <value>کپی‌رایت [year] توسط وب‌سایت Persian-DnnSoftware</value>
+</data>
+<data name="Tab.Home.Content.Text" xml:space="preserve">
+    <value>خانه</value>
+</data>
+<data name="Tab.Home.Name.Text" xml:space="preserve">
+    <value>خانه</value>
+</data>
+<data name="Tab.Home.Title.Text" xml:space="preserve">
+    <value>خانه</value>
+</data>
+
+  <data name="Tab.Home.BannerPane.Module.HomeBanner.Title.Text" xml:space="preserve">
+    <value>بنر صفحه اصلی</value>
+</data>
+<data name="Tab.Home.BannerPane.Module.HomeBanner.Content.H2.Text" xml:space="preserve">
+    <value>نصب شما با موفقیت انجام شد!</value>
+</data>
+<data name="Tab.Home.BannerPane.Module.HomeBanner.Content.H5.Text" xml:space="preserve">
+    <value>باز * مقیاس‌پذیر * قابل‌گسترش * ایمن</value>
+</data>
+<data name="Tab.Home.BannerPane.Module.HomeBanner.Content.Lead.Text" xml:space="preserve">
+    <value>به نصب جدید DNN خود خوش آمدید! DNN ساخت راه‌حل وب دلخواه شما را آسان می‌کند. از دسترسی متن‌باز تا معماری مقیاس‌پذیر و چارچوب قابل گسترش، می‌توانید به امنیت در تمام مراحل اطمینان داشته باشید. DNN تمام نیازهای کسب‌وکارهای کوچک، متوسط، بزرگ و سازمانی را پوشش می‌دهد!</value>
+</data>
+<data name="Tab.Home.BannerPane.Module.HomeBanner.Content.Image.Alt.Text" xml:space="preserve">
+    <value>نشان DNN</value>
+</data>
+<data name="Tab.Home.BannerPane.Module.HomeBanner.Content.Image.Title.Text" xml:space="preserve">
+    <value>نشان DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Title.Text" xml:space="preserve">
+    <value>محتوای صفحه اصلی</value>
+</data>
+
+  <data name="Tab.Home.FluidPane.Module.HomeContent.Content.Build.DivId.Text" xml:space="preserve">
+    <value>ساختن</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Build.H2.Text" xml:space="preserve">
+    <value>شروع به ساخت</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Build.Lead.Text" xml:space="preserve">
+    <value>به‌صورت پیش‌فرض، ابزارهای قدرتمندی در اختیار شما قرار دارد تا مدیریت محتوا را آغاز کنید. در سمت چپ، نوار «Persona» را مشاهده می‌کنید. در این نوار می‌توانید صفحات، کاربران، نقش‌ها، فایل‌ها، پوسته‌ها، سایت‌ها و بسیاری از تنظیمات دیگر را مدیریت کنید. کافی است روی گزینه‌های «محتوا»، «مدیریت» و «تنظیمات» حرکت کنید تا با امکانات بیشتر آشنا شوید.</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.DivId.Text" xml:space="preserve">
+    <value>یادگیری</value>
+</data>
+
+  <data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.H2.Text" xml:space="preserve">
+    <value>یادگیری DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Lead.Text" xml:space="preserve">
+    <value>چه به‌تازگی مدیریت یک سایت DNN را برعهده گرفته باشید و چه یک کاربر باتجربه DNN باشید، همیشه چیزهای جدیدی برای یادگیری وجود دارد. DNN سال‌هاست که وجود دارد و بسیار قدرتمند است. بیشتر بیاموزید. بیشتر انجام دهید.</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Administrators.Image.Alt.Text" xml:space="preserve">
+    <value>آیکون مدیران</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Administrators.Image.Title.Text" xml:space="preserve">
+    <value>آیکون مدیران</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Administrators.H4.Text" xml:space="preserve">
+    <value>مدیران</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Administrators.Div.Text" xml:space="preserve">
+    <value>مستندات مربوط به مدیران و کاربران ارشد (که با نام میزبان نیز شناخته می‌شوند) را بیابید. مدیران و کاربران ارشد وظایفی مانند نصب و به‌روزرسانی DNN، پیکربندی مجوزها و نقش‌های امنیتی، به‌روزرسانی تنظیمات سایت، نصب و ارتقای افزونه‌ها و بسیاری کارهای دیگر را انجام می‌دهند.</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Administrators.Button.Text" xml:space="preserve">
+    <value>بیشتر بیاموزید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Developers.Image.Alt.Text" xml:space="preserve">
+    <value>آیکون توسعه‌دهندگان</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Developers.Image.Title.Text" xml:space="preserve">
+    <value>آیکون توسعه‌دهندگان</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Developers.H4.Text" xml:space="preserve">
+    <value>توسعه‌دهندگان</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Developers.Div.Text" xml:space="preserve">
+    <value>DNN یک API باز و نقاط توسعه زیادی دارد. توسعه‌دهندگان می‌توانند افزونه‌های سفارشی DNN را با استفاده از روش‌های مختلف توسعه ایجاد کنند. محتوای این بخش به شما کمک می‌کند تا شروع کنید و بیشتر در مورد مدل توسعه‌پذیری DNN و الگوهای توسعه کاربردی آن بیاموزید.</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Developers.Button.Text" xml:space="preserve">
+    <value>بیشتر بیاموزید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Designers.Image.Alt.Text" xml:space="preserve">
+    <value>آیکون طراحان</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Designers.Image.Title.Text" xml:space="preserve">
+    <value>آیکون طراحان</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Designers.H4.Text" xml:space="preserve">
+    <value>طراحان</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Designers.Div.Text" xml:space="preserve">
+    <value>طراحان می‌توانند هر ظاهر و احساسی که بخواهند با DNN ایجاد کنند. محتوای این بخش به طراحان و توسعه‌دهندگان فرانت‌اند کمک می‌کند تا فرآیند ایجاد تم‌ها (که پیش‌تر "پوسته‌ها" نامیده می‌شدند) در DNN را درک کنند. اگر بتوانید آن را در فتوشاپ طراحی کنید، می‌توانید آن را به عنوان یک تم DNN بسازید!</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Learn.Designers.Button.Text" xml:space="preserve">
+    <value>بیشتر بیاموزید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.DivId.Text" xml:space="preserve">
+    <value>گسترش دادن</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.Image.Alt.Text" xml:space="preserve">
+    <value>آیکون افزونه‌های DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.Image.Title.Text" xml:space="preserve">
+    <value>آیکون افزونه‌های DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.H2.Text" xml:space="preserve">
+    <value>گسترش DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.H4.Text" xml:space="preserve">
+    <value>تم‌ها و ماژول‌ها</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.Lead.Text" xml:space="preserve">
+    <value>برای DNN افزونه‌های متن‌باز و تجاری زیادی وجود دارد که فقط منتظر شما هستند تا آنها را کشف کرده و برای ساخت پروژه‌های شگفت‌انگیز بعدی خود استفاده کنید! مطمئن شوید که آنها را بررسی کنید و ببینید کدام یک نیازهای پروژه شما را برآورده می‌کند. همچنین فراموش نکنید که می‌توانید به راحتی افزونه‌های سفارشی خود را ایجاد کنید، یا با یک ارائه‌دهنده معتبر و عالی در اکوسیستم DNN همکاری کنید تا این کار را برای شما انجام دهد.</value>
+</data>
+
+ <data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.PrimaryButton.Text" xml:space="preserve">
+    <value>افزونه‌های متن‌باز</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Extend.SecondaryButton.Text" xml:space="preserve">
+    <value>بازدید از فروشگاه DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DivId.Text" xml:space="preserve">
+    <value>مشارکت</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.H2.Text" xml:space="preserve">
+    <value>مشارکت در جامعه DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.Lead.Text" xml:space="preserve">
+    <value>صرف‌نظر از هویت شما، جامعه ما از شما استقبال می‌کند و شما را به مشارکت تشویق می‌کند. نه تنها می‌توانید کمک دریافت کنید و کمک ارائه دهید، بلکه ممکن است در این مسیر دوستانی برای همیشه پیدا کنید.</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.SlackImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی Slack سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.SlackImage.Title.Text" xml:space="preserve">
+    <value>لوگوی Slack سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DiscordImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی Discord سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DiscordImage.Title.Text" xml:space="preserve">
+    <value>لوگوی Discord سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.GitHubImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی GitHub سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.GitHubImage.Title.Text" xml:space="preserve">
+    <value>لوگوی GitHub سفید</value>
+</data>
+
+ <data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnCommunityImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی جامعه DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnCommunityImage.Title.Text" xml:space="preserve">
+    <value>لوگوی جامعه DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnForumsImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی انجمن‌های DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnForumsImage.Title.Text" xml:space="preserve">
+    <value>لوگوی انجمن‌های DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnBlogsImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی بلاگ‌های DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnBlogsImage.Title.Text" xml:space="preserve">
+    <value>لوگوی بلاگ‌های DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnDocsImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی اسناد DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnDocsImage.Title.Text" xml:space="preserve">
+    <value>لوگوی اسناد DNN سفید</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnCommunityAltImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی جایگزین جامعه DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnCommunityAltImage.Title.Text" xml:space="preserve">
+    <value>لوگوی جایگزین جامعه DNN</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.EventsImage.Alt.Text" xml:space="preserve">
+    <value>رویدادها</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.EventsImage.Title.Text" xml:space="preserve">
+    <value>رویدادها</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnConnectGroupPhotoImage.Alt.Text" xml:space="preserve">
+    <value>عکس گروه DNN Connect</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnConnectGroupPhotoImage.Title.Text" xml:space="preserve">
+    <value>عکس گروه DNN Connect</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnSummitGroupPhotoImage.Alt.Text" xml:space="preserve">
+    <value>عکس گروه DNN Summit</value>
+</data>
+<data name="Tab.Home.FluidPane.Module.HomeContent.Content.Participate.DnnSummitGroupPhotoImage.Title.Text" xml:space="preserve">
+    <value>عکس گروه DNN Summit</value>
+</data>
+<data name="Tab.Home.FooterPane.Module.FooterContent.Title.Text" xml:space="preserve">
+    <value>محتوای پاورقی</value>
+</data>
+<data name="Tab.Home.FooterPane.Module.FooterContent.Content.DnnFooterLogoImage.Alt.Text" xml:space="preserve">
+    <value>لوگوی پاورقی DNN</value>
+</data>
+<data name="Tab.Home.FooterPane.Module.FooterContent.Content.DnnFooterLogoImage.Title.Text" xml:space="preserve">
+    <value>لوگوی پاورقی DNN</value>
+</data>
+<data name="Tab.Build.Content.Text" xml:space="preserve">
+    <value>ساخت</value>
+</data>
+<data name="Tab.Build.Name.Text" xml:space="preserve">
+    <value>ساخت</value>
+</data>
+<data name="Tab.Build.Title.Text" xml:space="preserve">
+    <value>ساخت</value>
+</data>
+<data name="Tab.Build.Url.Text" xml:space="preserve">
+    <value>/#build</value>
+</data>
+<data name="Tab.Learn.Content.Text" xml:space="preserve">
+    <value>یادگیری</value>
+</data>
+<data name="Tab.Learn.Name.Text" xml:space="preserve">
+    <value>یادگیری</value>
+</data>
+<data name="Tab.Learn.Title.Text" xml:space="preserve">
+    <value>یادگیری</value>
+</data>
+<data name="Tab.Learn.Url.Text" xml:space="preserve">
+    <value>/#learn</value>
+</data>
+<data name="Tab.Extend.Content.Text" xml:space="preserve">
+    <value>گسترش</value>
+</data>
+<data name="Tab.Extend.Name.Text" xml:space="preserve">
+    <value>گسترش</value>
+</data>
+<data name="Tab.Extend.Title.Text" xml:space="preserve">
+    <value>گسترش</value>
+</data>
+<data name="Tab.Extend.Url.Text" xml:space="preserve">
+    <value>/#extend</value>
+</data>
+<data name="Tab.Participate.Content.Text" xml:space="preserve">
+    <value>شرکت کنید!</value>
+</data>
+<data name="Tab.Participate.Name.Text" xml:space="preserve">
+    <value>شرکت کنید!</value>
+</data>
+<data name="Tab.Participate.Title.Text" xml:space="preserve">
+    <value>شرکت کنید!</value>
+</data>
+<data name="Tab.Participate.Url.Text" xml:space="preserve">
+    <value>/#participate</value>
+</data>
+<data name="Tab.ActivityFeed.Content.Text" xml:space="preserve">
+    <value>فید فعالیت</value>
+</data>
+<data name="Tab.ActivityFeed.Name.Text" xml:space="preserve">
+    <value>فید فعالیت</value>
+</data>
+<data name="Tab.ActivityFeed.Title.Text" xml:space="preserve">
+    <value>فید فعالیت</value>
+</data>
+<data name="Tab.ActivityFeed.ContentPane.Module.MemberDirectory.Title.Text" xml:space="preserve">
+    <value>دایرکتوری اعضا</value>
+</data>
+<data name="Tab.ActivityFeed.ContentPane.Module.Navigation.Title.Text" xml:space="preserve">
+    <value>ناوبری</value>
+</data>
+<data name="Tab.ActivityFeed.ContentPane.Module.ViewProfile.Title.Text" xml:space="preserve">
+    <value>مشاهده پروفایل</value>
+</data>
+<data name="Tab.ActivityFeed.ContentPane.Module.Journal.Title.Text" xml:space="preserve">
+    <value>ژورنال</value>
+</data>
+<data name="Tab.SearchResults.Content.Text" xml:space="preserve">
+    <value>نتایج جستجو</value>
+</data>
+<data name="Tab.SearchResults.Name.Text" xml:space="preserve">
+    <value>نتایج جستجو</value>
+</data>
+<data name="Tab.SearchResults.Title.Text" xml:space="preserve">
+    <value>نتایج جستجو</value>
+</data>
+<data name="Tab.SearchResults.ContentPane.Module.SearchResults.Title.Text" xml:space="preserve">
+    <value>نتایج جستجو</value>
+</data>
+<data name="Tab.404ErrorPage.Content.Text" xml:space="preserve">
+    <value>صفحه خطای ۴۰۴</value>
+</data>
+<data name="Tab.404ErrorPage.Name.Text" xml:space="preserve">
+    <value>صفحه خطای ۴۰۴</value>
+</data>
+<data name="Tab.404ErrorPage.Title.Text" xml:space="preserve">
+    <value>صفحه خطای ۴۰۴</value>
+</data>
+<data name="Tab.404ErrorPage.Module.Title.Text" xml:space="preserve">
+    <value>صفحه پیدا نشد</value>
+</data>
+<data name="Tab.404ErrorPage.Module.Content.Text" xml:space="preserve">
+    <value>متاسفانه، صفحه‌ای که به دنبالش هستید پیدا نشد و ممکن است حذف شده باشد، نام آن تغییر کرده باشد یا به طور موقت در دسترس نباشد. پیشنهاد می‌شود که از صفحه اصلی شروع کنید. در صورتی که مشکل ادامه داشت یا نتواستید آنچه که دنبالش هستید پیدا کنید، خوشحال می‌شویم که با ما تماس بگیرید.</value>
+</data>
+<data name="Tab.MyProfile.Content.Text" xml:space="preserve">
+    <value>پروفایل من</value>
+</data>
+<data name="Tab.MyProfile.Name.Text" xml:space="preserve">
+    <value>پروفایل من</value>
+</data>
+<data name="Tab.MyProfile.Title.Text" xml:space="preserve">
+    <value>پروفایل من</value>
+</data>
+<data name="Tab.MyProfile.ContentPane.Module.MemberDirectory.Title.Text" xml:space="preserve">
+    <value>دایرکتوری اعضا</value>
+</data>
+<data name="Tab.MyProfile.ContentPane.Module.Navigation.Title.Text" xml:space="preserve">
+    <value>ناوبری</value>
+</data>
+<data name="Tab.MyProfile.ContentPane.Module.ViewProfile.Title.Text" xml:space="preserve">
+    <value>مشاهده پروفایل</value>
+</data>
+<data name="Tab.MyFriends.Content.Text" xml:space="preserve">
+    <value>دوستان من</value>
+</data>
+<data name="Tab.MyFriends.Name.Text" xml:space="preserve">
+    <value>دوستان</value>
+</data>
+<data name="Tab.MyFriends.Title.Text" xml:space="preserve">
+    <value>دوستان من</value>
+</data>
+<data name="Tab.MyFriends.ContentPane.Module.MemberDirectory.Title.Text" xml:space="preserve">
+    <value>دایرکتوری اعضا</value>
+</data>
+<data name="Tab.MyFriends.ContentPane.Module.Navigation.Title.Text" xml:space="preserve">
+    <value>ناوبری</value>
+</data>
+<data name="Tab.MyFriends.ContentPane.Module.ViewProfile.Title.Text" xml:space="preserve">
+    <value>مشاهده پروفایل</value>
+</data>
+<data name="Tab.MyMessages.Content.Text" xml:space="preserve">
+    <value>پیام‌های من</value>
+</data>
+<data name="Tab.MyMessages.Name.Text" xml:space="preserve">
+    <value>پیام‌ها</value>
+</data>
+<data name="Tab.MyMessages.Title.Text" xml:space="preserve">
+    <value>پیام‌های من</value>
+</data>
+<data name="Tab.MyMessages.ContentPane.Module.MemberDirectory.Title.Text" xml:space="preserve">
+    <value>دایرکتوری اعضا</value>
+</data>
+<data name="Tab.MyMessages.ContentPane.Module.Navigation.Title.Text" xml:space="preserve">
+    <value>ناوبری</value>
+</data>
+<data name="Tab.MyMessages.ContentPane.Module.ViewProfile.Title.Text" xml:space="preserve">
+    <value>مشاهده پروفایل</value>
+</data>
+<data name="Tab.MyMessages.ContentPane.Module.MessageCenter.Title.Text" xml:space="preserve">
+    <value>مرکز پیام‌ها</value>
+</data>
+<data name="Tab.WebsiteAdministration.Content.Text" xml:space="preserve">
+    <value>مدیریت وب‌سایت</value>
+</data>
+<data name="Tab.WebsiteAdministration.Name.Text" xml:space="preserve">
+    <value>مدیر</value>
+</data>
+<data name="Tab.WebsiteAdministration.Title.Text" xml:space="preserve">
+    <value>مدیریت وب‌سایت</value>
+</data>
+<data name="Tab.WebsiteAdministration.ContentPane.Module.BasicFeatures.Title.Text" xml:space="preserve">
+    <value>ویژگی‌های پایه</value>
+</data>
+<data name="Tab.FileManagement.Content.Text" xml:space="preserve">
+    <value>مدیریت فایل</value>
+</data>
+<data name="Tab.FileManagement.Name.Text" xml:space="preserve">
+    <value>مدیریت فایل</value>
+</data>
+<data name="Tab.FileManagement.Title.Text" xml:space="preserve">
+    <value>مدیریت وب‌سایت</value>
+</data>
+<data name="Tab.FileManagement.ContentPane.Module.ResourceManager.Title.Text" xml:space="preserve">
+    <value>مدیر منابع</value>
+</data>
+</root>
