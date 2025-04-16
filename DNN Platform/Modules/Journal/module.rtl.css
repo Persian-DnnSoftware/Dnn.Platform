@@ -1,9 +1,11 @@
 @charset "utf-8";
+/* Persian-DnnSoftware */
 /* CSS Document */
+
 
 #journalEditor, .jcmt .cmteditarea {
     display: inline-block;
-    width: 100%;
+    width: 96%;
     position: relative;
     background: #fff url('Images/input-bg.png') right top no-repeat;
     margin: 10px 0 0;
@@ -18,6 +20,10 @@
     z-index: 2;
     overflow: visible;
     zoom: 1;
+}
+
+.jcmt .cmteditarea {
+    z-index: 0;
 }
 
 .journalTools ul.jacmenu {
@@ -59,19 +65,9 @@
         background-color: #f5f5f5
     }
 
-#journalEditor #journalClose {
+#journalEditor #journalClose, #linkClose, .miniclose, .minidel {
     float: left;
     display: none;
-    width: 18px !important;
-    height: 18px !important;
-    cursor: pointer;
-    background-image: url('images/mini_del.gif');
-    background-repeat: no-repeat;
-}
-
-#linkClose, .miniclose, .minidel {
-    float: left;
-    visibility: hidden;
     width: 18px !important;
     height: 18px !important;
     cursor: pointer;
@@ -90,6 +86,11 @@
     top: 6px;
 }
 
+#journalEditor #journalClose {
+    position: absolute;
+    left: 2px;
+}
+
 #journalEditor #journalPlaceholder, .jcmt .cmteditarea .editorPlaceholder {
     font-size: 14px;
     color: #999;
@@ -99,7 +100,7 @@
 }
 
 #journalEditor #journalContent {
-    font-family: Arial, Helvetica;
+    font-family: Tahoma, Arial, Helvetica;
     float: right;
     display: none;
     height: 1px;
@@ -113,6 +114,7 @@
     width: 99%;
     resize: none;
 }
+
 
 #journalEditor .journalPlaceholder {
     width: 100%;
@@ -147,31 +149,31 @@
 }
 
 #journalEditor #tbar span#tbar-photo {
-    background-position: 100% 0;
+    background-position: 0 0;
 }
 
 #journalEditor #tbar span#tbar-attach {
-    background-position: right -24px top 0;
+    background-position: -24px 0;
 }
 
 #journalEditor #tbar span#tbar-perm {
-    background-position: right -81px top 0;
+    background-position: -81px 0;
 }
 
 #journalEditor #tbar span#tbar-photo:hover, #journalEditor #tbar span#tbar-photo.selected {
-    background-position: 100% -16px;
+    background-position: 0 -16px;
 }
 
 #journalEditor #tbar span#tbar-attach:hover, #journalEditor #tbar span#tbar-attach.selected {
-    background-position: right -24px top -16px;
+    background-position: -24px -16px;
 }
 
 #journalEditor #tbar span#tbar-attach:hover {
-    background-position: right -24px top -16px;
+    background-position: -24px -16px;
 }
 
 #journalEditor #tbar span#tbar-perm:hover {
-    background-position: right -81px top -16px;
+    background-position: -81px -16px;
 }
 
 .journalTools #journalOptionArea {
@@ -181,13 +183,13 @@
     border-top: 0px none transparent;
     -webkit-border-bottom-left-radius: 3px;
     -webkit-border-bottom-right-radius: 3px;
-    -moz-border-radius-bottomleft: 3px;
     -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     top: -10px;
     position: relative;
-    width: 100%;
+    width: 96%;
 }
 
     .journalTools #journalOptionArea div {
@@ -208,6 +210,8 @@
         margin: 0;
         padding: 0;
     }
+
+
 
     .journalTools #journalOptionArea .jpa {
         display: none;
@@ -280,6 +284,7 @@
     background-color: #ffffcc;
 }
 
+
 .journalrow {
     border-bottom: 1px solid #e4e1e1;
     margin-bottom: 20px;
@@ -292,144 +297,130 @@
     }
 
         .journalrow div.author img {
-            width: 32px;
+            width: 40px;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
             border-radius: 3px;
+            background: #fff;
+            border: 1px #ccc solid;
+            padding: 4px;
         }
 
-    .journalrow div.journalitem .jlink img {
-        max-width: 25%;
-        width: auto;
-    }
-
     .journalrow div.journalitem {
-        margin-right: 44px;
+        margin-right: 65px;
         overflow: hidden;
         word-break: break-all;
     }
 
-.journalitem p {
-    margin-bottom: 5px;
-    word-break: break-word;
-}
+        .journalrow div.journalitem p.journalfooter span {
+            padding: 0px 4px 0px 4px;
+            font-weight: bold;
+        }
 
-.journalrow div.journalitem p.journalfooter span {
-    padding: 0px 4px 0px 4px;
-    font-weight: bold;
-}
+        .journalrow div.journalitem .authorname {
+            padding-left: 6px;
+        }
 
-.journalrow div.journalitem .authorname {
-    padding-left: 6px;
-    display: inline-flex;
-}
-
-.journalrow div.journalitem ul.jcmt, .journalrow div.journalitem .likes {
-    width: 100%;
-    padding: 0px;
-    font-size: 11px;
-}
-/*.journalrow div.journalitem ul.jcmt li{border-bottom: solid 1px #fff;}*/
-.journalrow div.journalitem ul.jcmt {
-    margin-right: 0px;
-    margin-bottom: 0px;
-}
-
-    .journalrow div.journalitem ul.jcmt, .journalrow div.journalitem ul.jcmt li {
-        list-style-type: none;
-    }
-
-        .journalrow div.journalitem ul.jcmt li textarea {
-            border: solid 0px #ccc;
-            font-family: tahoma,verdana,arial,sans-serif;
-            font-size: 12px;
-            padding: 0px;
-            height: 20px;
-            margin-right: 0px;
-            margin-left: 0px;
+        .journalrow div.journalitem ul.jcmt, .journalrow div.journalitem .likes {
             width: 100%;
-            max-width: 100%;
-            word-break: break-word;
+            padding: 0px;
+            font-size: 11px;
         }
 
-        .journalrow div.journalitem ul.jcmt li .miniclose {
-            margin: 2px;
+        /*.journalrow div.journalitem ul.jcmt li{border-bottom: solid 1px #fff;}*/
+        .journalrow div.journalitem ul.jcmt {
+            margin-right: 0px;
+            margin-bottom: 0px;
         }
 
-        .journalrow div.journalitem ul.jcmt li:hover .miniclose, .journalrow:hover .minidel, .journalTools #journalOptionArea:hover #linkClose {
-            visibility: visible;
+            .journalrow div.journalitem ul.jcmt, .journalrow div.journalitem ul.jcmt li {
+                list-style-type: none;
+            }
+
+                .journalrow div.journalitem ul.jcmt li textarea {
+                    border: solid 0px #ccc;
+                    font-family: tahoma,verdana,arial,sans-serif;
+                    font-size: 12px;
+                    padding: 0px;
+                    height: 20px;
+                    margin-right: 0px;
+                    margin-left: 0px;
+                    width: 100%;
+                }
+
+                .journalrow div.journalitem ul.jcmt li .miniclose {
+                    margin: 2px;
+                }
+
+                .journalrow div.journalitem ul.jcmt li:hover .miniclose, .journalrow:hover .minidel {
+                    display: block;
+                }
+
+                .journalrow div.journalitem ul.jcmt li.cmtbtn a {
+                    display: none;
+                }
+
+                .journalrow div.journalitem ul.jcmt li img {
+                    float: right;
+                    right: 0;
+                    padding: 4px;
+                    position: relative;
+                    top: 0;
+                }
+
+                .journalrow div.journalitem ul.jcmt li p {
+                    padding: 4px 5px 4px 0px;
+                    margin: 3px 0px 5px 42px;
+                }
+
+                    .journalrow div.journalitem ul.jcmt li p a {
+                        padding-left: 6px;
+                    }
+
+                    .journalrow div.journalitem ul.jcmt li p abbr {
+                        border-style: none;
+                        display: block;
+                        margin-bottom: 3px;
+                        margin-top: 4px;
+                        padding-right: 5px;
+                        padding-top: 4px;
+                    }
+
+        .journalrow div.journalitem .journalfooter abbr {
+            border-style: none;
         }
 
-        .journalrow div.journalitem ul.jcmt li.cmtbtn a {
-            display: none;
-        }
-
-        .journalrow div.journalitem ul.jcmt li img {
+        .journalrow div.journalitem .jlink img {
             float: right;
-            right: 0;
-            padding: 4px;
-            position: relative;
-            top: 0;
+            margin-left: 12px;
+            max-width: 150px;
         }
 
-        .journalrow div.journalitem ul.jcmt li p {
-            padding: 4px 5px 4px 0px;
-            margin: 3px 42px 5px 0px;
+        .journalrow div.journalitem .jlink div {
+            max-width: 450px;
         }
 
-            .journalrow div.journalitem ul.jcmt li p a {
-                padding-left: 6px;
-                display: inline-flex;
-            }
-
-            .journalrow div.journalitem ul.jcmt li p abbr {
-                border-style: none;
-                display: block;
-                margin-bottom: 3px;
-                margin-top: 4px;
-                padding-right: 5px;
-                padding-top: 4px;
-            }
-
-.journalrow div.journalitem .journalfooter abbr {
-    border-style: none;
-}
-
-.journalrow div.journalitem .jlink a {
-    font-weight: bold;
-    display: block;
-    word-break: break-word;
-}
-
-.journalrow div.journalitem .jlink img {
-    float: right;
-    margin-left: 12px;
-    max-width: 150px;
-    width: 100%;
-    height: auto;
-    padding: 5px;
-}
-
-.journalrow div.journalitem .jlink div {
-    max-width: 100%;
-    word-break: break-word;
-}
-
-.journalrow div.journalitem .likes {
-    padding: 2px;
-}
+        .journalrow div.journalitem .likes {
+            padding: 2px;
+        }
 
 .jcmt .cmteditor {
-    max-width: 100%;
+    max-width: 445px;
     display: none;
     resize: none;
     outline: none;
 }
 
 .jcmt .cmteditarea {
-    margin: 2px 2px 4px 4px;
-    z-index: 0;
+    margin: 2px 4px 4px 2px;
 }
+
+    .jcmt .cmteditarea .editorPlaceholder {
+        height: 18px;
+        font-size: 11px;
+        line-height: 18px;
+    }
+
 /* Visibility and Security */
 .securityMenu {
     position: absolute;
@@ -452,10 +443,10 @@
         border: 1px solid #ccc;
         border-bottom: 1px solid #fff;
         /*CSS3*/
-        -moz-border-radius-topleft: 3px;
         -moz-border-radius-topright: 3px;
-        -webkit-border-radius: 3px 3px 0px 0px;
-        border-radius: 3px 3px 0px 0px;
+        -moz-border-radius-topleft: 3px;
+        -webkit-border-radius: 3px 0px 0px 3px;
+        border-radius: 3px 0px 0px 3px;
     }
 
 .DnnModule .securityMenu ul {
@@ -466,8 +457,8 @@
     border: 1px solid #ccc;
     list-style: none;
     background: #fff;
-    -webkit-border-radius: 0px 3px 3px 3px;
-    border-radius: 0px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 0px;
+    border-radius: 3px 3px 3px 0px;
     -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
@@ -477,6 +468,11 @@
     list-style: none;
     margin-bottom: 4px;
 }
+
+.journalitem p {
+    margin-bottom: 5px;
+}
+
 /* File Upload */
 .progress_bar_wrapper {
     width: 500px;
@@ -532,22 +528,35 @@ div.journalTools div#journalOptionArea div.fileUploadArea div#itemUpload div.pro
 }
 
 .journalTools #journalOptionArea #itemUpload .filePreviewArea img {
-    background: none repeat scroll 100% 0 #FFFFFF;
+    background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #E0EFF7;
     border-radius: 3px 3px 3px 3px;
-    margin: 0 12px 12px 0;
+    margin: 0 0 12px 12px;
     padding: 6px;
+}
+
+.journalrow div.journalitem .jlink img {
+    float: right;
+    margin-left: 12px;
+    max-width: 150px;
+    padding: 5px;
+    border: 1px #ccc solid;
+}
+
+.journalrow div.journalitem .jlink a {
+    font-weight: bold;
+    display: block
 }
 
 div#journalItems div.journalrow div.journalitem ul.jcmt li.cmteditarea {
     display: none;
     overflow: auto;
-    max-width: 99%;
 }
 
 .journalrow .juser {
     cursor: pointer;
 }
+
 
 div#journalOptionArea > div.fileUploadArea {
     background: #eff8ff; /* blue */
@@ -576,7 +585,7 @@ div#journalOptionArea div.journal_onlineFileShare div {
 
 div#journalOptionArea div.journal_onlineFileShare a.dnnSecondaryAction {
     display: inline-block;
-    margin: 15px 15px 0 0;
+    margin: 15px 0 0 15px;
 }
 
 div#journalOptionArea div.journal_localFileShare .dnnInputFileWrapper {
@@ -601,10 +610,10 @@ ul.ui-autocomplete {
     background: #fff;
     z-index: 5;
     /*CSS3*/
-    -moz-border-radius-bottomleft: 3px;
     -moz-border-radius-bottomright: 3px;
-    -webkit-border-radius: 0px 0px 3px 3px;
-    border-radius: 0px 0px 3px 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 3px 3px 0px;
     -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);

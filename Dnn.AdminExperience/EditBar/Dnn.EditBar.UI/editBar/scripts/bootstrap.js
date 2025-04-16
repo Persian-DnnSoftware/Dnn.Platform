@@ -53,6 +53,15 @@
 
     styles.push(mainCss);
 
+    /* START Persian-DnnSoftware */
+    if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+        var fontCss ="../../../../Resources/Shared/fonts/FontVazirmatn.css"
+        styles.push(fontCss);
+    }
+    /* END Persian-DnnSoftware */
+
+    
+
     addCssToHead(styles, version);
     addJsToBody(mainJs, version);
 })();

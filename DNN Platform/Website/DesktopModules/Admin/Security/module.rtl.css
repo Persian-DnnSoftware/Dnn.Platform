@@ -1,3 +1,4 @@
+/* Persian-DnnSoftware */
 .ContentPane * {
     zoom: 1;
 }
@@ -150,13 +151,13 @@ p.dnnFormRequired span {
 
 .dnnProfile .dnnFormRadioButtons input {
     float: none;
-    margin-right: 5px;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .dnnProfile .dnnFormRadioButtons select {
-    margin-right: 10px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .dnnProfile .dnnFormItem input[type="text"], .dnnProfile .dnnFormItem select, .dnnProfile .dnnFormItem textarea {
@@ -193,10 +194,6 @@ p.dnnFormRequired span {
     background-color: transparent;
     padding: 4px;
 }
-
-    .dnnProfileDetails .dnnFormItem > span.dnnRadiobutton {
-        background-color: #dbdbdb;
-    }
 
 .dnnProfileDetails .dnnFormItem .dnnDropDownList input[type="text"] {
     float: none;
@@ -366,9 +363,9 @@ ul.buttonList {
             text-decoration: none;
             text-shadow: 0px 1px 0px #fff;
             font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Tahoma, Arial, Helvetica, sans-serif;
             font-size: 12px;
-            background: #e7e7e7 url(images/socialLoginbuttons-repeatingbg.png) repeat-x 100% -601px;
+            background: #e7e7e7 url(images/socialLoginbuttons-repeatingbg.png) repeat-x 0 -601px;
             border: 1px solid #c9c9c9;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
@@ -391,7 +388,7 @@ ul.buttonList {
             ul.buttonList li a:hover {
                 border-color: #a8a8a8;
                 text-shadow: 0px 1px 0px #e1e1e1;
-                background-position: 100% -650px;
+                background-position: 0 -650px;
                 background-color: #cacbcd;
             }
 
@@ -399,7 +396,7 @@ ul.buttonList {
                 color: #fff;
                 text-shadow: 0px -1px 0px #666;
                 border-color: #a3a3a3;
-                background-position: 100% -700px;
+                background-position: 0 -700px;
                 background-color: #b7b9bb;
                 -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
                 -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
@@ -408,7 +405,7 @@ ul.buttonList {
     /* SET SOCIAL SPECIFIC STYLES */
     ul.buttonList .facebook a span, ul.buttonList .twitter a span, ul.buttonList .googleplus a span, ul.buttonList .windowslive a span {
         padding-right: 45px;
-        background: url(images/socialLoginbuttons-icons.png) no-repeat right 12px top 7px;
+        background: url(images/socialLoginbuttons-icons.png) no-repeat 12px 7px;
     }
 
     ul.buttonList .facebook a:after, ul.buttonList .twitter a:after, ul.buttonList .googleplus a:after, ul.buttonList .windowslive a:after {
@@ -426,7 +423,7 @@ ul.buttonList {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
         border-color: #286c93; /* dark blue */
-        background-position: 100% 0;
+        background-position: 0 0;
         background-color: #5581bb;
     }
 
@@ -434,12 +431,12 @@ ul.buttonList {
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
             border-color: #286c93; /* dark blue */
-            background-position: 100% -50px;
+            background-position: 0 -50px;
             background-color: #729dcd;
         }
 
         ul.buttonList .facebook a:active {
-            background-position: 100% -100px;
+            background-position: 0 -100px;
             border-color: #286c93; /* dark blue */
             background-color: #537fba;
         }
@@ -449,7 +446,7 @@ ul.buttonList {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
         border-color: #3d82a0; /* dark teal blue */
-        background-position: 100% -150px;
+        background-position: 0 -150px;
         background-color: #11a2d6;
     }
 
@@ -457,18 +454,18 @@ ul.buttonList {
             color: #fff;
             border-color: #3d82a0; /* dark teal blue */
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-            background-position: 100% -200px;
+            background-position: 0 -200px;
             background-color: #43c1e3;
         }
 
         ul.buttonList .twitter a:active {
-            background-position: 100% -250px;
+            background-position: 0 -250px;
             border-color: #3d82a0; /* dark teal blue */
             background-color: #0597cc;
         }
 
         ul.buttonList .twitter a span {
-            background-position: right 9px top -40px;
+            background-position: 9px -40px;
         }
 
     /*GOOGLE PLUS*/
@@ -476,7 +473,7 @@ ul.buttonList {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
         border-color: #821e16; /* dark red */
-        background-position: 100% -300px;
+        background-position: 0 -300px;
         background-color: #b12e1e;
     }
 
@@ -484,18 +481,18 @@ ul.buttonList {
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
             border-color: #821e16; /* dark red */
-            background-position: 100% -350px;
+            background-position: 0 -350px;
             background-color: #cc3633;
         }
 
         ul.buttonList .googleplus a:active {
-            background-position: 100% -400px;
+            background-position: 0 -400px;
             border-color: #821e16; /* dark red */
             background-color: #a5281a;
         }
 
         ul.buttonList .googleplus a span {
-            background-position: right 10px top -90px;
+            background-position: 10px -90px;
         }
 
     /*WINDOWS LIVE ID*/
@@ -503,7 +500,7 @@ ul.buttonList {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
         border-color: #7a7a7a; /* dark grey*/
-        background-position: 100% -450px;
+        background-position: 0 -450px;
         background-color: #8f8f8f;
     }
 
@@ -511,18 +508,18 @@ ul.buttonList {
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
             border-color: #7a7a7a; /* dark grey*/
-            background-position: 100% -500px;
+            background-position: 0 -500px;
             background-color: #b3b3b3;
         }
 
         ul.buttonList .windowslive a:active {
-            background-position: 100% -550px;
+            background-position: 0 -550px;
             border-color: #7a7a7a; /* dark grey*/
             background-color: #808080;
         }
 
         ul.buttonList .windowslive a span {
-            background-position: right 9px top -141px;
+            background-position: 9px -141px;
         }
 
 .dnnButtonIcon {
@@ -568,17 +565,16 @@ ul.buttonList {
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 0;
-    width: 85%;
-    max-width: 445px;
+    width: 475px;
 }
 
     .dnnProfile .dnnFileUploadScope > div:first-child {
         float: left;
-        width: 220px;
+        width: 250px;
     }
 
     .dnnProfile .dnnFileUploadScope .dnnLeft .dnnFormItem {
-        width: 220px;
+        width: 250px;
     }
 
         .dnnProfile .dnnFileUploadScope .dnnLeft .dnnFormItem .dnnDropDownList {
@@ -592,56 +588,6 @@ ul.buttonList {
         .dnnProfile .dnnFileUploadScope .dnnLeft .dnnFormItem.dnnFileUploadFolder {
             display: none !important;
         }
-
-/*DNN Edit Profile Page Manage Profile Tab Media Queries*/
-@media screen and (max-width: 860px) {
-    .dnnProfile .dnnLabel {
-        width: 20% !important;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .dnnProfile .dnnButtonDropdown-ul {
-        right: -150px;
-    }
-}
-
-@media screen and (max-width: 725px) {
-    .dnnProfile .dnnLabel {
-        float: none !important;
-        width: 100% !important;
-        text-align: right;
-    }
-
-        .dnnProfile .dnnLabel label {
-            margin-left: .3em;
-        }
-
-    .dnnProfile .dnnFormHelp {
-        position: relative !important;
-        width: 20px;
-    }
-
-    .dnnProfile .dnnTooltip {
-        right: 20%;
-    }
-}
-
-@media screen and (max-width: 530px) {
-    .dnnProfile .dnnFileUploadScope {
-        width: auto;
-    }
-
-        .dnnProfile .dnnFileUploadScope > div:first-child {
-            float: none;
-            width: 100%;
-        }
-
-    .dnnProfile .RadEditor, .RadEditor.reWrapper {
-        width: auto !important;
-        min-width: inherit !important;
-    }
-}
 
 /*DNN Profile Page Manage Services Tab Table(DNN-9321)*/
 @media only screen and (max-width: 570px) {

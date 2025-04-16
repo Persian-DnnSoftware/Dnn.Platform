@@ -1,14 +1,15 @@
-﻿.dnnSearchBoxPanel {
+﻿/* Persian-DnnSoftware */
+.dnnSearchBoxPanel {
     width: 100%;
-    padding: 10px 5px;
+    max-width: 980px;
+    padding: 10px 0 10px 0;
     background-color: #ddd;
 }
 
     .dnnSearchBoxPanel .dnnSearchBox {
-        margin-right: 0;
+        margin-right: 10px;
         margin-left: 105px;
         display: block;
-        padding-left: 10px;
     }
 
     .dnnSearchBoxPanel > div {
@@ -18,13 +19,13 @@
 .dnnSearchResultAdvancedTip {
     float: left;
     display: block;
-    margin: 10px 0 0 0;
-    width: 90px;
+    margin: 10px 0 0 13px;
 }
 
 .dnnSearchResultPanel {
     width: 100%;
-    margin: 10px 0 0 0;
+    max-width: 980px;
+    margin: 0 0 0 0; /*Persian-DnnSoftware*/
     padding: 10px 0 7px 0;
     background-color: #ddd;
 }
@@ -64,24 +65,24 @@
                 color: #666;
                 background: #fff;
                 background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
                 background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-                background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+                background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
             }
 
             .dnnSearchResultPanel .dnnSearchResultSortOptions > li.active > a,
             .dnnSearchResultPanel .dnnSearchResultSortOptions > li.active > a:hover {
                 background-color: #e8f1fa;
                 background: -moz-linear-gradient(top, #ccc 0%, #fff 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#ccc), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccc), color-stop(100%,#fff)); /* Chrome,Safari4+ */
                 background: -webkit-linear-gradient(top, #ccc 0%,#fff 100%); /* Chrome10+,Safari5.1+ */
-                background: linear-gradient(to bottom, #ccc 0%,#fff 100%); /* W3C */
+                background: linear-gradient(top, #ccc 0%,#fff 100%); /* W3C */
                 color: #333;
             }
 
-    .dnnSearchResultPanel > .dnnRight > span.dnnSearchResultCountPerPage, .dnnSearchResultPanel > .dnnLeft > span.dnnSearchResultCountPerPage {
+    .dnnSearchResultPanel > .dnnRight > span.dnnSearchResultCountPerPage {
         display: inline-block;
-        margin: 10px 10px 0 5px;
+        margin: 10px 0 0 5px;
         color: #666;
         vertical-align: top;
     }
@@ -97,7 +98,7 @@
     background-image: url(../../../images/loading.gif);
     background-repeat: no-repeat;
     background-position: center center;
-    margin: 30px 0 0 0;
+    margin: 30px 0 30px 0;
 }
 
 
@@ -201,11 +202,11 @@
         -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 1);
         background: #fff; /* Old browsers */
         background: -moz-linear-gradient(top, #fff 0%, #eee6e5 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #fff), color-stop(100%, #eee6e5)); /* Chrome,Safari4+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #eee6e5)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #fff 0%, #eee6e5 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #fff 0%, #eee6e5 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #fff 0%,#eee6e5 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #fff 0%,#eee6e5 100%); /* W3C */
+        background: linear-gradient(top, #fff 0%,#eee6e5 100%); /* W3C */
         border: 1px solid #dddddd;
         box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
         color: #555;
@@ -220,7 +221,7 @@
         .dnnSearchResultPager a.dnnPager-next {
             -webkit-border-bottom-left-radius: 3px;
             -webkit-border-top-left-radius: 3px;
-            background-image: url("../../../icons/sigma/right.png");
+            background-image: url("../../../icons/sigma/left.png");
             background-position: center;
             background-repeat: no-repeat;
             border-bottom-left-radius: 3px;
@@ -230,7 +231,7 @@
         .dnnSearchResultPager a.dnnPager-prev {
             -webkit-border-bottom-right-radius: 3px;
             -webkit-border-top-right-radius: 3px;
-            background-image: url("../../../icons/sigma/left.png");
+            background-image: url("../../../icons/sigma/right.png");
             background-position: center;
             background-repeat: no-repeat;
             border-bottom-right-radius: 3px;
@@ -332,4 +333,10 @@
     .dnnSearchBox_advanced_dropdown {
         right: -5px !important;
     }
+}
+
+/* Persian-DnnSoftware */
+dnnSearchResultItem-Link {
+    direction: ltr;
+    text-align: left;
 }

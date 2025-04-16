@@ -1,4 +1,4 @@
-﻿
+﻿/* Persian-DnnSoftware */
 .console {
     width: 95%;
     height: 95%;
@@ -178,7 +178,7 @@
 
     .console.profile .console-none div {
         cursor: pointer;
-        cursor: hand;
+        cursor: pointer;
         float: right;
         height: auto;
         /*width: 250px;*/
@@ -192,7 +192,7 @@
         padding: 10px 40px 10px 8px;
         margin: 0;
         border-bottom: solid 1px #fff;
-        background: url('../../../images/arrow-right-white.png') 18px center no-repeat;
+        background: url('../../images/arrow-right-white.png') 18px center no-repeat;
         color: #eee;
         font-size: 13px;
         line-height: 1;

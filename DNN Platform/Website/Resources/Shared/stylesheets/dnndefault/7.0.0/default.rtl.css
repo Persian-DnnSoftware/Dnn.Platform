@@ -8,7 +8,7 @@
 	* Description: 			sets typography, basic grids, 
 							and standard formstyles
 	* Version:				1.0.0 (2012-06-16)
-	* Author:				Ryan Martinez
+	* Author:				Ryan Martinez - Morteza Kermani
 	
 	== INDEX ===============================================
 	
@@ -41,8 +41,8 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
+    /*font-size: 100%;*/
+    /*font: inherit;*/
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -66,7 +66,7 @@ blockquote, q {
     }
 
 html, button, input, select, textarea {
-    font-family: sans-serif;
+    font-family: Tahoma, sans-serif;
     color: #222;
 }
 
@@ -112,10 +112,11 @@ sub {
 }
 
 body {
+    direction: rtl; /*Persian-DnnSoftware*/
     color: #444;
     font-size: 12px;
     line-height: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
 }
@@ -127,7 +128,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     display: block;
     color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
     font-weight: bold;
 }
 
@@ -136,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 h1 {
-    font-size: 38px;
+    font-size: 24px;
     line-height: 54px;
     letter-spacing: normal;
     margin-top: 8px;
@@ -144,7 +145,7 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 22px;
     line-height: 36px;
     letter-spacing: normal;
     margin-top: 8px;
@@ -152,7 +153,7 @@ h2 {
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 36px;
     letter-spacing: normal;
     margin-top: 8px;
@@ -160,7 +161,7 @@ h3 {
 }
 
 h4 {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 36px;
     letter-spacing: normal;
 }
@@ -232,8 +233,6 @@ small {
 .NormalDeleted {
     color: #999;
 }
-
-
 
 /* text style used for help text rendered by modules */
 .Help {
@@ -375,7 +374,7 @@ li p {
     background: rgba(2,139,255,0.15); /* blue */
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    max-width: 100%;
+    max-width: 980px;
 }
 
     .dnnFormMessage.dnnFormError,
@@ -400,7 +399,7 @@ li p {
 .dnnTableHeader {
     display: block;
     padding: 15px;
-    background: none repeat scroll 100% 0 #E3E3E5;
+    background: none repeat scroll 0 0 #E3E3E5;
 }
 
     .dnnTableHeader a,
@@ -424,8 +423,8 @@ li p {
     .dnnTableDisplay th {
         padding: 0;
         border-right: 1px solid #d1d1d1;
-        -webkit-box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.9);
-        box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.9);
+        -webkit-box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.9);
+        box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.9);
     }
 
         .dnnTableDisplay th > span,
@@ -454,9 +453,9 @@ li p {
         background: -webkit-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
+        background: linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
         text-align: right;
-        text-shadow: -1px 1px 0px rgba(255,255,255,0.8);
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
         color: #333;
     }
 
@@ -477,7 +476,7 @@ li p {
                 background: -webkit-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
                 background: -o-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Opera 11.10+ */
                 background: -ms-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* IE10+ */
-                background: linear-gradient(to bottom, #fefefe 0%,#e8e8e8 100%); /* W3C */
+                background: linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* W3C */
                 color: #333;
             }
 
@@ -489,7 +488,7 @@ li p {
                 background: -webkit-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Chrome10+,Safari5.1+ */
                 background: -o-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Opera 11.10+ */
                 background: -ms-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* IE10+ */
-                background: linear-gradient(to bottom, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
+                background: linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
                 -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
                 box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
             }
@@ -652,7 +651,7 @@ legend.required:after {
     background: rgba(0,0,0,0.03);
     content: 'Required';
     font-weight: normal;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: Tahoma, "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-style: italic;
     color: #777;
@@ -716,9 +715,9 @@ ul.dnnAdminTabNav li a,
     border-color: #0D569E; /*dark blue*/
     background: #3792ED;
     background: -moz-linear-gradient(top, #358eea 0%, #2170cd 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#358eea), color-stop(100%,#2170cd)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#358eea), color-stop(100%,#2170cd)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #358eea 0%,#2170cd 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #358eea 0%,#2170cd 100%); /* W3C */
+    background: linear-gradient(top, #358eea 0%,#2170cd 100%); /* W3C */
     -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.6), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.6), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
     color: #efefef;
@@ -729,9 +728,9 @@ ul.dnnAdminTabNav li a,
         border-color: #0D569E;
         background: #6cb6f3; /* Old browsers */
         background: -moz-linear-gradient(top, #6cb6f3 0%, #4387d2 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#6cb6f3), color-stop(100%,#4387d2)); /* Chrome,Safari4+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6cb6f3), color-stop(100%,#4387d2)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #6cb6f3 0%,#4387d2 100%); /* Chrome10+,Safari5.1+ */
-        background: linear-gradient(to bottom, #6cb6f3 0%,#4387d2 100%); /* W3C */
+        background: linear-gradient(top, #6cb6f3 0%,#4387d2 100%); /* W3C */
         color: #fff;
     }
 
@@ -739,9 +738,9 @@ ul.dnnAdminTabNav li a,
         border-color: #0D569E;
         background: #1f66be; /* Old browsers */
         background: -moz-linear-gradient(top, #1f66be 0%, #3085e0 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#1f66be), color-stop(100%,#3085e0)); /* Chrome,Safari4+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1f66be), color-stop(100%,#3085e0)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #1f66be 0%,#3085e0 100%); /* Chrome10+,Safari5.1+ */
-        background: linear-gradient(to bottom, #1f66be 0%,#3085e0 100%); /* W3C */
+        background: linear-gradient(top, #1f66be 0%,#3085e0 100%); /* W3C */
         -webkit-box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
         box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
         color: #fff;
@@ -765,11 +764,11 @@ ul.dnnAdminTabNav li a,
 .dnnLogin .LoginTabGroup span {
     background: #f5f5f5; /* Old browsers */
     background: -moz-linear-gradient(top, #f5f5f5 0%, #dfdfdf 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#f5f5f5), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
+    background: linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
     -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
     text-shadow: 0px 1px 0px #ffffff;
@@ -784,11 +783,11 @@ ul.dnnAdminTabNav li a,
     .dnnLogin .LoginTabGroup span:hover {
         background: #fefefe; /* Old browsers */
         background: -moz-linear-gradient(top, #fefefe 0%, #e8e8e8 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fefefe), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #fefefe 0%,#e8e8e8 100%); /* W3C */
+        background: linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* W3C */
         color: #555;
     }
 
@@ -802,11 +801,11 @@ ul.dnnAdminTabNav li a,
         border-color: #999;
         background: #c6c6c6; /* Old browsers */
         background: -moz-linear-gradient(top, #c6c6c6 0%, #f3f3f3 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#c6c6c6), color-stop(100%,#f3f3f3)); /* Chrome,Safari4+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6c6c6), color-stop(100%,#f3f3f3)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
+        background: linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
         -webkit-box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
         box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
     }
@@ -988,9 +987,9 @@ ul.dnnAdminTabNav {
             margin-bottom: 0;
             border-bottom: 0;
             box-shadow: none;
-            webkit-box-shadow: none;
-            -webkit-border-radius: 3px 3px 0px 0px;
-            border-radius: 3px 3px 0px 0px;
+            -webkit-box-shadow: none;
+            -webkit-border-radius: 3px 0px 0px 3px;
+            border-radius: 3px 0px 0px 3px;
         }
 
         ul.dnnAdminTabNav li.ui-tabs-active a {
@@ -1025,14 +1024,14 @@ ul.dnnAdminTabNav {
         margin-left: 4px;
         margin-bottom: 0;
         border-bottom: 0 none;
-        border-radius: 3px 3px 0 0;
+        border-radius: 3px 0 0 3px;
         box-shadow: none;
     }
 
         .dnnLogin .LoginTabGroup span.LoginTabSelected {
             margin-top: -3px;
             padding: 12px 9px 10px;
-            background: none repeat scroll 100% 0 #FFFFFF;
+            background: none repeat scroll 0 0 #FFFFFF;
         }
 
 /*-------------------------------------*/
@@ -1087,7 +1086,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-se {
-    cursor: sw-resize;
+    cursor: se-resize;
     width: 12px;
     height: 12px;
     left: 1px;
@@ -1095,7 +1094,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-sw {
-    cursor: se-resize;
+    cursor: sw-resize;
     width: 9px;
     height: 9px;
     right: -5px;
@@ -1103,7 +1102,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-nw {
-    cursor: ne-resize;
+    cursor: nw-resize;
     width: 9px;
     height: 9px;
     right: -5px;
@@ -1111,7 +1110,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-ne {
-    cursor: nw-resize;
+    cursor: ne-resize;
     width: 9px;
     height: 9px;
     left: -5px;
@@ -1150,7 +1149,7 @@ ul.dnnAdminTabNav {
     position: relative;
     display: block;
     width: 32.075%;
-    margin-left: 18px;
+    margin-right: 18px;
 }
 
 .dnnHelperTip {
@@ -1166,7 +1165,7 @@ ul.dnnAdminTabNav {
     padding: 10px;
     padding-right: 30px;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px top 12px;
+    background: rgba(0, 0, 0, 0.75) url(../../../../../images/pin-icn.png) no-repeat 7px 12px;
     font-size: 11px;
     color: #DDD;
     text-align: right;
@@ -1275,7 +1274,7 @@ td > .dnnLabel {
 .dnnHelperTip .dnnFormHelpContent span:after {
     position: absolute;
     content: "";
-    left: 15px;
+    right: 15px;
     bottom: -7px;
     width: 0;
     height: 0;
@@ -1297,8 +1296,8 @@ td > .dnnLabel {
     width: 0;
     height: 0;
     opacity: 0.75;
-    border-right: 7px solid transparent;
     border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
     border-top: 7px solid #000;
 }
 
@@ -1310,8 +1309,8 @@ td > .dnnLabel {
     width: 0;
     height: 0;
     opacity: 0.75;
-    border-right: 7px solid transparent;
     border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
     border-bottom: 7px solid #000;
 }
 
@@ -1323,7 +1322,7 @@ a.pinHelp {
     width: 15px;
     height: 15px;
     opacity: 0.5;
-    background: url(../../../../../images/pin-icn.png) no-repeat 100% 0;
+    background: url(../../../../../images/pin-icn.png) no-repeat 0 0;
 }
 
     .ui-draggable a.pinHelp,
@@ -1347,7 +1346,7 @@ a.pinHelp {
     background: rgba(255,0,0,0.75);
     font-size: 12px;
     color: #fff;
-    text-align: right;
+    text-align: left;
 }
 
     .dnnFormItem span.dnnFormMessage.dnnFormError:after {
@@ -1358,8 +1357,8 @@ a.pinHelp {
         width: 0;
         height: 0;
         opacity: 0.75;
-        border-right: 7px solid transparent;
         border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
         border-top: 7px solid red;
     }
 
@@ -1410,15 +1409,15 @@ a.pinHelp {
     }
 
     .dnnCheckbox img {
-        background-position: right 0px top 0px;
+        background-position: 3px 0px;
     }
 
 .dnnCheckbox-hover img {
-    background-position: right 0px top 0px;
+    background-position: 3px 0px;
 }
 
 .dnnCheckbox-checked img {
-    background-position: right -51px top 0px;
+    background-position: -51px 0px;
 }
 
 .dnnCheckbox-disabled {
@@ -1430,11 +1429,11 @@ a.pinHelp {
     }
 
 .dnnCheckbox-checked-error img {
-    background-position: right -150px top 0px;
+    background-position: -150px 0px;
 }
 
 .dnnCheckbox-error img {
-    background-position: right -100px top 0px;
+    background-position: -100px 0px;
 }
 
 .dnnCheckbox-focus {
@@ -1473,15 +1472,15 @@ a.pinHelp {
     }
 
     .dnnRadiobutton img {
-        background-position: right 0px top 0px;
+        background-position: 0px 0px;
     }
 
 .dnnRadiobutton-hover img {
-    background-position: right 0px top 0px;
+    background-position: 0px 0px;
 }
 
 .dnnRadiobutton-checked img {
-    background-position: right -50px top 0px;
+    background-position: -50px 0px;
 }
 
 .dnnRadiobutton-disabled img {
@@ -1489,11 +1488,11 @@ a.pinHelp {
 }
 
 .dnnRadiobutton-checked-error img {
-    background-position: right -150px top 0px;
+    background-position: -150px 0px;
 }
 
 .dnnRadiobutton-error img {
-    background-position: right -100px top 0px;
+    background-position: -100px 0px;
 }
 
 .dnnRadiobutton-focus {
@@ -1538,9 +1537,9 @@ div.dnnFormGroup {
     border: 1px solid #c9c9c9;
     background: #fff;
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #333;
@@ -1627,7 +1626,6 @@ div.dnnTagsInput span.tag {
     color: #888;
     cursor: pointer;
     background-color: #eee;
-    word-break: break-word;
 }
 
     div.dnnTagsInput span.tag:hover {
@@ -1650,12 +1648,12 @@ div.dnnTagsInput > div > input:focus {
     background: transparent;
     outline: none;
     font-weight: normal;
-    font-family: helvetica;
+    font-family: Tahoma, helvetica;
     font-size: 12px;
     display: inline-block;
     vertical-align: top;
     height: 19px;
-    padding: 3px 3px 3px 0;
+    padding: 3px 0 3px 3px;
     margin-bottom: 5px;
 }
 
@@ -1676,19 +1674,19 @@ div.dnnTagsInput div {
 
         div.dnnTagsInput div.dnnTags_filter > .dnnTags_filter_label {
             display: inline-block;
-            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc;
             padding: 3px 10px 0 15px;
             margin-left: 3px;
             color: #999;
             cursor: pointer;
-            background: url(../../../../../images/dnnSpinnerDownArrow.png) no-repeat;
+            background: url(../../../../../../images/dnnSpinnerDownArrow.png) no-repeat;
             background-position: left center;
             height: 22px;
         }
 
             div.dnnTagsInput div.dnnTags_filter > .dnnTags_filter_label.dnnExpanded {
                 color: #666;
-                background: url(../../../../../images/dnnSpinnerUpArrow.png) no-repeat;
+                background: url(../../../../../../images/dnnSpinnerUpArrow.png) no-repeat;
                 background-position: left center;
             }
 
@@ -1747,7 +1745,7 @@ div.dnnTagsInput div.dnnTags_filter a.dnnSearchButton {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url(../../../../../images/search/searchButton.png);
+    background-image: url(../../../../../../images/search/searchButton.png);
     background-repeat: no-repeat;
     background-position: center center;
     vertical-align: top;
@@ -1764,7 +1762,7 @@ div.dnnTagsInput div.dnnTags_filter a.dnnSearchButton {
 div.dnnTagsInput > div > input.dnnTagsInvalid {
     display: block;
     float: right;
-    margin-left: 5px;
+    margin-right: 5px;
     border: none;
     outline: none;
     border-radius: 3px;
@@ -1783,10 +1781,10 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
     background-color: #fff;
     overflow: hidden;
     z-index: 900001;
-    -webkit-border-bottom-right-radius: 3px;
     -webkit-border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     -webkit-box-shadow: 0px 2px 0px 0px #bbb;
     box-shadow: 0px 2px 0px 0px #bbb;
     min-width: 150px;
@@ -1826,7 +1824,7 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
 .dnnFormMessage .dnnLabel {
     float: none;
     width: 90%;
-    text-align: right;
+    text-align: left;
 }
 
 /* Pane header */
@@ -1842,9 +1840,9 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
     border: 1px solid #c9c9c9;
     background: #fff;
     background: -moz-linear-gradient(top, #f0f2f1 0%, #fff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#f0f2f1), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f2f1), color-stop(100%,#fff)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #f0f2f1 0%,#fff 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #f0f2f1 0%,#fff 100%); /* W3C */
+    background: linear-gradient(top, #f0f2f1 0%,#fff 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.25), 0px 1px 0px 0px #fff;
@@ -1864,10 +1862,10 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
         margin: 0;
         height: 100%;
         background-color: #1a82f7;
-        background: -moz-linear-gradient(right, #2b7fda 0%, #3fbdff 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, left top, color-stop(0%,#2b7fda), color-stop(100%,#3fbdff)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(right, #2b7fda 0%, #3fbdff 100%); /* Chrome10+,Safari5.1+ */
-        background: linear-gradient(to left, #2b7fda 0%, #3fbdff 100%); /* W3C */
+        background: -moz-linear-gradient(left, #2b7fda 0%, #3fbdff 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#2b7fda), color-stop(100%,#3fbdff)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, #2b7fda 0%, #3fbdff 100%); /* Chrome10+,Safari5.1+ */
+        background: linear-gradient(left, #2b7fda 0%, #3fbdff 100%); /* W3C */
     }
 
 /* Button Dropdown */
@@ -1881,9 +1879,9 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
     height: 30px !important;
     background: #fff;
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: 0px 1px 0px 0px #bbb;
@@ -1914,10 +1912,10 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
     background: #fff;
     border: 1px solid #c9c9c9;
     border-bottom: 1px solid #fff;
-    -webkit-border-top-right-radius: 3px;
-    border-top-right-radius: 3px;
     -webkit-border-top-left-radius: 3px;
     border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .dnnButtonDropdown-ul {
@@ -1971,9 +1969,9 @@ ul.dnnButtonGroup {
     padding: 0;
     background: #fff;
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: 0px 1px 0px 0px #bbb;
@@ -2063,7 +2061,7 @@ ul.dnnButtonGroup {
 .dnnForm fieldset.dnnFormInformation {
     float: right;
     width: 32.075%;
-    margin-right: 16px;
+    margin-left: 16px;
     padding: 18px 0;
     background: rgba(0,0,0,0.05);
 }
@@ -2092,7 +2090,7 @@ ul.dnnButtonGroup {
         float: none;
         display: inline;
         width: auto;
-        padding-left: 0;
+        padding-right: 0;
         margin: 0 0 0 10px;
         text-align: right;
         font-weight: normal;
@@ -2360,14 +2358,14 @@ ul.dnnButtonGroup {
                 border-top-left-radius: 8px;
                 border-bottom-left-radius: 8px;
                 background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-                background-position: right 8px top 4px;
+                background-position: 8px 4px;
                 text-indent: -9999em;
                 min-width: 0 !important;
             }
 
                 .dnnFormPopup .dnnModalCtrl .ui-dialog-titlebar-close:hover {
                     background: #358EEA url(../../../../../images/closeBtn.png) no-repeat;
-                    background-position: right 8px top 4px;
+                    background-position: 8px 4px;
                     cursor: pointer;
                 }
 
@@ -2383,13 +2381,13 @@ ul.dnnButtonGroup {
                 border-top-right-radius: 8px;
                 border-bottom-right-radius: 8px;
                 background: #585858 url(../../../../../images/resizeBtn.png) no-repeat;
-                background-position: right 10px top 2px;
+                background-position: 10px 2px;
                 text-indent: -9999em;
             }
 
                 .dnnFormPopup .dnnModalCtrl a.dnnToggleMax:hover {
                     background: #358EEA url(../../../../../images/resizeBtn.png) no-repeat;
-                    background-position: right 10px top 2px;
+                    background-position: 10px 2px;
                 }
 
 div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
@@ -2404,7 +2402,7 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     -webkit-border-radius: 12px;
     border-radius: 12px;
     background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-    background-position: right 4px top 4px;
+    background-position: 4px 4px;
     border: 3px solid #fff;
     text-indent: -9999em;
     min-width: 0 !important;
@@ -2448,6 +2446,7 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     height: 24px;
     width: 24px;
     background: url(../../../../../images/modal-resize-icn.png) no-repeat bottom;
+    cursor: sw-resize; /*Persian-DnnSoftware*/
 }
 
 .dnnFormPopup .dnnDialog {
@@ -2549,7 +2548,7 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
         height: 46px;
         margin: 0;
         padding: 0;
-        background: transparent url(../../../../../images/InstallWizardBG.png) repeat-x;
+        background: transparent url(../../../../../images/InstallWizardBG.rtl.png) repeat-x; /*Persian-DnnSoftware*/
     }
 
         .dnnWizardTab.ui-tabs .ui-tabs-nav li {
@@ -2601,8 +2600,8 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
 .dnnWizardStep {
     height: 46px;
     padding: 0 20px 0 0;
-    background: transparent url(../../../../../images/InstallWizardBG.png) repeat-x;
-    background-position: 100% 0;
+    background: transparent url(../../../../../images/InstallWizardBG.rtl.png) repeat-x; /*Persian-DnnSoftware*/
+    background-position: 0 0;
     cursor: pointer;
 }
 
@@ -2630,13 +2629,13 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
 .dnnWizardStepArrow {
     width: 25px;
     height: 46px;
-    background: transparent url(../../../../../images/InstallWizardBG.png) no-repeat;
+    background: transparent url(../../../../../images/InstallWizardBG.rtl.png) no-repeat; /*Persian-DnnSoftware*/
     background-position: 100% -401px;
 }
 
 .dnnWizardTab.ui-tabs .ui-tabs-nav li.ui-tabs-active .dnnWizardStep {
     height: 46px;
-    background-position: 100% -100px;
+    background-position: 0 -100px;
 }
 
 .dnnWizardTab.ui-tabs .ui-tabs-nav li.ui-tabs-active .dnnWizardStepNumber {
@@ -2745,12 +2744,12 @@ table.dnnPermissionsGrid {
 .dnnGridHeader td, thead.dnnGridHeader th, tr.dnnGridHeader th {
     padding: 6px 12px 6px 12px;
     border-bottom: 1px solid #c9c9c9;
-    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
     background: #f0f2f1;
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
 }
 
 .dnnGridItem td, .dnnGridAltItem td {
@@ -2795,6 +2794,10 @@ table.dnnPermissionsGrid {
         width: 180px;
         margin-bottom: 10px;
     }
+
+        .urlControl input[type=text] {
+            direction: ltr; /*Persian-DnnSoftware*/
+        }
 
     .urlControl dnnFormItem > a.dnnSecondaryAction {
         margin: 10px 0 0 10px;
@@ -2895,7 +2898,7 @@ span.dnnInputFileWrapper > input[type="file"] { /* force file upload style here,
     margin: 0;
     opacity: 0;
     filter: alpha(opacity=0);
-    direction: rtl;
+    direction: ltr;
     cursor: pointer;
     height: 100%;
     font-size: 200px;
@@ -2922,7 +2925,7 @@ span.dnnInputFileWrapper { /* Notes(by Richard): here must set !important */
     float: right;
     background-color: #F0F0F0;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     padding: 0;
     width: 500px;
 }
@@ -2941,8 +2944,8 @@ span.dnnInputFileWrapper { /* Notes(by Richard): here must set !important */
         float: right;
         width: 40px;
         margin-top: 8px;
-        padding-right: 5px;
-        text-align: right;
+        padding-left: 5px;
+        text-align: left;
     }
 
     .dnnFileUploadScope .dnnFormItem .dnnDropDownList span {
@@ -2979,7 +2982,7 @@ span.dnnInputFileWrapper { /* Notes(by Richard): here must set !important */
             background: rgba(0,0,0,0.5);
             padding: 5px 7px;
             border-radius: 3px;
-            box-shadow: 0px 1px 0px #fff, inset -1px 1px 0px #555;
+            box-shadow: 0px 1px 0px #fff, inset 1px 1px 0px #555;
             opacity: 0.5;
             cursor: default;
             -webkit-transition: all 500ms ease-in-out;
@@ -3046,7 +3049,7 @@ h2.dnnFormSectionHead {
     margin-top: 8px;
     margin-bottom: 18px;
     border-bottom: 1px solid #ddd;
-    font-size: 32px;
+    font-size: 22px;
     line-height: 36px;
     letter-spacing: -0.03em;
 }
@@ -3092,7 +3095,7 @@ h2.dnnFormSectionHead {
             display: block;
             padding: 15px 15px;
             border-bottom: 1px solid #ddd;
-            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
             background: rgba(0, 0, 0, 0.04);
             color: #999;
             text-decoration: none;
@@ -3106,7 +3109,7 @@ h2.dnnFormSectionHead {
         .dnnVerticalTabs li.active a {
             background: none;
             color: #333;
-            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
         }
 
 .tabBody {
@@ -3198,7 +3201,7 @@ h2.dnnFormSectionHead {
 
 .jspHorizontalBar .jspTrack,
 .jspHorizontalBar .jspDrag {
-    float: right;
+    float: left;
     height: 5px;
 }
 
@@ -3322,7 +3325,7 @@ body:not(.dnnEditState) .DNNEmptyPane {
 /*Edit In Place Tool Bar Classes*/
 .eipbackimg {
     position: absolute;
-    margin-top: -32px;
+    margin-top: 10px;
     white-space: nowrap;
     background: url(../../../../../images/eip_toolbar.png) repeat-x;
     height: 32px;
@@ -3332,7 +3335,7 @@ body:not(.dnnEditState) .DNNEmptyPane {
     .eipbackimg.editMode {
         border: 1px solid #777777 !important;
         background: -moz-linear-gradient(top, #303030 0%, #191919 100%) !important; /* FF3.6+ */
-        background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#303030), color-stop(100%,#191919)) !important; /* Chrome,Safari4+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303030), color-stop(100%,#191919)) !important; /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #303030 0%,#191919 100%) !important; /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #303030 0%,#191919 100%) !important; /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #303030 0%,#191919 100%) !important; /* IE10+ */
@@ -3372,51 +3375,51 @@ body:not(.dnnEditState) .DNNEmptyPane {
 }
 
 .eipbuttonbackimg.eipbutton_cancel {
-    background-position: right -32px top 0;
+    background-position: -32px 0;
 }
 
 .eipbuttonbackimg.eipbutton_bold {
-    background-position: right -64px top 0;
+    background-position: -64px 0;
 }
 
 .eipbuttonbackimg.eipbutton_italic {
-    background-position: right -96px top 0;
+    background-position: -96px 0;
 }
 
 .eipbuttonbackimg.eipbutton_underline {
-    background-position: right -128px top 0;
+    background-position: -128px 0;
 }
 
 .eipbuttonbackimg.eipbutton_justifyleft {
-    background-position: right -160px top 0;
+    background-position: -160px 0;
 }
 
 .eipbuttonbackimg.eipbutton_justifycenter {
-    background-position: right -192px top 0;
+    background-position: -192px 0;
 }
 
 .eipbuttonbackimg.eipbutton_justifyright {
-    background-position: right -224px top 0;
+    background-position: -224px 0;
 }
 
 .eipbuttonbackimg.eipbutton_orderedlist {
-    background-position: right -256px top 0;
+    background-position: -256px 0;
 }
 
 .eipbuttonbackimg.eipbutton_unorderedlist {
-    background-position: right -288px top 0;
+    background-position: -288px 0;
 }
 
 .eipbuttonbackimg.eipbutton_outdent {
-    background-position: right -320px top 0;
+    background-position: -320px 0;
 }
 
 .eipbuttonbackimg.eipbutton_indent {
-    background-position: right -352px top 0;
+    background-position: -352px 0;
 }
 
 .eipbuttonbackimg.eipbutton_createlink {
-    background-position: right -384px top 0;
+    background-position: -384px 0;
 }
 
 .eipbackimg.containerTitle .eipbutton_cancel {
@@ -3424,12 +3427,12 @@ body:not(.dnnEditState) .DNNEmptyPane {
 }
 
 .eipbutton_edit {
-    background: url(../../../../../images/eip_edit.png) no-repeat 0% center;
+    background: url(../../../../../images/eip_edit.png) no-repeat 100% center;
     float: right;
 }
 
 .eipbutton_save {
-    background: url(../../../../../images/eip_save.png) no-repeat 0% center;
+    background: url(../../../../../images/eip_save.png) no-repeat 100% center;
     float: right;
 }
 
@@ -3461,6 +3464,7 @@ input[type="button"].rspCollapseBarSpacer {
 }
 
 
+
 /*------------------------------------------------*/
 /* DEFAULT PROFILE STYLE */
 /*------------------------------------------------*/
@@ -3481,7 +3485,7 @@ input[type="button"].rspCollapseBarSpacer {
 
     .console.profile .console-none div {
         cursor: pointer;
-        cursor: hand;
+        cursor: pointer;
         float: right;
         height: auto;
         /*width: 250px;*/
@@ -3495,7 +3499,7 @@ input[type="button"].rspCollapseBarSpacer {
         padding: 10px 40px 10px 8px;
         margin: 0;
         border-bottom: solid 1px #fff;
-        background: url('../../../../images/arrow-right-white.png') 18px center no-repeat;
+        background: url('../../../../../images/arrow-right-white.png') 18px center no-repeat;
         color: #eee;
         font-size: 13px;
         line-height: 1;
@@ -3584,7 +3588,7 @@ body.mobileView.dnnFormPopup.dnnFormPopupMobileView {
         display: none !important;
         width: 0 !important;
         position: static !important;
-        left: 0 !important;
+        right: 0 !important;
         margin: 0 !important;
     }
 
@@ -3707,8 +3711,8 @@ body.mobileView.dnnFormPopup.dnnFormPopupMobileView {
 
 .dnnFormPopup.dnnFormPopupMobileView {
     width: auto !important;
-    right: 0 !important;
     left: 0 !important;
+    right: 0 !important;
     top: 0 !important;
     box-shadow: none !important;
 }
@@ -3863,6 +3867,7 @@ div.dnnSliderInput {
     -ms-border-radius: 3px;
     border-radius: 3px;
     height: 10px;
+    text-align: left; /*Persian-DnnSoftware*/
 }
 
     div.dnnSliderInput .ui-slider-handle {
@@ -3877,7 +3882,7 @@ div.dnnSliderInput {
         color: #555555;
         outline: none;
         top: -2px;
-        margin-right: -7px;
+        margin-left: -7px; /*Persian-DnnSoftware*/
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -3885,7 +3890,8 @@ div.dnnSliderInput {
 
     div.dnnSliderInput .dnnTooltip {
         top: -37px;
-        margin-right: -22px;
+        margin-left: 22px; /*Persian-DnnSoftware*/
+        float: left; /*Persian-DnnSoftware*/
     }
 
         div.dnnSliderInput .dnnTooltip .dnnFormHelpContent {
@@ -3897,9 +3903,17 @@ div.dnnSliderInput {
         }
 /*END DNN Slider Input Style*/
 
-/* Overflow for dnnMenu dropdown */
-#dnnMenu .dropdown-menu {
-    word-wrap: break-word;
+
+/* ===========   Persian-DnnSoftware   =========== */
+
+.RadCalendar_Default a.rcPrev {
+    background-position: -70px center !important;
 }
 
-/* End Overflow for dnnMenu dropdown */
+.RadCalendar_Default a.rcNext {
+    background-position: -15px center !important;
+}
+
+.jspDrag {
+    right: -3px;
+}

@@ -590,6 +590,7 @@
     <Content Include="admin\Menus\ModuleActions\dnnQuickSettings.js" />
     <Content Include="admin\Menus\ModuleActions\ModuleActions.less" />
     <Content Include="admin\Menus\ModuleActions\ModuleActions.rtl.css" />
+    <Content Include="admin\Modules\module.rtl.css" />
     <Content Include="admin\Security\module.rtl.css" />
     <Content Include="admin\Tabs\module.rtl.css" />
     <Content Include="DesktopModules\Admin\Authentication\module.rtl.css" />

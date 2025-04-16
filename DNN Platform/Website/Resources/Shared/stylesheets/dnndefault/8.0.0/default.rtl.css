@@ -46,7 +46,6 @@ input[type="image"] + span.Head, input[type="image"] + span.SubHead {
     font-size: 12px;
     font-weight: normal;
     line-height: 18px;
-    word-wrap: break-word;
 }
 
 /* disabled text styles */
@@ -109,7 +108,7 @@ img {
     background: rgba(2,139,255,0.15); /* blue */
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    max-width: 100%;
+    max-width: 980px;
 }
 
     .dnnFormMessage.dnnFormError,
@@ -134,7 +133,7 @@ img {
 .dnnTableHeader {
     display: block;
     padding: 15px;
-    background: none repeat scroll 100% 0 #E3E3E5;
+    background: none repeat scroll 0 0 #E3E3E5;
 }
 
     .dnnTableHeader a,
@@ -158,8 +157,8 @@ img {
     .dnnTableDisplay th {
         padding: 0;
         border-right: 1px solid #d1d1d1;
-        -webkit-box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.9);
-        box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.9);
+        -webkit-box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.9);
+        box-shadow: 1px 0px 0px 0px rgba(255, 255, 255, 0.9);
     }
 
         .dnnTableDisplay th > span,
@@ -188,9 +187,9 @@ img {
         background: -webkit-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
+        background: linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
         text-align: right;
-        text-shadow: -1px 1px 0px rgba(255,255,255,0.8);
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
         color: #333;
     }
 
@@ -211,7 +210,7 @@ img {
                 background: -webkit-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
                 background: -o-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Opera 11.10+ */
                 background: -ms-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* IE10+ */
-                background: linear-gradient(to bottom, #fefefe 0%,#e8e8e8 100%); /* W3C */
+                background: linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* W3C */
                 color: #333;
             }
 
@@ -223,7 +222,7 @@ img {
                 background: -webkit-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Chrome10+,Safari5.1+ */
                 background: -o-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Opera 11.10+ */
                 background: -ms-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* IE10+ */
-                background: linear-gradient(to bottom, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
+                background: linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
                 -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
                 box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
             }
@@ -452,7 +451,7 @@ ul.dnnAdminTabNav li a,
     background: -moz-linear-gradient(top, #358eea 0%, #2170cd 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#358eea), color-stop(100%,#2170cd)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #358eea 0%,#2170cd 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #358eea 0%,#2170cd 100%); /* W3C */
+    background: linear-gradient(top, #358eea 0%,#2170cd 100%); /* W3C */
     -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.6), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.6), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
     color: #efefef;
@@ -465,7 +464,7 @@ ul.dnnAdminTabNav li a,
         background: -moz-linear-gradient(top, #6cb6f3 0%, #4387d2 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#6cb6f3), color-stop(100%,#4387d2)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #6cb6f3 0%,#4387d2 100%); /* Chrome10+,Safari5.1+ */
-        background: linear-gradient(to bottom, #6cb6f3 0%,#4387d2 100%); /* W3C */
+        background: linear-gradient(top, #6cb6f3 0%,#4387d2 100%); /* W3C */
         color: #fff;
     }
 
@@ -475,7 +474,7 @@ ul.dnnAdminTabNav li a,
         background: -moz-linear-gradient(top, #1f66be 0%, #3085e0 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#1f66be), color-stop(100%,#3085e0)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #1f66be 0%,#3085e0 100%); /* Chrome10+,Safari5.1+ */
-        background: linear-gradient(to bottom, #1f66be 0%,#3085e0 100%); /* W3C */
+        background: linear-gradient(top, #1f66be 0%,#3085e0 100%); /* W3C */
         -webkit-box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
         box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
         color: #fff;
@@ -503,7 +502,7 @@ ul.dnnAdminTabNav li a,
     background: -webkit-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
+    background: linear-gradient(top, #f5f5f5 0%,#dfdfdf 100%); /* W3C */
     -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
     text-shadow: 0px 1px 0px #ffffff;
@@ -522,7 +521,7 @@ ul.dnnAdminTabNav li a,
         background: -webkit-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #fefefe 0%,#e8e8e8 100%); /* W3C */
+        background: linear-gradient(top, #fefefe 0%,#e8e8e8 100%); /* W3C */
         color: #555;
     }
 
@@ -540,7 +539,7 @@ ul.dnnAdminTabNav li a,
         background: -webkit-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
+        background: linear-gradient(top, #c6c6c6 0%,#f3f3f3 100%); /* W3C */
         -webkit-box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
         box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
     }
@@ -767,7 +766,7 @@ ul.dnnAdminTabNav {
         .dnnLogin .LoginTabGroup span.LoginTabSelected {
             margin-top: -3px;
             padding: 12px 9px 10px;
-            background: none repeat scroll 100% 0 #FFFFFF;
+            background: none repeat scroll 0 0 #FFFFFF;
         }
 
 /*-------------------------------------*/
@@ -822,7 +821,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-se {
-    cursor: sw-resize;
+    cursor: se-resize;
     width: 12px;
     height: 12px;
     left: 1px;
@@ -830,7 +829,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-sw {
-    cursor: se-resize;
+    cursor: sw-resize;
     width: 9px;
     height: 9px;
     right: -5px;
@@ -838,7 +837,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-nw {
-    cursor: ne-resize;
+    cursor: nw-resize;
     width: 9px;
     height: 9px;
     right: -5px;
@@ -846,7 +845,7 @@ ul.dnnAdminTabNav {
 }
 
 .dnnForm .ui-resizable-ne {
-    cursor: nw-resize;
+    cursor: ne-resize;
     width: 9px;
     height: 9px;
     left: -5px;
@@ -871,8 +870,6 @@ ul.dnnAdminTabNav {
 
         .dnnForm fieldset fieldset {
             width: 100%;
-            padding: 0;
-            margin: 0;
         }
 
     .dnnForm .dnnFormItem {
@@ -904,7 +901,7 @@ ul.dnnAdminTabNav {
     padding: 10px;
     padding-right: 30px;
     border-radius: 3px;
-    background: rgba(0, 0, 0, 0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px top 12px;
+    background: rgba(0, 0, 0, 0.75) url(../../../../../images/pin-icn.png) no-repeat 7px 12px;
     font-size: 11px;
     color: #DDD;
     text-align: right;
@@ -1016,13 +1013,13 @@ td > .dnnLabel {
 .dnnHelperTip .dnnFormHelpContent span:after {
     position: absolute;
     content: "";
-    left: 15px;
+    right: 15px;
     bottom: -7px;
     width: 0;
     height: 0;
     opacity: 0.75;
-    border-left: 7px solid transparent;
     border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
     border-top: 7px solid #000;
 }*/
 
@@ -1064,7 +1061,7 @@ a.pinHelp {
     width: 15px;
     height: 15px;
     opacity: 0.5;
-    background: url(../../../../../images/pin-icn.png) no-repeat 100% 0;
+    background: url(../../../../../images/pin-icn.png) no-repeat 0 0;
 }
 
     .ui-draggable a.pinHelp,
@@ -1077,7 +1074,7 @@ a.pinHelp {
     display: block;
     position: absolute;
     overflow: visible;
-    /*top:-95%; right: 12%;*/
+    /*top:-95%; left: 12%;*/
     bottom: 95%;
     left: 12%;
     width: 200px;
@@ -1151,15 +1148,15 @@ a.pinHelp {
     }
 
     .dnnCheckbox img {
-        background-position: right 0px top 0px;
+        background-position: 0px 0px;
     }
 
 .dnnCheckbox-hover img {
-    background-position: right 0px top 0px;
+    background-position: 0px 0px;
 }
 
 .dnnCheckbox-checked img {
-    background-position: right -51px top 0px;
+    background-position: -51px 0px;
 }
 
 .dnnCheckbox-disabled {
@@ -1171,11 +1168,11 @@ a.pinHelp {
     }
 
 .dnnCheckbox-checked-error img {
-    background-position: right -150px top 0px;
+    background-position: -150px 0px;
 }
 
 .dnnCheckbox-error img {
-    background-position: right -100px top 0px;
+    background-position: -100px 0px;
 }
 
 .dnnCheckbox-focus {
@@ -1214,15 +1211,15 @@ a.pinHelp {
     }
 
     .dnnRadiobutton img {
-        background-position: right 0px top 0px;
+        background-position: 0px 0px;
     }
 
 .dnnRadiobutton-hover img {
-    background-position: right 0px top 0px;
+    background-position: 0px 0px;
 }
 
 .dnnRadiobutton-checked img {
-    background-position: right -50px top 0px;
+    background-position: -50px 0px;
 }
 
 .dnnRadiobutton-disabled img {
@@ -1230,11 +1227,11 @@ a.pinHelp {
 }
 
 .dnnRadiobutton-checked-error img {
-    background-position: right -150px top 0px;
+    background-position: -150px 0px;
 }
 
 .dnnRadiobutton-error img {
-    background-position: right -100px top 0px;
+    background-position: -100px 0px;
 }
 
 .dnnRadiobutton-focus {
@@ -1281,7 +1278,7 @@ div.dnnFormGroup {
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #333;
@@ -1373,7 +1370,6 @@ div.dnnTagsInput span.tag {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     box-sizing: border-box;
-    word-break: break-word;
 }
 
     div.dnnTagsInput span.tag:hover {
@@ -1590,7 +1586,7 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
     background: -moz-linear-gradient(top, #f0f2f1 0%, #fff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#f0f2f1), color-stop(100%,#fff)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #f0f2f1 0%,#fff 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #f0f2f1 0%,#fff 100%); /* W3C */
+    background: linear-gradient(top, #f0f2f1 0%,#fff 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.25), 0px 1px 0px 0px #fff;
@@ -1613,7 +1609,7 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
         background: -moz-linear-gradient(right, #2b7fda 0%, #3fbdff 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, right top, left top, color-stop(0%,#2b7fda), color-stop(100%,#3fbdff)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(right, #2b7fda 0%, #3fbdff 100%); /* Chrome10+,Safari5.1+ */
-        background: linear-gradient(to left, #2b7fda 0%, #3fbdff 100%); /* W3C */
+        background: linear-gradient(right, #2b7fda 0%, #3fbdff 100%); /* W3C */
     }
 
 /* Button Dropdown */
@@ -1629,7 +1625,7 @@ div.dnnTagsInput > div > input.dnnTagsInvalid {
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: 0px 1px 0px 0px #bbb;
@@ -1721,7 +1717,7 @@ ul.dnnButtonGroup {
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: 0px 1px 0px 0px #bbb;
@@ -1754,22 +1750,8 @@ ul.dnnButtonGroup {
             display: inline-block;
             padding: 7px 7px 6px 7px;
             text-decoration: none;
-            background: #f5f5f5;
-            background: -moz-linear-gradient(top, #f5f5f5 0%, #dfdfdf 100%);
-            background: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #f5f5f5), color-stop(100%, #dfdfdf));
-            background: -webkit-linear-gradient(top, #f5f5f5 0%, #dfdfdf 100%);
-            background: -o-linear-gradient(top, #f5f5f5 0%, #dfdfdf 100%);
-            background: -ms-linear-gradient(top, #f5f5f5 0%, #dfdfdf 100%);
-            background: linear-gradient(to bottom, #f5f5f5 0%, #dfdfdf 100%);
-            -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
-            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.4), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
-            text-shadow: 0px 1px 0px #ffffff;
             color: #333;
         }
-
-            ul.dnnButtonGroup > li > a.active {
-                background: #fff;
-            }
 
     ul.dnnButtonGroup span {
         color: #333;
@@ -1979,14 +1961,14 @@ ul.dnnButtonGroup {
 /* Corner radius */
 .dnnForm .ui-corner-all,
 .dnnForm .ui-corner-top,
-.dnnForm .ui-corner-left,
+.dnnForm .ui-corner-right,
 .dnnForm .ui-corner-tl {
     border-radius: 4px;
 }
 
 .dnnForm .ui-corner-all,
 .dnnForm .ui-corner-top,
-.dnnForm .ui-corner-right,
+.dnnForm .ui-corner-left,
 .dnnForm .ui-corner-tr {
     border-radius: 4px;
 }
@@ -2122,14 +2104,14 @@ ul.dnnButtonGroup {
                 border-top-left-radius: 8px;
                 border-bottom-left-radius: 8px;
                 background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-                background-position: right 8px top 4px;
+                background-position: 8px 4px;
                 text-indent: -9999em;
                 min-width: 0 !important;
             }
 
                 .dnnFormPopup .dnnModalCtrl .ui-dialog-titlebar-close:hover {
                     background: #358EEA url(../../../../../images/closeBtn.png) no-repeat;
-                    background-position: right 8px top 4px;
+                    background-position: 8px 4px;
                     cursor: pointer;
                 }
 
@@ -2145,13 +2127,13 @@ ul.dnnButtonGroup {
                 border-top-right-radius: 8px;
                 border-bottom-right-radius: 8px;
                 background: #585858 url(../../../../../images/resizeBtn.png) no-repeat;
-                background-position: right 10px top 2px;
+                background-position: 10px 2px;
                 text-indent: -9999em;
             }
 
                 .dnnFormPopup .dnnModalCtrl a.dnnToggleMax:hover {
                     background: #358EEA url(../../../../../images/resizeBtn.png) no-repeat;
-                    background-position: right 10px top 2px;
+                    background-position: 10px 2px;
                 }
 
 div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
@@ -2166,7 +2148,7 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     -webkit-border-radius: 12px;
     border-radius: 12px;
     background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-    background-position: right 4px top 4px;
+    background-position: 4px 4px;
     border: 3px solid #fff;
     text-indent: -9999em;
     min-width: 0 !important;
@@ -2364,7 +2346,7 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     height: 46px;
     padding: 0 20px 0 0;
     background: transparent url(../../../../../images/InstallWizardBG.png) repeat-x;
-    background-position: 100% 0;
+    background-position: 0 0;
     cursor: pointer;
 }
 
@@ -2393,12 +2375,12 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     width: 25px;
     height: 46px;
     background: transparent url(../../../../../images/InstallWizardBG.png) no-repeat;
-    background-position: 100% -401px;
+    background-position: 0 -401px;
 }
 
 .dnnWizardTab.ui-tabs .ui-tabs-nav li.ui-tabs-active .dnnWizardStep {
     height: 46px;
-    background-position: 100% -100px;
+    background-position: 0 -100px;
 }
 
 .dnnWizardTab.ui-tabs .ui-tabs-nav li.ui-tabs-active .dnnWizardStepNumber {
@@ -2512,7 +2494,7 @@ table.dnnPermissionsGrid {
     background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
+    background: linear-gradient(top, #fff 0%,#f0f2f1 100%); /* W3C */
 }
 
 .dnnGridItem td, .dnnGridAltItem td {
@@ -2536,8 +2518,8 @@ table.dnnPermissionsGrid {
     td > input[type="image"] + a,
     td a > img{
         display:block;
-        float: left;
-        margin-right: 3px;
+        float: right;
+        margin-left: 3px;
     } */
 
 /*-------------------------------------*/
@@ -2657,7 +2639,7 @@ span.dnnInputFileWrapper > input[type="file"] { /* force file upload style here,
     margin: 0;
     opacity: 0;
     filter: alpha(opacity=0);
-    direction: rtl;
+    direction: ltr;
     cursor: pointer;
     height: 100%;
     font-size: 200px;
@@ -2741,7 +2723,7 @@ span.dnnInputFileWrapper { /* Notes(by Richard): here must set !important */
             background: rgba(0,0,0,0.5);
             padding: 5px 7px;
             border-radius: 3px;
-            box-shadow: 0px 1px 0px #fff, inset -1px 1px 0px #555;
+            box-shadow: 0px 1px 0px #fff, inset 1px 1px 0px #555;
             opacity: 0.5;
             cursor: default;
             -webkit-transition: all 500ms ease-in-out;
@@ -3018,11 +3000,11 @@ div.ModDNNLinksC .urlControl span.dnnRadiobutton {
 /*-------------------------------------*/
 /* GENERIC CLASSES */
 /*-------------------------------------*/
-.left {
+.right {
     float: right;
 }
 
-.right {
+.left {
     float: left;
 }
 
@@ -3084,7 +3066,7 @@ body:not(.dnnEditState) .DNNEmptyPane {
 /*Edit In Place Tool Bar Classes*/
 .eipbackimg {
     position: absolute;
-    margin-top: -32px;
+    margin-top: 10px;
     white-space: nowrap;
     background: url(../../../../../images/eip_toolbar.png) repeat-x;
     height: 32px;
@@ -3134,69 +3116,69 @@ body:not(.dnnEditState) .DNNEmptyPane {
 }
 
 .eipbuttonbackimg.eipbutton_cancel {
-    background-position: right -32px top 0;
+    background-position: -32px 0;
 }
 
 .eipbuttonbackimg.eipbutton_bold {
-    background-position: right -64px top 0;
+    background-position: -64px 0;
 }
 
 .eipbuttonbackimg.eipbutton_italic {
-    background-position: right -96px top 0;
+    background-position: -96px 0;
 }
 
 .eipbuttonbackimg.eipbutton_underline {
-    background-position: right -128px top 0;
+    background-position: -128px 0;
 }
 
 .eipbuttonbackimg.eipbutton_justifyleft {
-    background-position: right -160px top 0;
+    background-position: -160px 0;
 }
 
 .eipbuttonbackimg.eipbutton_justifycenter {
-    background-position: right -192px top 0;
+    background-position: -192px 0;
 }
 
 .eipbuttonbackimg.eipbutton_justifyright {
-    background-position: right -224px top 0;
+    background-position: -224px 0;
 }
 
 .eipbuttonbackimg.eipbutton_orderedlist {
-    background-position: right -256px top 0;
+    background-position: -256px 0;
 }
 
 .eipbuttonbackimg.eipbutton_unorderedlist {
-    background-position: right -288px top 0;
+    background-position: -288px 0;
 }
 
 .eipbuttonbackimg.eipbutton_outdent {
-    background-position: right -320px top 0;
+    background-position: -320px 0;
 }
 
 .eipbuttonbackimg.eipbutton_indent {
-    background-position: right -352px top 0;
+    background-position: -352px 0;
 }
 
 .eipbuttonbackimg.eipbutton_createlink {
-    background-position: right -384px top 0;
+    background-position: -384px 0;
 }
 
 .eipbackimg.containerTitle .eipbutton_cancel {
-    background: url(../../../../../images/eip_title_cancel.png) no-repeat center center;
+    background: url(../../images/eip_title_cancel.png) no-repeat center center;
 }
 
 .eipbutton_edit {
-    background: url(../../../../../images/eip_edit.png) no-repeat 0% center;
+    background: url(../../../../../images/eip_edit.png) no-repeat 100% center;
     float: right;
 }
 
 .eipbutton_save {
-    background: url(../../../../../images/eip_save.png) no-repeat 0% center;
+    background: url(../../../../../images/eip_save.png) no-repeat 100% center;
     float: right;
 }
 
 .eipbackimg.containerTitle .eipbutton_save {
-    background-image: url(../../../../../images/eip_title_save.png);
+    background-image: url(../../images/eip_title_save.png);
 }
 
 .eipbackimg.editMode .eipborderhover {
@@ -3257,7 +3239,7 @@ input[type="button"].rspCollapseBarSpacer {
         padding: 10px 40px 10px 8px;
         margin: 0;
         border-bottom: solid 1px #fff;
-        background: url('../../../../images/arrow-right-white.png') 18px center no-repeat;
+        background: url('../../../../images/arrow-left-white.png') 18px center no-repeat;
         color: #eee;
         font-size: 13px;
         line-height: 1;
@@ -3658,10 +3640,3 @@ div.dnnSliderInput {
             z-index: 1;
         }
 /*END DNN Slider Input Style*/
-
-/* Overflow for dnnMenu dropdown */
-#dnnMenu .dropdown-menu {
-    word-wrap: break-word;
-}
-
-/* End Overflow for dnnMenu dropdown */

@@ -1,3 +1,4 @@
+/* Persian-DnnSoftware */
 .dnnSendPasswordContent input[type=text] {
     width: 35%;
 }
@@ -27,5 +28,6 @@
 }
 
     .dnnPasswordResetContent .confirm-password-tooltip {
+        left: auto !important;
         right: 3% !important;
     }

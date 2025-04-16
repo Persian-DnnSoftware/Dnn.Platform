@@ -1,7 +1,6 @@
 ﻿/* Persian-DnnSoftware */
-/* Edit Bar iFrame */
 body {
-    margin-bottom: 80px !important;
+    margin-bottom: 80px !important
 }
 
 .editBarFrameContainer {
@@ -9,27 +8,27 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 1105 !important;
+    z-index: 1105 !important
 }
 
     .editBarFrameContainer.personabar-shown {
-        right: 80px;
+        right: 80px
     }
 
-iframe#editBar-iframe {
+#editBar-iframe {
     height: 80px;
     width: 100%;
-    vertical-align: top;
+    vertical-align: top
 }
 
-    iframe#editBar-iframe.small {
-        height: 170px;
+    #editBar-iframe.small {
+        height: 170px
     }
 
-    iframe#editBar-iframe.middle {
-        height: 480px;
+    #editBar-iframe.middle {
+        height: 480px
     }
 
-    iframe#editBar-iframe.large {
-        height: 100%;
+    #editBar-iframe.large {
+        height: 100%
     }

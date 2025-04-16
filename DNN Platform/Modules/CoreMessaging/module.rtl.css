@@ -1,4 +1,5 @@
-﻿@charset "utf-8";
+﻿/* Persian-DnnSoftware */
+@charset "utf-8";
 /* CSS Document */
 
 /* RESET STYLES
@@ -70,16 +71,16 @@
     display: inline-block;
     width: 7px;
     height: 9px;
-    background: url(images/icons.png) 100% 3px no-repeat;
+    background: url(images/icons.png) 0 3px no-repeat;
     margin: 0 6px 0 0;
 }
 
 .selectDrop > a:hover:after {
-    background: url(images/icons.png) right -250px top 3px no-repeat;
+    background: url(images/icons.png) -250px 3px no-repeat;
 }
 
 .selectDrop > a.disabled:hover:after {
-    background: url(images/icons.png) 100% 3px no-repeat;
+    background: url(images/icons.png) 0 3px no-repeat;
 }
 
 .selectDrop > a:active span {
@@ -87,15 +88,15 @@
 }
 
 .selectDrop > a:active:after {
-    background: url(images/icons.png) right -250px top 3px no-repeat;
+    background: url(images/icons.png) -250px 3px no-repeat;
 }
 
 .active > a:after {
-    background: url(images/icons.png) right -250px top 3px no-repeat !important;
+    background: url(images/icons.png) -250px 3px no-repeat !important;
 }
 
 .selectDrop > a.disabled:active:after {
-    background: url(images/icons.png) 100% 3px no-repeat;
+    background: url(images/icons.png) 0 3px no-repeat;
 }
 
 /* Styles for select drop*/
@@ -109,10 +110,10 @@
     border: 1px solid #ccc;
     background: #fff;
     /*CSS3*/
-    -moz-border-radius-bottomleft: 3px;
     -moz-border-radius-bottomright: 3px;
-    -webkit-border-radius: 0px 0px 3px 3px;
-    border-radius: 0px 0px 3px 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 3px 3px 0px;
     -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
@@ -135,12 +136,12 @@
     }
 
     .selectDrop.active > a:after {
-        background: url(../images/icons.png) right -250px top 3px no-repeat;
+        background: url(../images/icons.png) -250px 3px no-repeat;
     }
 
     /* Prevent default .select dropdown hoverstate when dropdown is open*/
     .selectDrop.active > a:active:after {
-        background: url(../images/icons.png) 100% 3px no-repeat;
+        background: url(../images/icons.png) 0 3px no-repeat;
     }
 
     /* when select drop down button is clicked toggle active class to show*/
@@ -209,7 +210,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,rgba(31,152,241,1)), color-stop(100%,rgba(2,111,196,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* Opera 11.10+ */
-    background: linear-gradient(to bottom, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* W3C */
+    background: linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* W3C */
 
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -315,20 +316,20 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
         display: inline-block;
         overflow: hidden;
         width: 10px;
-        background: url(images/icons.png) no-repeat right -150px top 3px;
+        background: url(images/icons.png) no-repeat -150px 3px;
         text-indent: -9999px;
     }
 
     .dnnTertiaryAction.ToggleOrder:active span {
-        background-position: right -300px top 3px;
+        background-position: -300px 3px;
     }
 
     .dnnTertiaryAction.ToggleOrder.ascend span {
-        background-position: right -200px top 3px;
+        background-position: -200px 3px;
     }
 
     .dnnTertiaryAction.ToggleOrder.ascend:active span {
-        background-position: right -350px top 3px;
+        background-position: -350px 3px;
     }
 
 .dnnPrimaryAction.ComposeMessage {
@@ -373,7 +374,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
     padding: 17px 15px 15px 15px;
     margin-bottom: 15px;
     display: block;
-    background: #F4F4F4 url(images/list-Icon.png) no-repeat right 15px top 18px;
+    background: #F4F4F4 url(images/list-Icon.png) no-repeat 15px 18px;
     border-bottom: 1px solid #ddd;
     text-align: center;
 }
@@ -419,7 +420,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
 .smListings [class^="ListCol-"] {
     display: block;
     float: right;
-    padding: 2% 0 2% 2%;
+    padding: 2% 3px 2% 2%; /*Persian-DnnSoftware*/
     overflow: hidden;
     word-wrap: break-word;
 }
@@ -445,7 +446,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
 
 .DnnModule-Messaging-Notifications .smListings .ListCol-4 {
     width: 25%;
-    max-width: 160px;
+    max-width: 110px;
     float: left;
 }
 
@@ -567,7 +568,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
     }
 
     .DnnModule-Messaging-Details .smListings .attatchements li {
-        background: url(images/page-Icon.png) no-repeat 100% 2px;
+        background: url(images/page-Icon.png) no-repeat 0 2px;
         padding: 4px 20px;
     }
 
@@ -623,8 +624,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,rgba(31,152,241,1)), color-stop(100%,rgba(2,111,196,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* Opera 11.10+ */
-    background: linear-gradient(to bottom, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* W3C */
-
+    background: linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* W3C */
 
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -648,7 +648,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
         background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,rgba(227,227,227,1)), color-stop(100%,rgba(199,200,202,1))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* Opera 11.10+ */
-        background: linear-gradient(to bottom, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* W3C */
+        background: linear-gradient(top, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* W3C */
 
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -699,7 +699,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
     background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,rgba(31,152,241,1)), color-stop(100%,rgba(2,111,196,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* Opera 11.10+ */
-    background: linear-gradient(to bottom, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* W3C */
+    background: linear-gradient(top, rgba(31,152,241,1) 0%,rgba(2,111,196,1) 100%); /* W3C */
 
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -723,7 +723,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .dnnPri
         background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,rgba(227,227,227,1)), color-stop(100%,rgba(199,200,202,1))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* Opera 11.10+ */
-        background: linear-gradient(to bottom, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* W3C */
+        background: linear-gradient(top, rgba(227,227,227,1) 0%,rgba(199,200,202,1) 100%); /* W3C */
 
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -794,6 +794,8 @@ textarea#replyMessage {
 
 .composeMessageDialog .dnnTertiaryAction {
     margin: 0 0 0 10px;
+    padding: 6px 6px;
+    height: 32px;
 }
 /*Attachments*/
 .composeMessageDialog .messageAttachments {
@@ -820,52 +822,3 @@ ul.messages dd.message img {
     max-width: 100% !important;
     height: auto !important;
 }
-
-/* Button Group */
-ul.dnnButtonGroup {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    background: -moz-linear-gradient(top, #fff 0%, #f0f2f1 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#fff), color-stop(100%,#f0f2f1)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #fff 0%,#f0f2f1 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(to bottom, #fff 0%,#f0f2f1 100%); /* W3C */
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0px 1px 0px 0px #bbb;
-    box-shadow: 0px 1px 0px 0px #bbb;
-    border: 1px solid #c9c9c9;
-    cursor: pointer;
-    list-style: none;
-}
-
-    ul.dnnButtonGroup > li {
-        display: block;
-        float: right;
-        border-right: 1px solid #c9c9c9;
-        margin: 0;
-    }
-
-        ul.dnnButtonGroup > li:hover {
-            background-color: #e8f1fa;
-        }
-
-        ul.dnnButtonGroup > li.dnnButtonGroup-first {
-            display: none;
-        }
-
-            ul.dnnButtonGroup > li.dnnButtonGroup-first + li {
-                border-right: none;
-            }
-
-        ul.dnnButtonGroup > li > a {
-            display: inline-block;
-            padding: 7px 7px 6px 7px;
-            text-decoration: none;
-            color: #333;
-        }
-
-    ul.dnnButtonGroup span {
-        color: #333;
-    }

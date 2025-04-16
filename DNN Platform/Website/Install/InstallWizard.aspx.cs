@@ -605,7 +605,7 @@ namespace DotNetNuke.Services.Install
                 this.Body.Attributes.Add("class", "rtl");
 
                 System.Web.UI.HtmlControls.HtmlLink font = new System.Web.UI.HtmlControls.HtmlLink();
-                font.Href = Globals.ApplicationPath + "/Resources/Shared/fonts/FontIRANSansX.css";
+                font.Href = Globals.ApplicationPath + "/Resources/Shared/fonts/FontVazirmatn.css";
                 font.Attributes["rel"] = "stylesheet";
                 font.Attributes["type"] = "text/css";
                 this.Page.Header.Controls.Add(font);
