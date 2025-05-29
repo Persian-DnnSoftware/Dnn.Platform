@@ -1,0 +1,60 @@
+﻿@use "../variables/colors";
+
+.aperture-footer {
+    background-color: colors.color('tertiary');
+    padding: 2rem 0;
+    color: colors.color('foreground-contrast');
+    margin: 0;
+
+    .aperture-container {
+        display: flex;
+        gap: 2rem;
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+
+            .footer-menu {
+                margin-bottom: auto;
+
+                @media (max-width: 767px) {
+                    #nav-footer {
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                }
+            }
+
+            .footer-terms-privacy {
+                font-size: small;
+                margin-top: 2rem;
+                margin-bottom: 0.5rem;
+
+                .aperture-terms::after {
+                    content: " | ";
+                    opacity: 0.25;
+                    padding: 0 0.25rem;
+                    display: inline-block;
+                    transform: rotateY(180deg); // اگر لازم باشه برای زیبایی RTL
+                }
+
+                a {
+                    font-weight: 200;
+                }
+            }
+
+            .footer-copyright {
+                font-size: small;
+                text-align: right; // برای هماهنگی با RTL
+            }
+        }
+
+        .footer-right {
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column-reverse;
+        }
+    }
+}

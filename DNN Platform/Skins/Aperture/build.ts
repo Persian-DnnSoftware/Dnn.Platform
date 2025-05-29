@@ -51,6 +51,11 @@ const transpiledFiles: TranspiledFileConfig[] = [
         input: "src/scss/style.scss",
         output: path.resolve(skinDist, "css/skin.min.css"),
     },
+    {// START persian-dnnsoftware
+        input: "src/scss/style.rtl.scss",
+        output: path.resolve(skinDist, "css/skin.min.rtl.css"),
+        // END persian-dnnsoftware
+    }
 ];
 
 const copyFiles: StaticFileConfig[] = [

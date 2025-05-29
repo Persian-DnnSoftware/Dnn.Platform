@@ -4,20 +4,26 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls.Internal" Assembly="DotNetNuke.Web" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR"><%--persian-dnnsoftware--%>
 <head runat="server">
   <title></title>
   <asp:PlaceHolder runat="server" ID="ClientDependencyHeadCss"></asp:PlaceHolder>
   <asp:PlaceHolder runat="server" ID="ClientDependencyHeadJs"></asp:PlaceHolder>
-  <link rel="stylesheet" type="text/css" class="needVer" href="../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?refresh" />
-  <link rel="stylesheet" type="text/css" class="needVer" href="Install.css?refresh" />
+  <%--START persian-dnnsoftware--%>
+  <%--<link rel="stylesheet" type="text/css" class="needVer" href="../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?refresh" />--%>
+  <%--<link rel="stylesheet" type="text/css" class="needVer" href="Install.css?refresh" />--%>
+  <%--END persian-dnnsoftware--%>
+  
   <script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
   <script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery-migrate.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
   <script type="text/javascript" src="../Resources/Shared/Scripts/jquery/jquery-ui.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
   <script type="text/javascript" src="../Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
   <asp:PlaceHolder ID="SCRIPTS" runat="server"></asp:PlaceHolder>
 </head>
-<body>
+<%--START persian-dnnsoftware--%>
+<%--<body>--%>
+<body id="Body" runat="server">
+<%--END persian-dnnsoftware--%>
   <asp:PlaceHolder runat="server" ID="ClientResourceIncludes" />
   <form id="form1" runat="server">
     <asp:ScriptManager ID="scManager" runat="server" EnablePageMethods="true"></asp:ScriptManager>
@@ -28,6 +34,9 @@
 
     <div id="languageFlags">
       <asp:LinkButton ID="lang_en_US" class="flag" runat="server" value="en-US" OnClientClick="upgradeWizard.changePageLocale('lang_en_US','en-US');"><img src="../images/flags/en-US.gif" alt="en-US" class="flagimage"/></asp:LinkButton>
+        <%--START persian-dnnsoftware--%>
+      <asp:LinkButton ID="lang_fa_IR" class="flag" runat="server" value="fa-IR" OnClientClick="upgradeWizard.changePageLocale('lang_fa_IR','fa-IR');"><img src="../images/flags/fa-IR.gif" alt="fa-IR" class="flagimage"/></asp:LinkButton>
+        <%--END persian-dnnsoftware--%>
       <asp:LinkButton ID="lang_de_DE" class="flag" runat="server" value="de-DE" OnClientClick="upgradeWizard.changePageLocale('lang_de_DE','de-DE');"><img src="../images/flags/de-DE.gif" alt="de-DE" class="flagimage"/></asp:LinkButton>
       <asp:LinkButton ID="lang_es_ES" class="flag" runat="server" value="es-ES" OnClientClick="upgradeWizard.changePageLocale('lang_es_ES','es-ES');"><img src="../images/flags/es-ES.gif" alt="es-ES" class="flagimage"/></asp:LinkButton>
       <asp:LinkButton ID="lang_fr_FR" class="flag" runat="server" value="fr-FR" OnClientClick="upgradeWizard.changePageLocale('lang_fr_FR','fr-FR');"><img src="../images/flags/fr-FR.gif" alt="fr-FR" class="flagimage"/></asp:LinkButton>

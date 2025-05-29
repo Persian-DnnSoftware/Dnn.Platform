@@ -1,0 +1,127 @@
+@use "../utilities/media-queries";
+@use "../variables/colors";
+
+/* Main Navigation */
+header {
+    a[id*="dnnLOGO"] {
+        display: block;
+        padding: 1.125rem 0;
+
+        img {
+            height: 70px;
+            max-height: 100%;
+            width: auto;
+        }
+
+        @include media-queries.mq-max-width(400) {
+            img {
+                height: 50px;
+            }
+        }
+    }
+}
+
+/* Desktop Styling */
+
+#nav-desktop, #nav-footer {
+    &,
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 2rem;
+
+        ul {
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li {
+                a {
+                    &:hover {
+                        color: colors.color('tertiary-light');
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        display: flex;
+    }
+
+    a {
+        font-size: 0.89rem;
+        color: colors.color('background-light');
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: colors.color('background');
+        }
+    }
+    // First Level
+    > li {
+        position: relative;
+
+        &:hover {
+            > ul {
+                display: flex;
+            }
+        }
+
+        > a {
+            display: flex;
+            align-items: flex-end;
+        }
+        // Below First Level
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            &.selected > a {
+                background: transparent;
+                color: colors.color('background');
+            }
+
+            &:not(.selected) > a:hover {
+                background: transparent;
+            }
+        }
+        // Second Level
+        > ul {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            top: 100%;
+            min-width: max-content;
+            max-width: 100%;
+            padding-left: 2rem; // was padding-right
+            right: 0; // added for RTL dropdown
+            background: colors.color('tertiary');
+            box-shadow: -1px 1px 5px 1px rgba(colors.color('foreground', true), 0.2); // flipped X
+            // Below Second Level
+            a {
+                padding: 0.75rem 1.25rem;
+            }
+
+            li {
+                flex-direction: column;
+
+                &:not(:first-child) {
+                    // border-top: 1px solid color('foreground-light');
+                }
+                // Below Third Level
+                > ul {
+                    a {
+                        font-size: 0.78rem;
+                        font-weight: 700;
+                        padding: .5rem 3rem .5rem .75rem; // flipped padding sides
+                    }
+                }
+            }
+        }
+    }
+}
