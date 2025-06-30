@@ -3,6 +3,10 @@
 @use "ui/ui.rtl";
 @use "modules/modules.rtl";
 
+body {
+    direction: rtl;
+}
+
 h2.dnnFormSectionHead {
     margin-top: 8px;
     margin-bottom: 18px;

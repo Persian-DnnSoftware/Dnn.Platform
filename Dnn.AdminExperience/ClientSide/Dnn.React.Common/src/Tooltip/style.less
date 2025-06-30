@@ -127,3 +127,22 @@
         height: 20px;
     }    
 }
+
+
+// START Persian-DnnSoftware
+.rtl .dnn-ui-common-tooltip {
+  .tooltip-overlay {
+    left: unset;
+    right: 50%;
+    transform: translateX(50%);
+    .tooltip-inner {
+      &::before {
+        left: unset;
+        right: 50%;
+        margin-left: unset;
+        margin-right: -16px;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

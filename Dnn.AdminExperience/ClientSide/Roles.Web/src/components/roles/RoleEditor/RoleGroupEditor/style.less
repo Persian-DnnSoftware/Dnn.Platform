@@ -181,3 +181,72 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .role-group-editor {
+  float: right;
+  h2 {
+    text-align: right;
+  }
+  .edit-form {
+    text-align: right;
+    &.short-left {
+      float: right;
+      clear: right;
+    }
+    &.short-right {
+      float: left;
+      clear: left;
+      padding-left: unset;
+      padding-right: 5%;
+    }
+    &.short-right::before {
+      left: unset;
+      right: -5%;
+    }
+    .form-item.short-left {
+      float: right;
+      clear: right;
+    }
+    .form-item.short-right {
+      float: left;
+      clear: left;
+    }
+    .form-item label {
+      text-align: right;
+    }
+    .form-item label.required:after {
+      margin-left: unset;
+      margin-right: 4px;
+    }
+    label.inline + * {
+      float: left;
+    }
+    .form-item.half-input > input + * {
+      right: unset;
+      left: 0;
+    }
+    .form-item .dnn-switch-container {
+      text-align: left;
+    }
+    .form-item.calendar:after {
+      float: left;
+    }
+    .actions {
+      text-align: center;
+      button[role="secondary"] {
+        margin-right: unset;
+        margin-left: 11px;
+      }
+    }
+    .form-items:after {
+      left: unset;
+      right: 50%;
+    }
+    .dnn-label label {
+      float: right;
+    }
+  }
+}
+// END Persian-DnnSoftware

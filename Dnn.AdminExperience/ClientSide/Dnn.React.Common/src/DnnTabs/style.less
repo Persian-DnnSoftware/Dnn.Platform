@@ -81,3 +81,30 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .dnn-tabs.react-tabs {
+  &.primary {
+    > ul {
+      li {
+        /* The margin-right: 0 is already the correct default for RTL when other tabs might have left margins.
+           No change is needed here. */
+      }
+    }
+  }
+  &.secondary {
+    > ul {
+      li {
+        /* margin: 0 31px; is symmetric and works for RTL. */
+        margin-right: unset;
+        margin-left: 35px; /* Adjusting the explicit margin-right to margin-left for RTL */
+        &:last-child {
+          margin-right: 31px; /* Overriding for last child in RTL */
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

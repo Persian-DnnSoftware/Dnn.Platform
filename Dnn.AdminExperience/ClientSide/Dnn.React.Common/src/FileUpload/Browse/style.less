@@ -178,3 +178,99 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .item-picker-container {
+        left: unset;
+        right: -1px;
+
+        .inner-box {
+            float: right;
+
+            .search {
+                float: right;
+
+                .clear-button {
+                    right: unset;
+                    left: 32px;
+                }
+
+                .search-icon {
+                    right: unset;
+                    left: 0px;
+                }
+
+                input[type="text"] {
+                    float: right;
+                }
+            }
+
+            .items {
+                float: right;
+            }
+        }
+    }
+
+    .item-picker {
+        ul {
+            padding-left: unset;
+            padding-right: 20px;
+
+            li {
+                float: right;
+
+                & > div {
+                    float: right;
+                }
+
+                & > ul {
+                    float: right;
+                }
+
+                &.open {
+                    & > .has-children {
+                        transform: rotate(-90deg); /* LTR: rotate(90deg) */
+                    }
+                }
+
+                .icon {
+                    float: right;
+                    margin-right: unset;
+                    margin-left: 5px;
+                }
+
+                .item-name {
+                    float: right;
+                }
+
+                .has-children {
+                    left: unset;
+                    right: -15px;
+
+                    &:after {
+                        left: unset;
+                        right: 4px;
+                        border-left: none; 
+                        border-right: 4px solid @rollingStone; /* LTR: border-left: 4px solid @rollingStone; */
+                    }
+                }
+            }
+        }
+    }
+
+    .file-upload-container {
+        .drop-down {
+            .selected-item {
+                float: right;
+                /* LTR original: padding: 7px; then padding-right: 20px; */
+                /* LTR effective: top:7, right:20, bottom:7, left:7 */
+                /* RTL target:    top:7, right:7,  bottom:7, left:20 */
+                padding-left: 20px;
+                padding-right: 7px; 
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware

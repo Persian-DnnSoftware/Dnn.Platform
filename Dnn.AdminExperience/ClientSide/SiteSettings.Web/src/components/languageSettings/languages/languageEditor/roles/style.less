@@ -51,3 +51,39 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .language-roles-list-container {
+  float: right;
+  .translator-sectionTitle {
+    float: right;
+    .dnn-label {
+      label {
+        float: right;
+      }
+    }
+  }
+  .group-filter {
+    border-left: none;
+    border-right: 1px solid @alto;
+    /* float: right is already correct */
+  }
+  .container {
+    float: right;
+    border-left: none;
+    border-right: 1px solid @alto;
+    .header-row {
+      float: right;
+      .dnn-grid-cell {
+        padding-left: unset;
+        padding-right: 20px;
+        &:last-child {
+          margin-left: unset;
+          margin-right: -35px;
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware
