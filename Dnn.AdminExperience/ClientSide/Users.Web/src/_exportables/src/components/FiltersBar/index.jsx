@@ -15,7 +15,7 @@ class FiltersBar extends Component {
             },
             searchText: "",
             // START Persian-DnnSoftware
-            searchIconStyle:document.body.classList.contains("rtl")?{left:0}:{right:0}
+            searchIconStyle:document.body.classList.contains("rtl")?{left:0, right:"unset"}:{right:0}
             // END Persian-DnnSoftware
         };
     }

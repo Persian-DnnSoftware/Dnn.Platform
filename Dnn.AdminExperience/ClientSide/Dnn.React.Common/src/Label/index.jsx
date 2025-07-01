@@ -4,7 +4,10 @@ import Tooltip from "../Tooltip";
 import "./style.less";
 
 const tooltipStyle = {
-    float: "left",
+    // START Persian-DnnSoftware
+    //float: "left",
+    float: document.body.classList.contains("rtl") ? "right":"left",
+    // END Persian-DnnSoftware
     position: "static"
 };
 
