@@ -28,6 +28,9 @@ class Gallery extends Component {
                 return;
             }
             this.scrollbarsRef.scrollLeft(scrollLeft);
+            // START Persian-DnnSoftware
+            this.scrollbarsRef.style.direction = "ltr";
+            // END Persian-DnnSoftware
         }
     }
 
@@ -46,6 +49,7 @@ class Gallery extends Component {
                 <Scrollbars ref={this.scrollbarsRef}
                     className="container"
                     autoHeight
+                    
                     autoHeightMin={0}
                     autoHeightMax={480}>
                     <div style={{width}}>
