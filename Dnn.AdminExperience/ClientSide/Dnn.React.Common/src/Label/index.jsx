@@ -3,17 +3,22 @@ import PropTypes from "prop-types";
 import Tooltip from "../Tooltip";
 import "./style.less";
 
-const tooltipStyle = {
-    // START Persian-DnnSoftware
-    //float: "left",
-    float: document.body.classList.contains("rtl") ? "right":"left",
-    // END Persian-DnnSoftware
+// START Persian-DnnSoftware
+//const tooltipStyle = {
+let tooltipStyle = {
+    float: "left",
     position: "static"
 };
+// END Persian-DnnSoftware
 
 class Label extends Component {
     constructor() {
         super();
+        // START Persian-DnnSoftware
+        if (document.body.classList.contains("rtl")) {
+            tooltipStyle.float="right";
+        }
+        // END Persian-DnnSoftware
     }
 
     render() {

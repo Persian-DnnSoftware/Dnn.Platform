@@ -699,21 +699,21 @@ PagePicker.propTypes = {
 };
 
 PagePicker.defaultProps = {
-    defaultLabel: "-- Select --",
+    defaultLabel: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "-- انتخاب --": "-- Select --",
     IsMultiSelect: false,
     SearchEnabled: true,
     ShowCount: true,
-    CountText: "<strong>{0}</strong> Results",
+    CountText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "<strong>{0}</strong> نتایج": "<strong>{0}</strong> Results",
     ShowIcon: true,
     IsInDropDown: true,
     Reload: false,
-    noneSpecifiedText: "< None Specified >",
+    noneSpecifiedText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "< مشخص نشده >": "< None Specified >",
     withIcon: true,
     withBorder: true,
     closeOnBlur: true,
     enabled: true,
     className: "",
-    placeholderText: "Search pages..",
+    placeholderText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "جستجوی صفحات..": "Search pages..",
     style: {
         width: 300
     },

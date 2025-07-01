@@ -1,4 +1,4 @@
-/* Persian-DnnSoftware */
+﻿/* Persian-DnnSoftware */
 
 @font-face {
     font-family: Vazirmatn;
@@ -2107,4 +2107,24 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
 
 .sqlconsolePanel .tables-container {
     direction: ltr
+}
+
+/*این قسمت باید به پروژه کلاینت اپ منتقل بشه*/
+.rtl .page-picker-content div.box {
+    margin-left: -17px !important;
+    margin-right: 0 !important;
+}
+
+.rtl .dnn-search-box svg {
+    left: 0;
+    right: auto !important
+}
+
+.rtl .page-picker-content .dnn-search-box svg {
+    left: 17px
+}
+
+.rtl .dnn-search-box input {
+    padding-right: 20px !important;
+    padding-left: 0 !important;
 }
