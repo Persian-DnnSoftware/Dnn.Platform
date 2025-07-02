@@ -1,5 +1,4 @@
-﻿/* persian-dnnsoftware */
-
+﻿// START Persian-DnnSoftware
 .dnnForm {
     .ui-resizable {
         position: relative;
@@ -17,7 +16,7 @@
         height: 7px;
         width: 100%;
         top: -5px;
-        right: 0; /* راستچین شد */
+        left: 0;
     }
 
     .ui-resizable-s {
@@ -25,54 +24,60 @@
         height: 7px;
         width: 100%;
         bottom: -5px;
-        right: 0; /* راستچین شد */
+        left: 0;
     }
 
-    .ui-resizable-e {
-        cursor: e-resize;
-        width: 7px;
-        left: -5px; /* راستچین شد */
-        top: 0;
-        height: 100%;
-    }
-
-    .ui-resizable-w {
+    .ui-resizable-e { // East (right) handle becomes left handle in RTL
         cursor: w-resize;
         width: 7px;
-        right: -5px; /* راستچین شد */
+        left: -5px;
+        right: auto;
         top: 0;
         height: 100%;
     }
 
-    .ui-resizable-se {
-        cursor: se-resize;
+    .ui-resizable-w { // West (left) handle becomes right handle in RTL
+        cursor: e-resize;
+        width: 7px;
+        right: -5px;
+        left: auto;
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-resizable-se { // South-East (bottom-right) handle becomes South-West in RTL
+        cursor: sw-resize;
         width: 12px;
         height: 12px;
-        left: -5px; /* راستچین شد */
+        left: 1px;
+        right: auto;
         bottom: 1px;
     }
 
-    .ui-resizable-sw {
-        cursor: sw-resize;
+    .ui-resizable-sw { // South-West (bottom-left) handle becomes South-East in RTL
+        cursor: se-resize;
         width: 9px;
         height: 9px;
-        right: -5px; /* راستچین شد */
+        right: -5px;
+        left: auto;
         bottom: -5px;
     }
 
-    .ui-resizable-nw {
-        cursor: nw-resize;
-        width: 9px;
-        height: 9px;
-        right: -5px; /* راستچین شد */
-        top: -5px;
-    }
-
-    .ui-resizable-ne {
+    .ui-resizable-nw { // North-West (top-left) handle becomes North-East in RTL
         cursor: ne-resize;
         width: 9px;
         height: 9px;
-        left: -5px; /* راستچین شد */
+        right: -5px;
+        left: auto;
+        top: -5px;
+    }
+
+    .ui-resizable-ne { // North-East (top-right) handle becomes North-West in RTL
+        cursor: nw-resize;
+        width: 9px;
+        height: 9px;
+        left: -5px;
+        right: auto;
         top: -5px;
     }
 
@@ -81,3 +86,4 @@
         display: none;
     }
 }
+// END Persian-DnnSoftware

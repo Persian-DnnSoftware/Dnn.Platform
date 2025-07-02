@@ -1,13 +1,12 @@
-﻿/* persian-dnnsoftware */
-
+﻿// START Persian-DnnSoftware
 /*-------------------------------------*/
 /* TABS : JQUERY UI TABS 1.8.14 */
 /*-------------------------------------*/
-/* تب‌ها */
+/* Tabs */
 ul.dnnAdminTabNav {
     display: flex;
     margin-top: 0.3125rem;
-    margin-right: 0; /* راستچین شد */
+    margin-right: 0;
     width: 100%;
     //min-height: 2.3125rem;
     border-bottom: 1px solid var(--dnn-color-foreground-light, #c2c2c2);
@@ -21,7 +20,7 @@ ul.dnnAdminTabNav {
             margin-bottom: 0;
             border-bottom: 0;
             border-radius: var(--dnn-controls-radius, 3px) var(--dnn-controls-radius, 3px) 0px 0px;
-            margin-left: 0.25rem; /* راستچین شد */
+            margin-left: 0.25rem;
             padding: 12px 9px 10px 9px;
             text-decoration: none;
             border: 1px solid var(--dnn-color-foreground-light, #c2c2c2);
@@ -40,7 +39,7 @@ ul.dnnAdminTabNav {
     }
 }
 
-/* پنل‌ها */
+/* Panels */
 .ui-tabs {
     .ui-tabs-panel {
         position: relative;
@@ -51,3 +50,4 @@ ul.dnnAdminTabNav {
         display: none;
     }
 }
+// END Persian-DnnSoftware

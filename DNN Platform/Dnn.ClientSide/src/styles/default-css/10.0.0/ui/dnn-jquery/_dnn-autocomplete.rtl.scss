@@ -1,7 +1,6 @@
-﻿/* persian-dnnsoftware */
+﻿// START Persian-DnnSoftware
 /* DNN Auto Complete */
 /* Platform does not appear to use it but we still have it in the code base */
-
 .dnn_acResults {
     padding: 0px;
     border: 1px solid #c9c9c9;
@@ -24,12 +23,13 @@
 
         li {
             margin: 0px;
-            padding: 6px 22px; // دو طرف مساوی است، نیازی به تغییر ندارد
+            padding: 6px 22px 6px 22px;
             border-top: 1px solid #c9c9c9;
-            color: #333;
+            color: #666;
             cursor: pointer;
             display: block;
             overflow: hidden;
+            color: #333;
 
             &:first-child {
                 border-top: none;
@@ -42,3 +42,4 @@
     background-color: #e8f1fa;
     color: #333;
 }
+// END Persian-DnnSoftware

@@ -1,5 +1,4 @@
-/* persian-dnnsoftware */
-
+// START Persian-DnnSoftware
 @use "edit-in-place.rtl";
 @use "login.rtl";
 @use "tables.rtl";
@@ -69,13 +68,12 @@ td.SubHead {
 .DNNAligncenter {
     text-align: center;
 }
-
 /* I think only used by CKEditor options. */
 .Hidden {
     display: none;
 }
-
-/* Critical Error Messages (querystring error=something) */
+/*Critical Error Messages (querystring error=something)*/
 div.errorWin p {
     margin: 0 0 10px 0;
 }
+// END Persian-DnnSoftware

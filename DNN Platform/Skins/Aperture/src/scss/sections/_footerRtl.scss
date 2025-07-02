@@ -1,10 +1,12 @@
-﻿@use "../variables/colors";
+﻿// START Persian-DnnSoftware
+@use "../variables/colors";
 
 .aperture-footer {
     background-color: colors.color('tertiary');
-    padding: 2rem 0;
+    padding: .5rem 0;
     color: colors.color('foreground-contrast');
     margin: 0;
+    padding: 2rem 0;
 
     .aperture-container {
         display: flex;
@@ -28,14 +30,11 @@
             .footer-terms-privacy {
                 font-size: small;
                 margin-top: 2rem;
-                margin-bottom: 0.5rem;
+                margin-bottom: .5rem;
 
                 .aperture-terms::after {
                     content: " | ";
-                    opacity: 0.25;
-                    padding: 0 0.25rem;
-                    display: inline-block;
-                    transform: rotateY(180deg); // اگر لازم باشه برای زیبایی RTL
+                    opacity: .25;
                 }
 
                 a {
@@ -45,7 +44,6 @@
 
             .footer-copyright {
                 font-size: small;
-                text-align: right; // برای هماهنگی با RTL
             }
         }
 
@@ -58,3 +56,4 @@
         }
     }
 }
+// END Persian-DnnSoftware

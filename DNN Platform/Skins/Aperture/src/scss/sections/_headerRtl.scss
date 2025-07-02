@@ -1,4 +1,5 @@
-﻿@use "../variables/colors";
+﻿// START Persian-DnnSoftware
+@use "../variables/colors";
 
 .aperture-header {
     position: -webkit-sticky;
@@ -8,20 +9,21 @@
 
     .eyebrow-bar {
         background-color: colors.color('tertiary');
-        padding: 0.5rem 0;
-        margin: 0;
+        padding: .5rem 0;
 
         .aperture-container {
             display: flex;
             align-items: center;
-            justify-content: flex-start; // تغییر از flex-end به flex-start برای RTL
+            justify-content: flex-end;
             gap: 1rem;
         }
+
+        margin: 0;
     }
 
     .logo-menu-bar {
         background-color: colors.color('tertiary-light');
-        padding: 0.5rem 0;
+        padding: .5rem 0;
         margin: 0;
 
         .aperture-container {
@@ -44,3 +46,4 @@
         }
     }
 }
+// END Persian-DnnSoftware

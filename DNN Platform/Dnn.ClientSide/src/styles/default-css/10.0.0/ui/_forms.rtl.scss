@@ -1,4 +1,5 @@
-﻿.dnnForm {
+﻿// START Persian-DnnSoftware
+.dnnForm {
     width: 100%;
 
     fieldset {
@@ -38,7 +39,6 @@
     input[type="email"],
     input[type="search"],
     input[type="password"] {
-        font-family: 'Vazirmatn';
         margin-bottom: 1.125rem;
         padding: 0.5rem;
         background: var(--dnn-color-background, #fff);
@@ -146,6 +146,7 @@
         overflow: visible;
         bottom: 95%;
         left: 12%;
+        right: auto;
         width: 200px;
         margin-bottom: 0;
         padding: 0.625rem;
@@ -160,12 +161,13 @@
             position: absolute;
             bottom: -0.4375rem;
             right: 0.9375rem;
+            left: auto;
             content: "";
             width: 0;
             height: 0;
             opacity: 0.75;
-            border-right: 0.4375rem solid transparent;
             border-left: 0.4375rem solid transparent;
+            border-right: 0.4375rem solid transparent;
             border-top: 0.4375rem solid var(--dnn-color-danger, red);
         }
     }
@@ -304,7 +306,7 @@ div.dnnFormGroup {
     padding: 0.625rem;
     padding-right: 1.875rem;
     border-radius: var(--dnn-controls-radius, 3px);
-    background: rgba( var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), 0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px top 12px;
+    background: rgba( var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), 0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px center;
     font-size: 0.6875rem;
     color: var(--dnn-color-foreground-contrast, #DDD);
     text-align: right;
@@ -333,6 +335,7 @@ a.dnnFormHelp {
     display: inline-block;
     position: absolute;
     left: 0;
+    right: auto;
     top: 2px;
     width: 14px;
     height: 15px;
@@ -543,10 +546,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     padding-left: 20px;
     margin-left: 18px;
     overflow: visible;
-    text-align: left;
+    text-align: right;
 
     > span {
-        text-align: left;
+        text-align: right;
     }
 
     + span {
@@ -561,11 +564,12 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     position: absolute;
     content: "";
     right: 15px;
+    left: auto;
     bottom: -7px;
     width: 0;
     height: 0;
-    border-right: 7px solid transparent;
     border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
     border-top: 7px solid var(--dnn-color-info, #000);
 }
 
@@ -573,11 +577,12 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     position: absolute;
     content: "";
     right: 15px;
+    left: auto;
     top: -7px;
     width: 0;
     height: 0;
-    border-right: 7px solid transparent;
     border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
     border-bottom: 7px solid var(--dnn-color-info, #000);
 }
 
@@ -585,11 +590,12 @@ a.pinHelp {
     display: block;
     position: absolute;
     right: 7px;
+    left: auto;
     top: 12px;
     width: 15px;
     height: 15px;
     opacity: 0.5;
-    background: url(../../../../../images/pin-icn.png) no-repeat 100% 0;
+    background: url(../../../../../images/pin-icn.png) no-repeat 0 0;
     filter: contrast(3);
 }
 
@@ -609,12 +615,12 @@ a.pinHelp:hover {
         width: 18px;
         height: 18px;
         background: transparent url(../../../../../images/checkbox.png) no-repeat;
-        background-position: left 0px top 0px;
+        background-position: 0px 0px;
     }
 }
 
 .dnnCheckbox-checked img {
-    background-position: left -51px top 0px;
+    background-position: -51px 0px;
 }
 
 .dnnCheckbox-disabled {
@@ -626,11 +632,11 @@ a.pinHelp:hover {
 }
 
 .dnnCheckbox-error img {
-    background-position: left -100px top 0px;
+    background-position: -100px 0px;
 }
 
 .dnnCheckbox-checked-error img {
-    background-position: left -150px top 0px;
+    background-position: -150px 0px;
 }
 
 .dnnCheckbox-focus {
@@ -657,12 +663,12 @@ a.pinHelp:hover {
         min-width: 20px;
         vertical-align: middle;
         background: transparent url(../../../../../images/radiobutton.png) no-repeat;
-        background-position: left 0px top 0px;
+        background-position: 0px 0px;
     }
 }
 
 .dnnRadiobutton-checked img {
-    background-position: left -50px top 0px;
+    background-position: -50px 0px;
 }
 
 .dnnRadiobutton-disabled img {
@@ -670,11 +676,11 @@ a.pinHelp:hover {
 }
 
 .dnnRadiobutton-checked-error img {
-    background-position: left -150px top 0px;
+    background-position: -150px 0px;
 }
 
 .dnnRadiobutton-error img {
-    background-position: left -100px top 0px;
+    background-position: -100px 0px;
 }
 
 .dnnRadiobutton-focus {
@@ -782,6 +788,7 @@ div.dnnTagsInput {
             > .dnnTags_filter_label {
                 display: inline-block;
                 border-right: 1px solid #ccc;
+                border-left: 0;
                 padding: 3px 10px 0 15px;
                 margin-left: 3px;
                 color: #999;
@@ -822,6 +829,7 @@ div.dnnTagsInput {
         position: absolute;
         top: -30px;
         left: -30px;
+        right: auto;
         width: 69px;
         height: 26px;
         border-radius: 10px;
@@ -839,13 +847,13 @@ div.dnnTagsInput {
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
             background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-            background-position: right 8px top 4px;
+            background-position: 8px 4px;
             text-indent: -9999em;
             min-width: 0 !important;
 
             &:hover {
                 background: var(--dnn-color-primary, #358EEA) url(../../../../../images/closeBtn.png) no-repeat;
-                background-position: right 8px top 4px;
+                background-position: 8px 4px;
                 cursor: pointer;
             }
         }
@@ -860,12 +868,12 @@ div.dnnTagsInput {
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
             background: #585858 url(../../../../../images/resizeBtn.png) no-repeat;
-            background-position: right 10px top 2px;
+            background-position: 10px 2px;
             text-indent: -9999em;
 
             &:hover {
                 background: var(--dnn-color-primary, #358EEA) url(../../../../../images/resizeBtn.png) no-repeat;
-                background-position: right 10px top 2px;
+                background-position: 10px 2px;
             }
         }
     }
@@ -920,9 +928,10 @@ div.dnnTagsInput {
 }
 
 .dnnPanelLoading {
-    right: 0;
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     opacity: 0.7;
 }
+// END Persian-DnnSoftware

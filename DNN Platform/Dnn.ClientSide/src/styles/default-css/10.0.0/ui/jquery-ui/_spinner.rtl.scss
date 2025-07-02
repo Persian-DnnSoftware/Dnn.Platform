@@ -1,6 +1,5 @@
-﻿/* persian-dnnsoftware */
-
-/* اسپینر ورودی سفارشی شده */
+﻿// START Persian-DnnSoftware
+/* Input Customised Spinner */
 .dnnSpinner {
     display: inline-block;
     position: relative;
@@ -17,7 +16,7 @@
 }
 
 .dnnSpinnerDisplay {
-    margin: 0 8px 0 25px; /* راستچین شد */
+    margin: 0 8px 0 25px;
     background: transparent;
     color: #999;
 }
@@ -36,10 +35,12 @@
 .dnnSpinnerCtrl {
     position: absolute;
     top: 0;
-    left: 0; /* راستچین شد */
+    left: 0;
+    right: auto;
     width: 25px;
     background-color: transparent;
-    border-right: 1px solid #c9c9c9; /* راستچین شد */
+    border-right: 1px solid #c9c9c9;
+    border-left: 0;
 }
 
 .dnnSpinnerCtrl > a.dnnSpinnerTopButton {
@@ -59,3 +60,4 @@
     background-position: center;
     cursor: pointer;
 }
+// END Persian-DnnSoftware

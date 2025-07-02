@@ -1,6 +1,6 @@
-﻿/* persian-dnnsoftware */
+﻿// START Persian-DnnSoftware
 
-/* پانل پیمایش جاوا اسکریپت، به نظر می‌رسد که نسخه خاص خودمان از آن باشد. */
+/* Javascript scroll pane, I believe our own flavor of it. */
 
 .jspContainer {
     overflow: hidden;
@@ -14,7 +14,7 @@
 .jspVerticalBar {
     position: absolute;
     top: 0;
-    left: 0; /* راستچین شد */
+    left: 0;
     width: 11px;
     height: 100%;
     background: #ccc;
@@ -23,7 +23,7 @@
 .jspHorizontalBar {
     position: absolute;
     bottom: 0;
-    right: 0; /* راستچین شد */
+    right: 0;
     width: 100%;
     height: 11px;
     background: #ccc;
@@ -40,7 +40,7 @@
 }
 
 .jspHorizontalBar .jspCap {
-    float: right; /* راستچین شد */
+    float: right;
 }
 
 .jspTrack {
@@ -50,7 +50,7 @@
 
 .jspVerticalBar .jspTrack {
     width: 10px;
-    margin: 0 3px 0 0; /* راستچین شد */
+    margin: 0 3px 0 0;
 }
 
 .jspHorizontalBar .jspTrack {
@@ -73,7 +73,7 @@
 .jspDrag {
     position: relative;
     top: 0;
-    left: 0;
+    right: 0;
     border-radius: 3px 3px 3px 3px;
     opacity: .75;
     background: #000;
@@ -82,6 +82,7 @@
 
 .jspHorizontalBar .jspTrack,
 .jspHorizontalBar .jspDrag {
-    float: right; /* راستچین شد */
+    float: right;
     height: 5px;
 }
+// END Persian-DnnSoftware

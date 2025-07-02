@@ -1,7 +1,6 @@
-/* persian-dnnsoftware */
-
+// START Persian-DnnSoftware
 /*-------------------------------------*/
-/* TABLE STYLES (RTL) */
+/* TABLE STYLES */
 /* Used by search results and subscriptions (profile) */
 /*-------------------------------------*/
 
@@ -20,9 +19,7 @@
     th {
         padding: 0;
         border-right: 1px solid var(--dnn-color-neutral, #d1d1d1);
-        background: var(--dnn-color-background, #d1d1d1);
-        text-align: right;
-        color: var(--dnn-color-foreground, #333);
+        border-left: 0;
     }
 
     th > span,
@@ -33,11 +30,18 @@
 
     td:first-child {
         border-right: 1px solid var(--dnn-color-neutral, #d1d1d1);
+        border-left: 0;
     }
 
     label {
         display: inline;
         padding-right: 0.3125rem;
+    }
+
+    th {
+        background: var(--dnn-color-background, #d1d1d1);
+        text-align: right;
+        color: var(--dnn-color-foreground, #333);
     }
 
     th a,
@@ -50,8 +54,7 @@
     th a {
         padding: 0.5rem 0.5625rem;
 
-        &:hover,
-        &:active {
+        &:hover, &:active {
             color: var(--dnn-color-foreground-dark, #333);
         }
     }
@@ -112,3 +115,4 @@
         box-sizing: border-box;
     }
 }
+// END Persian-DnnSoftware

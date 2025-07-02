@@ -699,21 +699,29 @@ PagePicker.propTypes = {
 };
 
 PagePicker.defaultProps = {
+    // START Persian-DnnSoftware
     defaultLabel: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "-- انتخاب --": "-- Select --",
+    // END Persian-DnnSoftware
     IsMultiSelect: false,
     SearchEnabled: true,
     ShowCount: true,
+    // START Persian-DnnSoftware
     CountText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "<strong>{0}</strong> نتایج": "<strong>{0}</strong> Results",
+    // END Persian-DnnSoftware
     ShowIcon: true,
     IsInDropDown: true,
     Reload: false,
+    // START Persian-DnnSoftware
     noneSpecifiedText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "< مشخص نشده >": "< None Specified >",
+    // END Persian-DnnSoftware
     withIcon: true,
     withBorder: true,
     closeOnBlur: true,
     enabled: true,
     className: "",
+    // START Persian-DnnSoftware
     placeholderText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "جستجوی صفحات..": "Search pages..",
+    // END Persian-DnnSoftware
     style: {
         width: 300
     },

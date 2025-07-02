@@ -1,10 +1,10 @@
-﻿/* persian-dnnsoftware */
-
+﻿// START Persian-DnnSoftware
 div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     display: block;
     position: absolute;
     top: -30px;
-    left: -30px; /* راستچین شد */
+    left: -30px;
+    right: auto;
     height: 24px;
     width: 24px;
     margin: 0px;
@@ -16,3 +16,4 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     text-indent: -9999em;
     min-width: 0 !important;
 }
+// END Persian-DnnSoftware

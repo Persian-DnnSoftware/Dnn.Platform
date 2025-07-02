@@ -1,7 +1,6 @@
-﻿/* persian-dnnsoftware */
+﻿// START Persian-DnnSoftware
 
-/* استایل‌دهی به کنترل PropertyEditor در وب‌فرم‌ها */
-
+/* Styles the webforms PropertyEditor control. */
 .dnnDropdownSettings {
     position: relative;
     height: 30px !important;
@@ -47,9 +46,9 @@
     position: absolute;
     z-index: 99;
     top: 29px;
-    right: 0; /* راستچین شد */
+    right: 0;
     width: 200px;
-    margin-right: 0; /* راستچین شد */
+    margin-right: 0;
     background: var(--dnn-color-background, #fff);
     border: 1px solid var(--dnn-color-foreground-light, #c9c9c9);
     -webkit-border-radius: 3px;
@@ -71,7 +70,7 @@
     }
 
     > ul > li {
-        padding-right: 16px; /* راستچین شد */
+        padding-right: 16px;
     }
 
     > li {
@@ -85,3 +84,4 @@
         }
     }
 }
+// END Persian-DnnSoftware

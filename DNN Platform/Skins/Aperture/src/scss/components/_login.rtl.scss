@@ -1,4 +1,5 @@
-﻿.dnnLogin {
+﻿// START Persian-DnnSoftware
+.dnnLogin {
     display: flex;
     justify-content: center;
     width: 90%;
@@ -22,14 +23,14 @@
                 display: none;
             }
 
-            &:nth-child(1),
-            &:nth-child(2) {
+            &:nth-child(1), &:nth-child(2) {
                 display: flex;
                 flex-direction: column;
 
                 .dnnFormLabel {
                     display: block;
-                    float: right; // تغییر از left به right
+                    float: right;
+
                     &::after {
                         clear: both;
                         content: '';
@@ -45,7 +46,7 @@
                     min-width: 100%;
                     font-size: 1.5rem;
                     font-weight: 500;
-                    padding: 0.25em;
+                    padding: .25em;
                 }
             }
 
@@ -57,13 +58,11 @@
                     margin: 0;
 
                     &.dnnPrimaryAction {
-                        margin-left: 0.25em; // تغییر از right به left
-                        margin-right: 0; // اطمینان از نداشتن margin قبلی
+                        margin-left: .25em;
                     }
 
                     &.dnnSecondaryAction {
-                        margin-right: 0.25em; // تغییر از left به right
-                        margin-left: 0;
+                        margin-right: .25em;
                     }
                 }
             }
@@ -85,8 +84,7 @@
                 }
 
                 label {
-                    margin-right: 0.5em; // تغییر از left به right
-                    margin-left: 0;
+                    margin-right: .5em;
                     font-size: 1.25rem;
                     font-weight: 550;
                 }
@@ -107,13 +105,11 @@
                         margin: 0;
 
                         &:nth-child(1) {
-                            padding-left: 0.25em; // تغییر از right به left
-                            padding-right: 0;
+                            padding-left: .25em;
                         }
 
                         &:nth-child(2) {
-                            padding-right: 0.25em; // تغییر از left به right
-                            padding-left: 0;
+                            padding-right: .25em;
                         }
                     }
 
@@ -125,3 +121,4 @@
         }
     }
 }
+// END Persian-DnnSoftware

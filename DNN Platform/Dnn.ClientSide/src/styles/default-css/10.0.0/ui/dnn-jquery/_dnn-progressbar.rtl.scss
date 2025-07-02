@@ -1,8 +1,8 @@
-/* persian-dnnsoftware */
+// START Persian-DnnSoftware
 /* Progressbar */
 /*
 Currently used by the installer/upgrade wizards and module injection.
-Purposely leaving hardcoded values for sizes and not using css-variables 
+Purposely leaving hardcoded values for sizes and not using css-variables
 because it is used in the installer and rarely visible in the module injection.
 */
 .dnnProgressbar {
@@ -29,3 +29,4 @@ because it is used in the installer and rarely visible in the module injection.
         background: linear-gradient(to left, #2b7fda 0%, #3fbdff 100%); /* W3C */
     }
 }
+// END Persian-DnnSoftware

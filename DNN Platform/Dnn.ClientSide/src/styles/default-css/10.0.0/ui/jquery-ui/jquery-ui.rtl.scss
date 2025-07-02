@@ -1,12 +1,12 @@
-﻿/* persian-dnnsoftware */
+﻿// START Persian-DnnSoftware
 
 @use "resizable.rtl";
 @use "spinner.rtl";
 @use "tabs.rtl";
 @use "dialog.rtl";
 
-/* بازنویسی‌های jQuery UI */
-/* ممکن است بتوانیم بخش dnnForm را حذف کنیم اگر آزمایش شد و با یک تم jQuery UI به خوبی کار کرد. */
+/* jQuery UI overrides. */
+/* We may be able to remove the dnnForm scope if tested to work good with a single jQuery UI theme. */
 .dnnForm {
     .ui-helper-hidden {
         display: none;
@@ -81,13 +81,14 @@
     }
 }
 
-/* منوی پاپ‌آپ */
+/* Popup Menu */
 .ui-widget-overlay {
     position: fixed;
     top: 0;
-    right: 0; /* راستچین شد */
+    right: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.65);
     z-index: 9999;
 }
+// END Persian-DnnSoftware

@@ -1,18 +1,17 @@
-﻿/* persian-dnnsoftware */
-
-/* استایل‌دهی به کنترل‌های DnnFileEditControl و DnnFilePicker در وب‌فرم‌ها */
+﻿// START Persian-DnnSoftware
+/* Styles the DnnFileEditControl and DnnFilePicker webforms controls */
 
 span[id$="FileControl"] {
     display: block;
-    float: right; /* راستچین شد */
+    float: right;
 }
 
 .dnnFilePicker {
     display: block;
-    float: right; /* راستچین شد */
+    float: right;
     background-color: var(--dnn-color-background, #f0f0f0);
     margin-bottom: 10px;
-    margin-left: 10px; /* راستچین شد */
+    margin-left: 10px;
     padding: 0 15px 0 15px;
     width: 450px;
 
@@ -34,7 +33,7 @@ span[id$="FileControl"] {
         }
 
         a.dnnSecondaryAction {
-            margin: 10px 0 0 10px; /* راستچین شد */
+            margin: 10px 0 0 10px;
             display: inline-block;
         }
 
@@ -52,18 +51,19 @@ span[id$="FileControl"] {
 
         span {
             display: block;
-            float: right; /* راستچین شد */
+            float: right;
             width: 40px;
             margin-top: 8px;
-            padding-right: 5px; /* راستچین شد */
-            text-align: right; /* راستچین شد */
+            padding-right: 5px;
+            text-align: right;
         }
     }
 
     select, input {
         width: 200px;
         margin: 0;
-        margin-left: 10px; /* راستچین شد */
+        margin-left: 10px;
         float: none;
     }
 }
+// END Persian-DnnSoftware

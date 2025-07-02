@@ -1,4 +1,4 @@
-﻿/* persian-dnnsoftware */
+﻿// START Persian-DnnSoftware
 .left {
     float: right;
 }
@@ -17,18 +17,18 @@
 
 .dnnClear {
     clear: both;
+
+    &:after {
+        clear: both;
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        font-size: 0;
+    }
 }
 
-.dnnClear:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden;
-    font-size: 0;
-}
-
-/* سازگاری با IE قدیمی */
 * + html .dnnClear {
     min-height: 1%;
 }
+// END Persian-DnnSoftware

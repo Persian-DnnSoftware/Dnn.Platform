@@ -1,4 +1,4 @@
-﻿/* persian-dnnsoftware */
+﻿// START Persian-DnnSoftware
 @use "base/base.rtl";
 @use "ui/ui.rtl";
 @use "modules/modules.rtl";
@@ -14,11 +14,12 @@ h2.dnnFormSectionHead {
     font-size: 2rem;
     line-height: 2.25rem;
     letter-spacing: 0.001875rem;
-    direction: rtl; /* راستچین کردن متن */
+    direction: rtl;
+
     h2.dnnFormSectionHead a {
         display: block;
-        padding-right: 3px; /* تغییر padding از سمت چپ به سمت راست */
-        background: url(../../../../../images/down-icn.png) no-repeat left 50%; /* تغییر موقعیت آیکن به سمت چپ */
+        padding-right: 3px;
+        background: url(../../../../../images/down-icn.png) no-repeat left 50%;
         text-decoration: none;
         color: var(--dnn-color-foreground, #333);
         font-size: 7.375rem;
@@ -27,17 +28,18 @@ h2.dnnFormSectionHead {
 
         &:hover {
             color: #222;
-            background: rgba( var(--dnn-color-primary-r, 2), var(--dnn-color-primary-g, 139), var(--dnn-color-primary-b, 255), 0.05) url(../../../../../images/down-icn.png) no-repeat left 50%; /* تغییر موقعیت آیکن در حالت hover */
+            background: rgba( var(--dnn-color-primary-r, 2), var(--dnn-color-primary-g, 139), var(--dnn-color-primary-b, 255), 0.05) url(../../../../../images/down-icn.png) no-repeat left 50%;
         }
 
         &.dnnSectionExpanded {
-            background: url(../../../../../images/up-icn.png) no-repeat left 50%; /* تغییر موقعیت آیکن به سمت چپ */
+            background: url(../../../../../images/up-icn.png) no-repeat left 50%;
             color: var(--dnn-color-foreground, #222);
 
             &:hover {
                 color: var(--dnn-color-foreground, #222);
-                background: rgba( var(--dnn-color-primary-r, 2), var(--dnn-color-primary-g, 139), var(--dnn-color-primary-b, 255), 0.05) url(../../../../../images/up-icn.png) no-repeat left 50%; /* تغییر موقعیت آیکن در حالت hover */
+                background: rgba( var(--dnn-color-primary-r, 2), var(--dnn-color-primary-g, 139), var(--dnn-color-primary-b, 255), 0.05) url(../../../../../images/up-icn.png) no-repeat left 50%;
             }
         }
     }
 }
+// END Persian-DnnSoftware

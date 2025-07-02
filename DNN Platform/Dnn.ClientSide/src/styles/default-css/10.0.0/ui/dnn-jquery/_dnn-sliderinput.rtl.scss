@@ -1,6 +1,5 @@
-/* persian-dnnsoftware */
+// START Persian-DnnSoftware
 /* DNN Slider Input Style */
-
 div.dnnSliderInput {
     position: relative;
     display: inline-block;
@@ -24,14 +23,12 @@ div.dnnSliderInput {
         outline: none;
         top: -2px;
         margin-right: -7px;
-        margin-left: 0;
         box-sizing: border-box;
     }
 
     .dnnTooltip {
         top: -37px;
         margin-right: -22px;
-        margin-left: 0;
 
         .dnnFormHelpContent {
             visibility: visible;
@@ -42,3 +39,4 @@ div.dnnSliderInput {
         }
     }
 }
+// END Persian-DnnSoftware

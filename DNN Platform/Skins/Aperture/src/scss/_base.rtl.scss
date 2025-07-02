@@ -1,16 +1,20 @@
+// START Persian-DnnSoftware
 @use "variables/colors";
+@use "variables/type.rtl";
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
-    direction: rtl; // جهت راست‌چین برای تمامی عناصر
 }
+
+
 
 // Base Styles
 //–––––––––––––––––––––––––––––––––––––––––––––––––
 
 body {
+    direction: rtl;
     font-size: 16px;
     font-weight: 200;
     line-height: 1.5;
@@ -20,13 +24,11 @@ body {
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
-    direction: rtl; // تنظیم جهت راست‌چین برای کل بدنه
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Vazirmatn',Tahome, Helvetica, sans-serif;
     font-weight: 500;
-    text-align: right; // تراز کردن تیترها به راست
 }
 
 h1 {
@@ -69,14 +71,12 @@ h6 {
     font-size: 1.22rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    text-align: right; // تراز کردن متن لید به راست
 }
 
 p {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
-    text-align: right; // تراز کردن پاراگراف‌ها به راست
 }
 
 ul,
@@ -85,8 +85,9 @@ pre,
 table,
 blockquote {
     margin-bottom: 1.5rem;
-    text-align: right; // تراز کردن لیست‌ها و بلوک‌ها به راست
 }
+
+
 
 // Sanitation
 //–––––––––––––––––––––––––––––––––––––––––––––––––
@@ -117,6 +118,8 @@ sub {
     top: .4em;
 }
 
+
+
 // Links
 //–––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -136,6 +139,8 @@ header a, footer a {
     font-weight: 400;
 }
 
+
+
 // hr and pre
 //–––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -153,5 +158,5 @@ hr {
 pre {
     background: colors.color('neutral');
     padding: 10px 15px;
-    direction: rtl; // جهت راست‌چین برای کد
 }
+// END Persian-DnnSoftware
