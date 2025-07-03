@@ -98,7 +98,13 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
         if (config.skin) {
             $personaBar.addClass(config.skin);
         }
-        
+
+        /* START Persian-DnnSoftware */
+        if (config.culture == 'fa-IR' || config.culture.startsWith("ar-")) {
+            $('body').addClass('rtl');
+        }
+        /* END Persian-DnnSoftware */
+
         var menuViewModel = utility.buildMenuViewModel(config.menuStructure);
         var cachedPersonaBarPageWidth = 860;
 

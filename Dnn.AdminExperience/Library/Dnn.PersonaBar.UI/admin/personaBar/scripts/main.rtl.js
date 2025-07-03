@@ -62,7 +62,7 @@ if (window.parent['personaBarSettings'].debugMode === true) {
 }
 
 require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../extension',
-        '../persistent', '../eventEmitter', '../menuIconLoader', '../gateway', 'domReady!', '../exports/export-bundle.rtl'],//persian-dnnsoftware
+        '../persistent', '../eventEmitter', '../menuIconLoader', '../gateway', 'domReady!', '../exports/export-bundle'],//persian-dnnsoftware
     function ($, ko, dayjs, ut, sf, cf, extension, persistent, eventEmitter, iconLoader, Gateway) {
         var iframe = window.parent.document.getElementById("personaBar-iframe");
         if (!iframe) return;
