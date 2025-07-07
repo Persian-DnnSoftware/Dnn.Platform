@@ -54,4 +54,31 @@
   left: 1em;
   text-align: left;
 }
+
+.rtl .passwordStrength {
+    &.ضعیف {
+        background-color:@weak;
+        width: 25%;
+    }
+
+    &.متوسط {
+        background-color: @fair;
+        width: 75%;
+    }
+
+    &.قوی {
+        background-color: @strong;
+        width: 100%;
+    }
+
+    &.weak{
+        color: @weak;
+    }
+    &.fair {
+        color:@fair;
+    }
+    &.strong {
+        color: @strong;
+    }
+}
 // END Persian-DnnSoftware

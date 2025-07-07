@@ -272,26 +272,65 @@
 
 // START Persian-DnnSoftware
 .rtl {
-    .pages-app {
-        #confirmation-dialog {
-            left: auto !important;
-            right: 400px !important;
-        }
-        .tags-container {
-            float: left;
-        }
-        .filter-by-tags {
-            margin-right: 0;
-            margin-left: 3px;
-            div {
+    .dnn-file-upload {
+        float: right;
+
+        .overlay {
+            span {
                 float: right;
             }
+
+            .buttons {
+                .button {
+                    float: right;
+
+                    &:first-of-type {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
         }
-        .header-dropdown {
-            float: left;
+
+        .file-upload-container {
+            .textarea-container {
+                float: right;
+            }
+
+            span {
+                float: left;
+                margin-right: 0;
+                margin-left: 10px;
+            }
+
+            .drop-down {
+                float: right;
+
+                &:after {
+                    right: auto;
+                    left: 8px;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                }
+            }
         }
-        .treeview-page-details {
-            padding: 44px 0px 30px 2px;
+    }
+
+    .dnn-file-upload .file-upload-container {
+        &.dnn-upload-bar {
+            .upload-bar-container {
+                float: right;
+
+                .upload-bar-box {
+                    float: right;
+
+                    .upload-bar {
+                        float: right;
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
         }
     }
 }

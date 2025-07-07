@@ -284,22 +284,18 @@
         float: right;
 
         &:after {
-            right: unset;
+            right: auto;
             left: 8px;
-            /* شکل فلش (به سمت پایین) تغییر نمی‌کند */
         }
 
         .selected-item {
             float: right;
-            /* LTR original: padding: 7px; سپس padding-right: 20px; */
-            /* LTR effective: top:7, right:20, bottom:7, left:7 */
-            /* RTL target:    top:7, right:7,  bottom:7, left:20 */
+            padding-right: 7px;
             padding-left: 20px;
-            padding-right: 7px; 
         }
 
         .folder-selector-container {
-            left: unset;
+            left: auto;
             right: -1px;
 
             .inner-box {
@@ -309,13 +305,13 @@
                     float: right;
 
                     .clear-button {
-                        right: unset;
+                        right: auto;
                         left: 32px;
                     }
 
                     .search-icon {
-                        right: unset;
-                        left: 0px;
+                        right: auto;
+                        left: 0;
                     }
 
                     input[type="text"] {
@@ -331,9 +327,8 @@
     }
 
     .dnn-folders-component {
-        /* تغییرات برای اولین بلوک ul اعمال شده است، با فرض اینکه بلوک دوم تکراری است */
         ul {
-            padding-left: unset;
+            padding-left: 0;
             padding-right: 20px;
 
             li {
@@ -346,32 +341,32 @@
                 & > ul {
                     float: right;
                 }
-
+                
                 &.open {
                     & > .has-children {
-                        transform: rotate(-90deg); /* LTR: rotate(90deg) */
+                        transform: rotate(-90deg);
                     }
                 }
 
                 .icon {
-                    float: right;
-                    margin-right: unset;
+                    float: left;
+                    margin-right: 0;
                     margin-left: 5px;
                 }
 
                 .item-name {
-                    float: right;
+                    float: left;
                 }
 
                 .has-children {
-                    left: unset;
+                    left: auto;
                     right: -15px;
 
                     &:after {
-                        left: unset;
+                        left: auto;
                         right: 4px;
-                        border-left: none; 
-                        border-right: 4px solid var(--dnn-color-neutral, @rollingStone); /* LTR: border-left */
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid var(--dnn-color-neutral, #787878);
                     }
                 }
             }

@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-escape */
 export const PasswordStrengthType = {
-    WEAK: "weak",
-    FAIR: "fair",
-    STRONG: "strong"
+    WEAK: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "ضعیف" : "weak",
+    FAIR: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "متوسط" : "fair",
+    STRONG: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "قوی" : "strong"
 };
 
 export const getPasswordStrength = (password, passwordStrengthOptions) => {
