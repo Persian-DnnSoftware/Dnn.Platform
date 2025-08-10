@@ -10,8 +10,8 @@
   <asp:PlaceHolder runat="server" ID="ClientDependencyHeadCss"></asp:PlaceHolder>
   <asp:PlaceHolder runat="server" ID="ClientDependencyHeadJs"></asp:PlaceHolder>
   <%--START persian-dnnsoftware--%>
-  <%--<link rel="stylesheet" type="text/css" class="needVer" href="../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?refresh" />--%>
-  <%--<link rel="stylesheet" type="text/css" class="needVer" href="Install.css?refresh" />--%>
+  <link rel="stylesheet" type="text/css" class="needVer" href="../Resources/Shared/stylesheets/dnndefault/10.0.0/default.css?refresh" />
+  <link rel="stylesheet" type="text/css" class="needVer" href="Install.css?refresh" />
   <%--END persian-dnnsoftware--%>
   
   <script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
