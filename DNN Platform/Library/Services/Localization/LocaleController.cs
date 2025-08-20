@@ -51,7 +51,10 @@ namespace DotNetNuke.Services.Localization
         /// <returns>culture list.</returns>
         public List<CultureInfo> GetCultures(Dictionary<string, Locale> locales)
         {
-            return locales.Values.Select(locale => new CultureInfo(locale.Code)).ToList();
+            /* START Persian-DnnSoftware */
+            /* return locales.Values.Select(locale => new CultureInfo(locale.Code)).ToList(); */
+            return locales.Values.Select(locale => Persian.PersianController.NewCultureInfo(locale.Code)).ToList();
+            /* END Persian-DnnSoftware */
         }
 
         /// <summary>Gets the current locale for current request to the portal.</summary>

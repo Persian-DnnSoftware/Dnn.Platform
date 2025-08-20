@@ -145,6 +145,7 @@
     <Content Include="connector.htm" />
     <Content Include="Images\GoogleTagManager_32X32_Standard.png" />
     <Content Include="License.txt" />
+    <Content Include="Module.rtl.css" />
     <Content Include="ReleaseNotes.txt" />
     <Content Include="Scripts\connector.js" />
   </ItemGroup>

@@ -46,7 +46,10 @@ namespace DotNetNuke.Services.Tokens
             set
             {
                 this.language = value;
-                this.formatProvider = new CultureInfo(this.language);
+                /* START Persian-DnnSoftware */
+                /* this.formatProvider = new CultureInfo(this.language); */
+                this.formatProvider = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(this.language);
+                /* END Persian-DnnSoftware */
             }
         }
 

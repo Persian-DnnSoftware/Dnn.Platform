@@ -12,6 +12,7 @@ namespace Dnn.PersonaBar.TaskScheduler.Components
     using DotNetNuke.Abstractions.Application;
     using DotNetNuke.Common;
     using DotNetNuke.Common.Utilities;
+    using DotNetNuke.Entities.Portals;
     using DotNetNuke.Instrumentation;
     using DotNetNuke.Services.Localization;
     using DotNetNuke.Services.Scheduling;
@@ -26,6 +27,13 @@ namespace Dnn.PersonaBar.TaskScheduler.Components
         {
             get
             {
+                /* START Persian-DnnSoftware */
+                if (PortalController.Instance.GetCurrentPortalSettings().CultureCode != "en-US")
+                {
+                    return Path.Combine($"~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.{PortalController.Instance.GetCurrentPortalSettings().CultureCode}.resx");
+                }
+
+                /* END Persian-DnnSoftware */
                 return Path.Combine("~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.resx");
             }
         }
@@ -43,6 +51,9 @@ namespace Dnn.PersonaBar.TaskScheduler.Components
                 var strWeek = Localization.GetString("Week", this.LocalResourcesFile);
                 var strMonth = Localization.GetString("Month", this.LocalResourcesFile);
                 var strYear = Localization.GetString("Year", this.LocalResourcesFile);
+                /* START Persian-DnnSoftware */
+                Localization.SetThreadCultures(new CultureInfo(PortalController.Instance.GetCurrentPortalSettings().CultureCode), PortalController.Instance.GetCurrentPortalSettings());
+                /* END Persian-DnnSoftware */
                 var strSecs = Localization.GetString("Seconds");
                 var strMns = Localization.GetString("Minutes");
                 var strHours = Localization.GetString("Hours");
