@@ -1298,7 +1298,7 @@ class App extends Component {
                 <div className="empty-page-state">
                     <div className="empty-page-state-message">
                         <h1>{this.state.emptyStateMessage || DefaultMessage}</h1>
-                        <p>Select a page in the tree to manage its settings here.</p>
+                        {window.parent["personaBarSettings"]["culture"] === "fa-IR" ?(<p>یک صفحه را در لیست انتخاب کنید تا بتوانید تنظیمات آن را در اینجا مدیریت کنید.</p>):(<p>Select a page in the tree to manage its settings here.</p>)}
                     </div>
                 </div>
             );

@@ -169,6 +169,7 @@
     <Content Include="CreateModule.ascx" />
     <Content Include="EditScript.ascx" />
     <Content Include="license.txt" />
+    <Content Include="module.rtl.css" />
     <Content Include="module.css" />
     <Content Include="releaseNotes.txt" />
     <Content Include="RazorHost.ascx" />

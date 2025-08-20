@@ -23,3 +23,29 @@
         } 
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .theme-settings {
+  padding: 15px 0 0 15px; /* Flipped padding-left and padding-right */
+
+  & > .dnn-grid-cell > .right-column {
+    border-left: none; /* Remove LTR border */
+    border-right: 1px solid @alto; /* Add RTL border */
+    padding: 20px 65px 0 0; /* Flipped padding-left to padding-right */
+
+    .dnn-radio-buttons {
+      /* margin is fine, as symmetric horizontal margins */
+      ul li {
+        margin-left: unset; /* Unset LTR margin */
+        margin-right: 0; /* Align to the right for RTL */
+
+        &:first-child {
+          margin-right: unset; /* Unset LTR margin */
+          margin-left: 30px; /* Set RTL margin */
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

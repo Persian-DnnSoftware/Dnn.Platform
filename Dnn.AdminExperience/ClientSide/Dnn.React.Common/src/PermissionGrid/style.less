@@ -156,3 +156,49 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .permissions-grid {
+  .grid-header {
+    .dnn-grid-cell {
+      border-left: none;
+      border-right: 1px solid var(--dnn-color-foreground-light, @alto);
+      &:first-child {
+        border-right: none;
+        padding-left: unset;
+        padding-right: 5px;
+      }
+    }
+  }
+  .grid-row {
+    .dnn-grid-cell {
+      border-left: none;
+      border-right: 1px solid var(--dnn-color-foreground-light, @alto);
+      justify-content: center;
+      &:first-child {
+        border-right: none;
+        padding-left: unset;
+        padding-right: 5px;
+        text-align: right;
+      }
+      &.col-actions {
+        text-align: left;
+        padding-right: unset;
+        padding-left: 20px;
+      }
+    }
+  }
+  table {
+    td {
+      border-right: none;
+      border-left: 1px solid var(--dnn-color-foreground-light, #666);
+      &:first-child {
+        text-align: right;
+        padding-left: unset;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware
