@@ -405,3 +405,126 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .dnn-day-picker {
+  float: right;
+  .calendar-container {
+    left: unset;
+    right: 0px;
+    transform-origin: 0% 0% 0px;
+    text-align: center;
+    & > div {
+      float: right;
+    }
+  }
+  .calendar-icon {
+    float: right;
+    margin-left: unset;
+    margin-right: 7px;
+  }
+  .clear-button {
+    left: unset;
+    right: 5px;
+  }
+  .calendar-text {
+    text-align: left;
+    float: right;
+    &.with-time-picker {
+      padding-right: unset;
+      padding-left: 40px;
+    }
+    div,
+    span {
+      float: right;
+    }
+  }
+  .DayPicker {
+    float: right;
+    .DayPicker-NavButton {
+      &.DayPicker-NavButton--prev {
+        left: unset;
+        right: 2px;
+        background-image: url(./img/rightBlack.png); /* Flipped arrow for RTL */
+      }
+      &.DayPicker-NavButton--next {
+        right: unset;
+        left: 2px;
+        background-image: url(./img/leftBlack.png); /* Flipped arrow for RTL */
+      }
+    }
+    .DayPicker-Weekdays {
+      float: right;
+      .DayPicker-WeekdaysRow {
+        float: right;
+        .DayPicker-Weekday {
+          float: right;
+        }
+      }
+    }
+    .DayPicker-Week {
+      float: right;
+    }
+    .DayPicker-Day {
+      float: right;
+      text-align: center;
+    }
+  }
+  button[role="primary"] {
+    float: left;
+    margin: 10px;
+  }
+  button[role="secondary"] {
+    float: left;
+    margin: 10px;
+  }
+  .date-input {
+    span {
+      float: right;
+    }
+    .select-container {
+      right: unset;
+      left: 0px;
+      &:after {
+        right: unset;
+        left: 5px;
+      }
+    }
+    input[type="text"] {
+      float: right;
+      text-align: center;
+    }
+  }
+}
+
+.rtl .dnn-time-picker-box {
+  .dnn-time-picker {
+    &.timezone-picker {
+      text-align: right;
+    }
+    &.time-picker {
+      &.half {
+        text-align: right;
+      }
+      &.full {
+        text-align: center;
+      }
+    }
+    float: right;
+    margin-left: unset;
+    margin-right: 10px;
+    .time-text {
+      &:after {
+        right: unset;
+        left: 0px;
+      }
+      .time-selector {
+        left: unset;
+        right: 50%;
+        transform: translate(50%);
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

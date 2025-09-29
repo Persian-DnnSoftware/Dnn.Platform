@@ -587,3 +587,172 @@ div.page-drag-helper.page-drag-multiple span.icon {
 .page-item {
     cursor: pointer;
 }
+
+
+/* START Persian-DnnSoftware */
+.rtl .pagePanel .pagehierarchy-container .pages-list-scroller > .jspContainer div.shadow {
+  left: unset;
+  right: 0;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(201, 201, 201, 0.7)), color-stop(10px, rgba(201, 201, 201, 0)));
+  background-image: -o-linear-gradient(right, rgba(201, 201, 201, 0.7) 0, rgba(201, 201, 201, 0) 10px);
+  background-image: -moz-linear-gradient(right, rgba(201, 201, 201, 0.7) 0, rgba(201, 201, 201, 0) 10px);
+  background-image: -webkit-linear-gradient(right, rgba(201, 201, 201, 0.7) 0, rgba(201, 201, 201, 0) 10px);
+  background-image: -ms-linear-gradient(right, rgba(201, 201, 201, 0.7) 0, rgba(201, 201, 201, 0) 10px);
+  background-image: linear-gradient(to left, rgba(201, 201, 201, 0.7) 0, rgba(201, 201, 201, 0) 10px);
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-container .pages-list {
+  float: right;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list.sub {
+  border-left: none;
+  border-right: none;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-scroller .pages-list.jspScrollable .jspPane {
+  padding-right: unset !important;
+  padding-left: 21px !important;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.thumbnail,
+.rtl li.page-drag-helper div.page-item span.thumbnail {
+  float: right;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.summary span > label,
+.rtl li.page-drag-helper div.page-item span.summary span > label {
+  margin-right: unset;
+  margin-left: 4px;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul div.page-item:hover span.actions span.buttons {
+  float: left;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.actions span.buttons span {
+  float: right;
+  margin-right: unset;
+  margin-left: 12px;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.actions span.buttons span:last-child {
+  margin-right: unset;
+  margin-left: 10px;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.actions span.buttons span.view-page {
+  /* background-position is direction-agnostic in this case. */
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.actions span.buttons span.edit-page {
+  /* background-position is direction-agnostic in this case. */
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.actions span.buttons span.settings {
+  /* background-position is direction-agnostic in this case. */
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.actions span.buttons span.delete-page {
+  /* background-position is direction-agnostic in this case. */
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list ul li div.page-item span.drag-area {
+  right: unset;
+  left: 0;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-scroller .pages-list .jspVerticalBar {
+  border-left: none;
+  border-right: 1px solid #d4d4d4;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-scroller .pages-list .jspVerticalBar .jspTrack {
+  margin-left: unset !important;
+  margin-right: 6px !important;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-drag-container {
+  left: unset;
+  right: 380px;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-drag-container .pages-list ul li div.drag-item span.summary span.drag-area,
+.rtl li.page-drag-helper div.drag-item span.summary span.drag-area {
+  text-align: right;
+  padding-left: unset;
+  padding-right: 15px;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-scroller .pages-list ul li.page-drag-target,
+.rtl div.page-drag-helper {
+  text-align: right;
+  padding-left: unset;
+  padding-right: 15px;
+}
+.rtl div.page-drag-helper span.icon {
+  margin-right: unset;
+  margin-left: 4px;
+}
+.rtl .pagePanel .pagehierarchy-container.drag-view .pages-list ul li div.page-item span.actions {
+  right: unset;
+  left: 16px;
+}
+.rtl .pagePanel .pagehierarchy-container.drag-view .pages-list ul li div.page-item span.summary {
+  margin-left: unset;
+  margin-right: 10px;
+}
+.rtl .pagePanel .pagehierarchy-container.drag-view .pages-list-scroller .pages-list.templates-list ul li {
+  margin: 20px 20px 0 0;
+  float: right;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-container .pages-list.templates-list ul li:nth-child(3n+1) {
+  margin-left: unset;
+  margin-right: 0px;
+}
+.rtl .pagePanel .pagehierarchy-container .pages-list-container .pages-list.templates-list ul li div.page-item span.summary {
+  margin-left: unset;
+  margin-right: 0;
+}
+.rtl div.page-drag-helper {
+  /* box-shadow is direction-agnostic */
+}
+.rtl div.page-drag-helper span.icon {
+  /* background-position and margin are direction-agnostic in this case. */
+}
+.rtl div.page-drag-helper span.drag-page-name {
+  /* overflow and white-space are direction-agnostic. */
+}
+.rtl div.page-drag-helper.page-drag-multiple span.icon {
+  /* background-position is direction-agnostic. */
+}
+@-webkit-keyframes driftDrag {
+  0% { -webkit-transform: translate(0, 0); }
+  12.5% { -webkit-transform: translate(-5px, 5px); }
+  25% { -webkit-transform: translate(-10px, 0px); }
+  37.5% { -webkit-transform: translate(-5px, -5px); }
+  50% { -webkit-transform: translate(0px, 0px); }
+  62.5% { -webkit-transform: translate(5px, 5px); }
+  75% { -webkit-transform: translate(10px, 0px); }
+  87.5% { -webkit-transform: translate(5px, -5px); }
+  100% { -webkit-transform: translate(0, 0); }
+}
+@-moz-keyframes driftDrag {
+  0% { -moz-transform: translate(0, 0); }
+  12.5% { -moz-transform: translate(-5px, 5px); }
+  25% { -moz-transform: translate(-10px, 0px); }
+  37.5% { -moz-transform: translate(-5px, -5px); }
+  50% { -moz-transform: translate(0px, 0px); }
+  62.5% { -moz-transform: translate(5px, 5px); }
+  75% { -moz-transform: translate(10px, 0px); }
+  87.5% { -moz-transform: translate(5px, -5px); }
+  100% { -moz-transform: translate(0, 0); }
+}
+@-o-keyframes driftDrag {
+  0% { -o-transform: translate(0, 0); }
+  12.5% { -o-transform: translate(-5px, 5px); }
+  25% { -o-transform: translate(-10px, 0px); }
+  37.5% { -o-transform: translate(-5px, -5px); }
+  50% { -o-transform: translate(0px, 0px); }
+  62.5% { -o-transform: translate(5px, 5px); }
+  75% { -o-transform: translate(10px, 0px); }
+  87.5% { -o-transform: translate(5px, -5px); }
+  100% { -o-transform: translate(0, 0); }
+}
+@keyframes driftDrag {
+  0% { transform: translate(0, 0); }
+  12.5% { transform: translate(-5px, 5px); }
+  25% { transform: translate(-10px, 0px); }
+  37.5% { transform: translate(-5px, -5px); }
+  50% { transform: translate(0px, 0px); }
+  62.5% { transform: translate(5px, 5px); }
+  75% { transform: translate(10px, 0px); }
+  87.5% { transform: translate(5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+.rtl .pagePanel > div.clear {
+  padding: 0;
+}
+/* END Persian-DnnSoftware */

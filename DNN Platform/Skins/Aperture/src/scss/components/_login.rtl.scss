@@ -1,0 +1,125 @@
+﻿// START Persian-DnnSoftware
+.dnnLogin {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 3rem;
+
+    @media (max-width: 768px) {
+        margin: 2rem 0;
+    }
+
+    > div {
+        width: 100%;
+        padding: 0;
+    }
+
+    .LoginPanel {
+        width: 100%;
+        padding: 0;
+
+        .dnnFormItem {
+            .dnnFormLabel {
+                display: none;
+            }
+
+            &:nth-child(1), &:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+
+                .dnnFormLabel {
+                    display: block;
+                    float: right;
+                    width: auto;
+
+                    &::after {
+                        clear: both;
+                        content: '';
+                    }
+                }
+
+                label {
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                }
+
+                input {
+                    min-width: 100%;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    padding: .25em;
+                }
+            }
+
+            &:nth-child(3) {
+                width: 50%;
+
+                a {
+                    width: 50%;
+                    margin: 0;
+
+                    &.dnnPrimaryAction {
+                        margin-left: .25em;
+                    }
+
+                    &.dnnSecondaryAction {
+                        margin-right: .25em;
+                    }
+                }
+            }
+
+            .dnnLoginRememberMe {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+
+                img {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .dnnCheckbox {
+                    margin: 1em 0;
+                    display: inline-flex;
+                    vertical-align: middle;
+                }
+
+                label {
+                    margin-right: .5em;
+                    font-size: 1.1rem;
+                    font-weight: 550;
+                }
+            }
+
+            &:last-child {
+                width: 100%;
+
+                .dnnLoginActions {
+                    width: 100%;
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    li {
+                        margin: 0;
+
+                        &:nth-child(1) {
+                            padding-left: .25em;
+                        }
+
+                        &:nth-child(2) {
+                            padding-right: .25em;
+                        }
+                    }
+
+                    a {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware

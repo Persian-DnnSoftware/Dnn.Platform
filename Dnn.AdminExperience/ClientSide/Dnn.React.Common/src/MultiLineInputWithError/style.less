@@ -86,3 +86,48 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .dnn-multi-line-input-with-error {
+  .dnn-label {
+    label {
+      float: right;
+    }
+  }
+  &.error {
+    .input-tooltip-container {
+      .dnn-inline-counter {
+        right: unset;
+        left: 26px;
+      }
+    }
+  }
+  &.warning {
+    .input-tooltip-container {
+      .dnn-inline-counter {
+        right: unset;
+        left: 26px;
+      }
+    }
+  }
+  .input-tooltip-container {
+    float: right;
+    .dnn-inline-counter {
+      right: unset;
+      left: 7px;
+    }
+    .dnn-ui-common-tooltip {
+      right: unset;
+      left: 7px;
+      .tooltip-text {
+        text-align: right;
+      }
+      &.outside {
+        right: unset;
+        left: -25px;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

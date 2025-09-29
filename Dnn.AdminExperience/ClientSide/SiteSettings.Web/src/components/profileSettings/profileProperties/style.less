@@ -153,3 +153,94 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .collapsible-component-properties {
+  float: right;
+  div.collapsible-header-properties {
+    float: right;
+    .row {
+      float: right;
+      .item-row-name {
+        width: 23%;
+        float: right;
+        padding-left: unset;
+        padding-right: 15px;
+        word-break: break-all;
+      }
+      .item-row-dataType {
+        width: 20%;
+        float: right;
+      }
+      .item-row-defaultVisibility {
+        width: 20%;
+        float: right;
+      }
+      .item-row-required, .item-row-visible {
+        width: 10%;
+        float: right;
+        text-align: center;
+        .checkMarkIcon {
+          width: 16px;
+          height: 16px;
+          margin-left: auto;
+          margin-right: auto;
+          > svg {
+            fill: @thunder;
+          }
+        }
+      }
+      .item-row-editButton {
+        width: 13% !important;
+        float: left;
+        margin-right: unset;
+        margin-left: 10px;
+        &:not(:last-child) {
+          float: right;
+          margin-right: unset;
+          margin-left: 0px;
+        }
+        .delete-icon,
+        .edit-icon,
+        .order-icon {
+          margin-left: unset;
+          margin-right: 5px;
+          float: left;
+          display: block;
+          cursor: pointer;
+          > svg {
+            width: 16px;
+            float: right;
+            height: 16px;
+            &:hover {
+              fill: @thunder;
+            }
+            fill: @alto;
+          }
+        }
+        .delete-icon-hidden,
+        .order-icon-hidden {
+          display: none;
+        }
+        .edit-icon-active,
+        .order-icon-active {
+          > svg {
+            width: 16px;
+            float: right;
+            height: 16px;
+            fill: @curiousBlue;
+          }
+        }
+      }
+      .item-row-wrapper {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+  .collapsible-body-properties {
+    width: 100%;
+    float: right;
+  }
+}
+// END Persian-DnnSoftware

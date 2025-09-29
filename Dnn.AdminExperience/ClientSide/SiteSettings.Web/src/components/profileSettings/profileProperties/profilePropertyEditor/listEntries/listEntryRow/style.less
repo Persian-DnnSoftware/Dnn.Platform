@@ -82,3 +82,53 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .collapsible-component-entry {
+  float: right;
+  div.collapsible-entry {
+    float: right;
+    .row {
+      float: right;
+      .item-row-text {
+        float: right;
+        padding-left: unset;
+        padding-right: 15px;
+      }
+      .item-row-value {
+        float: right;
+      }
+      .item-row-actionButtons {
+        margin-right: unset;
+        margin-left: 15px;
+        float: left;
+        &:not(:last-child) {
+          float: right;
+          margin-right: unset;
+          margin-left: 0px;
+        }
+        .delete-icon,
+        .edit-icon,
+        .order-icon {
+          margin-left: unset;
+          margin-right: 5px;
+          float: left;
+          > svg {
+            float: right;
+          }
+        }
+        .order-icon-active,
+        .edit-icon-active {
+          > svg {
+            float: left;
+          }
+        }
+      }
+    }
+  }
+  .collapsible-entry-body {
+    float: right;
+  }
+}
+// END Persian-DnnSoftware

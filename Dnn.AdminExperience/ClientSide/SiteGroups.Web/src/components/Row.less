@@ -59,3 +59,36 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .sitegroups-list-container {
+  .row {
+    > div {
+      float: right;
+      > div {
+        float: right;
+      }
+    }
+    div.rowHeader {
+      float: right;
+      .edit-icon {
+        margin-left: unset;
+        margin-right: 5px;
+        float: left;
+        svg {
+          float: right;
+        }
+      }
+      .icon-flat {
+        svg {
+          /* No change needed as fill is direction-agnostic. */
+        }
+      }
+    }
+    div.ReactCollapse--content {
+      padding: 5px; /* Symmetric padding, no change needed. */
+    }
+  }
+}
+// END Persian-DnnSoftware

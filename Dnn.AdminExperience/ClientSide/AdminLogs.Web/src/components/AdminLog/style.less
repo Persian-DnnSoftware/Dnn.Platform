@@ -238,3 +238,100 @@
 .adminlogs-email-panel {
     height: 450px;
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    #adminlogs-container {
+        .dnn-persona-bar-page-body {
+            .react-tabs {
+                .log-detail {
+                    margin: 0px 58px 10px 10px;
+                }
+
+                .logHeader-wrapper {
+                    float: right;
+                }
+
+                .logHeader-Checkbox {
+                    float: right;
+                    margin-left: unset;
+                    margin-right: 15px;
+                }
+
+                .logHeader-LogTypeCSSClass,
+                .logHeader-LogCreateDate,
+                .logHeader-LogTypeFriendlyName,
+                .logHeader-LogUserName,
+                .logHeader-LogPortalName,
+                .logHeader-Summary {
+                    float: right;
+                }
+
+                .Exception,
+                .ItemCreated,
+                .ItemUpdated,
+                .ItemDeleted,
+                .OperationSuccess,
+                .OperationFailure,
+                .GeneralAdminOperation,
+                .AdminAlert,
+                .HostAlert,
+                .SecurityException {
+                    float: right;
+                    margin: 0px 0 0 6px;
+                }
+
+                .logContainer,
+                .logContainerBox {
+                    float: right;
+                }
+
+                .toolbar {
+                    float: right;
+
+                    .adminlogs-filter-container:first-child {
+                        > .dnn-dropdown {
+                            .collapsible-label {
+                                padding-left: unset;
+                                padding-right: 0;
+                            }
+                        }
+                    }
+
+                    .adminlogs-filter-container {
+                        float: right;
+                        border-right: none;
+                        border-left: 1px solid @alto;
+                    }
+
+                    .toolbar-button {
+                        float: left;
+                        border-left: none;
+                        border-right: solid 1px @alto;
+
+                        .collapsible-content {
+                            margin-left: unset;
+                            margin-right: -288px;
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .logPager {
+                    float: right;
+                }
+
+                .logLegend-wrapper {
+                    float: right;
+
+                    .logLegend-item {
+                        float: right;
+                        padding: 5px 0px 5px 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware
