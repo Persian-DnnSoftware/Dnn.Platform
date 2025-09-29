@@ -216,6 +216,7 @@ namespace DotNetNuke.Framework
                 var newCulture = Services.Localization.Persian.PersianController.GetPersianCultureInfo();
                 System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
             }
+
             /* END Persian-DnnSoftware */
 
             // set global page settings
