@@ -17,7 +17,7 @@
         shim: {
             'jquery.hoverintent.min': ['jquery'],
             'jquery.qatooltip': ['jquery.hoverintent.min']
-            
+
         },
         map: {
             '*': {
@@ -62,11 +62,11 @@ if (window.parent['personaBarSettings'].debugMode === true) {
 }
 
 require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../extension',
-        '../persistent', '../eventEmitter', '../menuIconLoader', '../gateway', 'domReady!', '../exports/export-bundle'],//persian-dnnsoftware
+    '../persistent', '../eventEmitter', '../menuIconLoader', '../gateway', 'domReady!', '../exports/export-bundle'],
     function ($, ko, dayjs, ut, sf, cf, extension, persistent, eventEmitter, iconLoader, Gateway) {
         var iframe = window.parent.document.getElementById("personaBar-iframe");
         if (!iframe) return;
-        
+
         var onTouch = "ontouchstart" in document.documentElement;
         // Checking touch screen for second level menu - the above onTouch won't work on windows tablet - IE I didnt test but read about it.
         var isTouch = ('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0);
@@ -125,24 +125,24 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
             },
 
 
-            openSocialTasks: function openTaskWindow(){
-                 var taskWindow = $('.socialtasks');
-                 taskWindow.css({visibility:'visible'});
+            openSocialTasks: function openTaskWindow() {
+                var taskWindow = $('.socialtasks');
+                taskWindow.css({ visibility: 'visible' });
             },
 
             closeSocialTasks: function closeTaskWindow() {
-                 var taskWindow = $('.socialtasks')
-                 taskWindow.css({visibility:'hidden'});
+                var taskWindow = $('.socialtasks')
+                taskWindow.css({ visibility: 'hidden' });
             },
 
-            expandPersonaBarPage: function expandPersonaBar(){
+            expandPersonaBarPage: function expandPersonaBar() {
                 var personaBarPage = $(".dnn-persona-bar-page")
-                personaBarPage.css({width:"1159px"});
+                personaBarPage.css({ width: "1159px" });
             },
 
-            contractPersonaBarPage: function contractPersonaBar(){
+            contractPersonaBarPage: function contractPersonaBar() {
                 var personaBarPage = $('.dnn-persona-bar-page');
-                personaBarPage.css({width: cachedPersonaBarPageWidth+'px'});
+                personaBarPage.css({ width: cachedPersonaBarPageWidth + 'px' });
             },
 
             closePersonaBar: function handleClosePersonarBar(callback, keepSelection) {
@@ -249,7 +249,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                 $showSiteButton.hide();
                 var $menuItems = $(".btn_panel");
                 var $hoverMenuItems = $(".hovermenu > ul > li");
-                
+
                 $menuItems.removeClass('selected pending');
                 $hoverMenuItems.removeClass('selected pending');
 
@@ -392,7 +392,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                     }
                 }
             },
-            findMenuSettings: function(identifier, menuItems) {
+            findMenuSettings: function (identifier, menuItems) {
                 menuItems = menuItems || menuViewModel.menu.menuItems;
                 var settings = null;
                 for (var i = 0; i < menuItems.length; i++) {
@@ -422,7 +422,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
 
                 return settings;
             },
-            updateMenuSettings: function(identifier, settings, menuItems) {
+            updateMenuSettings: function (identifier, settings, menuItems) {
                 menuItems = menuItems || menuViewModel.menu.menuItems;
                 for (var i = 0; i < menuItems.length; i++) {
                     var menuItem = menuItems[i];
@@ -445,11 +445,11 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
             loadBundleScript: function (path) {
 
                 var urls = path;
-                if(Array.isArray(urls) === false) {
+                if (Array.isArray(urls) === false) {
                     urls = [path];
                 }
                 function ajax(urls, build) {
-                    if(urls.length == 0) {
+                    if (urls.length == 0) {
                         return;
                     }
                     $.ajax({
@@ -459,12 +459,12 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                             cdv: build
                         },
                         url: urls.pop(),
-                        complete: function() {
+                        complete: function () {
                             ajax(urls, build);
                         }
                     });
                 }
-                    
+
                 ajax(urls.reverse(), config.buildNumber);
             },
             panelViewData: function (panelId, viewData) {
@@ -507,7 +507,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
 
                 return panelId ? savedData[panelId] : savedData;
             },
-            savePanelTabView: function(panelId) {
+            savePanelTabView: function (panelId) {
                 var $panel = $('#' + panelId);
                 var $primaryTabs = $panel.find('.dnn-tabs.primary, .ui-tabs').eq(0).find('> ul > li');
                 if (!$primaryTabs.length) {
@@ -539,8 +539,8 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                     return;
                 }
 
-                var sleep = function(timeout) {
-                    setTimeout(function() {
+                var sleep = function (timeout) {
+                    setTimeout(function () {
                         util.updatePanelTabView(panelId);
                     }, timeout);
                 }
@@ -597,7 +597,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                 }, 100);
             }
         }
-        
+
         function onShownPersonaBar() {
             (function handleResizeWindow() {
                 var evt = document.createEvent('HTMLEvents');
@@ -680,7 +680,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                 message = util.resx.PersonaBar["LockEditMode.Help"];
             }
 
-            $btnEdit.find(".editmode-tooltip > span").fadeOut('fast', '', function() {
+            $btnEdit.find(".editmode-tooltip > span").fadeOut('fast', '', function () {
                 $btnEdit.find('.tooltip-title').html(title);
                 $btnEdit.find('.tooltip-message').html(message);
 
@@ -704,7 +704,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                 e.stopImmediatePropagation();
             });
             $btnEdit.append($tooltip);
-            
+
             var title = util.resx.PersonaBar["DisableEditBar"];
             var message = util.resx.PersonaBar["DisableEditBar.Help"];
 
@@ -718,7 +718,7 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
 
         function handleLockEditState($btnEdit) {
             var $tooltip = $('<div class="editmode-tooltip"><span class="tooltip-title"></span><span class="tooltip-message"></span></div>');
-            $tooltip.click(function(e) {
+            $tooltip.click(function (e) {
                 e.preventDefault();
                 e.stopImmediatePropagation();
             });
@@ -737,34 +737,404 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
             });
         }
 
-        function handleTabSelection (callback) {
+        function handleTabSelection(callback) {
             $('#personabar-panels').on('click',
                 '> .socialpanel .dnn-tabs.primary > ul > li,' +
                 '> .socialpanel .dnn-tabs.secondary > ul > li,' +
                 '> .socialpanel .ui-tabs > ul > li > a', function (e, byScript) {
-                if (byScript) {
-                    return;
-                }
+                    if (byScript) {
+                        return;
+                    }
 
-                var panelId = $(this).parents('.socialpanel').attr('id');
-                setTimeout(function() {
-                    util.savePanelTabView(panelId);
-                }, 0);
-            });
+                    var panelId = $(this).parents('.socialpanel').attr('id');
+                    setTimeout(function () {
+                        util.savePanelTabView(panelId);
+                    }, 0);
+                });
 
             callback();
         }
 
         util.asyncParallel([
-                function (callback) {
-                    util.loadResx(function onResxLoaded() {
-                        var viewModel = {
-                            resx: util.resx.PersonaBar,
-                            menu: menuViewModel.menu,
-                            upToDate: ko.observable(true),
-                            updateLink: ko.observable(''),
-                            updateCritical: ko.observable(false),
-                            logOff: function() {
+            function (callback) {
+                util.loadResx(function onResxLoaded() {
+                    var viewModel = {
+                        resx: util.resx.PersonaBar,
+                        menu: menuViewModel.menu,
+                        upToDate: ko.observable(true),
+                        localUpgrades: ko.observableArray([]),
+                        localUpgradeAvailable: ko.pureComputed(function () {
+                            return viewModel.localUpgrades() && viewModel.localUpgrades().length > 0 && viewModel.localUpgrades().some(u => u.IsValid && !u.IsOutdated);
+                        }),
+                        updateLink: ko.observable(''),
+                        updateCritical: ko.observable(false),
+                        logOff: function () {
+                            function onLogOffSuccess() {
+                                if (typeof window.top.dnn != "undefined" && typeof window.top.dnn.PersonaBar != "undefined") {
+                                    window.top.dnn.PersonaBar.userLoggedOut = true;
+                                }
+                                window.top.document.location.href = window.top.document.location.href;
+                            };
+
+                            util.sf.rawCall("GET", config.logOff, null, onLogOffSuccess);
+                            return;
+                        },
+                        startLocalUpgrade: function () {
+                            util.sf.moduleRoot = 'personabar';
+                            util.sf.controller = "serversummary";
+                            util.sf.postsilence('StartLocalUpgrade', {}, function onSuccess() {
+                                window.top.document.location.href = window.top.document.location.href;
+                            });
+                        }
+                    };
+
+                    viewModel.updateText = ko.computed(function () {
+                        return util.resx.PersonaBar.Update;
+                    });
+
+                    ko.applyBindings(viewModel, document.getElementById('personabar'));
+
+                    iconLoader.load();
+
+                    util.sf.moduleRoot = 'personabar';
+                    util.sf.controller = "serversummary";
+                    util.sf.getsilence('GetUpdateInfo', {}, function (data) {
+                        viewModel.upToDate(data.UpToDate);
+                        viewModel.updateLink(data.Url);
+                        viewModel.updateCritical(data.Critical);
+                        viewModel.localUpgrades(data.LocalUpgrades);
+                    });
+
+                    document.addEventListener("click", function (e) {
+                        $('#topLevelMenu .hovermenu').hide();
+                    });
+
+                    setTimeout(function () {
+
+                        // Setting for 1024 resolution
+                        var width = parent.document.body.clientWidth;
+                        if (width <= 1024 && width > 768) {
+                            $personaBarPlaceholder.css({ 'width': '700px' });
+                            $personaBarPanels.addClass("view-ipad landscape");
+                            $personaBar.addClass("view-ipad landscape");
+                        } else if (width <= 768) {
+                            $personaBarPlaceholder.css({ 'width': '500px' });
+                            $personaBarPanels.addClass("view-ipad portrait");
+                            $personaBar.addClass("view-ipad portrait");
+                        }
+                        else {
+                            $personaBarPanels.removeClass("view-ipad landscape portrait");
+                            $personaBar.removeClass("view-ipad landscape portrait");
+                        }
+
+                        if (isTouch) {
+                            $('#topLevelMenu .personabarnav > li').click(function () {
+                                var hoverMenuId = $(this).attr('data-hovermenu-id');
+                                $('#topLevelMenu .hovermenu').hide();
+                                if (hoverMenuId) {
+                                    var $hoverMenuId = $("#" + hoverMenuId);
+                                    $hoverMenuId.toggle();
+                                    $iframe.width("100%");
+                                }
+                            });
+                            $(document).on('touchstart', function (event) {
+                                if (!$(event.target).closest('#topLevelMenu .hovermenu').length) {
+                                    $('#topLevelMenu .hovermenu').hide();
+                                }
+                            });
+                            $body.addClass('touch');
+                        } else {
+                            $body.addClass('non-touch');
+                        }
+                        var isMac = navigator.appVersion.indexOf('Mac') > -1;
+                        if (isMac) {
+                            $body.addClass('mac');
+                        }
+
+                        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+                        if (isSafari) {
+                            $body.addClass('safari');
+                        }
+
+                        var isIe = (function isInternetExplorer() {
+                            if (navigator.appName === 'Microsoft Internet Explorer') return true;
+                            if (navigator.appName === 'Netscape') {
+                                var ua = navigator.userAgent;
+                                if (ua.indexOf('Trident') > -1) return true;
+                            }
+                            return false;
+                        })();
+                        if (isIe) {
+                            $body.addClass('ie');
+                            iframe.style.backgroundColor = "rgba(0,0,0,0.01)"; // IE10 flashing bug
+                        }
+
+                        if (config.visible) {
+
+
+                            (function setupMenu() {
+                                $(".btn_panel .hovermenu").click(function (e) {
+                                    e.stopPropagation();
+                                });
+
+                                $(".btn_panel, .hovermenu > ul > li").click(function handleClickOnHoverMenuItem(evt) {
+                                    evt.preventDefault();
+                                    evt.stopPropagation();
+
+                                    var $this = $(this);
+
+                                    if ($this.hasClass('selected')) {
+                                        var panelId = utility.getPanelIdFromPath($this.data('path'));
+                                        var panelAlreadyOpened = $('#' + panelId + ':not(visible)');
+                                        if (panelAlreadyOpened) {
+                                            panelAlreadyOpened.fadeIn('fast');
+                                        }
+                                        return;
+                                    }
+
+                                    var path = $this.data('path');
+                                    var params = null;
+
+                                    var identifier = $this.attr('id');
+                                    var moduleName = $this.data('module-name');
+                                    var folderName = $this.data('folder-name');
+                                    var query = $this.data('query');
+                                    var settings = util.findMenuSettings(identifier);
+                                    if (path === '') {
+                                        var menuItems = menuViewModel.menu.menuItems;
+                                        for (var i = 0; i < menuItems.length; i++) {
+                                            if (menuItems[i].id === identifier) {
+                                                if (menuItems[i].menuItems.length > 0) {
+                                                    var subMenu = menuItems[i].menuItems[0][0];
+                                                    identifier = subMenu.id;
+                                                    moduleName = subMenu.moduleName;
+                                                    folderName = subMenu.folderName;
+                                                    path = subMenu.path;
+                                                    query = subMenu.query;
+                                                    settings = util.findMenuSettings(identifier);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    if (checkMenuLink($('li[id="' + identifier + '"]'))) {
+                                        return;
+                                    }
+
+                                    if (!path) return;
+
+                                    if (moduleName !== undefined) {
+                                        params = {
+                                            moduleName: moduleName,
+                                            folderName: folderName,
+                                            identifier: identifier,
+                                            path: path,
+                                            query: query,
+                                            settings: settings
+                                        };
+                                    };
+
+                                    util.loadPanel(identifier, params);
+
+                                    $('.btn_panel > .hovermenu').fadeOut('fast');
+                                });
+
+                                var $avatarMenu = $('li.useravatar');
+                                if ($avatarMenu.length) {
+                                    $avatarMenu.before($showSiteButton);
+                                }
+
+                                $showSiteButton.click(function handleShowSite(e, keepSelection) {
+                                    e.preventDefault();
+                                    var needRefresh = $(this).data('need-refresh');
+                                    var needHomeRedirect = $(this).data('need-homeredirect');
+                                    $showSiteButton.hide();
+                                    util.closePersonaBar(function () {
+                                        if (needHomeRedirect) {
+                                            window.top.location.href = config.siteRoot;
+                                        } else {
+                                            if (needRefresh) {
+                                                window.top.location.reload();
+                                            }
+                                        }
+                                    }, keepSelection);
+                                });
+                            }());
+
+                            (function setupHoverMenu() {
+
+
+                                var showMenuHandlers = [];
+                                var leaveSubMenuHandlers = [];
+                                var mouseOnHovermenu = false;
+                                var mouseOnButton = false;
+
+                                var resetHandlers = function () {
+                                    if (showMenuHandlers.length > 0) {
+                                        $.each(showMenuHandlers, function (index, item) {
+                                            clearTimeout(item);
+                                        });
+                                        showMenuHandlers = [];
+                                    }
+
+                                    if (leaveSubMenuHandlers.length > 0) {
+                                        $.each(leaveSubMenuHandlers, function (index, item) {
+                                            clearTimeout(item);
+                                        });
+                                        leaveSubMenuHandlers = [];
+                                    }
+                                };
+
+                                $('.btn_panel').each(function () {
+                                    var $this = $(this);
+                                    var hoverMenuId = $this.data('hovermenu-id');
+                                    if (hoverMenuId === undefined) return;
+
+                                    var $hoverMenu = $('#' + hoverMenuId);
+                                    $this.hover(function () {
+                                        mouseOnButton = true;
+                                        if ($hoverMenu.css('display') === 'none' || $this.find('> div').length > 0) {
+                                            resetHandlers();
+
+                                            showMenuHandlers.push(setTimeout(function () {
+                                                if (($hoverMenu.css('display') === 'none' || $this.find('> div').length > 0) && mouseOnButton) {
+                                                    if (!activePath) iframe.style.width = "100%";
+
+                                                    $hoverMenu.css({
+                                                        position: 'absolute',
+                                                        right: '-1000px'//persian-dnnsoftware
+                                                    });
+
+                                                    $('.btn_panel').each(function () {
+                                                        var hoverMenuId = $(this).data('hovermenu-id');
+                                                        if (hoverMenuId === undefined) return;
+
+                                                        $('#' + hoverMenuId).hide();
+                                                    });
+
+                                                    // Set aria-expanded to true when menu is shown
+                                                    $hoverMenu.show();
+                                                    $this.attr('aria-expanded', 'true');
+
+                                                    // Fix ie personabar hover menús
+                                                    showMenuHandlers.push(setTimeout(function () {
+                                                        $('.hovermenu > ul').css('list-style-type', 'square');
+                                                        showMenuHandlers.push(setTimeout(function () {
+                                                            $('.hovermenu > ul').css('list-style-type', 'none');
+                                                            showMenuHandlers.push(setTimeout(function () {
+                                                                $hoverMenu.hide();
+                                                                $hoverMenu.removeAttr('style');
+                                                                calculateHoverMenuPosition($hoverMenu);
+                                                                showMenuHandlers.push(setTimeout(function () {
+                                                                    $hoverMenu.fadeIn('fast');
+                                                                }));
+
+                                                            }, 100));
+                                                        }));
+                                                    }));
+
+                                                }
+                                            }, 50));
+                                        }
+                                    }, function () {
+                                        mouseOnButton = false;
+                                        if (($hoverMenu.css('display') == 'block' || $this.find('> div').length > 0) && !mouseOnHovermenu) {
+                                            setTimeout(function () {
+                                                if (($hoverMenu.css('display') == 'block' || $this.find('> div').length > 0) && !mouseOnButton && !mouseOnHovermenu) {
+                                                    if (!activePath) {
+                                                        $iframe.width(personaBarMenuWidth);
+                                                    }
+                                                    // Set aria-expanded to false when menu is hidden
+                                                    $hoverMenu.hide();
+                                                    $this.attr('aria-expanded', 'false');
+
+                                                    resetHandlers();
+                                                }
+                                            }, 50);
+                                        }
+                                    });
+                                });
+
+                                $(".hovermenu").each(function () {
+                                    var $this = $(this);
+
+                                    $this.hover(function () {
+                                        mouseOnHovermenu = true;
+                                    }, function () {
+                                        mouseOnHovermenu = false;
+                                        if ($this.css('display') === 'block' && !mouseOnButton) {
+                                            leaveSubMenuHandlers.push(setTimeout(function () {
+                                                if ($this.css('display') === 'block' && !mouseOnButton && !mouseOnHovermenu) {
+                                                    if (!activePath) {
+                                                        $iframe.width(personaBarMenuWidth);
+                                                    }
+                                                    $this.hide();
+
+                                                    resetHandlers();
+                                                }
+                                            }, 800));
+                                        }
+                                    });
+                                });
+                            })();
+                        } else {
+                            $(".personabarnav > li.btn_panel, .hovermenu > ul > li").addClass("disabled");
+                        }
+
+                        (function setupEditButton() {
+                            var $btnEdit = $("#Edit.btn_panel");
+                            if (!config.visible) {
+                                return;
+                            }
+
+                            if (disableEditBar) {
+                                handleDisabledEditBar($btnEdit);
+                                return;
+                            }
+
+                            eventEmitter.addPanelCloseEventListener(function handleClosingPersonaBar() {
+                                $btnEdit.show();
+                            });
+                            eventEmitter.addPanelOpenEventListener(function handleOpeningPersonaBar() {
+                                $btnEdit.hide();
+                            });
+
+                            if (config.userMode !== 'Edit') {
+                                $btnEdit.on('click', function handleEdit() {
+                                    function toogleUserMode(mode, successCallback) {
+                                        util.sf.moduleRoot = 'internalservices';
+                                        util.sf.controller = "controlBar";
+                                        util.sf.post('ToggleUserMode', { UserMode: mode }, successCallback);
+                                    };
+                                    util.closePersonaBar(function () {
+                                        toogleUserMode('EDIT', function () {
+                                            function reloadPage() {
+                                                window.top.location = window.top.location.protocol + '//' + window.top.location.host + window.top.location.pathname + window.top.location.search;
+                                            }
+                                            saveBtnEditSettings(reloadPage, reloadPage);
+                                        });
+                                    });
+                                });
+                            } else {
+                                handleLockEditState($btnEdit);
+                            }
+                        })();
+
+                        $avatarImage = $('.useravatar span');
+                        $avatarImage.css('background-image', 'url(\'' + config.avatarUrl + '\')');
+
+                        var retryTimes = 0;
+                        var handleLogoutFunc = function () {
+                            var $logout = $('li#Logout');
+                            if (!$logout.length && retryTimes < 3) {
+                                setTimeout(handleLogoutFunc, 500);
+                                retryTimes++;
+                            }
+
+                            $logout.off('click').click(function (evt) {
+                                evt.preventDefault();
+                                evt.stopPropagation();
+
                                 function onLogOffSuccess() {
                                     if (typeof window.top.dnn != "undefined" && typeof window.top.dnn.PersonaBar != "undefined") {
                                         window.top.dnn.PersonaBar.userLoggedOut = true;
@@ -772,420 +1142,62 @@ require(['jquery', 'knockout', 'dayjs', '../util', '../sf', '../config', './../e
                                     window.top.document.location.href = window.top.document.location.href;
                                 };
 
-                                util.sf.rawCall("GET", config.logOff, null, onLogOffSuccess);
+                                util.sf.rawCall("GET", config.logOff, null, onLogOffSuccess, null, null, null, null, true);
                                 return;
-                            }
+                            });
                         };
 
-                        viewModel.updateText = ko.computed(function() {
-                            return util.resx.PersonaBar.Update;
-                        });
+                        handleLogoutFunc();
+                        if (!$iframe.attr('style') || $iframe.attr('style').indexOf("width") === -1) {
+                            $iframe.width(personaBarMenuWidth);
+                        }
+                    }, 0);
+                    callback();
+                });
+            },
+            function showPersonaBar(callback) {
+                var $personaBar = $(".personabar");
+                var $parentBody = $(parentBody);
 
-                        ko.applyBindings(viewModel, document.getElementById('personabar'));
+                if ($parentBody.hasClass('dnnEditState')) {
+                    $personaBar.css({ right: 0, 'display': 'block' });//persian-dnnsoftware
+                    $parentBody.animate({ marginRight: personaBarMenuWidth }, 1, 'linear', onShownPersonaBar);//persian-dnnsoftware
+                    callback();
+                } else {
+                    $iframe.width(personaBarMenuWidth);
+                    $personaBar.show();
 
-                        iconLoader.load();
-
-                        util.sf.moduleRoot = 'personabar';
-                        util.sf.controller = "serversummary";
-                        util.sf.getsilence('GetUpdateInfo', {}, function (data) {
-                            viewModel.upToDate(data.UpToDate);
-                            viewModel.updateLink(data.Url);
-                            viewModel.updateCritical(data.Critical);
-                        });
-
-                        document.addEventListener("click", function(e) {
-                            $('#topLevelMenu .hovermenu').hide();
-                        });
-
-                        setTimeout(function () {
-
-                            // Setting for 1024 resolution
-                            var width = parent.document.body.clientWidth;
-                            if (width <= 1024 && width > 768) {
-                                $personaBarPlaceholder.css({ 'width': '700px' });
-                                $personaBarPanels.addClass("view-ipad landscape");
-                                $personaBar.addClass("view-ipad landscape");
-                            } else if (width <= 768) {
-                                $personaBarPlaceholder.css({ 'width': '500px' });
-                                $personaBarPanels.addClass("view-ipad portrait");
-                                $personaBar.addClass("view-ipad portrait");
-                            }
-                            else {
-                                $personaBarPanels.removeClass("view-ipad landscape portrait");
-                                $personaBar.removeClass("view-ipad landscape portrait");
-                            }
-
-                            if (isTouch) {
-                                $('#topLevelMenu .personabarnav > li').click(function () {
-                                    var hoverMenuId = $(this).attr('data-hovermenu-id');
-                                    $('#topLevelMenu .hovermenu').hide();
-                                    if (hoverMenuId) {
-                                        var $hoverMenuId = $("#" + hoverMenuId);
-                                        $hoverMenuId.toggle();
-                                        $iframe.width("100%");
-                                    }
-                                });
-                                $(document).on('touchstart', function (event) {
-                                    if (!$(event.target).closest('#topLevelMenu .hovermenu').length) {
-                                        $('#topLevelMenu .hovermenu').hide();
-                                    }
-                                });
-                                $body.addClass('touch');
-                            } else {
-                                $body.addClass('non-touch');
-                            }
-                            var isMac = navigator.appVersion.indexOf('Mac') > -1;
-                            if (isMac) {
-                                $body.addClass('mac');
-                            }
-
-                            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-                            if (isSafari) {
-                                $body.addClass('safari');
-                            }
-
-                            var isIe = (function isInternetExplorer() {
-                                if (navigator.appName === 'Microsoft Internet Explorer') return true;
-                                if (navigator.appName === 'Netscape') {
-                                    var ua = navigator.userAgent;
-                                    if (ua.indexOf('Trident') > -1) return true;
-                                }
-                                return false;
-                            })();
-                            if (isIe) {
-                                $body.addClass('ie');
-                                iframe.style.backgroundColor = "rgba(0,0,0,0.01)"; // IE10 flashing bug
-                            }
-                            
-                            if (config.visible) {
-                                
-
-                                (function setupMenu() {
-                                    $(".btn_panel .hovermenu").click(function(e) {
-                                        e.stopPropagation();
-                                    });
-
-                                    $(".btn_panel, .hovermenu > ul > li").click(function handleClickOnHoverMenuItem(evt) {
-                                        evt.preventDefault();
-                                        evt.stopPropagation();
-
-                                        var $this = $(this);
-
-                                        if ($this.hasClass('selected')) {
-                                            var panelId = utility.getPanelIdFromPath($this.data('path'));
-                                            var panelAlreadyOpened = $('#' + panelId + ':not(visible)');
-                                            if (panelAlreadyOpened) {
-                                                panelAlreadyOpened.fadeIn('fast');
-                                            }
-                                            return;
-                                        }
-
-                                        var path = $this.data('path');
-                                        var params = null;
-
-                                        var identifier = $this.attr('id');
-                                        var moduleName = $this.data('module-name');
-                                        var folderName = $this.data('folder-name');
-                                        var query = $this.data('query');
-                                        var settings = util.findMenuSettings(identifier);
-                                        if (path === '') {
-                                            var menuItems = menuViewModel.menu.menuItems;
-                                            for (var i = 0; i < menuItems.length; i++) {
-                                                if (menuItems[i].id === identifier) {
-                                                    if (menuItems[i].menuItems.length > 0) {
-                                                        var subMenu = menuItems[i].menuItems[0][0];
-                                                        identifier = subMenu.id;
-                                                        moduleName = subMenu.moduleName;
-                                                        folderName = subMenu.folderName;
-                                                        path = subMenu.path;
-                                                        query = subMenu.query;
-                                                        settings = util.findMenuSettings(identifier);
-                                                    }
-                                                }
-                                            }
-                                        }
-
-                                        if (checkMenuLink($('li[id="' + identifier + '"]'))) {
-                                            return;
-                                        }
-
-                                        if (!path) return;
-                                        
-                                        if (moduleName !== undefined) {
-                                            params = {
-                                                moduleName: moduleName,
-                                                folderName: folderName,
-                                                identifier: identifier,
-                                                path: path,
-                                                query: query,
-                                                settings: settings
-                                            };
-                                        };
-
-                                        util.loadPanel(identifier, params);
-
-                                        $('.btn_panel > .hovermenu').fadeOut('fast');
-                                    });
-
-                                    var $avatarMenu = $('li.useravatar');
-                                    if ($avatarMenu.length) {
-                                        $avatarMenu.before($showSiteButton);
-                                    }
-
-                                    $showSiteButton.click(function handleShowSite(e, keepSelection) {
-                                        e.preventDefault();
-                                        var needRefresh = $(this).data('need-refresh');
-                                        var needHomeRedirect = $(this).data('need-homeredirect');
-                                        $showSiteButton.hide();
-                                        util.closePersonaBar(function() {
-                                            if (needHomeRedirect) {
-                                                window.top.location.href = config.siteRoot;
-                                            } else {
-                                                if (needRefresh) {
-                                                    window.top.location.reload();
-                                                }
-                                            }
-                                        }, keepSelection);
-                                    });
-                                }());
-
-                                (function setupHoverMenu() {
-
-
-                                    var showMenuHandlers = [];
-                                    var leaveSubMenuHandlers = [];
-                                    var mouseOnHovermenu = false;
-                                    var mouseOnButton = false;
-
-                                    var resetHandlers = function() {
-                                        if (showMenuHandlers.length > 0) {
-                                            $.each(showMenuHandlers, function(index, item) {
-                                                clearTimeout(item);
-                                            });
-                                            showMenuHandlers = [];
-                                        }
-
-                                        if (leaveSubMenuHandlers.length > 0) {
-                                            $.each(leaveSubMenuHandlers, function(index, item) {
-                                                clearTimeout(item);
-                                            });
-                                            leaveSubMenuHandlers = [];
-                                        }
-                                    };
-
-                                    $('.btn_panel').each(function () {
-                                        var $this = $(this);
-                                        var hoverMenuId = $this.data('hovermenu-id');
-                                        if (hoverMenuId === undefined) return;
-
-                                        var $hoverMenu = $('#' + hoverMenuId);
-                                        $this.hover(function () {
-                                            mouseOnButton = true;
-                                            if ($hoverMenu.css('display') === 'none' || $this.find('> div').length > 0) {
-                                                resetHandlers();
-
-                                                showMenuHandlers.push(setTimeout(function () {
-                                                    if (($hoverMenu.css('display') === 'none' || $this.find('> div').length > 0) && mouseOnButton) {
-                                                        if (!activePath) iframe.style.width = "100%";
-
-                                                        $hoverMenu.css({
-                                                            position: 'absolute',
-                                                            right: '-1000px'//persian-dnnsoftware
-                                                        });
-
-                                                        $('.btn_panel').each(function () {
-                                                            var hoverMenuId = $(this).data('hovermenu-id');
-                                                            if (hoverMenuId === undefined) return;
-
-                                                            $('#' + hoverMenuId).hide();
-                                                        });
-
-                                                        // Set aria-expanded to true when menu is shown
-                                                        $hoverMenu.show();
-                                                        $this.attr('aria-expanded', 'true');
-
-                                                        // Fix ie personabar hover menús
-                                                        showMenuHandlers.push(setTimeout(function () {
-                                                            $('.hovermenu > ul').css('list-style-type', 'square');
-                                                            showMenuHandlers.push(setTimeout(function () {
-                                                                $('.hovermenu > ul').css('list-style-type', 'none');
-                                                                showMenuHandlers.push(setTimeout(function () {
-                                                                    $hoverMenu.hide();
-                                                                    $hoverMenu.removeAttr('style');
-                                                                    calculateHoverMenuPosition($hoverMenu);
-                                                                    showMenuHandlers.push(setTimeout(function () {
-                                                                        $hoverMenu.fadeIn('fast');
-                                                                    }));
-
-                                                                }, 100));
-                                                            }));
-                                                        }));
-
-                                                    }
-                                                }, 50));
-                                            }
-                                        }, function () {
-                                            mouseOnButton = false;
-                                            if (($hoverMenu.css('display') == 'block' || $this.find('> div').length > 0) && !mouseOnHovermenu) {
-                                                setTimeout(function () {
-                                                    if (($hoverMenu.css('display') == 'block' || $this.find('> div').length > 0) && !mouseOnButton && !mouseOnHovermenu) {
-                                                        if (!activePath) {
-                                                            $iframe.width(personaBarMenuWidth);
-                                                        }
-                                                        // Set aria-expanded to false when menu is hidden
-                                                        $hoverMenu.hide();
-                                                        $this.attr('aria-expanded', 'false');
-
-                                                        resetHandlers();
-                                                    }
-                                                }, 50);
-                                            }
-                                        });
-                                    });
-
-                                    $(".hovermenu").each(function () {
-                                        var $this = $(this);
-
-                                        $this.hover(function () {
-                                            mouseOnHovermenu = true;
-                                        }, function () {
-                                            mouseOnHovermenu = false;
-                                            if ($this.css('display') === 'block' && !mouseOnButton) {
-                                                leaveSubMenuHandlers.push(setTimeout(function () {
-                                                    if ($this.css('display') === 'block' && !mouseOnButton && !mouseOnHovermenu) {
-                                                        if (!activePath) {
-                                                            $iframe.width(personaBarMenuWidth);
-                                                        }
-                                                        $this.hide();
-
-                                                        resetHandlers();
-                                                    }
-                                                }, 800));
-                                            }
-                                        });
-                                    });
-                                })();
-                            } else {
-                                $(".personabarnav > li.btn_panel, .hovermenu > ul > li").addClass("disabled");
-                            }
-
-                            (function setupEditButton() {
-                                var $btnEdit = $("#Edit.btn_panel");
-                                if (!config.visible) {
-                                    return;
-                                }
-
-                                if (disableEditBar) {
-                                    handleDisabledEditBar($btnEdit);
-                                    return;
-                                }
-
-                                eventEmitter.addPanelCloseEventListener(function handleClosingPersonaBar() {
-                                    $btnEdit.show();
-                                });
-                                eventEmitter.addPanelOpenEventListener(function handleOpeningPersonaBar() {
-                                    $btnEdit.hide();
-                                });
-
-                                if (config.userMode !== 'Edit') {
-                                    $btnEdit.on('click', function handleEdit() {
-                                        function toogleUserMode(mode, successCallback) {
-                                            util.sf.moduleRoot = 'internalservices';
-                                            util.sf.controller = "controlBar";
-                                            util.sf.post('ToggleUserMode', { UserMode: mode }, successCallback);
-                                        };
-                                        util.closePersonaBar(function () {
-                                            toogleUserMode('EDIT', function() {
-                                                function reloadPage() {
-                                                    window.top.location = window.top.location.protocol + '//' + window.top.location.host + window.top.location.pathname + window.top.location.search;
-                                                }
-                                                saveBtnEditSettings(reloadPage, reloadPage);
-                                            });
-                                        });
-                                    });
-                                } else {
-                                    handleLockEditState($btnEdit);
-                                }
-                            })();
-
-                            $avatarImage = $('.useravatar span');
-                            $avatarImage.css('background-image', 'url(\'' + config.avatarUrl + '\')');
-
-                            var retryTimes = 0;
-                            var handleLogoutFunc = function() {
-                                var $logout = $('li#Logout');
-                                if (!$logout.length && retryTimes < 3) {
-                                    setTimeout(handleLogoutFunc, 500);
-                                    retryTimes++;
-                                }
-
-                                $logout.off('click').click(function(evt) {
-                                    evt.preventDefault();
-                                    evt.stopPropagation();
-
-                                    function onLogOffSuccess() {
-                                        if (typeof window.top.dnn != "undefined" && typeof window.top.dnn.PersonaBar != "undefined") {
-                                            window.top.dnn.PersonaBar.userLoggedOut = true;
-                                        }
-                                        window.top.document.location.href = window.top.document.location.href;
-                                    };
-
-                                    util.sf.rawCall("GET", config.logOff, null, onLogOffSuccess, null, null, null, null, true);
-                                    return;
-                                });
-                            };
-
-                            handleLogoutFunc();
-                            if (!$iframe.attr('style') || $iframe.attr('style').indexOf("width") === -1) {
-                                $iframe.width(personaBarMenuWidth);
-                            }
-                        }, 0);
-                        callback();
-                    });
-                },
-                function showPersonaBar(callback) {
-                    var $personaBar = $(".personabar");
-                    var $parentBody = $(parentBody);
-
-                    if ($parentBody.hasClass('dnnEditState')) {
-                        $personaBar.css({ right: 0, 'display': 'block' });//persian-dnnsoftware
-                        $parentBody.animate({ marginRight: personaBarMenuWidth }, 1, 'linear', onShownPersonaBar);//persian-dnnsoftware
-                        callback();
-                    } else {
-                        $iframe.width(personaBarMenuWidth);
-                        $personaBar.show();
-          
-                        $personaBar.css({ right: 0, 'display': 'block' });//persian-dnnsoftware
-                        $parentBody.animate({ marginRight: personaBarMenuWidth }, 1, 'linear', onShownPersonaBar);//persian-dnnsoftware
-                        $personaBar.animate({ right: 0 }, 1, 'linear', callback);//persian-dnnsoftware
-                    }
-
-                    $mask.click(function(e) {
-                        $showSiteButton.trigger('click', [true]);
-                    });
-                },
-                function initCustomModules(callback) {
-                    util.initCustomModules(callback);
-                },
-                function (callback) {
-                    handleTabSelection(callback);
+                    $personaBar.css({ right: 0, 'display': 'block' });//persian-dnnsoftware
+                    $parentBody.animate({ marginRight: personaBarMenuWidth }, 1, 'linear', onShownPersonaBar);//persian-dnnsoftware
+                    $personaBar.animate({ right: 0 }, 1, 'linear', callback);//persian-dnnsoftware
                 }
-        ],
-        function loadPanelFromPersistedSetting() {
-            var pageUrl = window.top.location.href.toLowerCase();
-            if (pageUrl.indexOf("skinsrc=") > -1 || pageUrl.indexOf("containersrc=") > -1 || pageUrl.indexOf("dnnprintmode=") > -1) {
-                return;
-            }
 
-            var settings = util.persistent.load();
-            if (settings.expandPersonaBar && settings.activeIdentifier) {
-                var identifier = settings.activeIdentifier;
-                util.loadPanel(identifier, {});
+                $mask.click(function (e) {
+                    $showSiteButton.trigger('click', [true]);
+                });
+            },
+            function initCustomModules(callback) {
+                util.initCustomModules(callback);
+            },
+            function (callback) {
+                handleTabSelection(callback);
             }
-        });
-        
+        ],
+            function loadPanelFromPersistedSetting() {
+                var pageUrl = window.top.location.href.toLowerCase();
+                if (pageUrl.indexOf("skinsrc=") > -1 || pageUrl.indexOf("containersrc=") > -1 || pageUrl.indexOf("dnnprintmode=") > -1) {
+                    return;
+                }
+
+                var settings = util.persistent.load();
+                if (settings.expandPersonaBar && settings.activeIdentifier) {
+                    var identifier = settings.activeIdentifier;
+                    util.loadPanel(identifier, {});
+                }
+            });
+
         if (typeof window.parent.dnn === "undefined" || window.parent.dnn === null) {
-             window.parent.dnn = {};
+            window.parent.dnn = {};
         }
         // Register a PersonaBar object in the parent window global scope
         // to allow easy integration between the site and the persona bar
