@@ -30,7 +30,10 @@ class License extends Component {
                         enabled={!props.disabled}
                         onChange={props.onChange && props.onChange.bind(this, "license")} />}
                 {props.readOnly &&
-                    <Scrollbars style={licenseBoxStyle}>
+                    <Scrollbars // START Persian-DnnSoftware
+                        className="dnn-scrollbars"
+                        // END Persian-DnnSoftware
+                        style={licenseBoxStyle}>
                         <div className="read-only-license" dangerouslySetInnerHTML={{ __html: value }}></div>
                     </Scrollbars>
                 }

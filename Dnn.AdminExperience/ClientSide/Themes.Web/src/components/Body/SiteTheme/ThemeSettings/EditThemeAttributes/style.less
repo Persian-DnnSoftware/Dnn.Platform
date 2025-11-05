@@ -67,3 +67,31 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .edit-theme-attributes {
+  .edit-popup {
+    float: right;
+    left: unset;
+    right: 0;
+    .dnn-grid-cell > .dnn-grid-cell {
+      padding-right: unset;
+      padding-left: 25px;
+    }
+    .dnn-grid-cell > .dnn-grid-cell.right-column {
+      padding-right: 25px;
+      padding-left: unset;
+      border-left: unset; /* Remove LTR border */
+      border-right: none; /* Original border-left: none means no border on left, so for RTL, no border on right. */
+    }
+    .dnn-grid-cell.actions-cell {
+      text-align: center;
+      button:first-child {
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

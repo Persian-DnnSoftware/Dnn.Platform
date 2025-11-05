@@ -476,3 +476,16 @@ IF NOT EXISTS (SELECT 1 FROM {databaseOwner}[{objectQualifier}EventLogTypes] WHE
 IF NOT EXISTS (SELECT 1 FROM {databaseOwner}[{objectQualifier}EventLogConfig] WHERE [LogTypeKey] = N'APITOKEN_REVOKED')
 	INSERT INTO {databaseOwner}[{objectQualifier}EventLogConfig] ([LogTypeKey], [LogTypePortalID], [LoggingIsActive], [KeepMostRecent], [EmailNotificationIsActive], [NotificationThreshold], [NotificationThresholdTime], [NotificationThresholdTimeType], [MailFromAddress], [MailToAddress])
 	VALUES (N'APITOKEN_REVOKED', NULL, 1, 10, 0, 1, 1, 1, N'', N'')
+
+
+
+/*** START persian-dnnsoftware ***/
+IF EXISTS (SELECT 1 FROM {databaseOwner}[{objectQualifier}PersonaBarMenu] WHERE [ResourceKey] = N'Global Assets')
+BEGIN
+UPDATE {databaseOwner}[{objectQualifier}PersonaBarMenu] SET [ResourceKey] = N'nav_GlobalAssets' WHERE [ResourceKey] = N'Global Assets'
+END
+GO
+
+
+
+/*** END persian-dnnsoftware ***/

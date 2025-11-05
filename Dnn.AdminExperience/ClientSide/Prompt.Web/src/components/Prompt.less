@@ -231,3 +231,58 @@
 }
 
 #showsite { margin-right: 25px; }
+
+
+// START Persian-DnnSoftware
+#dnnPrompt-container {
+  .dnnPrompt-app {
+    &.personaBar-mainContainer {
+      .wrapper {
+        .dnn-prompt {
+          width: ~"calc(100% - 25px)"; /* No change needed, as it's a width calculation */
+        }
+        .dnn-prompt-input {
+          left: unset; /* Remove LTR left */
+          right: 17px; /* Set RTL right */
+        }
+        .dnn-prompt-input-wrapper {
+          &::before {
+            margin-left: unset; /* Remove LTR margin */
+            margin-right: 3px; /* Set RTL margin */
+          }
+        }
+        section.dnn-prompt-inline-help {
+          blockquote {
+            border-left: none; /* Remove LTR border */
+            border-right: 10px solid rgba(0, 255, 0, .4); /* Set RTL border */
+          }
+          li {
+            margin-left: unset; /* Remove LTR margin */
+            margin-right: 2.2em; /* Set RTL margin */
+          }
+          table.table tr td:first-child {
+            white-space: nowrap; /* No change needed, as it's a wrapping control */
+          }
+          table.command-result-tbl tr td:first-child {
+            white-space: nowrap; /* No change needed, as it's a wrapping control */
+          }
+          table.table thead th {
+            text-align: right; /* Align table headers to the right for RTL */
+          }
+          table.table td {
+            text-align: right; /* Align table cells to the right for RTL */
+          }
+          table.command-result-tbl td {
+            text-align: right; /* Align command result table cells to the right for RTL */
+          }
+        }
+      }
+    }
+  }
+}
+
+#showsite {
+  margin-right: unset; /* Remove LTR margin */
+  margin-left: 25px; /* Set RTL margin */
+}
+// END Persian-DnnSoftware

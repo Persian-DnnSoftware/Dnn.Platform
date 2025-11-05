@@ -42,6 +42,15 @@ namespace DotNetNuke.Services.Install
         protected global::System.Web.UI.WebControls.PlaceHolder SCRIPTS;
 
         /// <summary>
+        /// Body control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Body;
+
+        /// <summary>
         /// ClientResourceIncludes control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace DotNetNuke.Services.Install
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lang_en_US;
+
+        /// <summary>
+        /// lang_fa_IR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lang_fa_IR;
 
         /// <summary>
         /// lang_de_DE control.

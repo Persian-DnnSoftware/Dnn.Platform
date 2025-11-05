@@ -37,9 +37,12 @@ AlreadyInstalled.propTypes = {
 };
 
 AlreadyInstalled.defaultProps = {
-    repairInstallText: "Repair Install",
-    cancelInstallText: "Cancel",
-    orText: "or",
-    repairWarning: "Warning: You have selected to repair the installation of this package." +
-    "<br/> This will cause the files in the package to overwrite all files that were previously installed."
+    // START Persian-DnnSoftware
+    repairInstallText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "نصب مجدد" : "Repair Install",
+    cancelInstallText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "انصراف" : "Cancel",
+    orText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "یا" : "or",
+    repairWarning: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "هشدار: شما گزینه نصب مجدد این بسته را انتخاب کرده‌اید." + 
+    "<br/> این کار باعث می‌شود فایل‌های موجود در بسته، تمام فایل‌هایی را که قبلاً نصب شده‌اند جایگزین کنند." : 
+        "Warning: You have selected to repair the installation of this package." + "<br/> This will cause the files in the package to overwrite all files that were previously installed."
+    // END Persian-DnnSoftware
 };
