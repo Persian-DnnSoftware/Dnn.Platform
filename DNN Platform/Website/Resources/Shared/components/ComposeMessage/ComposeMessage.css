@@ -49,6 +49,6 @@ div.token-input-dropdown-facebook ul li img {
   background: url(images/delete.png) no-repeat 3px 3px;
   opacity: 0.75;
 }
-.composeMessageDialog .messageAttachments a.removeAttachment:hover {
-  opacity: 1;
+.composeMessageDialog .messageAttachments a.removeAttachment:hover{
+	opacity:1;
 }

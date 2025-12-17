@@ -552,43 +552,59 @@
     var advancedTextClear = $("#dnnSearchResult_dnnSearchBox_input").prev();
     var wrapWidth = $("#dnnSearchResult_dnnSearchBox_input").parent().width();
 
-    if (advancedTerm) {
-      advancedTextCtrl.show();
-      advancedTextClear.addClass("dnnShow");
-      var htmlAdvancedTerm = advancedTerm
-        .replace(/\[/g, "[&nbsp;")
-        .replace(/\]/g, "&nbsp;]")
-        .replace(/after:/g, "<b>after: </b>")
-        .replace(/type:/g, "<b>type: </b>");
-      var w = advancedTextCtrl.html(htmlAdvancedTerm).width();
-      $("#dnnSearchResult_dnnSearchBox_input")
-        .val(term)
-        .css({
-          left: w + 40,
-          width: wrapWidth - w - 165 - 8,
-        });
-      advancedTextClear.css({
-        left: w + 20,
-      });
-    } else {
-      advancedTextCtrl.html("").hide();
-      var w1 = $("#dnnSearchResult_dnnSearchBox_input")
-        .next()
-        .next()
-        .next()
-        .width();
-      $("#dnnSearchResult_dnnSearchBox_input").css({
-        left: "",
-        width: wrapWidth - w1 - 50 - 8,
-      });
+        if (advancedTerm) {
+            advancedTextCtrl.show();
+            advancedTextClear.addClass('dnnShow');
+            var htmlAdvancedTerm = advancedTerm.replace(/\[/g, '[&nbsp;').replace(/\]/g, '&nbsp;]')
+                .replace(/after:/g, '<b>after: </b>').replace(/type:/g, '<b>type: </b>');
+            var w = advancedTextCtrl.html(htmlAdvancedTerm).width();
+            /* START Persian-DnnSoftware */
+            if ($('body').hasClass('r' + 't' + 'l')) {
+                $('#dnnSearchResult_dnnSearchBox_input').val(term).css({
+                    right: w + 40,
+                    width: wrapWidth - w - 165 - 8
+                });
+                advancedTextClear.css({
+                    right: w + 20
+                });
+            } else {
+                $('#dnnSearchResult_dnnSearchBox_input').val(term).css({
+                    left: w + 40,
+                    width: wrapWidth - w - 165 - 8
+                });
+                advancedTextClear.css({
+                    left: w + 20
+                });
+            }
+            /* END Persian-DnnSoftware */
+        } else {
+            advancedTextCtrl.html('').hide();
+            var w1 = $('#dnnSearchResult_dnnSearchBox_input').next().next().next().width();
+            
+            /* START Persian-DnnSoftware */
+            if ($('body').hasClass('r' + 't' + 'l')) {
+                $('#dnnSearchResult_dnnSearchBox_input').css({
+                    right: "",
+                    width: wrapWidth - w1 - 50 - 8
+                });
 
-      $("#dnnSearchResult_dnnSearchBox_input")
-        .next()
-        .css({
-          right: w1 + 35,
-        });
-      advancedTextClear.removeClass("dnnShow");
-    }
+                $('#dnnSearchResult_dnnSearchBox_input').next().css({
+                    left: w1 + 35
+                });
+            } else {
+                $('#dnnSearchResult_dnnSearchBox_input').css({
+                    left: "",
+                    width: wrapWidth - w1 - 50 - 8
+                });
+
+                $('#dnnSearchResult_dnnSearchBox_input').next().css({
+                    right: w1 + 35
+                });
+            }
+            /* END Persian-DnnSoftware */
+
+            advancedTextClear.removeClass('dnnShow');
+        }
 
     if (term) {
       $("#dnnSearchResult_dnnSearchBox_input").next().addClass("dnnShow");

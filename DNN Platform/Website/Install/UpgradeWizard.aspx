@@ -4,12 +4,17 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls.Internal" Assembly="DotNetNuke.Web" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<%--START persian-dnnsoftware--%>
+<%--<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">--%>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR">
+<%--END persian-dnnsoftware--%>
 <head runat="server">
   <title></title>
   <asp:PlaceHolder runat="server" ID="ClientDependencyHeadCss"></asp:PlaceHolder>
   <asp:PlaceHolder runat="server" ID="ClientDependencyHeadJs"></asp:PlaceHolder>
-  <link rel="stylesheet" type="text/css" class="needVer" href="../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?refresh" />
+  <%--START persian-dnnsoftware--%>
+  <%--<link rel="stylesheet" type="text/css" class="needVer" href="../Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?refresh" />--%>
+  <%--END persian-dnnsoftware--%>
   <link rel="stylesheet" type="text/css" class="needVer" href="Install.css?refresh" />
   <script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
   <script type="text/javascript" src="../Resources/Shared/scripts/jquery/jquery-migrate.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
@@ -17,7 +22,10 @@
   <script type="text/javascript" src="../Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js?ver=<%=DotNetNuke.Common.Globals.FormatVersion(ApplicationVersion)%>"></script>
   <asp:PlaceHolder ID="SCRIPTS" runat="server"></asp:PlaceHolder>
 </head>
-<body>
+<%--START persian-dnnsoftware--%>
+<%--<body>--%>
+<body id="Body" runat="server">
+<%--END persian-dnnsoftware--%>
   <asp:PlaceHolder runat="server" ID="ClientResourceIncludes" />
   <form id="form1" runat="server">
     <asp:ScriptManager ID="scManager" runat="server" EnablePageMethods="true"></asp:ScriptManager>

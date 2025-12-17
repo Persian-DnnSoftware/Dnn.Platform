@@ -81,12 +81,24 @@ public partial class DateUtils
         return DateTime.Now + driftLocal;
     }
 
-    /// <summary>Returns a string with the pretty printed amount of time since the specified date.</summary>
-    /// <param name="date">DateTime in UTC.</param>
-    /// <returns>String representing the required date for display.</returns>
-    public static string CalculateDateForDisplay(DateTime date)
-    {
-        var utcTimeDifference = GetDatabaseUtcTime() - date;
+        /// <summary>Returns a string with the pretty printed amount of time since the specified date.</summary>
+        /// <param name="date">DateTime in UTC.</param>
+        /// <returns>String representing the required date for display.</returns>
+        public static string CalculateDateForDisplay(DateTime date)
+        {
+            /* START Persian-DnnSoftware */
+            string tempdate = date.ToString("yyyy/MM/dd HH:mm:ss");
+            DateTime date1 = GetDatabaseUtcTime();
+            TimeSpan utcTimeDifference;
+
+            if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
+            {
+                date = DateTime.Parse(tempdate);
+            }
+
+            utcTimeDifference = date1 - date;
+            /* END Persian-DnnSoftware */
+            /* var utcTimeDifference = GetDatabaseUtcTime() - date; */
 
         if (utcTimeDifference.TotalSeconds < 60)
         {

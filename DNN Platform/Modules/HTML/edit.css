@@ -61,15 +61,20 @@
   width: 20px;
 }
 .ehActions a.aspNetDisabled {
-  color: #ccc;
-  cursor: not-allowed;
-  padding: 6px 6px;
-  display: inline-block;
-  margin-bottom: 9px;
-  min-width: 75px;
-  border: 1px solid #c2c2c2;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  font-weight: normal;
-  text-align: center;
+    color: #ccc;
+    cursor: not-allowed;
+    padding: 6px 6px;    
+    display: inline-block;
+    margin-bottom: 9px;
+    min-width: 75px;
+    border: 1px solid #c2c2c2;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: normal;
+    text-align: center;
 }
+
+/* ===========   Persian-DnnSoftware   =========== */
+
+.rtl .dnnFormItem .dnnHTMLSRadioButtons label, .rtl .dnnFormItem .dnnPSRadioButtons input, .rtl .dnnFormItem .dnnHTMLSRadioButtons label, .rtl .dnnFormItem .dnnHTMLSRadioButtons input{float:right;padding:0;width:2%;text-align:right;}
+.rtl .dnnFormItem .dnnHTMLSRadioButtons label{width:auto;padding:0 6px 0 15px;font-weight:normal}

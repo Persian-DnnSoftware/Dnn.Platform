@@ -83,19 +83,22 @@ public class CulturePropertyAccess : IPropertyAccess
             }
         }
 
-        if (propertyName.Equals("countryname", StringComparison.InvariantCultureIgnoreCase))
-        {
-            if (ci.IsNeutralCulture)
+            if (propertyName.Equals("countryname", StringComparison.InvariantCultureIgnoreCase))
             {
-                // Neutral culture do not include region information
-                return string.Empty;
+                if (ci.IsNeutralCulture)
+                {
+                    // Neutral culture do not include region information
+                    return string.Empty;
+                }
+                else
+                {
+                    /* START Persian-DnnSoftware */
+                    /* RegionInfo country = new RegionInfo(new CultureInfo(ci.Name, false).LCID); */
+                    RegionInfo country = new RegionInfo(DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(ci.Name).LCID);
+                    /* END Persian-DnnSoftware */
+                    return PropertyAccess.FormatString(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(country.EnglishName), format);
+                }
             }
-            else
-            {
-                RegionInfo country = new RegionInfo(new CultureInfo(ci.Name, false).LCID);
-                return PropertyAccess.FormatString(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(country.EnglishName), format);
-            }
-        }
 
         if (propertyName.Equals("countrynativename", StringComparison.InvariantCultureIgnoreCase))
         {

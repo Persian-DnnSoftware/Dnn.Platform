@@ -42,26 +42,49 @@ public class Calendar
 
         var dayNameString = dayBuilder.ToString().TrimEnd(trimChars);
 
-        // Get the short date pattern for the culture
-        string formatString = DateTimeFormatInfo.CurrentInfo.ShortDatePattern;
-        if (!field.Page.ClientScript.IsClientScriptIncludeRegistered("PopupCalendar.js"))
-        {
-            ScriptManager.RegisterClientScriptInclude(field.Page, field.Page.GetType(), "PopupCalendar.js", ClientAPI.ScriptPath + "PopupCalendar.js");
-        }
+            // Get the short date pattern for the culture
+            string formatString = DateTimeFormatInfo.CurrentInfo.ShortDatePattern;
+            /* START Persian-DnnSoftware */
+            if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
+            {
+                if (!field.Page.ClientScript.IsClientScriptIncludeRegistered("PersianCalendar.js"))
+                {
+                    ClientAPI.RegisterClientScriptBlock(field.Page, "PersianCalendar.js", "<script src=\"" + ClientAPI.ScriptPath + "PersianCalendar.js\"></script>");
+                    ClientAPI.RegisterClientScriptBlock(field.Page, "PersianCalendar.css", "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + ClientAPI.ScriptPath + "PersianCalendar.css\" />");
+                }
+            }
+            else
+            {
+                if (!field.Page.ClientScript.IsClientScriptIncludeRegistered("PopupCalendar.js"))
+                {
+                    ScriptManager.RegisterClientScriptInclude(field.Page, field.Page.GetType(), "PopupCalendar.js", ClientAPI.ScriptPath + "PopupCalendar.js");
+                }
+            }
 
-        string strToday = ClientAPI.GetSafeJSString(Localization.GetString("Today"));
-        string strClose = ClientAPI.GetSafeJSString(Localization.GetString("Close"));
-        string strCalendar = ClientAPI.GetSafeJSString(Localization.GetString("Calendar"));
-        return
-            string.Format(
-                "javascript:popupCal('Cal','{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7});",
-                HttpUtility.JavaScriptStringEncode(field.ClientID),
-                HttpUtility.JavaScriptStringEncode(formatString),
-                HttpUtility.JavaScriptStringEncode(monthNameString),
-                HttpUtility.JavaScriptStringEncode(dayNameString),
-                HttpUtility.JavaScriptStringEncode(strToday),
-                HttpUtility.JavaScriptStringEncode(strClose),
-                HttpUtility.JavaScriptStringEncode(strCalendar),
-                (int)DateTimeFormatInfo.CurrentInfo.FirstDayOfWeek);
+            /* END Persian-DnnSoftware */
+
+            string strToday = ClientAPI.GetSafeJSString(Localization.GetString("Today"));
+            string strClose = ClientAPI.GetSafeJSString(Localization.GetString("Close"));
+            string strCalendar = ClientAPI.GetSafeJSString(Localization.GetString("Calendar"));
+
+            /* START Persian-DnnSoftware */
+            if (System.Globalization.CultureInfo.CurrentCulture.ToString() == "fa-IR")
+            {
+                return "javascript:displayDatePicker('" + field.ClientID + "');";
+            }
+
+            /* END Persian-DnnSoftware */
+            return
+                string.Format(
+                    "javascript:popupCal('Cal','{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7});",
+                    HttpUtility.JavaScriptStringEncode(field.ClientID),
+                    HttpUtility.JavaScriptStringEncode(formatString),
+                    HttpUtility.JavaScriptStringEncode(monthNameString),
+                    HttpUtility.JavaScriptStringEncode(dayNameString),
+                    HttpUtility.JavaScriptStringEncode(strToday),
+                    HttpUtility.JavaScriptStringEncode(strClose),
+                    HttpUtility.JavaScriptStringEncode(strCalendar),
+                    (int)DateTimeFormatInfo.CurrentInfo.FirstDayOfWeek);
+        }
     }
 }

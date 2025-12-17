@@ -10,6 +10,13 @@
     font-weight: bolder;
     color: var(--dnn-color-primary-dark, #0d569e);
   }
+  /* START Persian-DnnSoftware */
+  @if "body has class $rtl"{
+    .item-name{
+      font-family: IRANSans;
+    }
+  }
+  /* END Persian-DnnSoftware */
 }
 
 button {
@@ -30,3 +37,11 @@ dnn-collapsible {
   background-color: white;
   z-index: 1;
 }
+
+/* START Persian-DnnSoftware */
+@if "body has class $rtl"{
+  button{
+    font-family: IRANSans;
+  }
+}
+/* END Persian-DnnSoftware */

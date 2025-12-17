@@ -139,30 +139,28 @@ export class DnnRmActionsBar {
             )}
           {state.selectedItems.length > 0 &&
             // One or multiple items are currently selected
-            state.currentItems.hasDeletePermission && [
-              <dnn-action-move-items items={state.selectedItems} />,
-              <dnn-action-delete-items items={state.selectedItems} />,
-            ]}
-          {state.selectedItems.length > 0 &&
-            state.selectedItems.every(
-              (i) =>
-                i.isFolder &&
-                i.unlinkAllowedStatus &&
-                i.unlinkAllowedStatus != "false",
-            ) && <dnn-action-unlink-items items={state.selectedItems} />}
-          {state.selectedItems.length == 1 &&
-            !state.selectedItems[0].isFolder &&
-            location.protocol == "https:" && (
-              <dnn-action-copy-url items={state.selectedItems} />
-            )}
-          {state.selectedItems.length == 1 &&
-            !state.selectedItems[0].isFolder && (
-              <dnn-action-open-file item={state.selectedItems[0]} />
-            )}
-          {state.selectedItems.length == 1 &&
-            !state.selectedItems[0].isFolder && (
-              <dnn-action-download-item item={state.selectedItems[0]} />
-            )}
+            state.currentItems.hasDeletePermission &&
+            [
+              <dnn-action-move-items items={state.selectedItems}/>
+            ,
+              <dnn-action-delete-items items={state.selectedItems}/>
+            ]
+          }
+          {state.selectedItems.length > 0 && state.selectedItems.every(i => i.isFolder && i.unlinkAllowedStatus && i.unlinkAllowedStatus != "false") &&
+            <dnn-action-unlink-items items={state.selectedItems}/>
+          }
+          {/* START persian-dnnsoftware */}
+          {/* {state.selectedItems.length == 1 && !state.selectedItems[0].isFolder && location.protocol == "https:" && */}
+          {state.selectedItems.length == 1 && !state.selectedItems[0].isFolder && (location.protocol == "https:" || location.protocol == "http:" ) &&
+          /* END Persian-DnnSoftware */
+            <dnn-action-copy-url items={state.selectedItems}/>
+          }
+          {state.selectedItems.length == 1 && !state.selectedItems[0].isFolder &&
+            <dnn-action-open-file item={state.selectedItems[0]}/>
+          }
+          {state.selectedItems.length == 1 && !state.selectedItems[0].isFolder &&
+            <dnn-action-download-item item={state.selectedItems[0]}/>
+          }
         </dnn-vertical-overflow-menu>
         <div class="right-controls">
           {state.selectedItems.length > 0 && (

@@ -26,19 +26,21 @@ public class UpdateLanguagePackStep : BaseInstallationStep
         var installConfig = InstallController.Instance.GetInstallConfig();
         string culture = installConfig.InstallCulture;
 
-        if (culture.ToLowerInvariant() != "en-us")
-        {
-            try
+            /* START Persian-DnnSoftware */
+            /* if (culture.ToLowerInvariant() != "en-us") */
+            if (culture.ToLowerInvariant() != "en-us" && culture.ToLowerInvariant() != "fa-ir")
             {
-                // need apply the Licensing module after packages installed, so that we can know whats the edition of install instance. CE/PE/EE
-                var document = Config.Load();
-                var licensingNode = document.SelectSingleNode("/configuration/system.webServer/modules/add[@name='Licensing']");
-                if (licensingNode != null)
+                try
                 {
-                    var type = licensingNode.Attributes["type"].Value;
-                    var module = Reflection.CreateObject(type, null, false) as IHttpModule;
-                    module.Init(HttpContext.Current.ApplicationInstance);
-                }
+                    // need apply the Licensing module after packages installed, so that we can know whats the edition of install instance. CE/PE/EE
+                    var document = Config.Load();
+                    var licensingNode = document.SelectSingleNode("/configuration/system.webServer/modules/add[@name='Licensing']");
+                    if (licensingNode != null)
+                    {
+                        var type = licensingNode.Attributes["type"].Value;
+                        var module = Reflection.CreateObject(type, null, false) as IHttpModule;
+                        module.Init(HttpContext.Current.ApplicationInstance);
+                    }
 
                 InstallController.Instance.IsAvailableLanguagePack(culture);
             }

@@ -99,13 +99,74 @@ ul.searchSkinObjectPreview > li.searchSkinObjectPreview_group:hover {
   color: #000;
 }
 
-ul.searchSkinObjectPreview > li > a.searchSkinObjectPreview_more {
-  display: inline;
-  position: static;
-  background: none;
-  z-index: inherit;
-  width: auto;
-  height: auto;
-  text-indent: inherit;
-  float: none;
+        ul.searchSkinObjectPreview > li > a.searchSkinObjectPreview_more {
+            display: inline;
+            position: static;
+            background: none;
+            z-index: inherit;
+            width: auto;
+            height: auto;
+            text-indent: inherit;
+            float: none;
+        }
+
+
+        
+
+/* ===========   Persian-DnnSoftware   =========== */
+
+.rtl .searchInputContainer {
+    display: inline-block;
+    margin: 0 0 0 -3px;
+    position: relative;
+}
+.rtl .searchInputContainer a.dnnSearchBoxClearText {
+        display: block;
+        position: absolute;
+        right: auto;
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        background: none;
+        cursor: pointer;
+        margin: 7px 0 7px 0;
+        z-index: 20;
+    }
+
+.rtl .searchInputContainer a.dnnSearchBoxClearText.dnnShow {
+    background: url(../../../images/search/clearText.png) center center no-repeat;
+}
+
+
+.rtl ul.searchSkinObjectPreview {
+    position: absolute;
+    top: 100%;
+    right: auto;
+    left: 0;
+    background: #fff;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #c9c9c9;
+    width: 350px;
+    z-index: 200;
+    padding: 0;
+}
+
+
+.rtl ul.searchSkinObjectPreview > li {
+    padding: 6px 22px 6px 12px;
+    border-top: 1px solid #c9c9c9;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    text-transform: none;
+}
+
+.rtl ul.searchSkinObjectPreview > li > span img.userpic {
+    width: 32px;
+    height: 32px;
+    display: block;
+    float: right;
+    margin-left: 4px;
 }

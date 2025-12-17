@@ -2,8 +2,10 @@ if (typeof dnn === "undefined") {
   dnn = {};
 } //var dnn = dnn || {};
 
-// Copyright (c) .NET Foundation. All rights reserved.
-// Licensed under the MIT License. See LICENSE file in the project root for full license information.
+// DotNetNuke� - http://www.dotnetnuke.com
+// Copyright (c) 2002-2017
+// by DotNetNuke Corporation
+// All Rights Reserved
 
 (function ($, window, document, undefined) {
   "use strict";
@@ -59,8 +61,14 @@ if (typeof dnn === "undefined") {
         $.proxy(this._onMouseDownY, this),
       );
 
-      this._scrollbarXBottom = parseInt(this._$scrollbarX.css("bottom"), 10);
-      this._scrollbarYRight = parseInt(this._$scrollbarY.css("right"), 10);
+            this._scrollbarXBottom = parseInt(this._$scrollbarX.css('bottom'), 10);
+            /* START Persian-DnnSoftware */
+            if ($('body').hasClass('r' + 't' + 'l')) {
+                this._scrollbarYRight = parseInt(this._$scrollbarY.css('left'), 10);
+            } else {
+                this._scrollbarYRight = parseInt(this._$scrollbarY.css('right'), 10);
+            }
+            /* END Persian-DnnSoftware */
 
       if (this.$element.mousewheel) {
         this.$element.mousewheel($.proxy(this._onMouseWheel, this));

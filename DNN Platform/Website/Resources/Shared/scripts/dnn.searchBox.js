@@ -70,27 +70,40 @@
 
       this.realInput.val(originalVal);
 
-      var realInputRight = 50;
-      var advancedDropdown = $(".dnnSearchBox_advanced_dropdown", this.$wrap);
-      var advancedForm = $("#" + this.options.advancedId);
-      if (advancedEnabled) {
-        advancedForm.appendTo(advancedDropdown);
-        var w = $(".dnnSearchBox_advanced", this.$wrap).width();
-        var w2 = $(".dnnSearchBox_advanced_query", this.$wrap).width();
-        realInputRight = w + w2 + 50;
-        $(".dnnSearchBox_advanced_query", this.$wrap).hide();
-      }
-      this.realInput.css({
-        right: realInputRight,
-        width: wrapWidth - realInputRight - 8,
-      });
-      if (originalVal) {
-        this.realInput
-          .next()
-          .addClass("dnnShow")
-          .css({ right: realInputRight - 15 });
-      }
-    },
+            /* START Persian-DnnSoftware */
+            if ($('body').hasClass('r' + 't' + 'l')) {
+                var realInputLeft = 50;
+                var advancedDropdown = $('.dnnSearchBox_advanced_dropdown', this.$wrap);
+                var advancedForm = $('#' + this.options.advancedId);
+                if (advancedEnabled) {
+                    advancedForm.appendTo(advancedDropdown);
+                    var w = $('.dnnSearchBox_advanced', this.$wrap).width();
+                    var w2 = $('.dnnSearchBox_advanced_query', this.$wrap).width();
+                    realInputLeft = w + w2 + 50;
+                    $('.dnnSearchBox_advanced_query', this.$wrap).hide();
+                }
+                this.realInput.css({ left: realInputLeft, width: wrapWidth - realInputLeft - 8 });
+                if (originalVal) {
+                    this.realInput.next().addClass('dnnShow').css({ left: realInputLeft - 15 });
+                }
+            } else {
+                var realInputRight = 50;
+                var advancedDropdown = $('.dnnSearchBox_advanced_dropdown', this.$wrap);
+                var advancedForm = $('#' + this.options.advancedId);
+                if (advancedEnabled) {
+                    advancedForm.appendTo(advancedDropdown);
+                    var w = $('.dnnSearchBox_advanced', this.$wrap).width();
+                    var w2 = $('.dnnSearchBox_advanced_query', this.$wrap).width();
+                    realInputRight = w + w2 + 50;
+                    $('.dnnSearchBox_advanced_query', this.$wrap).hide();
+                }
+                this.realInput.css({ right: realInputRight, width: wrapWidth - realInputRight - 8 });
+                if (originalVal) {
+                    this.realInput.next().addClass('dnnShow').css({ right: realInputRight - 15 });
+                }
+            }
+            /* END Persian-DnnSoftware */
+        },    
 
     _makeUrl: function (param, service) {
       var url = this.options.previewUrl
@@ -225,67 +238,73 @@
           var k = e.keyCode || e.witch;
           if ($.inArray(k, self._ignoreKeyCodes) > -1) return;
 
-          var val = realInput.val();
-          var right = parseInt(realInput.css("right").replace("px", "")) - 15;
-          if (!val) {
-            clearTextBtn.removeClass("dnnShow");
-            // hide preview
-            $(".dnnSearchBox_preview", this.$wrap).remove();
-          } else {
-            clearTextBtn
-              .css({
-                right: right,
-              })
-              .addClass("dnnShow");
-            if (
-              self.options.enablePreview &&
-              val.length >= self.options.previewMinChars
-            ) {
-              // enable preview
-              if (self.throttle) {
-                clearTimeout(self.throttle);
-                delete self.throttle;
-              }
-              self.throttle = setTimeout(function () {
-                var service = self.options.moduleId
-                  ? $.dnnSF
-                    ? $.dnnSF(self.options.moduleId)
-                    : null
-                  : null;
-                var url = self._makeUrl(val, service);
-                if (url) {
-                  $.ajax({
-                    url: url,
-                    beforeSend: service ? service.setModuleHeaders : null,
-                    success: function (result) {
-                      if (result) self._generatePreviewTemplate(val, result);
-                    },
-                    error: function (jqXhr, textStatus, errorThrown) {
-                      if ($.isFunction(self.options.previewOnError)) {
-                        self.options.previewOnError(
-                          jqXhr,
-                          textStatus,
-                          errorThrown,
-                        );
-                      }
-                    },
-                    type: "GET",
-                    dataType: "json",
-                    contentType: "application/json",
-                  });
+                var val = realInput.val();
+                /* START Persian-DnnSoftware */
+                var right;
+                if ($('body').hasClass('r' + 't' + 'l')) {
+                    right = parseInt(realInput.css('left').replace('px', '')) - 15;
+                } else {
+                    right = parseInt(realInput.css('right').replace('px', '')) - 15;
                 }
-              }, self.options.previewDelay);
-            } else if (
-              self.options.refreshSearchResult &&
-              self.options.searchFunction &&
-              typeof self.options.searchFunction == "function" &&
-              val.length >= self.options.refreshSearchResultMinChars
-            ) {
-              // enable auto search refresh
-              if (self.throttle) {
-                clearTimeout(self.throttle);
-                delete self.throttle;
-              }
+                /* END Persian-DnnSoftware */
+                if (!val) {
+                    clearTextBtn.removeClass('dnnShow');
+                    // hide preview
+                    $('.dnnSearchBox_preview', this.$wrap).remove();
+                }
+                else {
+                    /* START Persian-DnnSoftware */
+                    if ($('body').hasClass('r' + 't' + 'l')) {
+                        clearTextBtn.css({
+                            left: right
+                        }).addClass('dnnShow');
+                    } else {
+                        clearTextBtn.css({
+                            right: right
+                        }).addClass('dnnShow');
+                    }
+                    /* END Persian-DnnSoftware */
+                    if (self.options.enablePreview &&
+                        val.length >= self.options.previewMinChars) {
+                        // enable preview
+                        if (self.throttle) {
+                            clearTimeout(self.throttle);
+                            delete self.throttle;
+                        }
+                        self.throttle = setTimeout(function () {
+
+                            var service = self.options.moduleId ? ($.dnnSF ? $.dnnSF(self.options.moduleId) : null) : null;
+                            var url = self._makeUrl(val, service);
+                            if (url) {
+                                $.ajax({
+                                    url: url,
+                                    beforeSend: service ? service.setModuleHeaders : null,
+                                    success: function (result) {
+                                        if (result)
+                                            self._generatePreviewTemplate(val, result);
+                                    },
+                                    error: function (jqXhr, textStatus, errorThrown) {
+                                        if ($.isFunction(self.options.previewOnError)) {
+                                            self.options.previewOnError(jqXhr, textStatus, errorThrown);
+                                        }
+                                    },
+                                    type: 'GET',
+                                    dataType: 'json',
+                                    contentType: "application/json"
+                                });
+                            }
+                        }, self.options.previewDelay);
+                    }
+                    else if (self.options.refreshSearchResult &&
+                        self.options.searchFunction &&
+                        typeof self.options.searchFunction == 'function' &&
+                        val.length >= self.options.refreshSearchResultMinChars) {
+                        
+                        // enable auto search refresh
+                        if (self.throttle) {
+                            clearTimeout(self.throttle);
+                            delete self.throttle;
+                        }
 
               self.throttle = setTimeout(function () {
                 self.options.searchFunction(val);

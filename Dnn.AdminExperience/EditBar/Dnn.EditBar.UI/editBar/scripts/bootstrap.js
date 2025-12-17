@@ -31,14 +31,28 @@
   var themeCss = "css/theme.css";
   var mainCss = mobi ? "css/main.mobi.css" : "css/main.css";
 
-  var hasCustomEditBarTheme = editBarSettings["editBarTheme"];
-  if (hasCustomEditBarTheme) {
-    styles.push("../../../../Portals/_default/EditBarTheme.css");
-  } else {
-    styles.push(themeCss);
-  }
+    var hasCustomEditBarTheme = editBarSettings['editBarTheme'];
+    if (hasCustomEditBarTheme){
+        /* START Persian-DnnSoftware */
+        //styles.push('../../../../Portals/_default/EditBarTheme.css');
+        if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+            styles.push('../../../../Portals/_default/EditBarTheme.rtl.css');
+        }else{
+            styles.push('../../../../Portals/_default/EditBarTheme.css');
+        }
+        /* END Persian-DnnSoftware */
+    }
+    else{
+        styles.push(themeCss);
+    }
 
-  styles.push(mainCss);
+    /* START Persian-DnnSoftware */
+    if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+        mainCss = mobi ? 'css/main.mobi.rtl.css' : 'css/main.rtl.css';
+    }
+    /* END Persian-DnnSoftware */
+    
+    styles.push(mainCss);
 
   addCssToHead(styles, version);
   addJsToBody(mainJs, version);

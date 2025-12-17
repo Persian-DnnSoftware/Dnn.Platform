@@ -73,52 +73,80 @@ class TaskHistoryItemRow extends Component {
     } else return <span>&nbsp; </span>;
   }
 
-  getStartEndDisplay() {
-    let display = "<span>&nbsp;</span>";
-    if (this.props.startDate) {
-      display = "<p>S: " + this.props.startDate + "</p>";
-    }
-    if (this.props.endDate) {
-      display += "<p>E: " + this.props.endDate + "</p>";
-    }
-    if (this.props.nextStart) {
-      display += "<p>N: " + this.props.nextStart + "</p>";
-    }
-    return (
-      <div>
-        <Html html={display} />
-      </div>
-    );
-  }
+    getStartEndDisplay() {
+        let display = "<span>&nbsp;</span>";
+        /* START Persian-DnnSoftware */
+        if (window.parent["personaBarSettings"]["culture"] === "fa-IR") {
+            if (this.props.startDate) {
+                display = "<p>شروع: " + this.getPersianDate(this.props.startDate,true) + "</p>";
+            }
+            if (this.props.endDate) {
+                display += "<p>پایان: " + this.getPersianDate(this.props.endDate,true) + "</p>";
+            }
+            if (this.props.nextStart) {
+                display += "<p>بعدی: " + this.getPersianDate(this.props.nextStart,true) + "</p>";
+            }
+        }
+        else {
 
-  render() {
-    return (
-      <div
-        className={styles.taskHistoryItemRow}
-        ref={(node) => (this.node = node)}
-      >
-        <div className="term-label-logNotes">
-          <div className="term-label-wrapper">{this.getLogNotesDisplay()}</div>
-        </div>
-        <div className="term-label-server">
-          <div className="term-label-wrapper">
-            <span>{this.props.server}&nbsp; </span>
-          </div>
-        </div>
-        <div className="term-label-elapsedTime">
-          <div className="term-label-wrapper">
-            <span>{this.props.elapsedTime}&nbsp; </span>
-          </div>
-        </div>
-        <div className="term-label-succeeded">
-          <div className="term-label-wrapper">{this.getSucceededDisplay()}</div>
-        </div>
-        <div className="term-label-startEnd">
-          <div className="term-label-wrapper">{this.getStartEndDisplay()}</div>
-        </div>
-      </div>
-    );
-  }
+            if (this.props.startDate) {
+                display = "<p>S: " + this.props.startDate + "</p>";
+            }
+            if (this.props.endDate) {
+                display += "<p>E: " + this.props.endDate + "</p>";
+            }
+            if (this.props.nextStart) {
+                display += "<p>N: " + this.props.nextStart + "</p>";
+            }
+        }
+        /* END Persian-DnnSoftware */
+        return <div dangerouslySetInnerHTML={{ __html: display }}></div>;
+    }
+
+    /* START Persian-DnnSoftware */
+    getPersianDate(date,longformat)
+    {
+        return longformat === true?new Date(date).toLocaleString("fa-IR",{
+            year:"numeric",
+            month:"2-digit",
+            day:"2-digit",
+            hour:"2-digit",
+            minute:"2-digit"
+        }).replace("،","  -  "): new Date(date).toLocaleDateString("fa-IR");
+    }
+    /* END Persian-DnnSoftware */
+    
+    render() {
+        return (
+            <div className={styles.taskHistoryItemRow} ref={node => this.node = node}>
+                <div className="term-label-logNotes">
+                    <div className="term-label-wrapper">
+                        {this.getLogNotesDisplay()}
+                    </div>
+                </div>
+                <div className="term-label-server">
+                    <div className="term-label-wrapper">
+                        <span>{this.props.server}&nbsp; </span>
+                    </div>
+                </div>
+                <div className="term-label-elapsedTime">
+                    <div className="term-label-wrapper">
+                        <span>{this.props.elapsedTime}&nbsp; </span>
+                    </div>
+                </div>
+                <div className="term-label-succeeded">
+                    <div className="term-label-wrapper">
+                        {this.getSucceededDisplay()}
+                    </div>
+                </div>
+                <div className="term-label-startEnd">
+                    <div className="term-label-wrapper">
+                        {this.getStartEndDisplay()}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 TaskHistoryItemRow.propTypes = {

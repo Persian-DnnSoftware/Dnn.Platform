@@ -123,9 +123,12 @@
     <None Include="editBar\css\SourceCodePro-Regular.ttf.woff" />
     <None Include="editBar\css\SourceCodePro-Semibold.ttf" />
     <None Include="editBar\css\SourceCodePro-Semibold.ttf.woff" />
+    <Content Include="editBar\css\editBarContainer.rtl.css" />
+    <Content Include="editBar\css\main.rtl.css" />
     <Content Include="editBar\css\QuickAddModule.css" />
     <Content Include="editBar\css\theme.css" />
     <Content Include="editBar\QuickAddModule.html" />
+    <Content Include="editBar\resources\ContentEditorManager\Styles\ContentEditor.rtl.css" />
     <Content Include="editBar\scripts\QuickAddModule.js" />
     <Content Include="Module.build">
       <SubType>Designer</SubType>

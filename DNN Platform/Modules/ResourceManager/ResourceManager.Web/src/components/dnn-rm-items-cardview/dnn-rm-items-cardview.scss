@@ -44,6 +44,14 @@
     .item-name {
       line-break: anywhere;
     }
+
+    /* START Persian-DnnSoftware */
+    @if "body has class $rtl"{
+      .item-name{
+        font-family: IRANSans;
+      }
+    }
+    /* END Persian-DnnSoftware */
   }
 }
 dnn-collapsible {

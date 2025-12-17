@@ -37,15 +37,21 @@ class UserRow extends Component {
       return "-";
     }
 
-    return monthValue + "/" + dayValue + "/" + yearValue;
-  }
-  onStartTimeClick(userRole, index) {
-    this.setState({
-      editIndex: index,
-      editCommand: "startTime",
-      isCalendarVisible: true,
-    });
-  }
+        /* START Persian-DnnSoftware */
+        if (window.parent["personaBarSettings"]["culture"] === "fa-IR") {
+            return new Date(date).toLocaleString("fa-IR",{
+                year:"numeric",
+                month:"2-digit",
+                day:"2-digit"
+            }).replace("،","  -  ");
+        }
+        /* END Persian-DnnSoftware */
+        
+        return monthValue + "/" + dayValue + "/" + yearValue;
+    }
+    onStartTimeClick(userRole, index) {
+        this.setState({ editIndex: index, editCommand: "startTime", isCalendarVisible: true });
+    }
 
   onExpiresTimeClick(userRole, index) {
     this.setState({

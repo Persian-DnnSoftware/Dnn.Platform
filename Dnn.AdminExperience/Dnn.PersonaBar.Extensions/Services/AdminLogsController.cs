@@ -90,18 +90,21 @@ public class AdminLogsController : PersonaBarApiController
                 pageIndex,
                 ref totalRecords);
 
-            var items = logItems.Select(v => new
-            {
-                v.LogGUID,
-                v.LogFileID,
-                this.controller.GetMyLogType(v.LogTypeKey).LogTypeCSSClass,
-                this.controller.GetMyLogType(v.LogTypeKey).LogTypeFriendlyName,
-                v.LogUserName,
-                v.LogPortalName,
-                LogCreateDate = v.LogCreateDate.ToString("G", CultureInfo.InvariantCulture),
-                v.LogProperties.Summary,
-                LogProperties = this.controller.GetPropertiesText(v),
-            });
+                var items = logItems.Select(v => new
+                {
+                    v.LogGUID,
+                    v.LogFileID,
+                    this.controller.GetMyLogType(v.LogTypeKey).LogTypeCSSClass,
+                    this.controller.GetMyLogType(v.LogTypeKey).LogTypeFriendlyName,
+                    v.LogUserName,
+                    v.LogPortalName,
+                    /* START Persian-DnnSoftware */
+                    /* LogCreateDate = v.LogCreateDate.ToString("G", CultureInfo.InvariantCulture), */
+                    LogCreateDate = this.PortalSettings.CultureCode == "fa-IR" ? v.LogCreateDate.ToString("G", DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo("fa-IR")) : v.LogCreateDate.ToString("G", CultureInfo.InvariantCulture),
+                    /* END Persian-DnnSoftware */
+                    v.LogProperties.Summary,
+                    LogProperties = this.controller.GetPropertiesText(v),
+                });
 
             var response = new
             {
