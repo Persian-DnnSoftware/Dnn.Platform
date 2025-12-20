@@ -428,27 +428,27 @@ public partial class ClientResourceManager
             return;
         }
 
-            /* START Persian-DnnSoftware */
-            /* if ((System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http")) //Comment for 404 Page Bug Fix, CurrentCulture => CurrentUICulture */
-            if ((System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http"))
+        /* START Persian-DnnSoftware */
+        /* if ((System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http")) //Comment for 404 Page Bug Fix, CurrentCulture => CurrentUICulture */
+        if ((System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft && filePath.Contains(".css")) && !filePath.Contains("http"))
+        {
+            string locfile = filePath.Replace(".css", ".rtl.css");
+            if (FileExists(page, locfile))
             {
-                string locfile = filePath.Replace(".css", ".rtl.css");
-                if (FileExists(page, locfile))
-                {
-                    filePath = locfile;
-                }
+                filePath = locfile;
             }
+        }
 
-            /* END Persian-DnnSoftware */
+        /* END Persian-DnnSoftware */
 
-            var include = new DnnCssInclude { ForceProvider = provider, Priority = priority, FilePath = filePath, Name = name, Version = version };
-            if (htmlAttributes != null)
+        var include = new DnnCssInclude { ForceProvider = provider, Priority = priority, FilePath = filePath, Name = name, Version = version };
+        if (htmlAttributes != null)
+        {
+            foreach (var attribute in htmlAttributes)
             {
-                foreach (var attribute in htmlAttributes)
-                {
-                    include.HtmlAttributes[attribute.Key] = attribute.Value;
-                }
+                include.HtmlAttributes[attribute.Key] = attribute.Value;
             }
+        }
 
         page.FindControl("ClientResourceIncludes")?.Controls.Add(include);
     }
