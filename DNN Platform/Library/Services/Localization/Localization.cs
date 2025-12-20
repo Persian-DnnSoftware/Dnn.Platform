@@ -146,16 +146,16 @@ public partial class Localization
         }
     }
 
-        public static string SystemTimeZone
+    public static string SystemTimeZone
+    {
+        get
         {
-            get
-            {
-                /* START Persian-DnnSoftware */
-                /* return "Pacific Standard Time"; */
-                return "Iran Standard Time";
-                /* END Persian-DnnSoftware */
-            }
+            /* START Persian-DnnSoftware */
+            /* return "Pacific Standard Time"; */
+            return "Iran Standard Time";
+            /* END Persian-DnnSoftware */
         }
+    }
 
     /// <summary>
     /// Gets or sets the KeyName property returns and caches the name of the key attribute used to lookup resources.
@@ -611,12 +611,12 @@ public partial class Localization
             pageCulture = new CultureInfo(SystemLocale);
         }
 
-            // finally set the cookie
-            /* START Persian-DnnSoftware */
-            /* return pageCulture; */
-            return Persian.PersianController.NewCultureInfo(pageCulture);
-            /* END Persian-DnnSoftware */
-        }
+        // finally set the cookie
+        /* START Persian-DnnSoftware */
+        /* return pageCulture; */
+        return Persian.PersianController.NewCultureInfo(pageCulture);
+        /* END Persian-DnnSoftware */
+    }
 
     /// <summary>Tries to get a valid language from the browser preferences.</summary>
     /// <param name="portalId">Id of the current portal.</param>
@@ -1533,63 +1533,63 @@ public partial class Localization
         return locale != null ? locale.LanguageId : Null.NullInteger;
     }
 
-        public string GetFixedCurrency(decimal expression, string culture, int numDigitsAfterDecimal)
-        {
-            string oldCurrentCulture = this.CurrentUICulture;
-            /* START Persian-DnnSoftware */
-            /* var newCulture = new CultureInfo(culture); */
-            var newCulture = Persian.PersianController.NewCultureInfo(culture);
-            /* END Persian-DnnSoftware */
-            Thread.CurrentThread.CurrentUICulture = newCulture;
-            string currencyStr = expression.ToString(newCulture.NumberFormat.CurrencySymbol);
-            /* START Persian-DnnSoftware */
-            /* var oldCulture = new CultureInfo(oldCurrentCulture); */
-            var oldCulture = Persian.PersianController.NewCultureInfo(oldCurrentCulture);
-            /* END Persian-DnnSoftware */
-            Thread.CurrentThread.CurrentUICulture = oldCulture;
-            return currencyStr;
-        }
+    public string GetFixedCurrency(decimal expression, string culture, int numDigitsAfterDecimal)
+    {
+        string oldCurrentCulture = this.CurrentUICulture;
+        /* START Persian-DnnSoftware */
+        /* var newCulture = new CultureInfo(culture); */
+        var newCulture = Persian.PersianController.NewCultureInfo(culture);
+        /* END Persian-DnnSoftware */
+        Thread.CurrentThread.CurrentUICulture = newCulture;
+        string currencyStr = expression.ToString(newCulture.NumberFormat.CurrencySymbol);
+        /* START Persian-DnnSoftware */
+        /* var oldCulture = new CultureInfo(oldCurrentCulture); */
+        var oldCulture = Persian.PersianController.NewCultureInfo(oldCurrentCulture);
+        /* END Persian-DnnSoftware */
+        Thread.CurrentThread.CurrentUICulture = oldCulture;
+        return currencyStr;
+    }
 
-        public string GetFixedDate(DateTime expression, string culture)
-        {
-            string oldCurrentCulture = this.CurrentUICulture;
-            /* START Persian-DnnSoftware */
-            /* var newCulture = new CultureInfo(culture); */
-            var newCulture = Persian.PersianController.NewCultureInfo(culture);
-            /* END Persian-DnnSoftware */
-            Thread.CurrentThread.CurrentUICulture = newCulture;
-            string dateStr = expression.ToString(newCulture.DateTimeFormat.FullDateTimePattern);
-            /* START Persian-DnnSoftware */
-            /* var oldCulture = new CultureInfo(oldCurrentCulture); */
-            var oldCulture = Persian.PersianController.NewCultureInfo(oldCurrentCulture);
-            /* END Persian-DnnSoftware */
-            Thread.CurrentThread.CurrentUICulture = oldCulture;
-            return dateStr;
-        }
+    public string GetFixedDate(DateTime expression, string culture)
+    {
+        string oldCurrentCulture = this.CurrentUICulture;
+        /* START Persian-DnnSoftware */
+        /* var newCulture = new CultureInfo(culture); */
+        var newCulture = Persian.PersianController.NewCultureInfo(culture);
+        /* END Persian-DnnSoftware */
+        Thread.CurrentThread.CurrentUICulture = newCulture;
+        string dateStr = expression.ToString(newCulture.DateTimeFormat.FullDateTimePattern);
+        /* START Persian-DnnSoftware */
+        /* var oldCulture = new CultureInfo(oldCurrentCulture); */
+        var oldCulture = Persian.PersianController.NewCultureInfo(oldCurrentCulture);
+        /* END Persian-DnnSoftware */
+        Thread.CurrentThread.CurrentUICulture = oldCulture;
+        return dateStr;
+    }
 
-        /// <summary>
-        /// Parses the language parameter into a valid and enabled language in the current portal.
-        /// If an exact match is not found (language-region), it will try to find a match for the language only.
-        /// Ex: requested locale is "en-GB", requested language is "en", enabled locale is "en-US", so "en" is a match for "en-US".
-        /// </summary>
-        /// <param name="portalId">Id of current portal.</param>
-        /// <param name="language">Language to be parsed.</param>
-        /// <returns>A valid and enabled CultureInfo that matches the language passed if any.</returns>
-        internal static CultureInfo GetCultureFromString(int portalId, string language)
+    /// <summary>
+    /// Parses the language parameter into a valid and enabled language in the current portal.
+    /// If an exact match is not found (language-region), it will try to find a match for the language only.
+    /// Ex: requested locale is "en-GB", requested language is "en", enabled locale is "en-US", so "en" is a match for "en-US".
+    /// </summary>
+    /// <param name="portalId">Id of current portal.</param>
+    /// <param name="language">Language to be parsed.</param>
+    /// <returns>A valid and enabled CultureInfo that matches the language passed if any.</returns>
+    internal static CultureInfo GetCultureFromString(int portalId, string language)
+    {
+        CultureInfo culture = null;
+        if (!string.IsNullOrEmpty(language))
         {
-            CultureInfo culture = null;
-            if (!string.IsNullOrEmpty(language))
+            if (LocaleController.Instance.IsEnabled(ref language, portalId))
             {
-                if (LocaleController.Instance.IsEnabled(ref language, portalId))
-                {
-                    /* START Persian-DnnSoftware */
-                    /* culture = new CultureInfo(language); */
-                    culture = Persian.PersianController.NewCultureInfo(language);
-                    /* END Persian-DnnSoftware */
-                }
-                else
-                {
-                    string preferredLanguage = language.Split('-')[0];
+                /* START Persian-DnnSoftware */
+                /* culture = new CultureInfo(language); */
+                culture = Persian.PersianController.NewCultureInfo(language);
+                /* END Persian-DnnSoftware */
+            }
+            else
+            {
+                string preferredLanguage = language.Split('-')[0];
 
                 Dictionary<string, Locale> enabledLocales = new Dictionary<string, Locale>();
                 if (portalId > Null.NullInteger)
@@ -1597,19 +1597,19 @@ public partial class Localization
                     enabledLocales = LocaleController.Instance.GetLocales(portalId);
                 }
 
-                    foreach (string localeCode in enabledLocales.Keys)
+                foreach (string localeCode in enabledLocales.Keys)
+                {
+                    if (localeCode.Split('-')[0] == preferredLanguage.Split('-')[0])
                     {
-                        if (localeCode.Split('-')[0] == preferredLanguage.Split('-')[0])
-                        {
-                            /* START Persian-DnnSoftware */
-                            /* culture = new CultureInfo(localeCode); */
-                            culture = Persian.PersianController.NewCultureInfo(localeCode);
-                            /* END Persian-DnnSoftware */
-                            break;
-                        }
+                        /* START Persian-DnnSoftware */
+                        /* culture = new CultureInfo(localeCode); */
+                        culture = Persian.PersianController.NewCultureInfo(localeCode);
+                        /* END Persian-DnnSoftware */
+                        break;
                     }
                 }
             }
+        }
 
         return culture;
     }
@@ -1873,41 +1873,41 @@ public partial class Localization
         }
     }
 
-        /// <summary>Tries to get a valid language from the portal default preferences.</summary>
-        /// <param name="portalSettings">Current PortalSettings.</param>
-        /// <returns>A valid CultureInfo if any is found.</returns>
-        private static CultureInfo GetCultureFromPortal(IPortalSettings portalSettings)
+    /// <summary>Tries to get a valid language from the portal default preferences.</summary>
+    /// <param name="portalSettings">Current PortalSettings.</param>
+    /// <returns>A valid CultureInfo if any is found.</returns>
+    private static CultureInfo GetCultureFromPortal(IPortalSettings portalSettings)
+    {
+        CultureInfo culture = null;
+        if (!string.IsNullOrEmpty(portalSettings.DefaultLanguage))
         {
-            CultureInfo culture = null;
-            if (!string.IsNullOrEmpty(portalSettings.DefaultLanguage))
+            // As the portal default language can never be disabled, we know this language is available and enabled
+            /* START Persian-DnnSoftware */
+            /* culture = new CultureInfo(portalSettings.DefaultLanguage); */
+            culture = Persian.PersianController.NewCultureInfo(portalSettings.DefaultLanguage);
+            /* END Persian-DnnSoftware */
+        }
+        else
+        {
+            // Get the first enabled locale on the portal
+            Dictionary<string, Locale> enabledLocales = new Dictionary<string, Locale>();
+            if (portalSettings.PortalId > Null.NullInteger)
             {
-                // As the portal default language can never be disabled, we know this language is available and enabled
-                /* START Persian-DnnSoftware */
-                /* culture = new CultureInfo(portalSettings.DefaultLanguage); */
-                culture = Persian.PersianController.NewCultureInfo(portalSettings.DefaultLanguage);
-                /* END Persian-DnnSoftware */
+                enabledLocales = LocaleController.Instance.GetLocales(portalSettings.PortalId);
             }
-            else
-            {
-                // Get the first enabled locale on the portal
-                Dictionary<string, Locale> enabledLocales = new Dictionary<string, Locale>();
-                if (portalSettings.PortalId > Null.NullInteger)
-                {
-                    enabledLocales = LocaleController.Instance.GetLocales(portalSettings.PortalId);
-                }
 
-                if (enabledLocales.Count > 0)
+            if (enabledLocales.Count > 0)
+            {
+                foreach (string localeCode in enabledLocales.Keys)
                 {
-                    foreach (string localeCode in enabledLocales.Keys)
-                    {
-                        /* START Persian-DnnSoftware */
-                        /* culture = new CultureInfo(localeCode); */
-                        culture = Persian.PersianController.NewCultureInfo(localeCode);
-                        /* END Persian-DnnSoftware */
-                        break;
-                    }
+                    /* START Persian-DnnSoftware */
+                    /* culture = new CultureInfo(localeCode); */
+                    culture = Persian.PersianController.NewCultureInfo(localeCode);
+                    /* END Persian-DnnSoftware */
+                    break;
                 }
             }
+        }
 
         return culture;
     }

@@ -1,6 +1,7 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information
+
 namespace DotNetNuke.Entities.Urls;
 
 using System;
@@ -487,21 +488,21 @@ public class AdvancedUrlRewriter : UrlRewriterBase
             }
         }
 
-            if (context != null)
+        if (context != null)
+        {
+            /* START Persian-DnnSoftware */
+            /* 404 Page RLT Bug Fix */
+            var portalInfo = PortalController.Instance.GetPortal(Host.HostPortalID);
+            if (portalInfo.CultureCode == "fa-IR")
             {
-                /* START Persian-DnnSoftware */
-                /* 404 Page RLT Bug Fix */
-                var portalInfo = PortalController.Instance.GetPortal(Host.HostPortalID);
-                if (portalInfo.CultureCode == "fa-IR")
-                {
-                    var newCulture = Services.Localization.Persian.PersianController.NewCultureInfo(portalInfo.CultureCode);
-                    System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
-                }
+                var newCulture = Services.Localization.Persian.PersianController.NewCultureInfo(portalInfo.CultureCode);
+                System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+            }
 
-                /* END Persian-DnnSoftware */
-                HttpRequest request = context.Request;
-                HttpResponse response = context.Response;
-                HttpServerUtility server = context.Server;
+            /* END Persian-DnnSoftware */
+            HttpRequest request = context.Request;
+            HttpResponse response = context.Response;
+            HttpServerUtility server = context.Server;
 
             const string errorPageHtmlHeader = @"<html><head><title>{0}</title></head><body>";
             const string errorPageHtmlFooter = @"</body></html>";
@@ -770,31 +771,31 @@ public class AdvancedUrlRewriter : UrlRewriterBase
 
                                 response.TrySkipIisCustomErrors = true;
 
-                                    // 881 : spoof the basePage object so that the client dependency framework
-                                    // is satisfied it's working with a page-based handler
-                                    /* START Persian-DnnSoftware */
-                                    /* 404 Page RLT Bug Fix */
-                                    /* IHttpHandler spoofPage = new CDefault(); */
-                                    var spoofPage = new CDefault();
-                                    if (portalInfo.CultureCode == "fa-IR")
-                                    {
-                                        spoofPage.Culture = "fa-IR";
-                                    }
-
-                                    /* END Persian-DnnSoftware */
-                                    context.Handler = spoofPage;
-                                    server.Transfer("~/" + errUrl, true);
-                                }
-                                else
+                                // 881 : spoof the basePage object so that the client dependency framework
+                                // is satisfied it's working with a page-based handler
+                                /* START Persian-DnnSoftware */
+                                /* 404 Page RLT Bug Fix */
+                                /* IHttpHandler spoofPage = new CDefault(); */
+                                var spoofPage = new CDefault();
+                                if (portalInfo.CultureCode == "fa-IR")
                                 {
-                                    context.RewritePath("~/Default.aspx", false);
-                                    response.TrySkipIisCustomErrors = true;
-                                    response.Status = "404 Not Found";
-                                    response.StatusCode = 404;
+                                    spoofPage.Culture = "fa-IR";
                                 }
+
+                                /* END Persian-DnnSoftware */
+                                context.Handler = spoofPage;
+                                server.Transfer("~/" + errUrl, true);
+                            }
+                            else
+                            {
+                                context.RewritePath("~/Default.aspx", false);
+                                response.TrySkipIisCustomErrors = true;
+                                response.Status = "404 Not Found";
+                                response.StatusCode = 404;
                             }
                         }
                     }
+                }
 
                 // 912 : change to new if statement to handle cases where the TabId404 couldn't be handled correctly
                 if (unhandled404)
@@ -1401,52 +1402,52 @@ public class AdvancedUrlRewriter : UrlRewriterBase
         return MakeUrlWithAlias(requestUri, alias.HTTPAlias);
     }
 
-        /// <summary>Determines if this is a request from an install / upgrade url.</summary>
-        /// <param name="physicalPath"></param>
-        /// <param name="refererPath"></param>
-        /// <param name="requestedDomain"></param>
-        /// <param name="refererDomain"></param>
-        /// <returns><see langword="true"/> if the request is for an install URL, otherwise <see langword="false"/>.</returns>
-        /// <remarks>
-        /// //875 : cater for the upgradewizard.aspx Url that is new to DNN 6.1.
-        /// </remarks>
-        private static bool IgnoreRequestForInstall(string physicalPath, string refererPath, string requestedDomain, string refererDomain)
+    /// <summary>Determines if this is a request from an install / upgrade url.</summary>
+    /// <param name="physicalPath"></param>
+    /// <param name="refererPath"></param>
+    /// <param name="requestedDomain"></param>
+    /// <param name="refererDomain"></param>
+    /// <returns><see langword="true"/> if the request is for an install URL, otherwise <see langword="false"/>.</returns>
+    /// <remarks>
+    /// //875 : cater for the upgradewizard.aspx Url that is new to DNN 6.1.
+    /// </remarks>
+    private static bool IgnoreRequestForInstall(string physicalPath, string refererPath, string requestedDomain, string refererDomain)
+    {
+        /* START Persian-DnnSoftware */
+        try
         {
-            /* START Persian-DnnSoftware */
-            try
-            {
-                /* END Persian-DnnSoftware */
-                if (physicalPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
-                || physicalPath.EndsWith("installwizard.aspx", true, CultureInfo.InvariantCulture)
-                || physicalPath.EndsWith("upgradewizard.aspx", true, CultureInfo.InvariantCulture)
-                || Globals.Status == Globals.UpgradeStatus.Install
-                || Globals.Status == Globals.UpgradeStatus.Upgrade)
-                {
-                    return true;
-                }
-
-                // 954 : DNN 7.0 compatibility
-                // check for /default.aspx which is default Url launched from the Upgrade/Install wizard page
-                // 961 : check domain as well as path for the referer
-                if (physicalPath.EndsWith(Globals.glbDefaultPage, true, CultureInfo.InvariantCulture) == false
-                && refererPath != null
-                && string.Compare(requestedDomain, refererDomain, StringComparison.OrdinalIgnoreCase) == 0
-                && (refererPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
-                    || refererPath.EndsWith("installwizard.aspx", true, CultureInfo.InvariantCulture)
-                    || refererPath.EndsWith("upgradewizard.aspx", true, CultureInfo.InvariantCulture)))
-                {
-                    return true;
-                }
-
-                /* START Persian-DnnSoftware */
-            }
-            catch (Exception)
-            {
-            }
-
             /* END Persian-DnnSoftware */
-            return false;
+            if (physicalPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
+            || physicalPath.EndsWith("installwizard.aspx", true, CultureInfo.InvariantCulture)
+            || physicalPath.EndsWith("upgradewizard.aspx", true, CultureInfo.InvariantCulture)
+            || Globals.Status == Globals.UpgradeStatus.Install
+            || Globals.Status == Globals.UpgradeStatus.Upgrade)
+            {
+                return true;
+            }
+
+            // 954 : DNN 7.0 compatibility
+            // check for /default.aspx which is default Url launched from the Upgrade/Install wizard page
+            // 961 : check domain as well as path for the referer
+            if (physicalPath.EndsWith(Globals.glbDefaultPage, true, CultureInfo.InvariantCulture) == false
+            && refererPath != null
+            && string.Compare(requestedDomain, refererDomain, StringComparison.OrdinalIgnoreCase) == 0
+            && (refererPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
+                || refererPath.EndsWith("installwizard.aspx", true, CultureInfo.InvariantCulture)
+                || refererPath.EndsWith("upgradewizard.aspx", true, CultureInfo.InvariantCulture)))
+            {
+                return true;
+            }
+
+            /* START Persian-DnnSoftware */
         }
+        catch (Exception)
+        {
+        }
+
+        /* END Persian-DnnSoftware */
+        return false;
+    }
 
     private static bool IgnoreRequestForWebServer(string requestedPath)
     {
@@ -3141,27 +3142,26 @@ public class AdvancedUrlRewriter : UrlRewriterBase
         HttpRequest request = app.Request;
         HttpServerUtility server = app.Server;
 
-            // 675 : unnecessarily strict url validation
-            // URL validation
-            // check for ".." escape characters commonly used by hackers to traverse the folder tree on the server
-            // the application should always use the exact relative location of the resource it is requesting
-            /* START Persian-DnnSoftware */
-            var regx = new Regex("[\\\\/]\\.\\.[\\\\/]", RegexOptions.Compiled);
-            string url = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? string.Empty;
-            if (!regx.Match(request.Url.AbsolutePath).Success && !regx.Match(url).Success)
-            {
-                return;
-            }
-
-            app.Context.Response.Redirect(app.Context.Request.Url.Host.ToString(), true);
-
-            // var strURL = request.Url.AbsolutePath;
-            // var strDoubleDecodeURL = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? string.Empty;
-            // if (UrlSlashesRegex.Match(strURL).Success || UrlSlashesRegex.Match(strDoubleDecodeURL).Success)
-            // {
-            //    throw new HttpException(404, "Not Found");
-            // }
-            /* END Persian-DnnSoftware */
+        // 675 : unnecessarily strict url validation
+        // URL validation
+        // check for ".." escape characters commonly used by hackers to traverse the folder tree on the server
+        // the application should always use the exact relative location of the resource it is requesting
+        /* START Persian-DnnSoftware */
+        var regx = new Regex("[\\\\/]\\.\\.[\\\\/]", RegexOptions.Compiled);
+        string url = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? string.Empty;
+        if (!regx.Match(request.Url.AbsolutePath).Success && !regx.Match(url).Success)
+        {
+            return;
         }
+
+        app.Context.Response.Redirect(app.Context.Request.Url.Host.ToString(), true);
+
+        // var strURL = request.Url.AbsolutePath;
+        // var strDoubleDecodeURL = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? string.Empty;
+        // if (UrlSlashesRegex.Match(strURL).Success || UrlSlashesRegex.Match(strDoubleDecodeURL).Success)
+        // {
+        //    throw new HttpException(404, "Not Found");
+        // }
+        /* END Persian-DnnSoftware */
     }
 }

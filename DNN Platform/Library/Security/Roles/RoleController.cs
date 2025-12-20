@@ -641,19 +641,19 @@ public partial class RoleController : ServiceLocator<IRoleController, RoleContro
                     preferredLocale = portalSettings.DefaultLanguage;
                 }
 
-                    /* START Persian-DnnSoftware */
-                    /* var ci = new CultureInfo(preferredLocale); */
-                    var ci = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(preferredLocale);
-                    /* END Persian-DnnSoftware */
-                    UserRoleInfo objUserRole = RoleController.Instance.GetUserRole(portalSettings.PortalId, objUser.UserID, objRole.RoleID);
-                    custom.Add(Null.IsNull(objUserRole.EffectiveDate)
-                                   ? DateTime.Today.ToString("g", ci)
-                                   : objUserRole.EffectiveDate.ToString("g", ci));
-                    custom.Add(Null.IsNull(objUserRole.ExpiryDate) ? "-" : objUserRole.ExpiryDate.ToString("g", ci));
-                    break;
-                case UserRoleActions.Delete:
-                    custom.Add(string.Empty);
-                    break;
+                /* START Persian-DnnSoftware */
+                /* var ci = new CultureInfo(preferredLocale); */
+                var ci = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(preferredLocale);
+                /* END Persian-DnnSoftware */
+                UserRoleInfo objUserRole = RoleController.Instance.GetUserRole(portalSettings.PortalId, objUser.UserID, objRole.RoleID);
+                custom.Add(Null.IsNull(objUserRole.EffectiveDate)
+                                ? DateTime.Today.ToString("g", ci)
+                                : objUserRole.EffectiveDate.ToString("g", ci));
+                custom.Add(Null.IsNull(objUserRole.ExpiryDate) ? "-" : objUserRole.ExpiryDate.ToString("g", ci));
+                break;
+            case UserRoleActions.Delete:
+                custom.Add(string.Empty);
+                break;
             }
 
         var message = new Message

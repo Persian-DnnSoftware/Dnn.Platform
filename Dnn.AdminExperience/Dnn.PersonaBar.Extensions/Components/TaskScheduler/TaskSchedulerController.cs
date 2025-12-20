@@ -9,85 +9,85 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 
-    using DotNetNuke.Abstractions.Application;
-    using DotNetNuke.Common;
-    using DotNetNuke.Common.Utilities;
-    using DotNetNuke.Entities.Portals;
-    using DotNetNuke.Instrumentation;
-    using DotNetNuke.Services.Localization;
-    using DotNetNuke.Services.Scheduling;
-    using Microsoft.Extensions.DependencyInjection;
+using DotNetNuke.Abstractions.Application;
+using DotNetNuke.Common;
+using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Portals;
+using DotNetNuke.Instrumentation;
+using DotNetNuke.Services.Localization;
+using DotNetNuke.Services.Scheduling;
+using Microsoft.Extensions.DependencyInjection;
 
 public class TaskSchedulerController
 {
     private static readonly string SchedulersToRunOnSameWebServerKey = "SchedulersToRunOnSameWebServer";
     private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(TaskSchedulerController));
 
-        private string LocalResourcesFile
+    private string LocalResourcesFile
+    {
+        get
         {
-            get
+            /* START Persian-DnnSoftware */
+            if (PortalController.Instance.GetCurrentPortalSettings().CultureCode != "en-US")
             {
-                /* START Persian-DnnSoftware */
-                if (PortalController.Instance.GetCurrentPortalSettings().CultureCode != "en-US")
-                {
-                    return Path.Combine($"~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.{PortalController.Instance.GetCurrentPortalSettings().CultureCode}.resx");
-                }
-
-                /* END Persian-DnnSoftware */
-                return Path.Combine("~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.resx");
+                return Path.Combine($"~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.{PortalController.Instance.GetCurrentPortalSettings().CultureCode}.resx");
             }
-        }
 
-        public string GetTimeLapse(int timeLapse, string timeLapseMeasurement)
+            /* END Persian-DnnSoftware */
+            return Path.Combine("~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.resx");
+        }
+    }
+
+    public string GetTimeLapse(int timeLapse, string timeLapseMeasurement)
+    {
+        if (timeLapse != Null.NullInteger)
         {
-            if (timeLapse != Null.NullInteger)
+            var str = Null.NullString;
+            var strPrefix = Localization.GetString("TimeLapsePrefix", this.LocalResourcesFile);
+            var strSec = Localization.GetString("Second", this.LocalResourcesFile);
+            var strMn = Localization.GetString("Minute", this.LocalResourcesFile);
+            var strHour = Localization.GetString("Hour", this.LocalResourcesFile);
+            var strDay = Localization.GetString("Day", this.LocalResourcesFile);
+            var strWeek = Localization.GetString("Week", this.LocalResourcesFile);
+            var strMonth = Localization.GetString("Month", this.LocalResourcesFile);
+            var strYear = Localization.GetString("Year", this.LocalResourcesFile);
+            /* START Persian-DnnSoftware */
+            Localization.SetThreadCultures(new CultureInfo(PortalController.Instance.GetCurrentPortalSettings().CultureCode), PortalController.Instance.GetCurrentPortalSettings());
+            /* END Persian-DnnSoftware */
+            var strSecs = Localization.GetString("Seconds");
+            var strMns = Localization.GetString("Minutes");
+            var strHours = Localization.GetString("Hours");
+            var strDays = Localization.GetString("Days");
+            var strWeeks = Localization.GetString("Weeks");
+            var strMonths = Localization.GetString("Months");
+            var strYears = Localization.GetString("Years");
+            switch (timeLapseMeasurement)
             {
-                var str = Null.NullString;
-                var strPrefix = Localization.GetString("TimeLapsePrefix", this.LocalResourcesFile);
-                var strSec = Localization.GetString("Second", this.LocalResourcesFile);
-                var strMn = Localization.GetString("Minute", this.LocalResourcesFile);
-                var strHour = Localization.GetString("Hour", this.LocalResourcesFile);
-                var strDay = Localization.GetString("Day", this.LocalResourcesFile);
-                var strWeek = Localization.GetString("Week", this.LocalResourcesFile);
-                var strMonth = Localization.GetString("Month", this.LocalResourcesFile);
-                var strYear = Localization.GetString("Year", this.LocalResourcesFile);
-                /* START Persian-DnnSoftware */
-                Localization.SetThreadCultures(new CultureInfo(PortalController.Instance.GetCurrentPortalSettings().CultureCode), PortalController.Instance.GetCurrentPortalSettings());
-                /* END Persian-DnnSoftware */
-                var strSecs = Localization.GetString("Seconds");
-                var strMns = Localization.GetString("Minutes");
-                var strHours = Localization.GetString("Hours");
-                var strDays = Localization.GetString("Days");
-                var strWeeks = Localization.GetString("Weeks");
-                var strMonths = Localization.GetString("Months");
-                var strYears = Localization.GetString("Years");
-                switch (timeLapseMeasurement)
-                {
-                    case "s":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strSecs : strSec);
-                        break;
-                    case "m":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strMns : strMn);
-                        break;
-                    case "h":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strHours : strHour);
-                        break;
-                    case "d":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strDays : strDay);
-                        break;
-                    case "w":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strWeeks : strWeek);
-                        break;
-                    case "mo":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strMonths : strMonth);
-                        break;
-                    case "y":
-                        str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strYears : strYear);
-                        break;
-                }
+                case "s":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strSecs : strSec);
+                    break;
+                case "m":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strMns : strMn);
+                    break;
+                case "h":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strHours : strHour);
+                    break;
+                case "d":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strDays : strDay);
+                    break;
+                case "w":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strWeeks : strWeek);
+                    break;
+                case "mo":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strMonths : strMonth);
+                    break;
+                case "y":
+                    str = strPrefix + " " + timeLapse + " " + (timeLapse > 1 ? strYears : strYear);
+                    break;
+            }
 
             return str;
-        }
+    }
 
         return Localization.GetString("n/a", this.LocalResourcesFile);
     }

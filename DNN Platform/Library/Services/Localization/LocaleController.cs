@@ -46,16 +46,16 @@ public class LocaleController : ComponentBase<ILocaleController, LocaleControlle
             .All(languagePack => languagePack.LanguageID != languageId);
     }
 
-        /// <summary>Gets the cultures from local list.</summary>
-        /// <param name="locales">The locales.</param>
-        /// <returns>culture list.</returns>
-        public List<CultureInfo> GetCultures(Dictionary<string, Locale> locales)
-        {
-            /* START Persian-DnnSoftware */
-            /* return locales.Values.Select(locale => new CultureInfo(locale.Code)).ToList(); */
-            return locales.Values.Select(locale => Persian.PersianController.NewCultureInfo(locale.Code)).ToList();
-            /* END Persian-DnnSoftware */
-        }
+    /// <summary>Gets the cultures from local list.</summary>
+    /// <param name="locales">The locales.</param>
+    /// <returns>culture list.</returns>
+    public List<CultureInfo> GetCultures(Dictionary<string, Locale> locales)
+    {
+        /* START Persian-DnnSoftware */
+        /* return locales.Values.Select(locale => new CultureInfo(locale.Code)).ToList(); */
+        return locales.Values.Select(locale => Persian.PersianController.NewCultureInfo(locale.Code)).ToList();
+        /* END Persian-DnnSoftware */
+    }
 
     /// <summary>Gets the current locale for current request to the portal.</summary>
     /// <param name="portalId">The portal id.</param>

@@ -43,15 +43,15 @@ public abstract class BaseTokenReplace
             return this.language;
         }
 
-            set
-            {
-                this.language = value;
-                /* START Persian-DnnSoftware */
-                /* this.formatProvider = new CultureInfo(this.language); */
-                this.formatProvider = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(this.language);
-                /* END Persian-DnnSoftware */
-            }
+        set
+        {
+            this.language = value;
+            /* START Persian-DnnSoftware */
+            /* this.formatProvider = new CultureInfo(this.language); */
+            this.formatProvider = DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(this.language);
+            /* END Persian-DnnSoftware */
         }
+    }
 
     /// <summary>Gets the Format provider as Culture info from stored language or current culture.</summary>
     /// <value>An CultureInfo.</value>

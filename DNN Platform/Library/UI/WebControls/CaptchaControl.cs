@@ -26,18 +26,18 @@ using DotNetNuke.Services.Localization;
 
 using Image = System.Web.UI.WebControls.Image;
 
-    /// <summary>The CaptchaControl control provides a Captcha Challenge control.</summary>
-    [ToolboxData("<{0}:CaptchaControl Runat=\"server\" CaptchaHeight=\"100px\" CaptchaWidth=\"300px\" />")]
-    public class CaptchaControl : WebControl, INamingContainer, IPostBackDataHandler
+/// <summary>The CaptchaControl control provides a Captcha Challenge control.</summary>
+[ToolboxData("<{0}:CaptchaControl Runat=\"server\" CaptchaHeight=\"100px\" CaptchaWidth=\"300px\" />")]
+public class CaptchaControl : WebControl, INamingContainer, IPostBackDataHandler
+{
+    internal const string KEY = "captcha";
+    private const int EXPIRATIONDEFAULT = 120;
+    private const int LENGTHDEFAULT = 6;
+    private const string RENDERURLDEFAULT = "ImageChallenge.captcha.aspx";
+    private const string CHARSDEFAULT = "abcdefghmnpqrstuv23456789"; /* Persian-DnnSoftware "abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789"; */
+    private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(CaptchaControl));
+    private static readonly string[] FontFamilies =
     {
-        internal const string KEY = "captcha";
-        private const int EXPIRATIONDEFAULT = 120;
-        private const int LENGTHDEFAULT = 6;
-        private const string RENDERURLDEFAULT = "ImageChallenge.captcha.aspx";
-        private const string CHARSDEFAULT = "abcdefghmnpqrstuv23456789"; /* Persian-DnnSoftware "abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789"; */
-        private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(CaptchaControl));
-        private static readonly string[] FontFamilies =
-        {
             "Comic Sans MS",
             "Consolas",
             "Courier New",
@@ -47,7 +47,7 @@ using Image = System.Web.UI.WebControls.Image;
             "Lucida Console",
             "MS Sans Serif",
             "Trebuchet MS",
-        };
+    };
 
     private static readonly Random Rand = new Random();
     private static string separator = ":-:";

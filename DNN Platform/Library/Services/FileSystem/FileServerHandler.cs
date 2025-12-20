@@ -70,14 +70,14 @@ public class FileServerHandler : IHttpHandler
             }
         }
 
-            if (LocaleController.Instance.IsEnabled(ref language, portalSettings.PortalId))
-            {
-                /* START Persian-DnnSoftware */
-                /* Localization.SetThreadCultures(new CultureInfo(language), portalSettings); */
-                Localization.SetThreadCultures(DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(language), portalSettings);
-                /* END Persian-DnnSoftware */
-                Localization.SetLanguage(language);
-            }
+        if (LocaleController.Instance.IsEnabled(ref language, portalSettings.PortalId))
+        {
+            /* START Persian-DnnSoftware */
+            /* Localization.SetThreadCultures(new CultureInfo(language), portalSettings); */
+            Localization.SetThreadCultures(DotNetNuke.Services.Localization.Persian.PersianController.NewCultureInfo(language), portalSettings);
+            /* END Persian-DnnSoftware */
+            Localization.SetLanguage(language);
+        }
 
         // get the URL
         string url = string.Empty;
