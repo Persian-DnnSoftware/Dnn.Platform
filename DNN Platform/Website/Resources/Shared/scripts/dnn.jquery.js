@@ -491,14 +491,14 @@
     var opts = $.extend({}, $.fn.dnnTooltip.defaultOptions, options),
       $wrap = this;
 
-        $wrap.each(function () {
-            var $this = $(this),
-                dnnFormHelp = $this.prev();
-            if ($this.data('initialized')) return;
-            dnnFormHelp.on('click', function (e) {
-                e.preventDefault();
-            });
-            var helpSelector = $this.find(opts.helpSelector);
+    $wrap.each(function () {
+      var $this = $(this),
+        dnnFormHelp = $this.prev();
+      if ($this.data("initialized")) return;
+      dnnFormHelp.on("click", function (e) {
+        e.preventDefault();
+      });
+      var helpSelector = $this.find(opts.helpSelector);
             $this.parent().css({ position: 'relative' });
             /* START Persian-DnnSoftware */
             if ($('body').hasClass('r' + 't' + 'l')) {
@@ -551,9 +551,9 @@
 
       var pinHelper = helpSelector.find(opts.pinSelector);
 
-            pinHelper.on('click', function (e) {
-                e.preventDefault();
-                if ($this.hasClass(opts.pinnedClass)) {
+      pinHelper.on("click", function (e) {
+        e.preventDefault();
+        if ($this.hasClass(opts.pinnedClass)) {
                     /* START Persian-DnnSoftware */
                     if ($('body').hasClass('r' + 't' + 'l')) {
                         helpSelector.css({ "right": '0', "top": '0' })
@@ -565,16 +565,14 @@
                             .draggable('destroy');
                     }
                     /* END Persian-DnnSoftware */
-                    $this.removeClass(opts.pinnedClass);
-                }
-                else {
-
-                    $this.addClass(opts.pinnedClass);
-                    if ($.isFunction($().draggable)) {
-                        helpSelector.draggable();
-                    }
-                }
-            });
+          $this.removeClass(opts.pinnedClass);
+        } else {
+          $this.addClass(opts.pinnedClass);
+          if ($.isFunction($().draggable)) {
+            helpSelector.draggable();
+          }
+        }
+      });
 
       $this.data("initialized", 1);
     });
@@ -776,7 +774,7 @@
       pd.tooltipWrapper.css({ position: "absolute" });
       pd.tooltipWrapperInner = $(".dnnFormHelpContent", pd.tooltipWrapper);
 
-            var tooltipHeight = pd.tooltipWrapperInner.height();
+      var tooltipHeight = pd.tooltipWrapperInner.height();
             /* START Persian-DnnSoftware */
             if ($('body').hasClass('r' + 't' + 'l')) {
                 pd.tooltipWrapperInner.css({ right: '-10px', top: -(tooltipHeight + 30) + 'px' });
@@ -784,21 +782,21 @@
                 pd.tooltipWrapperInner.css({ left: '-10px', top: -(tooltipHeight + 30) + 'px' });
             }
             /* END Persian-DnnSoftware */
-            var hoverOnPd = false;
-            $pd.hover(
-                function () {
-                    hoverOnPd = true;
-                    setTimeout(function () {
-                        if (hoverOnPd)
-                            pd.tooltipWrapperInner.css('visibility', 'visible');
-                    }, 400);
-                },
-                function () {
-                    hoverOnPd = false;
-                    setTimeout(function () {
-                        if (!hoverOnPd)
-                            pd.tooltipWrapperInner.css('visibility', 'hidden');
-                    }, 400);
+      var hoverOnPd = false;
+      $pd.hover(
+        function () {
+          hoverOnPd = true;
+          setTimeout(function () {
+            if (hoverOnPd) pd.tooltipWrapperInner.css("visibility", "visible");
+          }, 400);
+        },
+        function () {
+          hoverOnPd = false;
+          setTimeout(function () {
+            if (!hoverOnPd) pd.tooltipWrapperInner.css("visibility", "hidden");
+          }, 400);
+        },
+      );
 
       if (settings.show) {
         hoverOnPd = true;
@@ -2404,42 +2402,76 @@
           }
         });
 
-                var tagTooLongErrMsg = $('<span class="dnnFormError dnnFormMessage">' + String.format(settings.moreThanMaxCharsErrorText, settings.maxChars) + '</span>');
-                // if user types a comma, create a new tag
-                $(data.fake_input).on('keypress keydown blur', data, function (event) {
-                    if ($(this).val() === "" || clickedOnAutoComplete) {
-                        return;
-                    }
-                    var currValLength = $(this).val().length;
-                    if ((currValLength >= settings.maxChars) && !(event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9)) {
-                        tagTooLongErrMsg.insertAfter($(this)).show().delay(1500).fadeOut(1000);
-                    }
-                    /* START Persian-DnnSoftware */
-                    //if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur") {
-                    if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13 || event.which == 9 || event.type == "blur" || event.which == 1548 || event.which == 1563) {
-                    /* END Persian-DnnSoftware */
-                        event.preventDefault();
-                        if (!clickedOnAutoComplete) {
-                            tagItems(data, event);
-                        }
-                        clickedOnAutoComplete = false;
-                    } else if (event.data.autosize) {
-                        $(event.data.fake_input).dnnDoAutosize(settings);
-                    }
-                    return true;
-                });
-                //Delete last tag on backspace
-                data.removeWithBackspace && $(data.fake_input).on('keydown', function (event) {
-                    if (event.keyCode == 8 && $(this).val() == '') {
-                        event.preventDefault();
-                        var lastTag = $(this).closest('.dnnTagsInput').find('.tag:last').text();
-                        var lastTagId = $(this).attr('id').replace(/_tag$/, '');
-                        lastTag = lastTag.replace(/[\s]+$/, '');
-                        $('#' + lastTagId).dnnRemoveTag(escape(lastTag));
-                        $(this).trigger('focus');
-                    }
-                });
-                $(data.fake_input).blur();
+        var tagTooLongErrMsg = $(
+          '<span class="dnnFormError dnnFormMessage">' +
+            String.format(
+              settings.moreThanMaxCharsErrorText,
+              settings.maxChars,
+            ) +
+            "</span>",
+        );
+        // if user types a comma, create a new tag
+        $(data.fake_input).on("keypress keydown blur", data, function (event) {
+          if ($(this).val() === "" || clickedOnAutoComplete) {
+            return;
+          }
+          var currValLength = $(this).val().length;
+          if (
+            currValLength >= settings.maxChars &&
+            !(
+              event.which == event.data.delimiter.charCodeAt(0) ||
+              event.which == 13 ||
+              event.which == 9
+            )
+          ) {
+            tagTooLongErrMsg
+              .insertAfter($(this))
+              .show()
+              .delay(1500)
+              .fadeOut(1000);
+          }
+          /* START Persian-DnnSoftware */
+          // if (
+          //   event.which == event.data.delimiter.charCodeAt(0) ||
+          //   event.which == 13 ||
+          //   event.which == 9 ||
+          //   event.type == "blur"
+          // ) {
+          if (
+            event.which == event.data.delimiter.charCodeAt(0) ||
+            event.which == 13 ||
+            event.which == 9 ||
+            event.type == "blur" || 
+            event.which == 1548 || 
+            event.which == 1563
+          ) {
+            /* END Persian-DnnSoftware */
+            event.preventDefault();
+            if (!clickedOnAutoComplete) {
+              tagItems(data, event);
+            }
+            clickedOnAutoComplete = false;
+          } else if (event.data.autosize) {
+            $(event.data.fake_input).dnnDoAutosize(settings);
+          }
+          return true;
+        });
+        //Delete last tag on backspace
+        data.removeWithBackspace &&
+          $(data.fake_input).on("keydown", function (event) {
+            if (event.keyCode == 8 && $(this).val() == "") {
+              event.preventDefault();
+              var lastTag = $(this)
+                .closest(".dnnTagsInput")
+                .find(".tag:last")
+                .text();
+              var lastTagId = $(this).attr("id").replace(/_tag$/, "");
+              lastTag = lastTag.replace(/[\s]+$/, "");
+              $("#" + lastTagId).dnnRemoveTag(escape(lastTag));
+              $(this).trigger("focus");
+            }
+          });
+        $(data.fake_input).blur();
 
         //Removes the not_valid class when user changes the value of the fake input
         if (data.unique) {
