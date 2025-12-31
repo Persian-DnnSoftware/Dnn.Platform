@@ -3175,33 +3175,5 @@ namespace DotNetNuke.Entities.Urls
                 }
             }
         }
-
-        private void SecurityCheck(HttpApplication app)
-        {
-            HttpRequest request = app.Request;
-            HttpServerUtility server = app.Server;
-
-            // 675 : unnecessarily strict url validation
-            // URL validation
-            // check for ".." escape characters commonly used by hackers to traverse the folder tree on the server
-            // the application should always use the exact relative location of the resource it is requesting
-            /* START Persian-DnnSoftware */
-            var regx = new Regex("[\\\\/]\\.\\.[\\\\/]", RegexOptions.Compiled);
-            string url = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? string.Empty;
-            if (!regx.Match(request.Url.AbsolutePath).Success && !regx.Match(url).Success)
-            {
-                return;
-            }
-
-            app.Context.Response.Redirect(app.Context.Request.Url.Host.ToString(), true);
-
-            // var strURL = request.Url.AbsolutePath;
-            // var strDoubleDecodeURL = server.UrlDecode(server.UrlDecode(request.Url.AbsolutePath)) ?? string.Empty;
-            // if (UrlSlashesRegex.Match(strURL).Success || UrlSlashesRegex.Match(strDoubleDecodeURL).Success)
-            // {
-            //    throw new HttpException(404, "Not Found");
-            // }
-            /* END Persian-DnnSoftware */
-        }
     }
 }
