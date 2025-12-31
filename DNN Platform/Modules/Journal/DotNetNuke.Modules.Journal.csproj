@@ -174,6 +174,7 @@
     <None Include="Journal.dnn">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="module.rtl.css" />
     <Content Include="Module.build" />
     <None Include="module.css" />
     <Content Include="Providers\DataProviders\SqlDataProvider\07.03.00.SqlDataProvider" />

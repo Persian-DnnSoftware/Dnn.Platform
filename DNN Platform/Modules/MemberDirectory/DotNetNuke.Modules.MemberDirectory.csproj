@@ -111,6 +111,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Module.build" />
+    <Content Include="module.rtl.css" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>

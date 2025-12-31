@@ -112,6 +112,14 @@ namespace Dnn.EditBar.UI.Services
                 var filename = Path.GetFileName(resourcesFile);
                 var relativePath = Path.Combine(editBarResourcesPath, filename);
                 var keys = EditBar.UI.Controllers.LocalizationController.Instance.GetLocalizedDictionary(relativePath, culture);
+
+                /* START Persian-DnnSoftware */
+                if (culture.ToLower() != "en-us")
+                {
+                    key = key.Replace($".{culture}", string.Empty);
+                }
+
+                /* START Persian-DnnSoftware */
                 resources.Add(key, keys);
             }
 
@@ -138,7 +146,16 @@ namespace Dnn.EditBar.UI.Services
         {
             var editBarResourcesPath = Path.Combine(Constants.EditBarRelativePath, "App_LocalResources");
             var physicalPath = HttpContext.Current.Server.MapPath(editBarResourcesPath);
-            return Directory.GetFiles(physicalPath, "*.resx");
+
+            /* START Persian-DnnSoftware */
+            /* return Directory.GetFiles(physicalPath, "*.resx"); */
+            if (culture.ToLower() == "en-us")
+            {
+                return Directory.GetFiles(physicalPath, "*.resx");
+            }
+
+            return Directory.GetFiles(physicalPath, $"*.{culture}.resx");
+            /* END Persian-DnnSoftware */
         }
     }
 }

@@ -63,3 +63,33 @@
             }
         }
     }
+
+
+// START Persian-DnnSoftware
+.rtl .dnn-in-context-menu {
+  &.menu-item {
+    float: right;
+    .icon {
+      float: right;
+    }
+    .label {
+      float: right;
+      padding-left: unset;
+      padding-right: 20px;
+    }
+  }
+  &.menu {
+    right: unset;
+    left: -18px;
+    text-align: right;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px;
+    }
+  }
+}
+// END Persian-DnnSoftware

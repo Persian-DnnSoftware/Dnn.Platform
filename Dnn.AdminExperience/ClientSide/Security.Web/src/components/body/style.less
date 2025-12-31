@@ -19,3 +19,21 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl #security-container {
+  .dnn-persona-bar-page {
+    .primary {
+      > .react-tabs__tab-list {
+        > .react-tabs__tab {
+          padding-left: unset; /* Remove LTR padding */
+          padding-right: unset; /* Remove LTR padding */
+          padding-right: 30px; /* Set RTL padding-right, same as LTR padding-left for visual symmetry */
+          padding-left: 30px;  /* Set RTL padding-left, same as LTR padding-right for visual symmetry */
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

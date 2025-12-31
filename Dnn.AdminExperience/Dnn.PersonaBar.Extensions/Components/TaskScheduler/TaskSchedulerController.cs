@@ -13,6 +13,7 @@ namespace Dnn.PersonaBar.TaskScheduler.Components
     using DotNetNuke.Abstractions.Application;
     using DotNetNuke.Common;
     using DotNetNuke.Common.Utilities;
+    using DotNetNuke.Entities.Portals;
     using DotNetNuke.Instrumentation;
     using DotNetNuke.Services.Localization;
     using DotNetNuke.Services.Scheduling;
@@ -23,7 +24,23 @@ namespace Dnn.PersonaBar.TaskScheduler.Components
         private static readonly string SchedulersToRunOnSameWebServerKey = "SchedulersToRunOnSameWebServer";
         private static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(TaskSchedulerController));
 
-        private static string LocalResourcesFile => Path.Combine("~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.resx");
+        /* START Persian-DnnSoftware */
+        /* private static string LocalResourcesFile => Path.Combine("~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.resx"); */
+
+        private static string LocalResourcesFile
+        {
+            get
+            {
+                if (PortalController.Instance.GetCurrentPortalSettings().CultureCode != "en-US")
+                {
+                    return Path.Combine($"~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.{PortalController.Instance.GetCurrentPortalSettings().CultureCode}.resx");
+                }
+
+                return Path.Combine("~/DesktopModules/admin/Dnn.PersonaBar/Modules/Dnn.TaskScheduler/App_LocalResources/TaskScheduler.resx");
+            }
+        }
+
+        /* END Persian-DnnSoftware */
 
         [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "Breaking change")]
         public string GetTimeLapse(int timeLapse, string timeLapseMeasurement)
@@ -39,6 +56,9 @@ namespace Dnn.PersonaBar.TaskScheduler.Components
                 var strWeek = Localization.GetString("Week", LocalResourcesFile);
                 var strMonth = Localization.GetString("Month", LocalResourcesFile);
                 var strYear = Localization.GetString("Year", LocalResourcesFile);
+                /* START Persian-DnnSoftware */
+                Localization.SetThreadCultures(new CultureInfo(PortalController.Instance.GetCurrentPortalSettings().CultureCode), PortalController.Instance.GetCurrentPortalSettings());
+                /* END Persian-DnnSoftware */
                 var strSecs = Localization.GetString("Seconds");
                 var strMns = Localization.GetString("Minutes");
                 var strHours = Localization.GetString("Hours");
