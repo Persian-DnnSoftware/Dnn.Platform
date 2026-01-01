@@ -114,7 +114,7 @@ namespace Dnn.EditBar.UI.Services
                 var keys = EditBar.UI.Controllers.LocalizationController.Instance.GetLocalizedDictionary(relativePath, culture);
 
                 /* START Persian-DnnSoftware */
-                if (culture.ToLower() != "en-us")
+                if (!culture.Equals("en-us", StringComparison.OrdinalIgnoreCase))
                 {
                     key = key.Replace($".{culture}", string.Empty);
                 }
@@ -149,7 +149,7 @@ namespace Dnn.EditBar.UI.Services
 
             /* START Persian-DnnSoftware */
             /* return Directory.GetFiles(physicalPath, "*.resx"); */
-            if (culture.ToLower() == "en-us")
+            if (culture.Equals("en-us", StringComparison.OrdinalIgnoreCase))
             {
                 return Directory.GetFiles(physicalPath, "*.resx");
             }
