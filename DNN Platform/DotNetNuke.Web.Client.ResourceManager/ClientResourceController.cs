@@ -6,6 +6,7 @@ namespace DotNetNuke.Web.Client.ResourceManager
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
 
     using DotNetNuke.Abstractions.Application;
@@ -15,12 +16,23 @@ namespace DotNetNuke.Web.Client.ResourceManager
     public class ClientResourceController : IClientResourceController
     {
         private readonly IHostSettings hostSettings;
+        private readonly IApplicationStatusInfo appStatus;
 
         /// <summary>Initializes a new instance of the <see cref="ClientResourceController"/> class.</summary>
         /// <param name="hostSettings">The host settings.</param>
+        [Obsolete("Deprecated in DotNetNuke 10.2.2. Use overload with IApplicationStatusInfo. Scheduled removal in v12.0.0.")]
         public ClientResourceController(IHostSettings hostSettings)
+            : this(hostSettings, null)
+        {
+        }
+
+        /// <summary>Initializes a new instance of the <see cref="ClientResourceController"/> class.</summary>
+        /// <param name="hostSettings">The host settings.</param>
+        /// <param name="appStatus">The application status.</param>
+        public ClientResourceController(IHostSettings hostSettings, IApplicationStatusInfo appStatus)
         {
             this.hostSettings = hostSettings;
+            this.appStatus = appStatus;
             this.RegisterPathNameAlias("SharedScripts", "~/Resources/Shared/Scripts/");
         }
 
@@ -186,32 +198,64 @@ namespace DotNetNuke.Web.Client.ResourceManager
         /// <inheritdoc />
         public string RenderDependencies(ResourceType resourceType, string provider, string applicationPath)
         {
-            var sortedList = new List<string>();
+            var sortedList = new List<IResource>();
             if (resourceType is ResourceType.Font or ResourceType.All)
             {
-                foreach (var link in this.Fonts.Where(s => (s.Provider == provider || (s.Provider == string.Empty && provider == ClientResourceProviders.DefaultCssProvider)) && !this.FontsToExclude.Contains(s.Name)).OrderBy(l => l.Priority))
-                {
-                    sortedList.Add(link.Render(this.hostSettings.CrmVersion, this.hostSettings.CdnEnabled, applicationPath));
-                }
+                sortedList.AddRange(
+                    this.Fonts
+                        .Where(s =>
+                            (s.Provider == provider || (s.Provider == string.Empty && provider == ClientResourceProviders.DefaultCssProvider))
+                            && !this.FontsToExclude.Contains(s.Name))
+                        .OrderBy(l => l.Priority));
             }
 
             if (resourceType is ResourceType.Stylesheet or ResourceType.All)
             {
-                foreach (var link in this.Stylesheets.Where(s => (s.Provider == provider || (s.Provider == string.Empty && provider == ClientResourceProviders.DefaultCssProvider)) && !this.StylesheetsToExclude.Contains(s.Name)).OrderBy(l => l.Priority))
-                {
-                    sortedList.Add(link.Render(this.hostSettings.CrmVersion, this.hostSettings.CdnEnabled, applicationPath));
-                }
+                sortedList.AddRange(
+                    this.Stylesheets
+                        .Where(s =>
+                            (s.Provider == provider || (s.Provider == string.Empty && provider == ClientResourceProviders.DefaultCssProvider))
+                            && !this.StylesheetsToExclude.Contains(s.Name))
+                        .OrderBy(l => l.Priority));
             }
 
             if (resourceType is ResourceType.Script or ResourceType.All)
             {
-                foreach (var script in this.Scripts.Where(s => (s.Provider == provider || (s.Provider == string.Empty && provider == ClientResourceProviders.DefaultJsProvider)) && !this.ScriptsToExclude.Contains(s.Name)).OrderBy(s => s.Priority))
-                {
-                    sortedList.Add(script.Render(this.hostSettings.CrmVersion, this.hostSettings.CdnEnabled, applicationPath));
-                }
+                sortedList.AddRange(
+                    this.Scripts
+                        .Where(s =>
+                            (s.Provider == provider || (s.Provider == string.Empty && provider == ClientResourceProviders.DefaultJsProvider))
+                            && !this.ScriptsToExclude.Contains(s.Name))
+                        .OrderBy(s => s.Priority));
             }
 
-            return string.Join(string.Empty, sortedList);
+            if (System.Globalization.CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+            {
+                sortedList = sortedList.ConvertAll(resource =>
+                {
+                    if (resource.FilePath.StartsWith("http", StringComparison.OrdinalIgnoreCase) ||
+                        (this.hostSettings.CdnEnabled && !string.IsNullOrEmpty(resource.CdnUrl)))
+                    {
+                        return resource;
+                    }
+
+                    var ext = Path.GetExtension(resource.FilePath);
+                    var rtlFilePath = Path.ChangeExtension(resource.ResolvedPath, ".rtl" + ext);
+                    var relativePath = rtlFilePath.TrimStart('~').TrimStart('/').Replace("/", "\\");
+                    if (!File.Exists($"{this.appStatus.ApplicationMapPath}\\{relativePath}"))
+                    {
+                        return resource;
+                    }
+
+                    rtlFilePath = Path.ChangeExtension(resource.FilePath, ".rtl" + ext);
+                    resource.FilePath = rtlFilePath;
+                    resource.ResolvedPath = this.ResolvePath(rtlFilePath, resource.PathNameAlias);
+
+                    return resource;
+                });
+            }
+
+            return string.Join(string.Empty, sortedList.Select(resource => resource.Render(this.hostSettings.CrmVersion, this.hostSettings.CdnEnabled, applicationPath)));
         }
 
         private List<T> AddResource<T>(List<T> resources, T resource)
