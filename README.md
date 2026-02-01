@@ -8,8 +8,11 @@
 دانلود آخرین نسخه DNN فارسی به همراه سورس.
 بومی سازی هسته DNN فارسی با بالاترین کیفیت
   
-## حمایت از دی ان ان فارسی
-  <a href="https://zarinp.al/Persian-DnnSoftware.ir"><img src='https://www.persian-dnnsoftware.ir/Portals/0/Images/Donate-200.png?ver=fyr_22nW-rkmf1ULsTwYMg%3d%3d' /></a>
+## حمایت از دی ان ان فارسی<div style="text-align: center;">
+  <a href="https://www.persian-dnnsoftware.ir/donate">
+<img alt="Donate-PNG-Download-Image" src="https://www.persian-dnnsoftware.ir/Portals/0/Images/Donate-300.png" /></a>
+</div>
+
 
 ## اعضای تیم
 
