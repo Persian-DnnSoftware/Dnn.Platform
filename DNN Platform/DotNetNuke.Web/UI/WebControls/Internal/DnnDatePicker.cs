@@ -84,27 +84,29 @@ namespace DotNetNuke.Web.UI.WebControls.Internal
 
             JavaScript.RequestRegistration(this.appStatus, this.eventLogger, PortalSettings.Current, CommonJs.jQuery);
 
-            ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/moment.min.js");
+            this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/moment.min.js");
             /* START Persian-DnnSoftware */
             if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
             {
-                ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.js");
+                this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/persian.datepicker.js");
             }
             else
             {
-                ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/pikaday.js");
+                this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/pikaday.js");
             }
 
             /* END Persian-DnnSoftware */
-            ClientResourceManager.RegisterScript(this.Page, "~/Resources/Shared/components/DatePicker/pikaday.jquery.js");
+
+            this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/pikaday.jquery.js");
+
             /* START Persian-DnnSoftware */
             if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
             {
-                ClientResourceManager.RegisterStyleSheet(this.Page, "~/Resources/Shared/components/DatePicker/persian.datepicker.css");
+                this.clientResourceController.RegisterStylesheet("~/Resources/Shared/components/DatePicker/persian.datepicker.css");
             }
             else
             {
-                ClientResourceManager.RegisterStyleSheet(this.Page, "~/Resources/Shared/components/DatePicker/pikaday.css");
+                this.clientResourceController.RegisterStylesheet("~/Resources/Shared/components/DatePicker/pikaday.css");
             }
 
             /* END Persian-DnnSoftware */
