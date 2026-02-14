@@ -80,3 +80,36 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.userSettings) {
+  float: right;
+  .dnn-grid-cell {
+    float: right;
+    text-align: right;
+    .outer-box {
+      &.right {
+        border-left: none;
+        border-right: 1px solid @alto;
+      }
+    }
+    .title {
+      float: right;
+    }
+  }
+  .buttons {
+    .dnn-grid-cell {
+      &.leftBtn {
+        padding-right: unset;
+        padding-left: 5px;
+        text-align: left;
+      }
+      &.rightBtn {
+        padding-left: unset;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

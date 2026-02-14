@@ -118,3 +118,53 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .theme-skin,
+.rtl .theme-container {
+  float: right;
+  margin-left: unset;
+  margin-right: 10px;
+
+  span.thumbnail {
+    /* svg left: 50% and transform: translate(-50%, -50%) are for centering, no change needed. */
+
+    span.actions {
+      left: unset;
+      right: 0;
+      text-align: center; /* This is already centered, no change needed */
+
+      ul {
+        li {
+          margin-left: unset;
+          margin-right: 10px;
+          svg {
+            /* left: 50% and transform: translate(-50%, -50%) are for centering, no change needed. */
+          }
+        }
+        li:first-child {
+          margin-left: unset;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  div.title {
+    /* text-align: center is direction-agnostic, no change needed. */
+  }
+
+  &:first-child {
+    margin-left: unset;
+    margin-right: 0;
+  }
+
+  &.selected {
+    span.checkmark {
+      right: unset;
+      left: 5px;
+    }
+  }
+}
+// END Persian-DnnSoftware

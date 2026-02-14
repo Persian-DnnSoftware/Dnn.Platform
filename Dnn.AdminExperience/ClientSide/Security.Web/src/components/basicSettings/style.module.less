@@ -45,3 +45,24 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.loginSettings) {
+  .dnn-ui-common-input-group {
+    label {
+      float: right; /* Changed from left to right */
+    }
+    .dnn-switch-container {
+      float: left; /* Changed from right to left */
+    }
+  }
+  .buttons-box {
+    text-align: center; /* text-align: center is direction-agnostic */
+  }
+  .globalIcon {
+    float: right; /* Changed from left to right */
+    margin: 5px -10px 0 0; /* Flipped negative margin from left to right */
+  }
+}
+// END Persian-DnnSoftware

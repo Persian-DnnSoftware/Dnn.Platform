@@ -22,7 +22,11 @@ class EditExtension extends Component {
                 <h6>{Localization.get("InstallExtension_Logs.Header")}</h6>
                 <Tooltip messages={[Localization.get("InstallationError")]} type="error" rendered={errorCount > 0} className="install-error-tooltip" />
                 <p>{Localization.get("InstallExtension_Logs.HelpText")}</p>
-                <Scrollbars style={errorCount > 0 ? Object.assign({borderBottom: "2px solid #EA2134"}, licenseBoxStyle) : licenseBoxStyle}>
+                <Scrollbars 
+                // START Persian-DnnSoftware
+                    className="dnn-scrollbars"
+                    // END Persian-DnnSoftware
+                    style={errorCount > 0 ? Object.assign({borderBottom: "2px solid #EA2134"}, licenseBoxStyle) : licenseBoxStyle}>
                     <div className="package-installation-report">
                         {props.logs.map((log, i) => {
                             return <p className={log.Type.toLowerCase()} key={i}>{log.Type + " " + log.Description}</p>;

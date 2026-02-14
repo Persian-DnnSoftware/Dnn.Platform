@@ -50,3 +50,32 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.pageDetailsFooter) {
+  .scheduler-date-box {
+    .scheduler-date-row {
+      label {
+        clear: left; /* Changed from `both` to `left` for RTL block-level adjustment */
+      }
+    }
+  }
+  .left-column {
+    .dnn-switch-container {
+      float: left; /* Changed from `right` to `left` for RTL */
+      margin-right: unset; /* Removed LTR margin */
+      margin-left: 15px; /* Added RTL margin */
+    }
+  }
+  .right-column {
+    .dnn-switch-container {
+      float: left; /* Changed from `right` to `left` for RTL */
+    }
+    > div {
+      padding-left: unset; /* Removed LTR padding */
+      padding-right: 15px; /* Added RTL padding */
+    }
+  }
+}
+// END Persian-DnnSoftware

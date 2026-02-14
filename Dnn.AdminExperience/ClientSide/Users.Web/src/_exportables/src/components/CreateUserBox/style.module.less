@@ -72,3 +72,37 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.newExtensionModal) {
+  .new-user-box {
+    float: right;
+    .dnn-switch-container {
+      .dnn-switch {
+        float: left;
+      }
+    }
+    .dnn-grid-cell {
+      .version-dropdown {
+        margin-right: unset;
+        margin-left: 10px;
+        &:last-child {
+          margin-left: unset; /* Override if it was set to 0 in LTR for the last child */
+          margin-right: 0;   /* Set for RTL last child */
+        }
+      }
+      &.modal-footer {
+        text-align: center;
+        button {
+          margin-right: unset;
+          margin-left: 10px;
+        }
+      }
+    }
+    .email-notification-line {
+      text-align: center;
+    }
+  }
+}
+// END Persian-DnnSoftware
