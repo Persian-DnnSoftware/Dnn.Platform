@@ -13,15 +13,16 @@
 <img alt="Donate-PNG-Download-Image" src="https://www.persian-dnnsoftware.ir/Portals/0/Images/Donate-300.png" /></a>
 </div>
 
-
-## اعضای تیم
-
-* مرتضی کرمانی
-* محمود نورایی
-* آرمین رحیمیان
-* علی نظری
-
 # دانلود DNN فارسی
+ * [دانلود نسخه 10.2.2 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v10.2.2-persian) - (تاریخ انتشار :1404/11/25)
+* [دانلود نسخه 10.2.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v10.2.1-persian) - (تاریخ انتشار :1404/10/17)
+* [دانلود نسخه 10.1.2 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v10.1.2-persian) - (تاریخ انتشار :1404/08/14)
+* [دانلود نسخه 10.1.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v10.1.1-persian) - (تاریخ انتشار :1404/07/07)
+* [دانلود نسخه 10.0.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v10.0.1-persian) - (تاریخ انتشار :1404/04/16)
+* [دانلود نسخه 9.13.10 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.10-persian) - (تاریخ انتشار :1404/10/03)
+* [دانلود نسخه 9.13.9 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.9-persian) - (تاریخ انتشار :1404/05/29)
+* [دانلود نسخه 9.13.7 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.7-persian) - (تاریخ انتشار :1403/10/10)
+* [دانلود نسخه 9.13.4 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.4-persian) - (تاریخ انتشار :1403/07/18)
 * [دانلود نسخه 9.13.3 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.3-persian) - (تاریخ انتشار :1402/12/17)
 * [دانلود نسخه 9.13.1 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.1-persian) - (تاریخ انتشار :1402/09/15)
 * [دانلود نسخه 9.13.0 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v9.13.0-persian) - (تاریخ انتشار :1402/08/09)
