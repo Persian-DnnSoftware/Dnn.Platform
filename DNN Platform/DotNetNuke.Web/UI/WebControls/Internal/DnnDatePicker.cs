@@ -85,10 +85,31 @@ namespace DotNetNuke.Web.UI.WebControls.Internal
             JavaScript.RequestRegistration(this.appStatus, this.eventLogger, PortalSettings.Current, CommonJs.jQuery);
 
             this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/moment.min.js");
-            this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/pikaday.js");
+            /* START Persian-DnnSoftware */
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+            {
+                this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/persian.datepicker.js");
+            }
+            else
+            {
+                this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/pikaday.js");
+            }
+
+            /* END Persian-DnnSoftware */
+
             this.clientResourceController.RegisterScript("~/Resources/Shared/components/DatePicker/pikaday.jquery.js");
 
-            this.clientResourceController.RegisterStylesheet("~/Resources/Shared/components/DatePicker/pikaday.css");
+            /* START Persian-DnnSoftware */
+            if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+            {
+                this.clientResourceController.RegisterStylesheet("~/Resources/Shared/components/DatePicker/persian.datepicker.css");
+            }
+            else
+            {
+                this.clientResourceController.RegisterStylesheet("~/Resources/Shared/components/DatePicker/pikaday.css");
+            }
+
+            /* END Persian-DnnSoftware */
 
             this.RegisterClientResources();
         }

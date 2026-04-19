@@ -37,7 +37,10 @@ class Module extends Component {
             return <div className={className}>
                 <Tooltip
                     messages={[toolTip]}
-                    style={{ float: "left", position: "static" }}
+                    // START Persian-DnnSoftware
+                    //style={{ float: "left", position: "static" }}
+                    style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                    // END Persian-DnnSoftware
                 />
                 <input type="text" value={module.ModuleTitle} onChange={this.onUpdateModules.bind(this, "ModuleTitle") } aria-label="Title"/>
                 {module.IsDeleted && <div className="icons-container">

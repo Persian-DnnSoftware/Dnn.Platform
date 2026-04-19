@@ -54,3 +54,39 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .words-editor {
+  float: right;
+  .dnn-ui-common-input-group {
+    label {
+      float: right;
+    }
+  }
+  .dnn-grid-system {
+    .left-column {
+      padding-right: unset;
+      padding-left: 30px;
+      border-right: none;
+      border-left: 1px solid @alto;
+    }
+    .right-column {
+      padding-left: unset;
+      padding-right: 30px;
+      border-left: 0 !important; /* Retaining existing !important, though typically flipped to border-right */
+      /* If there was an implicit border-left before, it should become border-right: 0; */
+    }
+  }
+  .editor-buttons-box {
+    float: right;
+    text-align: center;
+    .edit-icon {
+      float: left;
+      svg {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

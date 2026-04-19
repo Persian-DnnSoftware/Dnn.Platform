@@ -1,0 +1,34 @@
+﻿// START Persian-DnnSoftware
+.left {
+    float: right;
+}
+
+.right {
+    float: left;
+}
+
+.dnnLeft {
+    float: right;
+}
+
+.dnnRight {
+    float: left;
+}
+
+.dnnClear {
+    clear: both;
+
+    &:after {
+        clear: both;
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        font-size: 0;
+    }
+}
+
+* + html .dnnClear {
+    min-height: 1%;
+}
+// END Persian-DnnSoftware

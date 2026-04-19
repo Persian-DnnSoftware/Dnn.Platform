@@ -109,3 +109,32 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-content-load-wrapper {
+        &.upload-error {
+            .try-load-again {
+                left: unset;
+                right: 0;
+            }
+        }
+
+        .upload-bar-container {
+            .upload-bar-box {
+                float: right;
+
+                .upload-bar {
+                    float: right;
+                    left: unset;
+                    right: 0px;
+                    // animation-name: placeHolderShimmer; // از keyframes بالا که برای RTL تغییر کرده استفاده خواهد کرد
+                    background-image: -webkit-linear-gradient(to left, var(--dnn-color-primary-light, @nonPhotoBlue) 0%, var(--dnn-color-background, @nonPhotoBlue) 35%, var(--dnn-color-primary-light, @nonPhotoBlue) 100%);
+                    background-image: linear-gradient(to left, var(--dnn-color-primary-light, @nonPhotoBlue) 0%, var(--dnn-color-background, @nonPhotoBlue) 35%, var(--dnn-color-primary-light, @nonPhotoBlue) 100%);
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware
