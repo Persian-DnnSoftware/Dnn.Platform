@@ -262,3 +262,126 @@
             }
         }
     }
+
+
+    // START Persian-DnnSoftware
+.rtl :local(.importModal) {
+  float: right;
+  .pageTitle {
+    padding: 40px 40px 30px 0;
+  }
+  .pageDescription {
+    padding: 0 40px 15px 40px;
+  }
+  .packages-wrapper {
+    padding: 0 40px 70px 40px;
+    .packages {
+      .package-analyzing {
+        float: right;
+        .noDataImage {
+          text-align: center;
+        }
+      }
+      .package-card-wrapper {
+        float: right;
+        .package-card-tooltip {
+          left: unset;
+          right: 50%;
+          margin-left: unset;
+          margin-right: -25%;
+          &::after {
+            left: unset;
+            right: 50%;
+            margin-left: unset;
+            margin-right: -10px;
+            border-color: transparent transparent white transparent;
+          }
+        }
+        .package-card {
+          text-align: right;
+          .checkmark {
+            top: 5px;
+            right: unset;
+            left: 5px;
+          }
+          .card-grid {
+            float: right;
+            .card-column1 {
+              border-right: none;
+              border-left: 1px solid @alto;
+            }
+            .card-column2, .card-column4 {
+              .package-field {
+                float: right;
+                padding: 0 20px 13px 0;
+                span {
+                  float: left;
+                }
+              }
+            }
+            .card-column3 {
+              .package-field {
+                float: left;
+                padding: 0 0 10px 10px;
+              }
+            }
+            .card-column5 {
+              .package-field {
+                padding: 0 0 10px 20px;
+              }
+            }
+          }
+          .package-card-overlay {
+            .icon-container {
+              text-align: center;
+              > div {
+                margin-right: unset;
+                margin-left: 10px;
+              }
+            }
+            .dnn-text-overflow-wrapper {
+              margin-left: unset;
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+      .import-summary {
+        float: right;
+        .import-site-container {
+          .left-column {
+            float: right;
+            border-right: none;
+            border-left: 1px solid @alto;
+            padding: 10px 0 10px 30px;
+          }
+          .right-column {
+            float: right;
+            padding: 10px 30px 10px 0;
+            .seperator {
+              float: right;
+            }
+            .dnn-switch-container {
+              float: left;
+            }
+          }
+          .import-summary-item {
+            float: left;
+            text-align: left;
+          }
+        }
+        .finish-importing {
+          float: right;
+          text-align: center;
+        }
+      }
+    }
+    .packagePager {
+      float: right;
+    }
+    .action-buttons {
+      text-align: center;
+    }
+  }
+}
+// END Persian-DnnSoftware
