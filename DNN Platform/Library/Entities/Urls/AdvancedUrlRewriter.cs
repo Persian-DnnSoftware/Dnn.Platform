@@ -527,8 +527,8 @@ namespace DotNetNuke.Entities.Urls
             {
                 /* START Persian-DnnSoftware */
                 /* 404 Page RLT Bug Fix */
-                var portalInfo = PortalController.Instance.GetPortal(Host.HostPortalID);
-                if (portalInfo.CultureCode == "fa-IR")
+                PortalInfo portalInfo = CacheController.GetPortal(result.PortalId, false);
+                if (portalInfo != null && portalInfo.CultureCode == "fa-IR")
                 {
                     var newCulture = Services.Localization.Persian.PersianController.GetPersianCultureInfo();
                     System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
