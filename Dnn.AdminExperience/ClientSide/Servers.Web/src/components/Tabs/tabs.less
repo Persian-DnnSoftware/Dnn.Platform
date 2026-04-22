@@ -254,98 +254,139 @@
 }
 
 
-// START Persian-DnnSoftware
-.rtl .dnn-servers-tab-panel {
-  .dnn-servers-info-panel {
-    padding: 30px 80px 45px; /* Symmetric horizontal padding, no change */
-    display: inline-block; /* Display property is direction-agnostic */
-  }
-  .dnn-servers-info-panel-big {
-    margin: 30px 30px 45px; /* Symmetric horizontal margin, no change */
-    display: inline-block; /* Display property is direction-agnostic */
-    float: right; /* Changed from right to left */
-    .dnn-switch-container {
-      float: left; /* Changed from right to left */
-    }
-  }
-  .dnn-ui-common-input-group {
-    .title label {
-      float: right; /* Changed from left to right */
-    }
-  }
-  .tooltipAdjustment {
-    float: right; /* Changed from left to right */
-    div.tooltip-text {
-      /* max-width and word-break are direction-agnostic. */
-    }
-  }
-  .log-file-cell {
-    .dnn-dropdown {
-      border-right: none; /* Removed LTR border */
-      border-left: 1px solid @alto; /* Added RTL border */
-      .dropdown-icon {
-        right: unset; /* Removed LTR right */
-        left: 17px; /* Added RTL left */
+/* START Persian-DnnSoftware */
+.rtl {
+  .dnn-servers-tab-panel {
+
+    .dnn-servers-info-panel-big {
+      .dnn-switch-container {
+        float: left;
       }
     }
-  }
-  .leftPane {
-    padding-right: unset; /* Removed LTR padding */
-    padding-left: 30px; /* Added RTL padding */
-    border-right: none; /* Removed LTR border */
-    border-left: 1px solid @alto; /* Added RTL border */
-    .dnn-radio-buttons {
-      ul {
-        li {
-          margin: 0 0 0 15px; /* Flipped horizontal margin */
+
+    .dnn-ui-common-input-group {
+      .title label {
+        float: right;
+        text-align: right;
+      }
+    }
+
+    .tooltipAdjustment {
+      float: right;
+    }
+
+    .log-file-cell {
+      .dnn-dropdown {
+        border-left: 1px solid @alto;
+        border-right: 0;
+
+        .dropdown-icon {
+          right: auto;
+          left: 17px;
+        }
+      }
+    }
+
+    .leftPane {
+      padding-right: 0;
+      padding-left: 30px;
+      border-right: 0;
+      border-left: 1px solid @alto;
+
+      .dnn-radio-buttons {
+        ul {
+          li {
+            margin: 0 0 0 15px;
+          }
+        }
+      }
+    }
+
+    .rightPane {
+      padding-left: 10px;
+      padding-right: 20px;
+
+      .dnn-radio-buttons {
+        ul {
+          li:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .dnn-radio-buttons ul li {
+      label {
+        padding: 0 28px 0 21px;
+      }
+    }
+
+    .smtpServerSettingsTab .smtp-authentication-mode .dnn-radio-buttons ul li label {
+      padding: 0 24px 0 0;
+      text-align: right;
+    }
+
+    .buttons-panel {
+      .dnn-ui-common-button {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+
+    .dnn-servers-grid-panel {
+
+      .grid {
+        border-left: 0;
+        border-right: 1px solid @alto;
+
+        .row {
+          .alert-message {
+            text-align: center;
+          }
         }
       }
     }
   }
-  .rightPane {
-    padding-left: unset; /* Removed LTR padding */
-    padding-right: 20px; /* Added RTL padding */
-    .dnn-radio-buttons {
-      ul {
-        li:first-child {
-          margin-left: unset; /* Ensure no left margin from LTR, if it exists */
-          margin-right: 0; /* Align first item to the right */
+
+  .dnn-servers-tab-panel .dnn-servers-info-panel-big {
+
+    &.logsTab {
+
+      .dnn-label {
+        margin-right: 8px;
+        margin-left: 0;
+      }
+
+      .logHeader-wrapper {
+
+        .logHeader-type {
+          float: right;
+        }
+
+        .logHeader-filename {
+          float: right;
+        }
+
+        .logHeader-date {
+          float: right;
+        }
+
+        .logHeader-size {
+          float: right;
         }
       }
     }
-  }
-  .dnn-radio-buttons ul li {
-    label {
-      padding: 0px 28px 0 21px; /* Flipped horizontal padding */
-    }
-  }
-  .smtpServerSettingsTab .smtp-authentication-mode .dnn-radio-buttons ul li label {
-    padding: 0 24px 0 0; /* Flipped padding */
-    text-align: right; /* Changed text alignment */
-  }
-  .buttons-panel {
-    text-align: center; /* Center alignment is direction-agnostic */
-    .dnn-ui-common-button {
-      margin-right: unset; /* Removed LTR margin */
-      margin-left: 10px; /* Added RTL margin */
-    }
-  }
-  .dnn-servers-grid-panel {
-    .grid {
-      float: right; /* Changed from left to right */
-      border-left: none; /* Removed LTR border */
-      border-right: 1px solid @alto; /* Added RTL border */
-      .row {
-        .alert-message {
-          text-align: center; /* Center alignment is direction-agnostic */
+
+    .warningBox {
+
+      .warningButton {
+        .dnn-ui-common-button {
+          &:first-child {
+            margin-right: 0;
+          }
         }
       }
-    }
-  }
-  .warningBox {
-    &.authorize-box {
-      float: right; /* Changed from left to right */
     }
   }
 }
-// END Persian-DnnSoftware
+/* END Persian-DnnSoftware */
