@@ -650,3 +650,179 @@ div#recycleBin-header.socialpanelheader .actions {
     }
 
 /* END OF TREE OF PAGES STYLES */
+
+
+/*START Persian-DnnSoftware*/
+.rtl .recycleBinContainer div.title span.caption {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.rtl .recycleBinContainer div.title span.page-name {
+    margin-right: 16px;
+    margin-left: 0;
+}
+
+.rtl .recycleBinContainer div.title > a {
+    padding-right: 16px;
+    padding-left: 0;
+    background: url('../Images/icon-back-blue.png') no-repeat right center;
+    float: left;
+}
+
+.rtl .recycleBinContainer ul.tabs-nav li {
+    float: right;
+}
+
+.rtl div#recycleBin-header.socialpanelheader .actions {
+    float: left;
+    margin-left: 28px;
+    margin-right: 0;
+}
+
+    .rtl div#recycleBin-header.socialpanelheader .actions a.button {
+        margin: 22px 0 0 38px;
+    }
+
+.rtl .recyclbin-header .page {
+    border-left: 1px solid lightgrey;
+    border-right: none;
+}
+
+.rtl .recyclbin-header .deleteddate {
+    border-left: 1px solid lightgrey;
+    border-right: none;
+}
+
+.rtl .recycleBinContainer table.dnnRBGrid tr.dnnRBGridHeader td {
+    text-align: right;
+    font-family: Vazirmatn, sourcecodepro, Arial;
+}
+
+    .rtl .recycleBinContainer table.dnnRBGrid tr.dnnRBGridHeader td.mtitle,
+    .rtl .recycleBinContainer table.dnnRBGrid tr.dnnRBGridHeader td.username {
+        border-right: 0px;
+        border-left: 1px solid #c9c9c9;
+    }
+
+    .rtl .recycleBinContainer table.dnnRBGrid tr.dnnRBGridHeader td.first {
+        border-left: 0px;
+        border-right: 1px solid #c9c9c9;
+    }
+
+    .rtl .recycleBinContainer table.dnnRBGrid tr.dnnRBGridHeader td.thumbnail.pagename {
+        border-right: 0px;
+        border-left: 1px solid #c9c9c9;
+    }
+
+.rtl .recycleBinContainer table.dnnRBGrid td.thumbnail .image-table {
+    float: right;
+}
+
+    .rtl .recycleBinContainer table.dnnRBGrid td.thumbnail .image-table img {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+.rtl .recycleBinContainer table.dnnRBGrid td.pagename {
+    padding-right: 9px;
+    padding-left: 0;
+    text-align: right;
+}
+
+.rtl .recycleBinContainer div.rbactions {
+    text-align: left;
+}
+
+.rtl .recycleBinContainer table.dnnRBGrid td.username,
+.rtl .recycleBinContainer table.dnnRBGrid td.displayname {
+    text-align: right;
+}
+
+.rtl .recycleBinContainer td.actions span.restore {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.rtl .recycleBinContainer td.actions span.remove {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.rtl .recycleBinContainer input[type="checkbox"]:disabled + .qaTooltip {
+    right: 20px;
+    left: auto;
+}
+
+    .rtl .recycleBinContainer input[type="checkbox"]:disabled + .qaTooltip > .tag-menu a.help {
+        right: 7px;
+        left: auto;
+    }
+
+    .rtl .recycleBinContainer input[type="checkbox"]:disabled + .qaTooltip > .tag-menu p {
+        padding-right: 10px;
+        padding-left: 0;
+    }
+
+    .rtl .recycleBinContainer input[type="checkbox"]:disabled + .qaTooltip > .tag-menu:after {
+        border-left: 7px solid #000;
+        border-right: 0;
+        right: -14px;
+        left: auto;
+    }
+
+.rtl .content-container .jspVerticalBar {
+    border-right: 1px solid #d4d4d4;
+    border-left: none;
+}
+
+    .rtl .content-container .jspVerticalBar .jspTrack {
+        margin-right: 2px !important;
+        margin-left: 0 !important;
+    }
+
+.rtl .recycleBinContainer .containerUlPages .hover {
+    right: 22px;
+    left: auto;
+    margin-right: -11px;
+    margin-left: 0;
+}
+
+.rtl .recycleBinContainer .containerUlPages .pageDataContainer .pagename {
+    float: right;
+}
+
+.rtl .recycleBinContainer .containerUlPages .pageDataContainer::before {
+    right: -22px;
+    left: auto;
+    border-left: 0px;
+    border-right: 2px solid #d9d9d9;
+}
+
+.rtl .recycleBinContainer .containerUlPages .treeEdges {
+    border-right: 2px solid #d9d9d9;
+    border-left: none;
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.rtl .recycleBinContainer .containerUlPages .pageDataContainer {
+    border-right: 2px solid transparent;
+    border-left: none;
+}
+
+.rtl .recycleBinContainer a.tooltip span {
+    right: -30px;
+    left: auto;
+}
+
+    .rtl .recycleBinContainer a.tooltip span:after {
+        right: 75px;
+        left: auto;
+    }
+
+.rtl .recycleBinContainer .EmptyList {
+    font-family: Vazirmatn, Arial, Helvetica, sans-serif;
+}
+
+/*END Persian-DnnSoftware*/

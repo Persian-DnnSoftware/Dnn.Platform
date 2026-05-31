@@ -1,0 +1,24 @@
+﻿// START Persian-DnnSoftware
+@use "sass:meta";
+
+.aperture-theme {
+    @include meta.load-css('headerRtl');
+    @include meta.load-css('footerRtl');
+
+    .aperture-container {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+        max-width: 1280px;
+    }
+    // Sticky footer
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .aperture-main {
+        flex-grow: 1;
+    }
+}
+// END Persian-DnnSoftware

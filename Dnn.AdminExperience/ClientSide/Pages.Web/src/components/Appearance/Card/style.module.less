@@ -143,3 +143,34 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.moduleContainer) {
+  span.card-image {
+    & > svg {
+      left: unset;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+    span.hoverLayer {
+      left: unset;
+      right: 0;
+      text-align: center;
+    }
+  }
+  div.card-title {
+    text-align: center;
+  }
+  div.card-title-site-default {
+    text-align: center;
+  }
+  &.selected {
+    span.checkmark {
+      top: 5px;
+      right: unset;
+      left: 5px;
+    }
+  }
+}
+// END Persian-DnnSoftware

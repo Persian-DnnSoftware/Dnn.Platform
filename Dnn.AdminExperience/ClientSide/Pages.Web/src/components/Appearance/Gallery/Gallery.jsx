@@ -46,6 +46,9 @@ class Gallery extends Component {
                 <Scrollbars ref={this.scrollbarsRef}
                     className="container"
                     autoHeight
+                    // START Persian-DnnSoftware
+                    style={{direction:"ltr"}}
+                    // END Persian-DnnSoftware
                     autoHeightMin={0}
                     autoHeightMax={480}>
                     <div style={{width}} className="flex-container">

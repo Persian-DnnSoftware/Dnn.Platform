@@ -63,3 +63,44 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .extensions-app {
+  .dnn-persona-bar-page-header {
+    button {
+      margin-left: unset;
+      margin-right: 12px;
+    }
+  }
+  .dnn-ui-common-tooltip {
+    .tooltip-text {
+      text-align: right;
+    }
+  }
+}
+
+.rtl .extension-form {
+  .dnn-grid-cell {
+    &.modal-footer {
+      button {
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+    .version-dropdown {
+      margin-right: unset;
+      margin-left: 8px;
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+  .dnn-grid-system.with-right-border {
+    > .dnn-grid-cell:first-child {
+      border-right: none;
+      border-left: 1px solid @alto;
+    }
+  }
+}
+// END Persian-DnnSoftware

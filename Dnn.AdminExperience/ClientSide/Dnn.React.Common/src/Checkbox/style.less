@@ -109,3 +109,48 @@
         cursor: not-allowed;
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-checkbox-container {
+        &.align-left {
+            .dnn-ui-common-tooltip {
+                margin-right: unset;
+                margin-left: 20px;
+            }
+        }
+
+        .checkbox {
+            margin-right: unset;
+            margin-left: 20px;
+
+            input[type="checkbox"] {
+                & + label {
+                    &:after {
+                        left: unset;
+                        right: 4px;
+                        // خصوصیات مربوط به شکل تیک (مانند border-top, border-right, transform) معمولاً در RTL تغییر نمی‌کنند.
+                    }
+                }
+
+                &:checked + label {
+                    &:after {
+                        left: unset;
+                        right: 0.5px;
+                    }
+                }
+            }
+
+            &.deselect-state {
+                input[type="checkbox"]:checked + label[for] {
+                    &:after {
+                        left: unset;
+                        right: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware

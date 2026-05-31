@@ -49,3 +49,10 @@ h3 {
 dnn-color-input, dnn-input{
   --background-color: var(--dnn-color-surface-light, #eee);
 }
+
+
+// START Persian-DnnSoftware
+.rtl dnn-button{
+  font-family: Vazirmatn, Arial;
+}
+// END Persian-DnnSoftware

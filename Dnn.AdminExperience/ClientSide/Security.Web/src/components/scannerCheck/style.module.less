@@ -534,3 +534,281 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.scannerCheckResults) {
+  .scannerCheckItems-title {
+    margin: 0 25px 0 0;
+  }
+  .scannercheck-topbar {
+    .search-filter {
+      float: right;
+      > div {
+        border-right: none;
+        border-left: 1px solid @alto;
+        input {
+          padding-right: 0 !important;
+          padding-left: 16px !important;
+          &::-webkit-search-cancel-button {
+            right: unset;
+            left: 30px;
+          }
+        }
+      }
+    }
+    .search-filter-active {
+      float: right;
+      > div {
+        border-right: none;
+        border-left: 1px solid @alto;
+        input {
+          padding-right: 0 !important;
+          padding-left: 16px !important;
+          &::-webkit-search-cancel-button {
+            right: unset;
+            left: 30px;
+          }
+        }
+      }
+    }
+    .files-filter {
+      float: left;
+      border-right: none;
+      border-left: 1px solid @alto;
+      margin: 0px 0 0 20px;
+      padding: 9px 0px 4px 20px;
+    }
+    .files-filter-active {
+      float: left;
+      border-right: none;
+      border-left: 1px solid @alto;
+      margin: 0px 0 0 20px;
+      padding: 9px 0px 4px 20px;
+    }
+    .settings-filter {
+      float: left;
+      margin: 9px 0 0 0;
+    }
+    .settings-filter-active {
+      float: left;
+      margin: 9px 0 0 0;
+    }
+  }
+  .scannerCheckItems {
+    /* Assuming this is a block-level element that fills its container,
+       setting its float to right might be desired if it's part of a larger flex/grid,
+       or if it was explicitly floating left in LTR. Based on the previous
+       responses, a float: right was applied to main containers, so adding here for consistency. */
+    float: right; 
+    .scannerCheckHeader-wrapper {
+      float: right;
+      .scannerCheckHeader-FileName {
+        padding: 0 25px 0 0;
+        float: right;
+      }
+      .scannerCheckHeader-LastWriteTime {
+        float: right;
+      }
+      .scannerCheckHeader-DatabaseInstance {
+        padding: 0 25px 0 0;
+        float: right;
+      }
+      .scannerCheckHeader-DatabaseValue {
+        float: right;
+      }
+    }
+    .scannerCheckItem {
+      .label-name {
+        padding: 0 20px 0 0;
+        float: right;
+      }
+      .label-date {
+        float: right;
+      }
+      .label-columnname {
+        padding: 0 20px 0 0;
+        float: right;
+      }
+      .label-columnvalue {
+        float: right;
+      }
+      .label-wrapper {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+  .scannerCheckItems-riskFiles {
+    float: right; /* Added float for consistency */
+    .scannerCheckHeader-wrapper {
+      float: right;
+      .scannerCheckHeader-FileName {
+        padding: 0 25px 0 0;
+        float: right;
+      }
+      .scannerCheckHeader-LastWriteTime {
+        float: right;
+      }
+    }
+    .scannerCheckItem {
+      .label-name {
+        padding: 0 20px 0 0;
+        float: right;
+      }
+      .label-date {
+        float: right;
+      }
+      .label-wrapper {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+  .scannerCheckItems-portalSettings {
+    float: right; /* Added float for consistency */
+    .scannerCheckHeader-wrapper {
+      float: right;
+      .scannerCheckHeader-PortalId {
+        padding: 0 25px 0 0;
+        float: right;
+      }
+      .scannerCheckHeader-SettingName {
+        float: right;
+      }
+      .scannerCheckHeader-SettingValue {
+        float: right;
+      }
+      .scannerCheckHeader-UserId {
+        float: right;
+      }
+      .scannerCheckHeader-LastWriteTime {
+        float: right;
+      }
+    }
+    .scannerCheckItem {
+      .label-id {
+        padding: 0 20px 0 0;
+        float: right;
+      }
+      .label-name {
+        float: right;
+      }
+      .label-value {
+        float: right;
+      }
+      .label-user {
+        float: right;
+      }
+      .label-date {
+        float: right;
+      }
+      .label-wrapper {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+  .scannerCheckItems-tabSettings {
+    float: right; /* Added float for consistency */
+    .scannerCheckHeader-wrapper {
+      float: right;
+      .scannerCheckHeader-TabId {
+        padding: 0 25px 0 0;
+        float: right;
+      }
+      .scannerCheckHeader-PortalId {
+        float: right;
+      }
+      .scannerCheckHeader-SettingName {
+        float: right;
+      }
+      .scannerCheckHeader-SettingValue {
+        float: right;
+      }
+      .scannerCheckHeader-UserId {
+        float: right;
+      }
+      .scannerCheckHeader-LastWriteTime {
+        float: right;
+      }
+    }
+    .scannerCheckItem {
+      .label-tab {
+        padding: 0 20px 0 0;
+        float: right;
+      }
+      .label-id {
+        float: right;
+      }
+      .label-name {
+        float: right;
+      }
+      .label-value {
+        float: right;
+      }
+      .label-user {
+        float: right;
+      }
+      .label-date {
+        float: right;
+      }
+      .label-wrapper {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+  .scannerCheckItems-moduleSettings {
+    float: right; /* Added float for consistency */
+    .scannerCheckHeader-wrapper {
+      float: right;
+      .scannerCheckHeader-Type {
+        padding: 0 25px 0 0;
+        float: right;
+      }
+      .scannerCheckHeader-ModuleId {
+        float: right;
+      }
+      .scannerCheckHeader-PortalId {
+        float: right;
+      }
+      .scannerCheckHeader-SettingName {
+        float: right;
+      }
+      .scannerCheckHeader-SettingValue {
+        float: right;
+      }
+      .scannerCheckHeader-UserId {
+        float: right;
+      }
+      .scannerCheckHeader-LastWriteTime {
+        float: right;
+      }
+    }
+    .scannerCheckItem {
+      .label-type {
+        padding: 0 20px 0 0;
+        float: right;
+      }
+      .label-module {
+        float: right;
+      }
+      .label-id {
+        float: right;
+      }
+      .label-name {
+        float: right;
+      }
+      .label-value {
+        float: right;
+      }
+      .label-user {
+        float: right;
+      }
+      .label-date {
+        float: right;
+      }
+      .label-wrapper {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

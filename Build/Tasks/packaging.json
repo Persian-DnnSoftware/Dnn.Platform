@@ -84,6 +84,8 @@
     "/bin/System.Text.Encoding.CodePages.dll",
     "/bin/Providers/DotNetNuke.Providers.AspNetClientCapabilityProvider.dll",
     "/bin/System.Runtime.CompilerServices.Unsafe.dll",
+    "/bin/System.Collections.Immutable.dll",
+    "/bin/System.Text.Encoding.CodePages.dll",
     "/Config/DotNetNuke.config",
     "/Install/InstallWizard.aspx"
   ],

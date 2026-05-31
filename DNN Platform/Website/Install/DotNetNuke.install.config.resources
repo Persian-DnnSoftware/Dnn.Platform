@@ -12,7 +12,7 @@
     <lastname>Account</lastname>
     <username>host</username>
     <password>dnnhost</password>
-    <email>host@changeme.invalid</email>
+    <email>host@persian-dnnsoftware.ir</email>
     <locale>en-US</locale>
     <updatepassword>false</updatepassword>
   </superuser>
@@ -83,16 +83,16 @@
   <desktopmodules/>
   <portals>
     <portal>
-      <portalname>My Website</portalname>
+      <portalname>Persian-DnnSoftware</portalname>
       <administrator>
         <firstname>Administrator</firstname>
         <lastname>Account</lastname>
         <username>admin</username>
         <password>dnnadmin</password>
-        <email>admin@changeme.invalid</email>
+        <email>admin@persian-dnnsoftware.invalid</email>
       </administrator>
-      <description>My Website</description>
-      <keywords>DotNetNuke, DNN, Content, Management, CMS</keywords>
+      <description>Persian-DnnSoftware</description>
+      <keywords>DotNetNuke, DNN, Content, Management, CMS, Persian-DnnSoftware.ir</keywords>
       <templatefile>Default Website.template</templatefile>
       <portalaliases>
         <portalalias></portalalias>

@@ -184,3 +184,118 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .apitokens-details {
+  float: right;
+
+  .editor-container {
+    float: right;
+
+    &.right-column {
+      border-left: none; /* Remove LTR border */
+      border-right: 1px solid @alto; /* Add RTL border */
+    }
+
+    .title-row {
+      float: right;
+    }
+
+    .dnn-label {
+      float: right;
+
+      label {
+        float: right;
+      }
+    }
+
+    .apitokenkeys {
+      .dnn-label {
+        padding-left: unset; /* Remove LTR padding */
+        padding-right: 10px; /* Add RTL padding */
+      }
+    }
+
+    .status-row {
+      float: right;
+
+      .left {
+        float: right;
+      }
+
+      .right {
+        float: left; /* Change float direction */
+        text-align: left; /* Adjust text alignment */
+
+        .checkbox {
+          float: left; /* Change float direction */
+        }
+      }
+
+      .dnn-switch-container {
+        float: left; /* Change float direction */
+      }
+    }
+
+    .editor-row {
+      float: right;
+
+      select {
+        &.full {
+          float: right;
+        }
+
+        &.two-fifth {
+          float: right;
+        }
+
+        &.one-fourth {
+          float: right;
+        }
+      }
+
+      .text-section {
+        float: right;
+      }
+
+      .dnn-single-line-input-with-error,
+      input {
+        .dnn-label {
+          label {
+            float: right;
+          }
+        }
+      }
+
+      &.divider {
+        .dnn-label {
+          float: right;
+
+          label {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons-box {
+    float: right; /* Change float direction */
+    text-align: center; /* Text alignment remains centered */
+
+    .dnn-ui-common-button {
+      margin: 5px; /* Symmetric margin, no change */
+    }
+
+    .edit-icon {
+      margin: 0px 10px 20px 10px; /* Symmetric margin, no change */
+      float: left; /* Change float direction */
+
+      svg {
+        float: right; /* Change float direction */
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

@@ -1,0 +1,89 @@
+﻿// START Persian-DnnSoftware
+.dnnForm {
+    .ui-resizable {
+        position: relative;
+    }
+
+    .ui-resizable-handle {
+        position: absolute;
+        display: block;
+        z-index: 99999;
+        font-size: 0.1px;
+    }
+
+    .ui-resizable-n {
+        cursor: n-resize;
+        height: 7px;
+        width: 100%;
+        top: -5px;
+        left: 0;
+    }
+
+    .ui-resizable-s {
+        cursor: s-resize;
+        height: 7px;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+    }
+
+    .ui-resizable-e { // East (right) handle becomes left handle in RTL
+        cursor: w-resize;
+        width: 7px;
+        left: -5px;
+        right: auto;
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-resizable-w { // West (left) handle becomes right handle in RTL
+        cursor: e-resize;
+        width: 7px;
+        right: -5px;
+        left: auto;
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-resizable-se { // South-East (bottom-right) handle becomes South-West in RTL
+        cursor: sw-resize;
+        width: 12px;
+        height: 12px;
+        left: 1px;
+        right: auto;
+        bottom: 1px;
+    }
+
+    .ui-resizable-sw { // South-West (bottom-left) handle becomes South-East in RTL
+        cursor: se-resize;
+        width: 9px;
+        height: 9px;
+        right: -5px;
+        left: auto;
+        bottom: -5px;
+    }
+
+    .ui-resizable-nw { // North-West (top-left) handle becomes North-East in RTL
+        cursor: ne-resize;
+        width: 9px;
+        height: 9px;
+        right: -5px;
+        left: auto;
+        top: -5px;
+    }
+
+    .ui-resizable-ne { // North-East (top-right) handle becomes North-West in RTL
+        cursor: nw-resize;
+        width: 9px;
+        height: 9px;
+        left: -5px;
+        right: auto;
+        top: -5px;
+    }
+
+    .ui-resizable-disabled .ui-resizable-handle,
+    .ui-resizable-autohide .ui-resizable-handle {
+        display: none;
+    }
+}
+// END Persian-DnnSoftware

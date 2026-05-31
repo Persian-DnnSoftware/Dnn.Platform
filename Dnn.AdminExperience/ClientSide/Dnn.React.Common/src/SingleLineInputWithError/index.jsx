@@ -9,7 +9,10 @@ class SingleLineInputWithError extends Component {
     constructor() {
         super();
         this.state = {
-            isFocused: false
+            isFocused: false,
+            // START Persian-DnnSoftware
+            isRtl:document.body.classList.contains("rtl") ? true : false
+            // END Persian-DnnSoftware
         };
     }
 
@@ -100,7 +103,10 @@ class SingleLineInputWithError extends Component {
                         onKeyUp={props.onKeyUp}
                         value={props.value}
                         tabIndex={props.tabIndex}
-                        style={Object.assign({ marginBottom: 32, paddingRight: this.getInputRightPadding(props.counter, props.error)}, props.inputStyle)}
+                        //START Persian-DnnSoftware
+                        //style={Object.assign({ marginBottom: 32, paddingRight: this.getInputRightPadding(props.counter, props.error)}, props.inputStyle)}
+                        style={Object.assign({ marginBottom: 32},this.state.isRtl?{paddingRight: this.getInputRightPadding(props.counter, props.error)}:{paddingLeft: this.getInputRightPadding(props.counter, props.error)}, props.inputStyle)}
+                        //END Persian-DnnSoftware
                         placeholder={props.placeholder}
                         enabled={props.enabled}
                         size={props.inputSize}

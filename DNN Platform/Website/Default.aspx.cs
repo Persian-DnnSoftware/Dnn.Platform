@@ -262,6 +262,16 @@ namespace DotNetNuke.Framework
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
+            /* START Persian-DnnSoftware */
+
+            // 404 Page RLT Bug Fix
+            if (this.PortalSettings.CultureCode == "fa-IR")
+            {
+                var newCulture = Services.Localization.Persian.PersianController.GetPersianCultureInfo();
+                System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+            }
+
+            /* END Persian-DnnSoftware */
 
             // set global page settings
             this.InitializePage();

@@ -525,6 +525,16 @@ namespace DotNetNuke.Entities.Urls
 
             if (context != null)
             {
+                /* START Persian-DnnSoftware */
+                /* 404 Page RLT Bug Fix */
+                PortalInfo portalInfo = CacheController.GetPortal(result.PortalId, false);
+                if (portalInfo != null && portalInfo.CultureCode == "fa-IR")
+                {
+                    var newCulture = Services.Localization.Persian.PersianController.GetPersianCultureInfo();
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = newCulture;
+                }
+
+                /* END Persian-DnnSoftware */
                 HttpRequest request = context.Request;
                 HttpResponse response = context.Response;
                 HttpServerUtility server = context.Server;
@@ -800,7 +810,16 @@ namespace DotNetNuke.Entities.Urls
 
                                     // 881 : spoof the basePage object so that the client dependency framework
                                     // is satisfied it's working with a page-based handler
-                                    IHttpHandler spoofPage = new CDefault();
+                                    /* START Persian-DnnSoftware */
+                                    /* 404 Page RLT Bug Fix */
+                                    /* IHttpHandler spoofPage = new CDefault(); */
+                                    var spoofPage = new CDefault();
+                                    if (portalInfo.CultureCode == "fa-IR")
+                                    {
+                                        spoofPage.Culture = "fa-IR";
+                                    }
+
+                                    /* END Persian-DnnSoftware */
                                     context.Handler = spoofPage;
                                     server.Transfer("~/" + errUrl, true);
                                 }
@@ -1431,28 +1450,39 @@ namespace DotNetNuke.Entities.Urls
         /// </remarks>
         private static bool IgnoreRequestForInstall(string physicalPath, string refererPath, string requestedDomain, string refererDomain)
         {
-            if (physicalPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
+            /* START Persian-DnnSoftware */
+            try
+            {
+                /* END Persian-DnnSoftware */
+                if (physicalPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
                 || physicalPath.EndsWith("installwizard.aspx", true, CultureInfo.InvariantCulture)
                 || physicalPath.EndsWith("upgradewizard.aspx", true, CultureInfo.InvariantCulture)
                 || Globals.Status == Globals.UpgradeStatus.Install
                 || Globals.Status == Globals.UpgradeStatus.Upgrade)
-            {
-                return true;
-            }
+                {
+                    return true;
+                }
 
-            // 954 : DNN 7.0 compatibility
-            // check for /default.aspx which is default Url launched from the Upgrade/Install wizard page
-            // 961 : check domain as well as path for the referer
-            if (!physicalPath.EndsWith(Globals.glbDefaultPage, true, CultureInfo.InvariantCulture)
+                // 954 : DNN 7.0 compatibility
+                // check for /default.aspx which is default Url launched from the Upgrade/Install wizard page
+                // 961 : check domain as well as path for the referer
+                if (physicalPath.EndsWith(Globals.glbDefaultPage, true, CultureInfo.InvariantCulture) == false
                 && refererPath != null
                 && string.Equals(requestedDomain, refererDomain, StringComparison.OrdinalIgnoreCase)
                 && (refererPath.EndsWith("install.aspx", true, CultureInfo.InvariantCulture)
                     || refererPath.EndsWith("installwizard.aspx", true, CultureInfo.InvariantCulture)
                     || refererPath.EndsWith("upgradewizard.aspx", true, CultureInfo.InvariantCulture)))
+                {
+                    return true;
+                }
+
+                /* START Persian-DnnSoftware */
+            }
+            catch (Exception)
             {
-                return true;
             }
 
+            /* END Persian-DnnSoftware */
             return false;
         }
 
