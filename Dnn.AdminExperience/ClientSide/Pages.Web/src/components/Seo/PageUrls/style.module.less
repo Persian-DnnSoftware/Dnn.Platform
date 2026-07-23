@@ -86,3 +86,36 @@
         clear: both;
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.urlRow) {
+    .url-path {
+        direction: ltr;
+        padding-left: 10px;
+        text-align: right;
+    }
+  .extension-action {
+    float: left;
+    margin-right: unset;
+    margin-left: 5px;
+  }
+}
+
+.rtl :local(.AddItemRow) {
+  .sectionTitle {
+    float: right;
+  }
+  .AddItemBox {
+    float: left;
+    .add-icon {
+      margin-left: unset;
+      margin-right: 20px;
+      float: right;
+      svg {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

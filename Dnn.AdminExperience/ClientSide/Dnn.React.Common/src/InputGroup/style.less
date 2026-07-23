@@ -33,3 +33,37 @@
             border-collapse: separate;
         }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-ui-common-input-group {
+        float: right;
+
+        .input-group-addon { /* در حالت RTL، افزونه در سمت راست قرار می‌گیرد */
+            border-right: unset; /* لغو border-right: none از حالت LTR تا border عمومی اعمال شود */
+            border-left: none;   /* حذف بردر چپ */
+            
+            /* در LTR گوشه‌های بالا-راست و پایین-راست صفر بودند، آنها را به شعاع عمومی بازمی‌گردانیم */
+            border-top-right-radius: unset; 
+            border-bottom-right-radius: unset;
+
+            /* گوشه‌های بالا-چپ و پایین-چپ (که اکنون در کنار اینپوت هستند) تیز می‌شوند */
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        
+        input { /* در حالت RTL، اینپوت در سمت چپ قرار می‌گیرد */
+            /* در LTR گوشه‌های بالا-چپ و پایین-چپ صفر بودند، آنها را به شعاع عمومی/پیش‌فرض بازمی‌گردانیم */
+            border-top-left-radius: unset; 
+            border-bottom-left-radius: unset;
+
+            /* گوشه‌های بالا-راست و پایین-راست (که اکنون در کنار افزونه هستند) تیز می‌شوند */
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            
+            /* float: left برای اینپوت به دلیل display: table-cell احتمالا بی‌اثر است، بنابراین float برای RTL تغییر داده نمی‌شود. */
+        }
+    }
+}
+// END Persian-DnnSoftware

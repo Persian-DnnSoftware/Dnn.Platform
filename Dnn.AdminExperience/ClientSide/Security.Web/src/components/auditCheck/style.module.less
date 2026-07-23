@@ -90,3 +90,46 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.auditCheckResults) {
+  .auditcheck-topbar {
+    margin: 20px 25px 0 25px; /* Symmetric horizontal margins, no change needed */
+  }
+  .auditCheckItems {
+    /* display: inline-block, margin, border are largely direction-agnostic */
+    .auditCheckHeader-wrapper {
+      float: right; /* Flipped float direction */
+      .auditCheckHeader-SecurityCheck {
+        padding: 0 25px 0 0; /* Flipped horizontal padding */
+        float: right; /* Flipped float direction */
+      }
+      .auditCheckHeader-Result {
+        float: right; /* Flipped float direction */
+      }
+      .auditCheckHeader-Notes {
+        float: right; /* Flipped float direction */
+      }
+    }
+    .auditCheckItem {
+      /* display: table, width, padding, color, border are largely direction-agnostic */
+      .label-name {
+        padding: 0 20px 0 0; /* Flipped horizontal padding */
+        float: right; /* Flipped float direction */
+      }
+      .label-result {
+        float: right; /* Flipped float direction */
+      }
+      .label-notes {
+        float: right; /* Flipped float direction */
+      }
+      .label-wrapper {
+        padding: 0 5px 0 5px; /* Symmetric padding, no change needed */
+        /* All .label-result-severity-* classes mainly deal with color, font-weight, margin-bottom,
+           and text-transform which are direction-agnostic. text-decoration and cursor also are. */
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

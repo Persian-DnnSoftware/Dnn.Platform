@@ -116,3 +116,70 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .scheduler-setting-editor {
+  .container {
+    &.right-column {
+      border-left: none;
+      border-right: 1px solid @alto;
+    }
+    .title-row {
+      float: right;
+    }
+    .status-row {
+      .left {
+        float: right;
+      }
+      .right {
+        float: left;
+        text-align: left;
+        .checkbox {
+          float: left;
+        }
+      }
+    }
+    .editor-row {
+      label {
+        float: right;
+        text-align: right;
+      }
+      select {
+        &.full {
+          float: right;
+        }
+        &.two-fifth {
+          float: right;
+        }
+        &.one-fourth {
+          float: right;
+        }
+      }
+      .text-section {
+        float: right;
+      }
+      .dnn-day-picker {
+        .calendar-text {
+          width: ~"calc(100% - 37px)"; /* No change needed in calculation expression */
+        }
+      }
+      .switch-button {
+        label {
+          /* width: auto is not directional */
+        }
+      }
+    }
+  }
+  .buttons-box {
+    float: right;
+    text-align: center;
+    .edit-icon {
+      float: left;
+      svg {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

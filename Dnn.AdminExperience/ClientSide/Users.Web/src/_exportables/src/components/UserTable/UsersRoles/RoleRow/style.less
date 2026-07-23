@@ -75,3 +75,41 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl #users-container {
+  .user-role-row {
+    float: right;
+    text-align: right;
+    .dnn-grid-cell {
+      .actions {
+        float: left;
+        text-align: left;
+        & > div {
+          text-align: right;
+          float: right;
+        }
+        span {
+          float: right;
+        }
+        a {
+          float: right;
+        }
+      }
+    }
+    &:hover {
+      .dnn-grid-cell {
+        .actions {
+          span {
+            float: right;
+          }
+          a {
+            /* opacity changes, no float change */
+          }
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

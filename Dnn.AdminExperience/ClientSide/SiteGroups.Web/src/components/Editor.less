@@ -116,3 +116,77 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .sitegroup-details-editor {
+  float: right;
+  .selector-container {
+    padding: 0 25px; /* Symmetric padding, no change needed */
+  }
+  .editor-container {
+    float: right;
+    &.right-column {
+      border-left: none; /* Remove LTR border */
+      border-right: 1px solid @alto; /* Add RTL border */
+    }
+    .title-row {
+      float: right;
+    }
+    .status-row {
+      float: right;
+      .left {
+        float: right;
+        .dnn-label {
+          float: right;
+          label {
+            float: right;
+          }
+        }
+      }
+      .right {
+        float: left;
+        text-align: left;
+        .checkbox {
+          float: left;
+        }
+      }
+    }
+    .editor-row {
+      float: right;
+      select {
+        &.full {
+          float: right;
+        }
+        &.two-fifth {
+          float: right;
+        }
+        &.one-fourth {
+          float: right;
+        }
+      }
+      .text-section {
+        float: right;
+      }
+      &.divider {
+        .dnn-label {
+          float: right;
+          label {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+  .buttons-box {
+    float: right;
+    text-align: center;
+    .edit-icon {
+      float: left;
+      svg {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware
