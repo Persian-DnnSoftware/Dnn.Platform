@@ -12,6 +12,13 @@
   <a href="https://www.persian-dnnsoftware.ir/donate">
 <img alt="Donate-PNG-Download-Image" src="https://www.persian-dnnsoftware.ir/Portals/0/Images/Donate-300.png" /></a>
 </div>
+<div style="text-align: center;">
+
+
+  <h3><a href="https://reymit.ir/persian-dnnsoftware" >
+حمایت مالی از طریق "ریمیت"
+</a></h3>
+</div>
 
 # دانلود DNN فارسی
  * [دانلود نسخه 10.2.2 دی ان ان فارسی](https://github.com/Persian-DnnSoftware/Dnn.Platform/releases/tag/v10.2.2-persian) - (تاریخ انتشار :1404/11/25)
