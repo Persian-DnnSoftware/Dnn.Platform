@@ -4,12 +4,11 @@
 @use "tables.rtl";
 
 /* Module headings */
-.Head {
+.Head{
     display: inline-block;
     margin-bottom: 0.375rem;
 }
-
-td.SubHead {
+td.SubHead{
     display: table-cell;
     margin-bottom: 0;
 }
@@ -60,11 +59,9 @@ td.SubHead {
 .DNNAlignleft {
     text-align: right;
 }
-
 .DNNAlignright {
     text-align: left;
 }
-
 .DNNAligncenter {
     text-align: center;
 }
@@ -73,7 +70,5 @@ td.SubHead {
     display: none;
 }
 /*Critical Error Messages (querystring error=something)*/
-div.errorWin p {
-    margin: 0 0 10px 0;
-}
+div.errorWin p{ margin: 0 0 10px 0;}
 // END Persian-DnnSoftware

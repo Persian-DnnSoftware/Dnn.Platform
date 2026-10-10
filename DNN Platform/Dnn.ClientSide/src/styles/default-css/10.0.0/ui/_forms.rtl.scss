@@ -1,39 +1,36 @@
 ﻿// START Persian-DnnSoftware
-.dnnForm {
+.dnnForm{
     width: 100%;
-
-    fieldset {
+    fieldset{
         clear: none;
         position: relative;
         margin-bottom: 1.125rem;
         text-align: right;
-
-        fieldset {
+        fieldset{
             width: 100%;
         }
     }
-
-    .dnnFormItem {
+    .dnnFormItem{
         clear: both;
         width: 100%;
         display: block;
         position: relative;
         text-align: right;
-
-        a.dnnFormHelp {
-            span {
+        a.dnnFormHelp{
+            span{
                 position: relative;
             }
-
-            img {
+            img{
                 display: block;
             }
         }
     }
 }
 
-.dnnFormItem {
+.dnnFormItem{
     input[type="text"],
+    input[type="date"],
+    input[type="datetime-local"],
     select,
     textarea,
     input[type="email"],
@@ -48,13 +45,12 @@
         font-size: 0.75rem;
         width: 45%;
         max-width: 445px;
-
-        + .dnnTertiaryAction {
+        font-family: inherit;
+        + .dnnTertiaryAction{
             display: inline-block;
             max-width: 60px;
         }
     }
-
     input[type="checkbox"],
     input[type="radio"] {
         width: 0.8125rem;
@@ -62,28 +58,22 @@
         padding: 0;
         box-sizing: border-box;
     }
-
     input[type="search"] {
         box-sizing: content-box;
     }
-
-    input[type="checkbox"] {
+    input[type="checkbox"]{
         margin: 0 5px;
     }
-
-    table {
+    table{
         background: none;
     }
-
     .dnnSpinner {
         width: 45%;
         margin-bottom: 1.125rem;
     }
-
     .dnnTagsInput {
         width: 45%;
     }
-
     textarea {
         min-height: 5rem;
     }
@@ -94,11 +84,9 @@
         width: 32.075%;
         padding: 0.3125rem;
         margin-bottom: 1.125rem;
-
         .dnnLeft {
             width: 100%;
         }
-
         span {
             display: inline-block;
             width: 33%;
@@ -118,8 +106,7 @@
         border-color: var(--dnn-color-neutral-dark, #a7a7a7);
         border-width: 1px;
     }
-
-    button[disabled], input[disabled] {
+    button[disabled], input[disabled]{
         cursor: default;
         opacity: 0.5;
     }
@@ -127,6 +114,9 @@
     input[type="text"]:active, .dnnFormItem input[type="text"]:focus,
     input[type="password"]:focus, .dnnFormItem input[type="password"]:active,
     input[type="email"]:active, .dnnFormItem input[type="email"]:focus,
+    input[type="date"]:active, .dnnFormItem input[type="date"]:focus,
+    input[type="datetime-local"]:active, .dnnFormItem input[type="datetime-local"]:focus,
+    input[type="datetime-local"]:active, .dnnFormItem input[type="datetime-local"]:focus,
     select:active, .dnnFormItem select:focus,
     textarea:active, .dnnFormItem textarea:focus,
     input[type="search"]:active, .dnnFormItem input[type="search"]:focus {
@@ -136,7 +126,7 @@
         color: var(--dnn-color-foreground, #333);
     }
     /* Invalid state */
-    input:invalid, textarea:invalid {
+    input:invalid, textarea:invalid{
         background-color: var(--dnn-color-neutral, #f0dddd);
     }
     /* Error tooltip */
@@ -146,7 +136,6 @@
         overflow: visible;
         bottom: 95%;
         left: 12%;
-        right: auto;
         width: 200px;
         margin-bottom: 0;
         padding: 0.625rem;
@@ -156,12 +145,10 @@
         font-size: 0.75rem;
         color: var(--dnn-color-danger-contrast, #fff);
         text-align: right;
-
-        &:after {
+        &:after{
             position: absolute;
             bottom: -0.4375rem;
             right: 0.9375rem;
-            left: auto;
             content: "";
             width: 0;
             height: 0;
@@ -172,7 +159,6 @@
         }
     }
 }
-
 div.dnnFormGroup {
     display: inline-block;
     padding: 10px;
@@ -189,7 +175,7 @@ div.dnnFormGroup {
 .dnnTertiaryAction,
 .dnnLogin .LoginTabGroup span {
     display: inline-block;
-    padding: 0.5625rem;
+    padding: 0.375rem;
     margin-bottom: 0.5625rem;
     cursor: pointer;
     min-width: 4.6875rem;
@@ -201,18 +187,11 @@ div.dnnFormGroup {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+    font-family: inherit;
 }
 
-.dnnFormItem button, .dnnFormItem input[type="button"],
-.dnnFormItem input[type="reset"],
-.dnnFormItem input[type="submit"],
-.dnnPrimaryAction,
-.dnnSecondaryAction,
-.dnnTertiaryAction {
-    padding: 0.375rem;
-}
 
-.dnnFormMessage {
+.dnnFormMessage{
     display: block;
     padding: 0.95rem 1rem;
     margin-bottom: 1.125rem;
@@ -221,44 +200,35 @@ div.dnnFormGroup {
     border-radius: var(--dnn-controls-radius, 3px);
     max-width: 100%;
     color: var(--dnn-color-info-contrast, black);
-
     a {
         color: var(--dnn-color-info-contrast, black);
         text-decoration: underline;
     }
-
     &.dnnFormError,
     &.dnnFormValidationSummary {
         background-color: var(--dnn-color-danger, rgba(255,0,0,0.15));
         border-color: var(--dnn-color-danger-dark, rgba(255,0,0,0.2));
         color: var(--dnn-color-danger-contrast, black);
-
         a {
             color: var(--dnn-color-danger-contrast, black);
-            ;
         }
     }
-
     &.dnnFormWarning {
         background-color: var(--dnn-color-warning, rgba(255,255,0,0.15));
         border-color: var(--dnn-color-warning-dark, #CDB21F);
         color: var(--dnn-color-warning-contrast, black);
-
         a {
             color: var(--dnn-color-warning-contrast, black);
         }
     }
-
     &.dnnFormSuccess {
         background-color: var(--dnn-color-success, rgba(0,255,0,0.15));
         border-color: var(--dnn-color-success-dark, rgba(0,255,0,0.5));
         color: var(--dnn-color-success-contrast, black);
-
         a {
             color: var(--dnn-color-success-contrast, black);
         }
     }
-
     .dnnLabel {
         float: none;
         width: 90%;
@@ -266,38 +236,30 @@ div.dnnFormGroup {
     }
 }
 
-.dnnFormItem {
+.dnnFormItem{
     input[type="checkbox"] + span,
     input[type="radio"] + span {
         display: inline-block;
         width: auto;
         margin: 0.375rem 0.3125rem 0.375rem 0.3125rem;
     }
-
-    .dnnLabel {
+    .dnnLabel{
         margin-top: 0.3125rem;
     }
 }
 
-/* Pane header */
-.dnnFormSectionHead span {
-    font-size: 18px;
-    color: #222;
-}
 
 /* Tooltips */
 .dnnTooltip {
     position: relative;
     display: block;
     width: 32.075%;
-    margin-left: 1.125rem;
+    margin-right: 1.125rem;
 }
-
 .dnnHelperTip {
     position: relative;
     display: block;
 }
-
 .dnnDragdropTip {
     z-index: 10000;
     position: absolute;
@@ -306,7 +268,11 @@ div.dnnFormGroup {
     padding: 0.625rem;
     padding-right: 1.875rem;
     border-radius: var(--dnn-controls-radius, 3px);
-    background: rgba( var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), var(--dnn-color-background-contrast, 0), 0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px center;
+    background: rgba(
+        var(--dnn-color-background-contrast, 0),
+        var(--dnn-color-background-contrast, 0),
+        var(--dnn-color-background-contrast, 0),
+        0.75) url(../../../../../images/pin-icn.png) no-repeat right 7px top 12px;
     font-size: 0.6875rem;
     color: var(--dnn-color-foreground-contrast, #DDD);
     text-align: right;
@@ -335,7 +301,6 @@ a.dnnFormHelp {
     display: inline-block;
     position: absolute;
     left: 0;
-    right: auto;
     top: 2px;
     width: 14px;
     height: 15px;
@@ -366,7 +331,7 @@ legend.required:after {
     background: rgba(0,0,0,0.03);
     content: 'Required';
     font-weight: normal;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.6875rem;
     font-style: italic;
     color: var(--dnn-color-foreground-light, #777);
@@ -376,9 +341,10 @@ legend.required:after {
 .error label, legend.error {
     color: var(--dnn-color-danger, rgba(255,0,0,0.9));
 }
-
-.error {
+.error{
     input[type="text"],
+    input[type="date"],
+    input[type="datetime-local"],
     select, .error textarea,
     input[type="email"],
     input[type="search"] {
@@ -386,13 +352,13 @@ legend.required:after {
         color: var(--dnn-color-danger, rgba(255,0,0,0.7));
     }
 }
-
-.dnnFormError {
+.dnnFormError{
     label a span {
         color: var(--dnn-color-danger, red);
     }
-
     input[type="text"],
+    input[type="date"],
+    input[type="datetime-local"],
     input[type="password"],
     input[type="email"],
     input[type="tel"],
@@ -414,7 +380,6 @@ legend.required:after {
     margin: 0;
     padding-top: 1.125rem;
     text-align: right;
-
     li {
         float: right;
         margin-left: 0.3125rem;
@@ -427,12 +392,10 @@ legend.required:after {
     background: var(--dnn-color-primary, #3792ED);
     border-color: var(--dnn-color-primary-dark, #0D569E);
     color: var(--dnn-color-primary-contrast, #efefef);
-
-    &:hover, &:active {
+    &:hover, &:active{
         background: var(--dnn-color-primary-light, #6cb6f3);
         color: var(--dnn-color-primary-contrast, #fff);
     }
-
     &[disabled], &[disabled]:hover, &[disabled]:active {
         background: var(--dnn-color-neutral-light, #ebebeb);
         border-color: var(--dnn-color-neutral-dark, #a7a7a7);
@@ -443,16 +406,14 @@ legend.required:after {
 /* Secondary Action */
 .dnnSecondaryAction,
 .dnnFormItem input[type="reset"],
-a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
+ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     background: var(--dnn-color-secondary, #f5f5f5);
     border-color: var(--dnn-color-secondary-dark, #f5f5f5);
     color: var(--dnn-color-secondary-contrast, #333);
-
-    &:hover, &:active {
+    &:hover, &:active{
         background: var(--dnn-color-secondary-light, #fefefe);
         color: var(--dnn-color-secondary-contrast, #333);
     }
-
     &[disabled], &[disabled]:hover, &[disabled]:active {
         background: var(--dnn-color-neutral-light, #ebebeb);
         border-color: var(--dnn-color-neutral-dark, #a7a7a7);
@@ -465,21 +426,19 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     background: var(--dnn-color-tertiary, #eaeaea);
     border-color: var(--dnn-color-tertiary-dark, #c2c2c2);
     color: var(--dnn-color-tertiary-contrast, #333);
-
-    &:hover, &:active {
+    &:hover, &:active{
         background: var(--dnn-color-tertiary-dark, #d8d8d8);
         color: var(--dnn-color-tertiary-contrast, #333);
     }
 }
 
 /* Action Button behind input */
-.dnnFormItem {
+.dnnFormItem{
     input[type="text"] + a.dnnPrimaryAction,
     input[type="text"] + a.dnnSecondaryAction,
-    input[type="text"] + a.dnnTerriaryAction {
+    input[type="text"] + a.dnnTertiaryAction { 
         margin-right: 0.3125rem;
     }
-
     input[type="checkbox"] + span,
     input[type="radio"] + span {
         margin: 0.3125rem;
@@ -501,12 +460,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     color: var(--dnn-color-info-contrast, #ddd);
     text-align: right;
 }
-
 .dnnFormHelpContent span {
     display: block;
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
-
 .dnnTooltip .dnnFormHelpContent .dnnHelpText {
     word-wrap: break-word;
 }
@@ -522,12 +479,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     text-align: right;
     font-weight: normal;
 }
-
 .dnnFormRadioButtons {
     float: right;
     display: block;
     width: auto;
-
     input[type=radio] {
         float: none;
     }
@@ -546,12 +501,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     padding-left: 20px;
     margin-left: 18px;
     overflow: visible;
-    text-align: right;
-
+    text-align: left;
     > span {
-        text-align: right;
+        text-align: left;
     }
-
     + span {
         display: inline-block;
         margin-top: 6px;
@@ -559,12 +512,11 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
         white-space: pre-line;
     }
 }
-
-.bottomArrow:after {
+.bottomArrow:after
+{
     position: absolute;
     content: "";
     right: 15px;
-    left: auto;
     bottom: -7px;
     width: 0;
     height: 0;
@@ -572,12 +524,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     border-right: 7px solid transparent;
     border-top: 7px solid var(--dnn-color-info, #000);
 }
-
 .topArrow:before {
     position: absolute;
     content: "";
     right: 15px;
-    left: auto;
     top: -7px;
     width: 0;
     height: 0;
@@ -585,12 +535,10 @@ a.dnnSecondaryAction, a.dnnSecondaryAction, .dnnLogin .LoginTabGroup span {
     border-right: 7px solid transparent;
     border-bottom: 7px solid var(--dnn-color-info, #000);
 }
-
 a.pinHelp {
     display: block;
     position: absolute;
     right: 7px;
-    left: auto;
     top: 12px;
     width: 15px;
     height: 15px;
@@ -598,7 +546,6 @@ a.pinHelp {
     background: url(../../../../../images/pin-icn.png) no-repeat 0 0;
     filter: contrast(3);
 }
-
 .ui-draggable a.pinHelp,
 a.pinHelp:hover {
     opacity: 1;
@@ -606,7 +553,8 @@ a.pinHelp:hover {
 
 /* Input Customised Checkbox*/
 .dnnCheckbox {
-    display: flex;
+    display: inline-flex;
+    padding-left: 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -618,45 +566,34 @@ a.pinHelp:hover {
         background-position: 0px 0px;
     }
 }
-
 .dnnCheckbox-checked img {
     background-position: -51px 0px;
 }
-
 .dnnCheckbox-disabled {
     cursor: not-allowed;
-
     img {
         opacity: .5;
     }
 }
-
 .dnnCheckbox-error img {
     background-position: -100px 0px;
 }
-
 .dnnCheckbox-checked-error img {
     background-position: -150px 0px;
 }
-
 .dnnCheckbox-focus {
     outline: 2px solid var(--dnn-color-foreground, black);
     outline-offset: 2px;
 }
-
-.dnnBoxLabel {
-    display: inline-block;
-}
+.dnnBoxLabel{ display: inline-block;}
 
 /* Input Customised Radiobutton */
 .dnnRadiobutton {
     display: inline-block;
     cursor: pointer;
-
     .mark {
         display: inline-block;
     }
-
     img {
         width: 20px;
         height: 18px;
@@ -666,25 +603,20 @@ a.pinHelp:hover {
         background-position: 0px 0px;
     }
 }
-
 .dnnRadiobutton-checked img {
     background-position: -50px 0px;
 }
-
 .dnnRadiobutton-disabled img {
     opacity: .5;
 }
-
 .dnnRadiobutton-checked-error img {
     background-position: -150px 0px;
 }
-
 .dnnRadiobutton-error img {
     background-position: -100px 0px;
 }
-
 .dnnRadiobutton-focus {
-    outline: 2px solid var(--dnn-color-foreground, black);
+	outline: 2px solid var(--dnn-color-foreground, black);
     outline-offset: 2px;
 }
 
@@ -697,7 +629,6 @@ span.dnnHSRadioButtons {
     padding: 10px;
     margin-bottom: 5px;
 }
-
 table.dnnFormRadioButtons {
     margin-bottom: 5px;
 }
@@ -710,11 +641,10 @@ table.dnnFormRadioButtons {
 div.dnnTagsInput {
     display: inline-block;
     margin: 0;
-    padding: 5px 5px 0 0;
+    padding: 5px 0 0 5px;
     border: 1px solid var(--dnn-color-foreground-light, #c9c9c9);
     border-radius: var(--dnn-controls-radius, 3px);
     background: var(--dnn-color-background, #FFF);
-
     span.tag {
         display: block;
         float: right;
@@ -729,13 +659,11 @@ div.dnnTagsInput {
         cursor: pointer;
         background-color: var(--dnn-color-neutral, #eee);
         word-break: break-word;
-
         &:hover {
             background-color: var(--dnn-color-primary, #e8f1fa);
             color: var(--dnn-color-primary-contrast, #444);
             border-color: var(--dnn-color-primary-dark, #000);
         }
-
         a {
             display: inline-block;
             width: 8px;
@@ -746,8 +674,7 @@ div.dnnTagsInput {
             filter: contrast(5);
         }
     }
-
-    > div > input {
+    > div > input{
         border: none;
         background: transparent;
         font-size: 0.75rem;
@@ -756,11 +683,9 @@ div.dnnTagsInput {
         height: 1.1875rem;
         padding: 0.5rem 0.1875rem 0.1875rem 0;
         margin-bottom: 0.3125rem;
-
         &:focus, &:active {
             outline: none;
         }
-
         &.dnnTagsInvalid {
             display: block;
             float: right;
@@ -775,20 +700,16 @@ div.dnnTagsInput {
             text-decoration: none;
         }
     }
-
     div {
         display: block;
         float: right;
-
         &.dnnTags_filter {
             float: left;
             position: relative;
             margin: 0 0.3125rem 0.3125rem 0;
-
             > .dnnTags_filter_label {
                 display: inline-block;
                 border-right: 1px solid #ccc;
-                border-left: 0;
                 padding: 3px 10px 0 15px;
                 margin-left: 3px;
                 color: #999;
@@ -806,13 +727,15 @@ div.dnnTagsInput {
     position: absolute;
     padding: 1.125rem;
     background: var(--dnn-color-background, #fff);
-    box-shadow: 0 0 25px 0 rgba( var(--dnn-color-foreground-r, 0), var(--dnn-color-foreground-g, 0), var(--dnn-color-foreground-b, 0), 0.75);
-    z-index: 100000;
-
+    box-shadow: 0 0 25px 0 rgba(
+        var(--dnn-color-foreground-r, 0),
+        var(--dnn-color-foreground-g, 0),
+        var(--dnn-color-foreground-b, 0),
+        0.75);
+	z-index: 100000;
     .dnnFormPopup > * {
         box-sizing: content-box;
     }
-
     .ui-dialog-titlebar {
         position: relative;
         padding: 0 0 1.125rem 0;
@@ -821,7 +744,6 @@ div.dnnTagsInput {
         font-size: 1.125rem;
         font-weight: bold;
     }
-
     .dnnModalCtrl {
         /* This is the min/max button and the close button in module popups like the module settings. */
         /* PNG images are used for the buttons so we need to keep a color that works with white overlay and fixed sizes.*/
@@ -829,13 +751,11 @@ div.dnnTagsInput {
         position: absolute;
         top: -30px;
         left: -30px;
-        right: auto;
         width: 69px;
         height: 26px;
         border-radius: 10px;
         background-color: #fff;
         box-shadow: 0px 0px 5px #666;
-
         .ui-dialog-titlebar-close {
             float: left;
             display: block;
@@ -847,17 +767,15 @@ div.dnnTagsInput {
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
             background: #585858 url(../../../../../images/closeBtn.png) no-repeat;
-            background-position: 8px 4px;
+            background-position: calc(100% - 8px) 4px;
             text-indent: -9999em;
             min-width: 0 !important;
-
-            &:hover {
+            &:hover{
                 background: var(--dnn-color-primary, #358EEA) url(../../../../../images/closeBtn.png) no-repeat;
-                background-position: 8px 4px;
+                background-position: calc(100% - 8px) 4px;
                 cursor: pointer;
             }
         }
-
         a.dnnToggleMax {
             float: right;
             display: block;
@@ -868,32 +786,28 @@ div.dnnTagsInput {
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
             background: #585858 url(../../../../../images/resizeBtn.png) no-repeat;
-            background-position: 10px 2px;
+            background-position: calc(100% - 10px) 2px;
             text-indent: -9999em;
-
             &:hover {
                 background: var(--dnn-color-primary, #358EEA) url(../../../../../images/resizeBtn.png) no-repeat;
-                background-position: 10px 2px;
+                background-position: calc(100% - 10px) 2px;
             }
         }
     }
-
     .ui-resizable-se {
         float: left;
         height: 24px;
         width: 24px;
         background: url(../../../../../images/modal-resize-icn.png) no-repeat bottom;
     }
-
     .dnnDialog {
         padding: 10px;
     }
     /* Popup Iframe */
     #iPopUp {
-        width: 100% !important;
+        width: 100%!important;
         padding-top: 10px;
     }
-
     .ui-dialog-content, #iPopUp .ui-dialog-content {
         position: relative;
         border: 0;
@@ -902,7 +816,6 @@ div.dnnTagsInput {
         background: var(--dnn-color-background, #fff);
         zoom: 1;
     }
-
     .ui-dialog-buttonpane {
         margin: .5em 0 0 0;
         padding: .3em 0em 0em 1em;
@@ -911,7 +824,6 @@ div.dnnTagsInput {
         background-image: none;
         text-align: right;
         border-top: 1px solid var(--dnn-color-foreground-light, #ddd);
-
         button {
             margin: 0.5em 0em 0.5em 0.4em;
             padding: 0.5em 1em;
@@ -926,9 +838,8 @@ div.dnnTagsInput {
     position: absolute;
     z-index: 9999;
 }
-
 .dnnPanelLoading {
-    left: 0;
+    right: 0;
     top: 0;
     width: 100%;
     height: 100%;

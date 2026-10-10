@@ -2,7 +2,7 @@
 /*-------------------------------------*/
 /* LOGIN TAB GROUP */
 /*-------------------------------------*/
-.dnnLogin {
+.dnnLogin{
     .LoginTabGroup {
         display: inline-block;
         width: 100%;
@@ -10,14 +10,12 @@
         margin-right: 0;
         margin-top: 5px;
         border-bottom: 1px solid #C2C2C2;
-
         span {
             margin-left: 4px;
             margin-bottom: 0;
             border-bottom: 0 none;
             border-radius: 3px 3px 0 0;
             box-shadow: none;
-
             &.LoginTabSelected {
                 margin-top: -3px;
                 padding: 12px 9px 10px;
@@ -26,7 +24,6 @@
         }
     }
 }
-
 .dnnLoginActions {
     display: inline-block;
 }

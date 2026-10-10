@@ -770,8 +770,15 @@
     <Content Include="Licenses\Cake %28MIT%29.txt.resources" />
     <Content Include="Licenses\Cake LongPath Module %28MIT%29.txt.resources" />
     <Content Include="Licenses\CodeMirror %28MIT%29.txt.resources" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\ComboBox.Default.rtl.css" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\DatePicker.Default.rtl.css" />
     <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\DropDownList.Default.css" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\DropDownList.Default.rtl.css" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\Grid.Default.rtl.css" />
     <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\GridView.Default.css" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\GridView.Default.rtl.css" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\PanelBar.Default.rtl.css" />
+    <Content Include="Portals\_default\Skins\_default\WebControlSkin\Default\TabStrip.Default.rtl.css" />
     <Content Include="Providers\DataProviders\SqlDataProvider\10.01.02.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\10.02.00.SqlDataProvider" />
     <Content Include="Providers\DataProviders\SqlDataProvider\10.02.01.SqlDataProvider" />
@@ -784,6 +791,8 @@
     <Content Include="Resources\Shared\components\DatePicker\pikaday.css" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.jquery.js" />
     <Content Include="Resources\Shared\components\DatePicker\pikaday.js" />
+    <Content Include="Resources\Shared\components\DropDownList\dnn.DropDownList.rtl.css" />
+    <Content Include="Resources\Shared\components\FileUpload\dnn.FileUpload.rtl.css" />
     <Content Include="Resources\Shared\components\SimpleMDE\codemirror.css" />
     <Content Include="Resources\Shared\components\SimpleMDE\marked.js" />
     <Content Include="Resources\Shared\components\SimpleMDE\simplemde.css" />

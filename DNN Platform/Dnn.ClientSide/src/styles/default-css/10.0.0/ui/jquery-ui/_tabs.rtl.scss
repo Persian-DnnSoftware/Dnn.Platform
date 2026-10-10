@@ -10,27 +10,22 @@ ul.dnnAdminTabNav {
     width: 100%;
     //min-height: 2.3125rem;
     border-bottom: 1px solid var(--dnn-color-foreground-light, #c2c2c2);
-
     li {
         list-style: none;
         display: flex;
         align-items: center;
-
         a {
             margin-bottom: 0;
-            border-bottom: 0;
             border-radius: var(--dnn-controls-radius, 3px) var(--dnn-controls-radius, 3px) 0px 0px;
             margin-left: 0.25rem;
             padding: 12px 9px 10px 9px;
             text-decoration: none;
             border: 1px solid var(--dnn-color-foreground-light, #c2c2c2);
             border-bottom: none;
-
-            &:hover, &:active {
+            &:hover, &:active{
                 color: var(--dnn-color-primary-light, #028bff);
             }
         }
-
         &.ui-tabs-active a {
             background: var(--dnn-color-primary, #fff);
             color: var(--dnn-color-primary-contrast, #000);
@@ -40,12 +35,12 @@ ul.dnnAdminTabNav {
 }
 
 /* Panels */
-.ui-tabs {
+.ui-tabs{
     .ui-tabs-panel {
         position: relative;
         display: block;
     }
-
+    
     .ui-tabs-hide {
         display: none;
     }

@@ -2,7 +2,7 @@
 /* Progressbar */
 /*
 Currently used by the installer/upgrade wizards and module injection.
-Purposely leaving hardcoded values for sizes and not using css-variables
+Purposely leaving hardcoded values for sizes and not using css-variables 
 because it is used in the installer and rarely visible in the module injection.
 */
 .dnnProgressbar {
@@ -12,13 +12,11 @@ because it is used in the installer and rarely visible in the module injection.
     background: #fff;
     border-radius: 3px;
 }
-
 .ui-progressbar {
     height: 10px !important;
     overflow: hidden;
     background-color: #ccc;
     text-align: right;
-
     .ui-progressbar-value {
         margin: 0;
         height: 100%;

@@ -4,7 +4,6 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     position: absolute;
     top: -30px;
     left: -30px;
-    right: auto;
     height: 24px;
     width: 24px;
     margin: 0px;
@@ -14,6 +13,6 @@ div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
     background-position: 4px 4px;
     border: 3px solid #fff;
     text-indent: -9999em;
-    min-width: 0 !important;
+	min-width: 0 !important;
 }
 // END Persian-DnnSoftware

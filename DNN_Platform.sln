@@ -114,6 +114,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		.node-version = .node-version
 		.yarnrc.yml = .yarnrc.yml
 		DNN Platform\Tests\App.config = DNN Platform\Tests\App.config
 		azure-pipelines.yml = azure-pipelines.yml
@@ -125,6 +126,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CONTRIBUTING.md = CONTRIBUTING.md
 		Directory.Build.props = Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
+		Directory.Packages.TestAndBuild.props = Directory.Packages.TestAndBuild.props
 		dnnplatform.png = dnnplatform.png
 		DNN_Platform.build = DNN_Platform.build
 		DNN_Platform.local.build = DNN_Platform.local.build
@@ -140,8 +142,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		settings.local.json = settings.local.json
 		SolutionInfo.cs = SolutionInfo.cs
 		stylecop.json = stylecop.json
-		.node-version = .node-version
-		Directory.Packages.TestAndBuild.props = Directory.Packages.TestAndBuild.props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetNuke.Tests.Integration", "DNN Platform\Tests\DotNetNuke.Tests.Integration\DotNetNuke.Tests.Integration.csproj", "{6629A64D-58B9-48B9-B932-15AF193C2212}"
@@ -329,8 +329,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selectize", "Selectize", "{
 		DNN Platform\JavaScript Libraries\Selectize\Selectize (Apache).txt = DNN Platform\JavaScript Libraries\Selectize\Selectize (Apache).txt
 		DNN Platform\JavaScript Libraries\Selectize\selectize.css = DNN Platform\JavaScript Libraries\Selectize\selectize.css
 		DNN Platform\JavaScript Libraries\Selectize\selectize.default.css = DNN Platform\JavaScript Libraries\Selectize\selectize.default.css
+		DNN Platform\JavaScript Libraries\Selectize\selectize.default.rtl.css = DNN Platform\JavaScript Libraries\Selectize\selectize.default.rtl.css
 		DNN Platform\JavaScript Libraries\Selectize\Selectize.dnn = DNN Platform\JavaScript Libraries\Selectize\Selectize.dnn
 		DNN Platform\JavaScript Libraries\Selectize\selectize.min.js = DNN Platform\JavaScript Libraries\Selectize\selectize.min.js
+		DNN Platform\JavaScript Libraries\Selectize\selectize.rtl.css = DNN Platform\JavaScript Libraries\Selectize\selectize.rtl.css
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnn.Modules.Console", "DNN Platform\Admin Modules\Dnn.Modules.Console\Dnn.Modules.Console.csproj", "{946F0EA1-6187-4878-A32F-B7BF70E13CE5}"
@@ -613,10 +615,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{AC5B9AB0-6049-43F3-B0C6-3E3090CBA5C2}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\image-actions.yml = .github\workflows\image-actions.yml
 		.github\workflows\browserslist-update-db.yml = .github\workflows\browserslist-update-db.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		.github\workflows\dependency-review.yml = .github\workflows\dependency-review.yml
+		.github\workflows\image-actions.yml = .github\workflows\image-actions.yml
 		.github\workflows\ossf-scorecard.yml = .github\workflows\ossf-scorecard.yml
 	EndProjectSection
 EndProject
