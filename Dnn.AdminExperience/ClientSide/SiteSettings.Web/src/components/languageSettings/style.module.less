@@ -118,3 +118,80 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.languageSettings) {
+  .dnn-ui-common-input-group {
+    label {
+      float: right;
+    }
+    .languageSettings-row_switch {
+      .dnn-switch-container {
+        float: left;
+      }
+      .dnn-label.inline {
+        label {
+          /* max-width is direction-agnostic */
+        }
+      }
+    }
+    .dnn-radio-buttons {
+      /* li margin is overridden, check its own rule for float */
+      li {
+        /* width is direction-agnostic */
+      }
+    }
+    .dnn-dropdown {
+      li {
+        float: right;
+      }
+    }
+    .default-language {
+      float: right;
+      .language-container {
+        float: right;
+      }
+    }
+    .language-flag {
+      float: right;
+    }
+    .language-name {
+      float: right;
+      margin-left: unset;
+      margin-right: 10px;
+    }
+  }
+  .buttons-box {
+    float: right;
+    text-align: center;
+  }
+  .buttons-box-alter {
+    float: right;
+    text-align: center;
+  }
+  .sectionTitle {
+    float: right;
+  }
+  .dnn-grid-system {
+    .left-column {
+      padding-right: unset;
+      padding-left: 30px;
+      border-right: none;
+      border-left: 1px solid @alto;
+    }
+    .right-column {
+      padding-left: unset;
+      padding-right: 30px;
+      border-left: none;
+      border-right: 1px solid @alto;
+    }
+  }
+  .collapsible-button {
+    text-align: center;
+    &.open {
+      float: right;
+    }
+  }
+}
+// END Persian-DnnSoftware

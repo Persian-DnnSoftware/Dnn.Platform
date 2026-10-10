@@ -288,7 +288,10 @@ class InstallExtensionModal extends Component {
                                 onDone={this.endInstallation.bind(this)}
                                 primaryButtonText={Localization.get("Next.Button")} />}
 
-                        <p className="modal-pagination">{"-- " + (props.wizardStep + 1) + " of 5 --"} </p>
+                        {/* START Persian-DnnSoftware */}
+                        {/* <p className="modal-pagination">{"-- " + (props.wizardStep + 1) + " of 5 --"} </p> */}
+                        {document.body.classList.contains("rtl")?<p className="modal-pagination">{"-- " + (props.wizardStep + 1) + " از 5 --"} </p>:<p className="modal-pagination">{"-- " + (props.wizardStep + 1) + " of 5 --"} </p>}
+                        {/* END Persian-DnnSoftware */}
                     </GridCell>
                 </PersonaBarPageBody>
             </GridCell>

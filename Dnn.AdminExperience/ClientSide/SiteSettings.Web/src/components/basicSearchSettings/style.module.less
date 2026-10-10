@@ -148,3 +148,72 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.basicSearchSettings) {
+  .dnn-ui-common-input-group {
+    label {
+      float: right;
+    }
+    .basicSearchSettings-row_switch {
+      float: right;
+      .dnn-switch-container {
+        float: left;
+      }
+      .dnn-label.inline {
+        label {
+          float: right;
+        }
+      }
+    }
+    .basicSearchSettings-row_slider {
+      .dnn-label {
+        label {
+          float: right;
+        }
+      }
+      .slider-container {
+        float: left;
+      }
+    }
+  }
+  .sectionTitle {
+    float: right;
+  }
+  .searchIndexWrapper {
+    float: right;
+    .searchIndexWrapper-left {
+      float: right;
+      border-right: none;
+      border-left: 1px solid @alto;
+    }
+    .searchIndexWrapper-right {
+      float: left;
+      .dnn-ui-common-button {
+        float: left;
+        margin: 0 0 15px 30px;
+        &:last-child {
+          float: left;
+        }
+      }
+    }
+  }
+  .buttons-box {
+    float: right;
+    text-align: center;
+  }
+  .dnn-grid-system {
+    .left-column {
+      padding-right: unset;
+      padding-left: 30px;
+    }
+    .right-column {
+      padding-left: unset;
+      padding-right: 30px;
+      border-left: none;
+      border-right: 1px solid @alto;
+    }
+  }
+}
+// END Persian-DnnSoftware

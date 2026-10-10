@@ -45,3 +45,25 @@
     }
     
 }
+
+
+// START Persian-DnnSoftware
+.rtl .sitegroups-list-container {
+  float: right;
+  & > div {
+    /* Padding is symmetric, no change needed. */
+  }
+  .container {
+    .no-sitegroups-row {
+      float: right;
+      text-align: center; /* Text align center is direction-agnostic. */
+    }
+    float: right;
+    border-left: none; /* Remove LTR border */
+    border-right: 1px solid @alto; /* Add RTL border */
+    .sitegroups-header-row {
+      float: right;
+    }
+  }
+}
+// END Persian-DnnSoftware

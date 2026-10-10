@@ -388,3 +388,139 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-day-picker {
+        float: right;
+
+        .calendar-container {
+            left: unset;
+            right: 0px;
+            transform-origin: 0% 0% 0px; /* LTR: 100% 0% 0px */
+
+            & > div {
+                float: right;
+            }
+        }
+
+        .calendar-icon {
+            float: right;
+            margin-left: unset;
+            margin-right: 7px;
+        }
+
+        .clear-button {
+            left: unset;
+            right: 5px;
+        }
+
+        .calendar-text {
+            text-align: left; /* LTR: right */
+            float: right;
+
+            &.with-time-picker {
+                /* Base padding: 8px 12px; LTR padding-right: 40px; */
+                /* LTR effective: T:8, R:40, B:8, L:12 */
+                /* RTL effective: T:8, R:12, B:8, L:40 */
+                padding-left: 40px;
+                padding-right: 12px; 
+            }
+
+            div, span {
+                float: right;
+            }
+        }
+
+        .DayPicker {
+            float: right;
+
+            .DayPicker-NavButton {
+                &.DayPicker-NavButton--prev {
+                    left: unset;
+                    right: 2px;
+                    background-image: url(./img/rightBlack.png); /* LTR: leftBlack.png - Assuming this is the 'previous' visual direction */
+                }
+
+                &.DayPicker-NavButton--next {
+                    right: unset;
+                    left: 2px;
+                    background-image: url(./img/leftBlack.png); /* LTR: rightBlack.png - Assuming this is the 'next' visual direction */
+                }
+            }
+
+            .DayPicker-Weekdays {
+                float: right;
+                .DayPicker-WeekdaysRow {
+                    float: right;
+                    .DayPicker-Weekday {
+                        float: right;
+                    }
+                }
+            }
+
+            .DayPicker-Week {
+                float: right;
+            }
+
+            .DayPicker-Day {
+                float: right;
+            }
+        }
+
+        button[role="primary"] {
+            float: left; /* LTR: right */
+        }
+
+        button[role="secondary"] {
+            float: left; /* LTR: right */
+        }
+
+        .date-input {
+            span {
+                float: right;
+            }
+
+            .select-container {
+                right: unset;
+                left: 0px;
+
+                &:after {
+                    right: unset;
+                    left: 5px;
+                }
+            }
+
+            input[type="text"] {
+                float: right;
+            }
+        }
+    }
+
+    .dnn-time-picker-box {
+        .dnn-time-picker {
+            float: right;
+            margin-left: unset;
+            margin-right: 10px;
+
+            &.timezone-picker {
+                text-align: right; /* LTR: left */
+            }
+
+            &.time-picker {
+                &.half {
+                    text-align: right; /* LTR: left */
+                }
+            }
+
+            .time-text {
+                &:after {
+                    right: unset;
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware

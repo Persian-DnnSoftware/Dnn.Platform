@@ -17,6 +17,7 @@ namespace DotNetNuke.Modules.Admin.Modules
 
     using DotNetNuke.Abstractions;
     using DotNetNuke.Abstractions.Application;
+    using DotNetNuke.Abstractions.ClientResources;
     using DotNetNuke.Abstractions.Portals;
     using DotNetNuke.Common.Utilities;
     using DotNetNuke.Entities.Modules;
@@ -50,6 +51,10 @@ namespace DotNetNuke.Modules.Admin.Modules
         private readonly IJavaScriptLibraryHelper javaScript;
         private readonly IApplicationStatusInfo appStatus;
 
+        // START Persian-DnnSoftware
+        private readonly IClientResourceController clientResourceController;
+
+        // END Persian-DnnSoftware
         private int moduleId = -1;
         private Control control;
         private ModuleInfo module;
@@ -57,7 +62,7 @@ namespace DotNetNuke.Modules.Admin.Modules
         /// <summary>Initializes a new instance of the <see cref="ModuleSettingsPage"/> class.</summary>
         [Obsolete("Deprecated in DotNetNuke 10.2.4. Please use overload with IApplicationStatusInfo. Scheduled removal in v12.0.0.")]
         public ModuleSettingsPage()
-            : this(null, null, null, null, null, null)
+            : this(null, null, null, null, null, null, null)
         {
         }
 
@@ -69,7 +74,7 @@ namespace DotNetNuke.Modules.Admin.Modules
         /// <param name="javaScript">The JavaScript library helper.</param>
         [Obsolete("Deprecated in DotNetNuke 10.2.4. Please use overload with IApplicationStatusInfo. Scheduled removal in v12.0.0.")]
         public ModuleSettingsPage(INavigationManager navigationManager, IPortalAliasService portalAliasService, IModuleControlPipeline moduleControlPipeline, IHostSettings hostSettings, IJavaScriptLibraryHelper javaScript)
-            : this(navigationManager, portalAliasService, moduleControlPipeline, hostSettings, javaScript, null)
+            : this(navigationManager, portalAliasService, moduleControlPipeline, hostSettings, javaScript, null, null)
         {
         }
 
@@ -80,7 +85,8 @@ namespace DotNetNuke.Modules.Admin.Modules
         /// <param name="hostSettings">The host settings.</param>
         /// <param name="javaScript">The JavaScript library helper.</param>
         /// <param name="appStatus">The application status.</param>
-        public ModuleSettingsPage(INavigationManager navigationManager, IPortalAliasService portalAliasService, IModuleControlPipeline moduleControlPipeline, IHostSettings hostSettings, IJavaScriptLibraryHelper javaScript, IApplicationStatusInfo appStatus)
+        /// <param name="clientResource">The client resource.</param>
+        public ModuleSettingsPage(INavigationManager navigationManager, IPortalAliasService portalAliasService, IModuleControlPipeline moduleControlPipeline, IHostSettings hostSettings, IJavaScriptLibraryHelper javaScript, IApplicationStatusInfo appStatus, IClientResourceController clientResource)
         {
             this.navigationManager = navigationManager ?? this.DependencyProvider.GetRequiredService<INavigationManager>();
             this.portalAliasService = portalAliasService ?? this.DependencyProvider.GetRequiredService<IPortalAliasService>();
@@ -88,6 +94,11 @@ namespace DotNetNuke.Modules.Admin.Modules
             this.hostSettings = hostSettings ?? this.DependencyProvider.GetRequiredService<IHostSettings>();
             this.javaScript = javaScript ?? this.DependencyProvider.GetRequiredService<IJavaScriptLibraryHelper>();
             this.appStatus = appStatus ?? this.DependencyProvider.GetRequiredService<IApplicationStatusInfo>();
+
+            // START Persian-DnnSoftware
+            this.clientResourceController = clientResource ?? this.DependencyProvider.GetRequiredService<IClientResourceController>();
+
+            // END Persian-DnnSoftware
         }
 
         private bool HideDeleteButton => this.Request.QueryString["HideDelete"] == "true";
@@ -174,6 +185,20 @@ namespace DotNetNuke.Modules.Admin.Modules
                 this.cmdDelete.Click += this.OnDeleteClick;
                 this.cmdUpdate.Click += this.OnUpdateClick;
 
+                // START Persian-DnnSoftware
+                if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
+                {
+                    this.clientResourceController.CreateStylesheet("~/Resources/Shared/components/DatePicker/persian.datepicker.css")
+                        .SetNameAndVersion("persian.datepicker.css", "1.0.5", false)
+                        .SetPriority(FileOrder.Css.DefaultCss)
+                        .Register();
+
+                    this.clientResourceController.CreateScript("~/Resources/Shared/components/DatePicker/persian.datepicker.js")
+                        .SetNameAndVersion("persian.datepicker.js", "1.0.5", false)
+                        .Register();
+                }
+
+                // ENN Persian-DnnSoftware
                 this.javaScript.RequestRegistration(CommonJs.DnnPlugins);
 
                 // get ModuleId

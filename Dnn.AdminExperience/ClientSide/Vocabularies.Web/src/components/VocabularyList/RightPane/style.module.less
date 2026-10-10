@@ -72,3 +72,43 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.vocabulariesRightPane) {
+  .add-term-button {
+    float: left;
+    svg {
+      float: right;
+      margin-right: unset;
+      margin-left: 5px;
+    }
+  }
+  .term-list {
+    .term-list-content {
+      ul.root-level {
+        /* padding is symmetric */
+        &.Hierarchy {
+          padding: 5px 25px; /* Symmetric padding */
+        }
+        ul {
+          padding: 0 15px; /* Symmetric padding */
+        }
+      }
+    }
+    .term-ul {
+      padding: 0 15px; /* Symmetric padding */
+      &.root-level {
+        padding: 5px 25px; /* Symmetric padding */
+      }
+      &.term-list-level {
+        li {
+          &.selected > div > div > span {
+            /* color is direction-agnostic */
+          }
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

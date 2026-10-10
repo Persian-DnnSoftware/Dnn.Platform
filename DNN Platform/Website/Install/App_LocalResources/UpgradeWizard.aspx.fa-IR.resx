@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountInfo.Text" xml:space="preserve">
+  <value>اطلاعات حساب</value>
+</data>
+<data name="BestPractices.Text" xml:space="preserve">
+  <value>شما در شُرُف ارتقاء وب‌سایت خود به نسخه‌ای جدیدتر از این برنامه هستید. انجام منظم ارتقاءها بهترین راه برای اطمینان از حفظ یکپارچگی سرمایه‌گذاری شما و امنیت کاربران و دارایی‌های شماست. پیش از ادامه‌ی فرآیند ارتقاء خودکار، لطفاً اطمینان حاصل کنید که:
+&lt;ul&gt;
+&lt;li&gt;برنامه‌ریزی کرده‌اید که ابتدا این فرآیند را در یک محیط آزمایشی اجرا کنید
+&lt;li&gt;ویژگی‌های نصب فعلی خود را مستندسازی کرده‌اید، از جمله تحقیق درباره‌ی سازگاری ماژول‌های شخص ثالثی که ممکن است استفاده کرده باشید
+&lt;li&gt;پشتیبان‌گیری‌های لازم از محیط خود را تهیه کرده‌اید تا در صورت وقوع خطا در ارتقاء، بتوانید وب‌سایت خود را بازیابی کنید.
+&lt;/ul&gt;</value>
+</data>
+  <data name="VersionsMatch.Text" xml:space="preserve">
+  <value>نسخه پایگاه داده و برنامه مطابقت دارند - نیازی به ارتقاء نیست.</value>
+</data>
+<data name="VersionsMatchButIncrementalExists.Text" xml:space="preserve">
+  <value>نسخه پایگاه داده و برنامه مطابقت دارند - یک نسخه افزایشی برای ارتقاء موجود است.</value>
+</data>
+<data name="CurrentVersion.Text" xml:space="preserve">
+  <value>نسخه فعلی - {0}</value>
+</data>
+<data name="DatabaseUpgrade.Text" xml:space="preserve">
+  <value>در حال به‌روزرسانی پایگاه داده</value>
+</data>
+<data name="Error.Text" xml:space="preserve">
+  <value>خطا</value>
+</data>
+<data name="ErrorInStep.Text" xml:space="preserve">
+  <value>خطا رخ داد - {0}</value>
+</data>
+<data name="ExtensionsUpgrade.Text" xml:space="preserve">
+  <value>در حال به‌روزرسانی افزونه‌ها</value>
+</data>
+
+  <data name="IntroDetail.Text" xml:space="preserve">
+  <value>&lt;p&gt;به صفحه ارتقاء DNN خوش آمدید.&lt;/p&gt;
+
+&lt;p&gt;اولین گام، انتخاب زبانی است که می‌خواهید برای ارتقاء استفاده کنید.&lt;/p&gt;
+
+</value>
+</data>
+<data name="InvalidCredentials.Text" xml:space="preserve">
+  <value>نام کاربری و رمز عبور شناسایی نشد.</value>
+</data>
+<data name="Next.Text" xml:space="preserve">
+  <value>ارتقاء اکنون</value>
+</data>
+<data name="NextStep.Text" xml:space="preserve">
+  <value>مرحله بعد</value>
+</data>
+<data name="NoInstallationLog.Text" xml:space="preserve">
+  <value>گزارش نصب موجود نیست</value>
+</data>
+<data name="LoadingInstallationLog.Text" xml:space="preserve">
+  <value>در حال بارگذاری گزارش‌های نصب، لطفاً صبر کنید...</value>
+</data>
+<data name="Password.Help" xml:space="preserve">
+  <value>رمز عبور حساب کاربری سوپر یوزر.</value>
+</data>
+<data name="Password.Text" xml:space="preserve">
+  <value>رمز عبور:</value>
+</data>
+<data name="Retry.Text" xml:space="preserve">
+  <value>تلاش مجدد</value>
+</data>
+<data name="SeeLogs.Text" xml:space="preserve">
+  <value>مشاهده گزارش‌ها</value>
+</data>
+<data name="NoErrorsLogged.Text" xml:space="preserve">
+  <value>هیچ خطای ارتقائی ثبت نشده است</value>
+</data>
+<data name="TimerMinutes.Text" xml:space="preserve">
+  <value>دقیقه</value>
+</data>
+<data name="Title.Text" xml:space="preserve">
+  <value>ارتقاء</value>
+</data>
+
+  <data name="Upgrade.Text" xml:space="preserve">
+  <value>ارتقاء</value>
+</data>
+<data name="UpgradeDone.Text" xml:space="preserve">
+  <value>ارتقاء کامل شد</value>
+</data>
+<data name="UpgradingDatabase.Text" xml:space="preserve">
+  <value>در حال ارتقاء پایگاه داده</value>
+</data>
+<data name="Username.Help" xml:space="preserve">
+  <value>نام کاربری حساب کاربری سوپر یوزر.</value>
+</data>
+<data name="Username.Text" xml:space="preserve">
+  <value>نام کاربری میزبان (سوپر یوزر):</value>
+</data>
+<data name="Version.Text" xml:space="preserve">
+  <value>ارتقاء - نسخه {0}</value>
+</data>
+<data name="ViewWebsite.Text" xml:space="preserve">
+  <value>مشاهده وب‌سایت</value>
+</data>
+<data name="VisitWebsite.Text" xml:space="preserve">
+  <value>بازدید از وب‌سایت</value>
+</data>
+<data name="UpgradeStarted.Text" xml:space="preserve">
+  <value>ارتقاء شروع شد در</value>
+</data>
+<data name="AcceptTerms.Required" xml:space="preserve">
+  <value>برای ادامه، باید شرایط توافق‌نامه مجوز را بپذیرید.</value>
+</data>
+<data name="AcceptTerms.Text" xml:space="preserve">
+  <value>من شرایط &lt;a href="../Licenses/Dnn_Corp_License.pdf" target="_blank"&gt;توافق‌نامه مجوز&lt;/a&gt; را می‌پذیرم</value>
+</data>
+<data name="Security.Text" xml:space="preserve">
+  <value>امنیت</value>
+</data>
+<data name="TelerikInstalledAndUsedInfo.Text" xml:space="preserve">
+  <value>نصب شما در حال استفاده از Telerik در اسمبلی‌های زیر است:</value>
+</data>
+
+  <data name="TelerikInstalledAndUsedWarning.Text" xml:space="preserve">
+  <value>به نظر می‌رسد که افزونه‌هایی در سایت شما وجود دارد که به Telerik وابسته هستند. ما قادر به حذف وابستگی‌هایی که در بالا شناسایی و فهرست شده‌اند نیستیم. با این حال، این فرآیند ارتقاء &lt;em&gt;اجزای آسیب‌پذیر شناخته‌شده&lt;/em&gt; Telerik را حذف خواهد کرد. لطفاً پیش از ادامه فرآیند ارتقاء، از سایت خود نسخه پشتیبان تهیه کنید. پس از پایان ارتقاء، ممکن است عملکرد وب‌سایت شما مختل شود؛ در این صورت، بازگرداندن فایل &lt;code&gt;Telerik.Web.UI.dll&lt;/code&gt; به صورت دستی ممکن است باعث بازیابی عملکرد سایت شود تا زمانی که افزونه‌های آسیب‌دیده را حذف کنید.</value>
+</data>
+<data name="TelerikInstalledButNotUsedInfo.Text" xml:space="preserve">
+  <value>به نظر می‌رسد نصب شما از هیچ‌کدام از این اجزا استفاده نمی‌کند، در نتیجه مؤلفه Telerik به‌صورت خودکار حذف خواهد شد. لطفاً پیش از ادامه فرآیند ارتقاء، از سایت خود نسخه پشتیبان تهیه کنید.</value>
+</data>
+<data name="TelerikInstalledHeading.Text" xml:space="preserve">
+  <value>نصب Telerik شناسایی شد</value>
+</data>
+<data name="TelerikInstalledDetected.Text" xml:space="preserve">
+  <value>ما وجود مؤلفه‌های Telerik را شناسایی کرده‌ایم. نسخه شناسایی‌شده Telerik عبارت است از:</value>
+</data>
+<data name="TelerikInstalledBulletin.Text" xml:space="preserve">
+  <value>در ماه آگوست سال ۲۰۲۱ یک بولتن امنیتی منتشر شد که حذف فوری این مؤلفه را به دلیل وجود آسیب‌پذیری‌های امنیتی سطح بالا توصیه می‌کند. برای اطلاعات بیشتر به &lt;a href="https://dnncommunity.org/security" target="_blank"&gt;مرکز امنیتی DNN&lt;/a&gt; مراجعه کنید.</value>
+</data>
+<data name="TelerikNotInstalledHeading.Text" xml:space="preserve">
+  <value>بررسی امنیتی: موفقیت‌آمیز</value>
+</data>
+<data name="TelerikNotInstalledInfo.Text" xml:space="preserve">
+  <value>ما تأیید کرده‌ایم که سایت شما شامل مؤلفه آسیب‌پذیر Telerik که پیش‌تر با DNN توزیع می‌شد، نیست.</value>
+</data>
+<data name="TelerikUninstallInfo.Text" xml:space="preserve">
+  <value>توجه داشته باشید که انتخاب گزینه "بله" در زیر، &lt;a href="https://docs.dnncommunity.org/content/getting-started/setup/telerik-removal/index.html" target="_blank"&gt;این مراحل&lt;/a&gt; را به‌صورت خودکار برای شما انجام خواهد داد.</value>
+</data>
+<data name="TelerikInvalidAntiForgeryToken.Text" xml:space="preserve">
+  <value>توکن ضد جعل (Anti-Forgery) Telerik نامعتبر است.</value>
+</data>
+<data name="TelerikUninstallOptionMissing.Text" xml:space="preserve">
+  <value>گزینه حذف نصب Telerik موجود نیست.</value>
+</data>
+<data name="CheckingSecurity.Text" xml:space="preserve">
+  <value>در حال بررسی جنبه‌های امنیتی این نصب</value>
+</data>
+<data name="TelerikVersionNotKnownToBeVulnerableInfo.Text" xml:space="preserve">
+  <value>به نظر می‌رسد نصب شما از نسخه‌ای از مؤلفه‌های Telerik استفاده می‌کند که جدیدتر از نسخه‌های آسیب‌پذیر شناخته‌شده توزیع‌شده قبلی است. حذف نصب به‌صورت خودکار انجام نخواهد شد، با این حال لطفاً &lt;a href="https://docs.dnncommunity.org/content/getting-started/setup/telerik-removal/index.html" target="_blank"&gt;مراحل حذف&lt;/a&gt; را بررسی کنید تا اطمینان حاصل شود که تمامی مؤلفه‌های آسیب‌پذیر حذف یا جایگزین شده‌اند. همچنین، راهنمای امنیتی &lt;a href="https://www.telerik.com/products/aspnet-ajax/documentation/security/security-information#telerik-ajax-control-specific-security-guidelines"&gt;Telerik&lt;/a&gt; را بررسی کنید تا مطمئن شوید که از نسخه‌ای بدون آسیب‌پذیری استفاده می‌شود و به‌درستی پیکربندی شده است.</value>
+</data>
+
+</root>

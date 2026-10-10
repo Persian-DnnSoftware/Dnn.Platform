@@ -119,3 +119,72 @@
         color: @thunder;
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.ipFilterItems) {
+  display: block; /* display: block is direction-agnostic */
+  .ip-filter-items-grid {
+    float: right; /* Changed from left to right */
+  }
+  .header-row {
+    float: right; /* Changed from left to right */
+  }
+  .header-RuleType {
+    float: right; /* Changed from left to right */
+    padding-left: unset; /* Remove LTR padding */
+    padding-right: 15px; /* Add RTL padding */
+  }
+  .header-IPAddress {
+    float: right; /* Changed from left to right */
+  }
+  .header-Notes {
+    float: right; /* Changed from left to right */
+  }
+  .collapsible-component {
+    .collapsible-header {
+      text-align: left; /* Changed from right to left */
+      padding-right: unset; /* Remove LTR padding */
+      padding-left: 40px; /* Add RTL padding */
+    }
+  }
+  .ip-filter-topbar {
+    float: right; /* Changed from left to right */
+    .warning-container {
+      float: right; /* Changed from left to right */
+      .warning-icon {
+        > svg {
+          float: right; /* Changed from left to right */
+          margin: 0 0 0 10px; /* Flipped margin from right to left */
+        }
+      }
+    }
+    .AddItemRow {
+      text-align: left; /* Changed from right to left */
+      float: left; /* Changed from right to left */
+      .AddItemBox {
+        float: left; /* Changed from right to left */
+        .add-icon {
+          margin-left: unset; /* Remove LTR margin */
+          margin-right: 20px; /* Add RTL margin */
+          float: right; /* Changed from left to right */
+          svg {
+            float: right; /* Changed from left to right */
+          }
+        }
+      }
+      .AddItemBox-active {
+        float: left; /* Changed from right to left */
+        .add-icon {
+          margin-left: unset; /* Remove LTR margin */
+          margin-right: 20px; /* Add RTL margin */
+          float: right; /* Changed from left to right */
+          svg {
+            float: right; /* Changed from left to right */
+          }
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

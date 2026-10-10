@@ -105,3 +105,35 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.taskStatusItemLeftPane) {
+  float: right;
+  border-right: none;
+  border-left: 1px solid @alto;
+  .taskIcon {
+    float: right;
+  }
+  .taskIconProcessing {
+    float: right;
+  }
+  .taskDetail {
+    padding: 10px 45px 0 0;
+    > div {
+      float: right;
+    }
+    .taskDetail-common {
+      .taskDetail-common-title {
+        float: right;
+      }
+      .taskDetail-common-value {
+        float: left;
+      }
+      .taskDetail-common-title-processing {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

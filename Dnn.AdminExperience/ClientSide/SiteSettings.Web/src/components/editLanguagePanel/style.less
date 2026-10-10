@@ -230,3 +230,131 @@
         height: 24px;
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .dnn-language-resource-editor {
+  .edit-svg {
+    margin-left: unset;
+    margin-right: 10px;
+  }
+}
+.rtl .edit-language-panel {
+  &.dnn-persona-bar-page-body {
+    .edit-language-top-bar {
+      .language-info {
+        .language-flag {
+          float: right;
+          margin-right: unset;
+          margin-left: 25px;
+        }
+      }
+      .mode-container {
+        .dnn-radio-buttons, .dnn-label {
+          float: left;
+          .dnn-ui-common-tooltip-info {
+            margin-right: unset;
+            margin-left: 25px;
+          }
+          ul {
+            li {
+              margin-left: unset;
+              margin-right: 25px;
+            }
+          }
+        }
+        .dnn-label {
+          .dnn-ui-common-tooltip {
+            float: left;
+          }
+        }
+      }
+    }
+    .edit-resource-files {
+      >.dnn-grid-cell {
+        &:first-child {
+          padding-left: unset;
+          padding-right: 0;
+        }
+        &:last-child {
+          padding-right: unset;
+          padding-left: 0;
+        }
+      }
+      .dnn-switch-container {
+        .dnn-switch {
+          float: left;
+        }
+      }
+      .translation-action-buttons {
+        text-align: left;
+      }
+      .dnn-ui-common-button {
+        margin-left: unset;
+        margin-right: 10px;
+      }
+      .resource-file-tree-container {
+        .dnn-label {
+          > label {
+            /* font-weight is direction-agnostic */
+          }
+        }
+        .resource-file-dropdown {
+          padding: 8px 15px 8px 40px;
+          .dropdown-icon {
+            right: unset;
+            left: 10px;
+          }
+        }
+        ul.root-level {
+          padding: 5px 15px; /* Symmetric padding, no change */
+          li {
+            .resource-type-icon {
+              float: right;
+              margin-right: unset;
+              margin-left: 5px;
+            }
+            .edit-svg {
+              margin-right: unset;
+              margin-left: 5px; /* Adjusting the margin for RTL */
+              left: unset;
+              right: -16px; /* Flipped left to right */
+            }
+          }
+          ul {
+            padding: 0 15px; /* Symmetric padding, no change */
+          }
+        }
+      }
+    }
+    .resource-list {
+      .resource-controls {
+        .search-box-container {
+          float: left;
+          border-left: none; /* Removed LTR border */
+          border-right: 1px solid @alto; /* Added RTL border */
+          input::-webkit-search-cancel-button {
+            margin-right: unset;
+            margin-left: 25px;
+          }
+        }
+      }
+      .row-headers {
+        .row-header {
+          /* padding is symmetric, no change */
+        }
+      }
+      .resource-rows {
+        .resource-row {
+          .row-detail {
+            /* padding is symmetric, no change */
+            .key-name {
+              /* word-break and margin-top are direction-agnostic */
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

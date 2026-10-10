@@ -125,3 +125,43 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-dropdown {
+        &.large {
+            padding: 12px 15px 12px 40px; /* LTR: 12px 40px 12px 15px */
+        }
+
+        .dropdown-icon {
+            right: unset;
+            left: 10px;
+        }
+
+        .collapsible-label {
+            padding: 8px 15px 8px 40px; /* LTR: 8px 40px 8px 15px */
+
+            .dropdown-prepend {
+                > strong {
+                    margin-right: unset;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .collapsible-content {
+            left: unset;
+            right: -1px;
+        }
+    }
+
+    // این قسمت به صورت دستی اضافه شده به جی اس
+    .dnn-scrollbars {
+        div{
+            margin-right: unset!important;
+            margin-left: -15px!important;
+        }
+    }
+}
+// END Persian-DnnSoftware

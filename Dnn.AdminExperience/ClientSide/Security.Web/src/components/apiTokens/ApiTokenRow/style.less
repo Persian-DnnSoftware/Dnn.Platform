@@ -102,3 +102,54 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .collapsible-logitemdetail {
+  .logitem-collapsible {
+    float: right;
+
+    > div {
+      float: right;
+    }
+  }
+
+  div.collapsible-logitemdetail-header {
+    float: right;
+
+    .term-header {
+      .term-label {
+        float: right;
+      }
+
+      .term-label-wrapper {
+        padding: 0 5px 0 5px; /* Symmetric padding, no change */
+      }
+    }
+
+    .edit-icon {
+      margin-left: unset; /* Remove LTR margin */
+      margin-right: 5px; /* Set RTL margin */
+      float: left; /* Change float direction */
+
+      svg {
+        float: right; /* Change float direction */
+      }
+    }
+  }
+
+  .buttons-box {
+    float: right; /* Change float direction */
+    text-align: center; /* Center alignment is direction-agnostic */
+
+    .edit-icon {
+      margin: 0px 10px 20px 10px; /* Symmetric margin, no change */
+      float: left; /* Change float direction */
+
+      svg {
+        float: right; /* Change float direction */
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

@@ -240,3 +240,54 @@
 #showsite {
   margin-right: 25px;
 }
+
+// START Persian-DnnSoftware
+#dnnPrompt-container {
+  .dnnPrompt-app {
+    &.personaBar-mainContainer {
+      .wrapper {
+        .dnn-prompt-input {
+          left: unset;
+          right: 17px;
+        }
+
+        .dnn-prompt-input-wrapper {
+          &::before {
+            margin-left: unset;
+            margin-right: 3px;
+          }
+        }
+
+        section.dnn-prompt-inline-help {
+          blockquote {
+            border-left: none;
+            border-right: 10px solid rgba(0, 255, 0, 0.4);
+          }
+
+          li {
+            margin-left: unset;
+            margin-right: 2.2em;
+          }
+
+          table thead th {
+            text-align: right;
+          }
+
+          table.table td {
+            text-align: right;
+          }
+
+          table.command-result-tbl td {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+#showsite {
+  margin-right: unset;
+  margin-left: 25px;
+}
+// END Persian-DnnSoftware

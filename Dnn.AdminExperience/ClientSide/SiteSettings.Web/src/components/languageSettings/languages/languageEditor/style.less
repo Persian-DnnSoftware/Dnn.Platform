@@ -85,3 +85,65 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .language-editor {
+  float: right;
+  .dnn-ui-common-input-group {
+    label {
+      float: right;
+    }
+    .dnn-dropdown {
+      .collapsible-label {
+        .language-name {
+          /* width: 210px !important is not directional */
+        }
+      }
+      li {
+        /* width: 100% !important is not directional */
+      }
+    }
+    .dnn-single-line-input-with-error {
+      /* width: 100% !important is not directional */
+    }
+    .dnn-switch-container {
+      float: left;
+    }
+  }
+  .dnn-grid-system {
+    .left-column {
+      padding-right: unset;
+      padding-left: 30px;
+      border-right: none;
+      border-left: 1px solid @alto;
+    }
+    .right-column {
+      padding-left: unset;
+      padding-right: 30px;
+      border-left: 0 !important;
+      /* If there was an implicit border-left before, it should become border-right: 0; */
+    }
+  }
+  .editor-buttons-box {
+    float: right;
+    text-align: center;
+    .edit-icon {
+      float: left;
+      svg {
+        float: right;
+      }
+    }
+  }
+  .editor-buttons-box-roles {
+    float: right;
+    text-align: center;
+    .edit-icon {
+      float: left;
+      svg {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

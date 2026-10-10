@@ -55,3 +55,36 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.createVocabulary) {
+  .create-box {
+    label {
+      float: right;
+      margin-right: unset;
+      margin-left: 15px;
+    }
+    .dnn-radio-buttons {
+      float: right;
+      label:first-child {
+        /* word-wrap: break-word; and margin-bottom are non-directional */
+      }
+    }
+    .dnn-ui-common-input-group {
+      float: right;
+    }
+    .action-buttons {
+      text-align: center;
+      .required-help-text {
+        left: unset;
+        right: 0;
+      }
+      button:first-child {
+        margin-right: unset;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

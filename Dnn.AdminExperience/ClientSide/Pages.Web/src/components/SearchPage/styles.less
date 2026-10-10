@@ -417,3 +417,123 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .advancedCollapsibleComponent {
+  div.collapsible-header {
+    .collapse-icon {
+      right: unset;
+      left: 20px;
+      &:after {
+        left: unset;
+        right: -15px;
+      }
+    }
+  }
+  .search-advanced-header {
+    .search-advanced-icon {
+      svg {
+        float: right;
+        margin-right: unset;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.rtl .search-advanced-header {
+  .search-advanced-icon {
+    svg {
+      float: right;
+      margin-right: unset;
+      margin-left: 15px;
+    }
+  }
+}
+
+.rtl .pages-app {
+  .search-more-flyout {
+    .calendar-icon {
+      margin-left: unset;
+      margin-right: 5px;
+    }
+    .calendar-dropdown {
+      left: unset;
+      right: -1px;
+    }
+  }
+  .search-item-card {
+    .search-item-thumbnail {
+      float: right;
+    }
+    .search-item-details {
+      float: right;
+      padding: 10px 35px 10px 0px;
+      .search-item-details-left {
+        float: right;
+      }
+      .search-item-details-right {
+        float: left;
+        right: unset;
+        left: 90px;
+        ul {
+          float: left;
+          li {
+            float: right;
+          }
+        }
+      }
+    }
+    .search-item-details-list {
+      float: right;
+      ul {
+        li {
+          float: right;
+          margin: 0 10px;
+          &:first-child {
+            float: right;
+            margin: 0;
+          }
+          p:not(:first-child) {
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+  }
+  .search-container {
+    .btn {
+      float: right;
+    }
+    .back-to-page {
+      float: right;
+      div {
+        float: right;
+        margin-right: unset;
+        margin-left: 10px;
+      }
+    }
+    .dnn-back-to-link {
+      float: right;
+      > span {
+        float: right;
+      }
+      .dnn-back-to-arrow {
+        float: right;
+      }
+      &:hover {
+        float: right;
+      }
+    }
+    .search-box {
+      float: left;
+      border-left: none;
+      border-right: 1px solid @alto;
+      .search-input {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

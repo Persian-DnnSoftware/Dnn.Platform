@@ -98,3 +98,54 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl #apiTokenSettings-container {
+  .dnn-ui-common-input-group {
+    label {
+      float: right; /* Changed from left to right */
+    }
+
+    .sectionLabel {
+      label {
+        /* text-transform: uppercase; is direction-agnostic. */
+      }
+    }
+
+    .dnn-switch-container {
+      float: left; /* Changed from right to left */
+    }
+
+    /* float: none; is direction-agnostic, so no change needed here. */
+
+    .half-input-left {
+      float: right; /* Changed from left to right */
+      padding-right: unset; /* Remove LTR padding */
+      padding-left: 10px; /* Add RTL padding */
+    }
+
+    .half-input-right {
+      float: left; /* Changed from right to left */
+      padding-left: unset; /* Remove LTR padding */
+      padding-right: 10px; /* Add RTL padding */
+    }
+  }
+
+  .buttons-box {
+    text-align: center; /* text-align: center is direction-agnostic */
+  }
+
+  .warningBox {
+    .warningText {
+      /* font-weight and color are direction-agnostic. */
+    }
+
+    .warningButton {
+      .dnn-ui-common-button {
+        /* width, padding-top, padding-bottom, and margin-top are direction-agnostic. */
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

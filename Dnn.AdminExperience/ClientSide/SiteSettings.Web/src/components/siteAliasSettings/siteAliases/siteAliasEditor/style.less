@@ -55,3 +55,76 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.profileSettings) {
+  .dnn-ui-common-input-group {
+    label {
+      float: right;
+    }
+    .dnn-single-line-input-with-error {
+      float: right;
+    }
+    .VanityUrlPrefix {
+      float: right;
+      margin: 8px 0 0 8px; /* Symmetric for horizontal alignment, so no change to value */
+      margin-left: unset; /* Ensure LTR specific margin-left is unset */
+      margin-right: 8px; /* Apply LTR margin-left to RTL margin-right */
+    }
+    .dnn-switch-container {
+      float: left;
+    }
+  }
+  .sectionTitleNoBorder {
+    float: right;
+  }
+  .buttons-box {
+    float: right;
+    text-align: center;
+  }
+  .dnn-grid-system {
+    .left-column {
+      padding-right: unset;
+      padding-left: 30px;
+    }
+    .right-column {
+      padding-left: unset;
+      padding-right: 30px;
+      border-left: none;
+      border-right: 1px solid @alto;
+    }
+  }
+}
+.rtl .alias-editor {
+  float: right;
+  .dnn-ui-common-input-group {
+    label {
+      float: right;
+    }
+  }
+  .dnn-grid-system {
+    .left-column {
+      padding-right: unset;
+      padding-left: 30px;
+      border-right: none;
+      border-left: 1px solid @alto;
+    }
+    .right-column {
+      padding-left: unset;
+      padding-right: 30px;
+      border-left: 0 !important;
+    }
+  }
+  .editor-buttons-box {
+    float: right;
+    text-align: center;
+    .edit-icon {
+      float: left;
+      svg {
+        float: right;
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

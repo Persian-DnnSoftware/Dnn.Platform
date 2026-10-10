@@ -12,7 +12,11 @@ export default class GlobalIcon extends Component {
         const margin = this.props.isSwitch ? switchMargin : normalMargin;
         return <Tooltip type="global"
             messages={[localization.get("GlobalSettings")]}
-            style={Object.assign({ float: "left", height: "20", position: "static", margin: margin }, this.props.tooltipStyle)} />;
+            // START Persian-DnnSoftware
+            //style={Object.assign({ float: "left", height: "20", position: "static", margin: margin }, this.props.tooltipStyle)}
+            style={Object.assign({ float: document.body.classList.contains("rtl")? "right":"left", height: "20", position: "static", margin: margin }, this.props.tooltipStyle)} 
+            // END Persian-DnnSoftware
+        />;
     }
 }
 

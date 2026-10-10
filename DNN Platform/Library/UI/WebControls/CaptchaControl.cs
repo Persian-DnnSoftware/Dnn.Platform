@@ -38,7 +38,7 @@ namespace DotNetNuke.UI.WebControls
         private const int EXPIRATIONDEFAULT = 120;
         private const int LENGTHDEFAULT = 6;
         private const string RENDERURLDEFAULT = "ImageChallenge.captcha.aspx";
-        private const string CHARSDEFAULT = "abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+        private const string CHARSDEFAULT = "abcdefghmnpqrstuv23456789"; /* Persian-DnnSoftware "abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789"; */
         private static readonly ILogger Logger = DnnLoggingController.GetLogger<CaptchaControl>();
         private static readonly string[] FontFamilies =
         {

@@ -7,12 +7,16 @@ import { Dropdown, SearchBox, GridCell } from "@dnnsoftware/dnn-react-common";
 class FiltersBar extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             selectedUserFilter: {
                 label: Localization.get("Authorized"),
                 value: 0
             },
-            searchText: ""
+            searchText: "",
+            // START Persian-DnnSoftware
+            searchIconStyle:document.body.classList.contains("rtl")?{left:0, right:"unset"}:{right:0}
+            // END Persian-DnnSoftware
         };
     }
     onSelect(option) {
@@ -82,7 +86,10 @@ class FiltersBar extends Component {
                 <div>&nbsp; </div></GridCell>
             <GridCell columnSize={35} >
                 <div className="search-filter">
-                    <SearchBox placeholder={Localization.get("SearchPlaceHolder")} onSearch={this.onKeywordChanged.bind(this)} maxLength={50} iconStyle={{ right: 0 }} />
+                    {/* START Persian-DnnSoftware */}
+                    {/* <SearchBox placeholder={Localization.get("SearchPlaceHolder")} onSearch={this.onKeywordChanged.bind(this)} maxLength={50} iconStyle={{ right: 0 }} /> */}
+                    <SearchBox placeholder={Localization.get("SearchPlaceHolder")} onSearch={this.onKeywordChanged.bind(this)} maxLength={50} iconStyle={this.state.searchIconStyle} />
+                    {/* END Persian-DnnSoftware */}
                     <div className="clear"></div>
                 </div>
             </GridCell>

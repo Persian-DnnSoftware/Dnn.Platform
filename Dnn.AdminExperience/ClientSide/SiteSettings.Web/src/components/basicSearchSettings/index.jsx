@@ -173,7 +173,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }}
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
                                     />
                                 }
                             />
@@ -200,7 +203,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }}
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
                                     />
                                 }
                             />
@@ -227,7 +233,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }}
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
                                     />
                                 }
                             />
@@ -262,7 +271,10 @@ class BasicSearchSettingsPanelBody extends Component {
                             <Tooltip
                                 messages={[resx.get("GlobalSetting")]}
                                 type="global"
-                                style={{ float: "left", position: "static", marginTop: -3 }}
+                                // START Persian-DnnSoftware
+                                //style={{ float: "left", position: "static" }}
+                                style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                // END Persian-DnnSoftware
                             />}
                     />
                     <InputGroup>
@@ -275,7 +287,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }}
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
                                     />}
                             />
                             <Switch
@@ -301,7 +316,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                         <Tooltip
                                             messages={[resx.get("GlobalSetting")]}
                                             type="global"
-                                            style={{ float: "left", position: "static" }}
+                                            // START Persian-DnnSoftware
+                                            //style={{ float: "left", position: "static" }}
+                                            style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                            // END Persian-DnnSoftware
                                         />}
                                 />
                                 <NumberSlider
@@ -323,7 +341,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                         <Tooltip
                                             messages={[resx.get("GlobalSetting")]}
                                             type="global"
-                                            style={{ float: "left", position: "static" }}
+                                            // START Persian-DnnSoftware
+                                            //style={{ float: "left", position: "static" }}
+                                            style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                            // END Persian-DnnSoftware
                                         />}
                                 />
                                 <NumberSlider
@@ -345,7 +366,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                         <Tooltip
                                             messages={[resx.get("GlobalSetting")]}
                                             type="global"
-                                            style={{ float: "left", position: "static" }}
+                                            // START Persian-DnnSoftware
+                                            //style={{ float: "left", position: "static" }}
+                                            style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                            // END Persian-DnnSoftware
                                         />}
                                 />
                                 <NumberSlider
@@ -367,7 +391,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                         <Tooltip
                                             messages={[resx.get("GlobalSetting")]}
                                             type="global"
-                                            style={{ float: "left", position: "static" }}
+                                            // START Persian-DnnSoftware
+                                            //style={{ float: "left", position: "static" }}
+                                            style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                            // END Persian-DnnSoftware
                                         />}
                                 />
                                 <NumberSlider
@@ -389,7 +416,10 @@ class BasicSearchSettingsPanelBody extends Component {
                                         <Tooltip
                                             messages={[resx.get("GlobalSetting")]}
                                             type="global"
-                                            style={{ float: "left", position: "static" }}
+                                            // START Persian-DnnSoftware
+                                            //style={{ float: "left", position: "static" }}
+                                            style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                            // END Persian-DnnSoftware
                                         />}
                                 />
                                 <NumberSlider

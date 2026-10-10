@@ -96,6 +96,9 @@ class ThemeFileList extends Component {
             <div className="theme-files-list">
                 <Scrollbars
                     className="theme-files-scroller"
+                    // START Persian-DnnSoftware
+                    style={{direction:"ltr"}}
+                    // END Persian-DnnSoftware
                     autoHeight
                     autoHeightMin={0}
                     autoHeightMax={180}>

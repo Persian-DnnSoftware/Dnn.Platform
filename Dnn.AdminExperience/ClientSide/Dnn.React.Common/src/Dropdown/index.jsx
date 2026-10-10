@@ -9,7 +9,7 @@ import "./style.less";
 const DNN_DROPDOWN_MINHEIGHT = 100;
 
 class Dropdown extends Component {
-    constructor() {
+    constructor() {    
         super();
         this.state = {
             dropDownOpen: false,
@@ -320,6 +320,9 @@ class Dropdown extends Component {
                                 autoHeight={true}
                                 autoHeightMin={DNN_DROPDOWN_MINHEIGHT}
                                 style={props.scrollAreaStyle}
+                                // START Persian-DnnSoftware
+                                className="dnn-scrollbars"
+                                // END Persian-DnnSoftware
                                 onUpdate={this.props.onScrollUpdate}
                                 renderTrackHorizontal={() => <div/>}>
                                 <ul className="dnn-dropdown-options" ref={(ul) => this.dropDownListElement = ul}>
@@ -360,7 +363,9 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-    label: "-- Select --",
+    // START Persian-DnnSoftware
+    label: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "-- انتخاب --": "-- Select --",
+    // END Persian-DnnSoftware
     withIcon: true,
     withBorder: true,
     size: "small",

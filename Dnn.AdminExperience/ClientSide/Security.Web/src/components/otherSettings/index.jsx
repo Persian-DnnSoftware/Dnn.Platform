@@ -180,7 +180,11 @@ class OtherSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }} />
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
+                                    />
                                 } />
                             <Switch
                                 onText={resx.get("SwitchOn")}
@@ -199,7 +203,11 @@ class OtherSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }} />
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
+                                    />
                                 } />
                             <Switch
                                 onText={resx.get("SwitchOn")}
@@ -218,7 +226,11 @@ class OtherSettingsPanelBody extends Component {
                                     <Tooltip
                                         messages={[resx.get("GlobalSetting")]}
                                         type="global"
-                                        style={{ float: "left", position: "static" }} />
+                                        // START Persian-DnnSoftware
+                                        //style={{ float: "left", position: "static" }}
+                                        style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                        // END Persian-DnnSoftware
+                                    />
                                 } />
                             <Switch
                                 onText={resx.get("SwitchOn")}
@@ -279,7 +291,11 @@ class OtherSettingsPanelBody extends Component {
                                 <Tooltip
                                     messages={[resx.get("GlobalSetting")]}
                                     type="global"
-                                    style={{ float: "left", position: "static" }} />
+                                    // START Persian-DnnSoftware
+                                    //style={{ float: "left", position: "static" }}
+                                    style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                    // END Persian-DnnSoftware
+                                />
                             } />
                         <SingleLineInputWithError
                             withLabel={false}
@@ -296,7 +312,11 @@ class OtherSettingsPanelBody extends Component {
                                 <Tooltip
                                     messages={[resx.get("GlobalSetting")]}
                                     type="global"
-                                    style={{ float: "left", position: "static" }} />
+                                    // START Persian-DnnSoftware
+                                    //style={{ float: "left", position: "static" }}
+                                    style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                    // END Persian-DnnSoftware
+                                />
                             } />
                         <SingleLineInputWithError
                             withLabel={false}
@@ -313,7 +333,11 @@ class OtherSettingsPanelBody extends Component {
                                 <Tooltip
                                     messages={[resx.get("GlobalSetting")]}
                                     type="global"
-                                    style={{ float: "left", position: "static" }} />
+                                    // START Persian-DnnSoftware
+                                    //style={{ float: "left", position: "static" }}
+                                    style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                    // END Persian-DnnSoftware
+                                />
                             } />
                         <SingleLineInputWithError
                             withLabel={false}
@@ -330,7 +354,11 @@ class OtherSettingsPanelBody extends Component {
                                 <Tooltip
                                     messages={[resx.get("GlobalSetting")]}
                                     type="global"
-                                    style={{ float: "left", position: "static" }} />
+                                    // START Persian-DnnSoftware
+                                    //style={{ float: "left", position: "static" }}
+                                    style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                    // END Persian-DnnSoftware
+                                />
                             } />
                         <MultiLineInputWithError
                             value={state.otherSettings.AllowedExtensionWhitelist}
@@ -344,7 +372,11 @@ class OtherSettingsPanelBody extends Component {
                                 <Tooltip
                                     messages={[resx.get("GlobalSetting")]}
                                     type="global"
-                                    style={{ float: "left", position: "static" }} />
+                                    // START Persian-DnnSoftware
+                                    //style={{ float: "left", position: "static" }}
+                                    style={{ float: document.body.classList.contains("rtl") ? "right":"left", position: "static" }}
+                                    // END Persian-DnnSoftware
+                                />
                             } />
                         <MultiLineInputWithError
                             value={state.otherSettings.DefaultEndUserExtensionWhitelist}

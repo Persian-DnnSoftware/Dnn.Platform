@@ -128,3 +128,39 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .theme-file-skin,
+.rtl .theme-file-container {
+  float: right;
+  margin-left: unset;
+  margin-right: 10px;
+
+  span.thumbnail {
+    svg {
+      /* left: 50% and transform: translate(-50%, -50%) already provide horizontal centering, no change needed. */
+    }
+
+    > span.status {
+      span {
+        float: right;
+      }
+    }
+
+    span.actions {
+      left: unset;
+      right: 0;
+    }
+  }
+
+  div.title {
+    /* text-align: center is direction-agnostic, no change needed. */
+  }
+
+  &:first-child {
+    margin-left: unset;
+    margin-right: 0;
+  }
+}
+// END Persian-DnnSoftware

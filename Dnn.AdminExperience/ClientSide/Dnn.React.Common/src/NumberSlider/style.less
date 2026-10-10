@@ -44,3 +44,28 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .slider-container {
+  float: right;
+  & > span {
+    float: right;
+  }
+  &.with-min-max {
+    .slider {
+      width: calc(~"100% - 124px");
+    }
+  }
+  .slider {
+    float: right;
+    .thumb {
+      & > div {
+        left: unset;
+        right: 50%;
+        transform: translate(50%, 0);
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

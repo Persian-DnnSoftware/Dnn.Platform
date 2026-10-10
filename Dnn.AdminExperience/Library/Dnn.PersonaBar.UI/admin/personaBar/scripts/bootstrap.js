@@ -28,13 +28,28 @@
     var themeCss = 'css/theme.css';
     var mainCss = 'css/main.css';
 
+    /* START Persian-DnnSoftware */
+    if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+        mainJs = 'scripts/main.rtl.js';
+        mainCss = 'css/main.rtl.css';
+        themeCss = 'css/theme.rtl.css';
+    }
+    /* END Persian-DnnSoftware */
+
     if (cssVariables) {
         styles.push(cssVariables);
     }
 
     var hasCustomPersonaBarTheme = personaBarSettings['personaBarTheme'];
     if (hasCustomPersonaBarTheme){
-        styles.push('../../../../Portals/_default/PersonaBarTheme.css');
+        /* START Persian-DnnSoftware */
+        //styles.push('../../../../Portals/_default/PersonaBarTheme.css');
+        if (window.parent["personaBarSettings"]["culture"] == "fa-IR" || window.parent["personaBarSettings"]["culture"].startsWith("ar-")) {
+            styles.push("../../../../Portals/_default/PersonaBarTheme.rtl.css");
+        } else {
+            styles.push("../../../../Portals/_default/PersonaBarTheme.css");
+        }
+        /* END Persian-DnnSoftware */
     }
     else{
         styles.push(themeCss);
@@ -42,6 +57,13 @@
 
     styles.push(mainCss);
     styles.push('css/graph.css');
+
+    /* START Persian-DnnSoftware */
+    if (window.parent['personaBarSettings']['culture'] == 'fa-IR' || window.parent['personaBarSettings']['culture'].startsWith("ar-")) {
+        var fontCss = "../../../../Resources/Shared/fonts/FontVazirmatn.css"
+        styles.push(fontCss);
+    }
+    /* END Persian-DnnSoftware */
 
     addCssToHead(styles, version);
     addJsToBody(mainJs, version);

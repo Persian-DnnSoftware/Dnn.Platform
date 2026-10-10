@@ -138,3 +138,80 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.topPaneWrapper) {
+  .topPane-time {
+    float: left;
+    .topPane-time-name {
+      float: right;
+    }
+    .topPane-time-value {
+      float: left;
+      text-align: left;
+    }
+  }
+  .topPane {
+    float: right;
+    .topPane-left {
+      float: right;
+      margin-right: unset;
+      margin-left: 30px;
+    }
+    .topPane-middle {
+      float: right;
+      padding-right: unset;
+      padding-left: 50px;
+      .topPane-middle-common {
+        float: right;
+        .topPane-middle-common-title {
+          float: right;
+        }
+        .topPane-middle-common-value {
+          float: left;
+        }
+        .editIcon {
+          float: left;
+          padding-left: unset;
+          padding-right: 3px;
+          margin-right: unset;
+          margin-left: -20px;
+        }
+        .editIconDisabled {
+          float: left;
+          padding-left: unset;
+          padding-right: 3px;
+          margin-right: unset;
+          margin-left: -20px;
+        }
+        .collapsible-content {
+          margin: -45px 0 0 -92px; /* Adjusted to keep it consistent if it refers to absolute positioning */
+          text-align: right;
+        }
+      }
+    }
+    .topPane-right {
+      float: left;
+      border-right: none;
+      border-left: solid 1px @alto;
+      padding-right: unset;
+      padding-left: 30px;
+      .topPane-right-common {
+        float: right;
+        .topPane-right-common-title {
+          float: right;
+        }
+        .topPane-right-common-value {
+          float: left;
+        }
+      }
+    }
+    .topPane-button {
+      float: left;
+      margin-right: unset;
+      margin-left: 10px;
+    }
+  }
+}
+// END Persian-DnnSoftware

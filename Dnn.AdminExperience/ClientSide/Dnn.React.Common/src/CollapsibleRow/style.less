@@ -62,3 +62,37 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-collapsible-component {
+        div.collapsible-header {
+            float: right;
+
+            .collapse-icon {
+                right: unset;
+                left: 20px;
+                // نیازی به تغییر در :after (شکل فلش) نیست زیرا خود فلش (بالا/پایین) معمولاً در RTL آینه نمی‌شود
+                // و موقعیت داخلی آن نسبت به .collapse-icon است که قبلاً جابجا شده.
+            }
+        }
+
+        .collapsible-row {
+            float: right;
+        }
+
+        .collapsible-footer {
+            button {
+                margin-right: unset;
+                margin-left: 15px;
+
+                &:last-child {
+                    margin-right: unset;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware

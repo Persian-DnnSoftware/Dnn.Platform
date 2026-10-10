@@ -120,3 +120,50 @@
     vertical-align: top;
   }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .collapsible-component-users {
+  .collapsible-header-users.false {
+    /* No directional properties changed here. */
+  }
+}
+
+.rtl :local(.extensionDetailRow) {
+  float: right; /* Changed from left to right */
+  .user-avatar {
+    text-align: center; /* No change needed */
+  }
+  .user-detail-row {
+    float: right; /* Changed from left to right */
+    > div {
+      float: right; /* Changed from left to right */
+    }
+  }
+  .user-emails {
+    padding-left: unset !important; /* Remove LTR padding */
+    padding-right: 11px !important; /* Add RTL padding */
+  }
+  .user-names {
+    padding-left: unset !important; /* Remove LTR padding */
+    padding-right: 2px !important; /* Add RTL padding */
+  }
+  .user-joined {
+    padding-left: unset !important; /* Remove LTR padding */
+    padding-right: 22px !important; /* Add RTL padding */
+  }
+  .extension-action {
+    margin-left: unset; /* Remove LTR margin */
+    margin-right: 5px; /* Add RTL margin */
+    float: left; /* Changed from right to left */
+    svg {
+      float: right; /* Changed from left to right */
+    }
+  }
+  .user-status {
+    svg {
+      float: right; /* Changed from left to right */
+    }
+  }
+}
+// END Persian-DnnSoftware

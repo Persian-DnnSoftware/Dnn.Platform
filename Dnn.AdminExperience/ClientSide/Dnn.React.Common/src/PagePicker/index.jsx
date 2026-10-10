@@ -700,21 +700,29 @@ PagePicker.propTypes = {
 };
 
 PagePicker.defaultProps = {
-    defaultLabel: "-- Select --",
+    // START Persian-DnnSoftware
+    defaultLabel: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "-- انتخاب --": "-- Select --",
+    // END Persian-DnnSoftware
     IsMultiSelect: false,
     SearchEnabled: true,
     ShowCount: true,
-    CountText: "<strong>{0}</strong> Results",
+    // START Persian-DnnSoftware
+    CountText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "<strong>{0}</strong> نتایج": "<strong>{0}</strong> Results",
+    // END Persian-DnnSoftware
     ShowIcon: true,
     IsInDropDown: true,
     Reload: false,
-    noneSpecifiedText: "< None Specified >",
+    // START Persian-DnnSoftware
+    noneSpecifiedText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "< مشخص نشده >": "< None Specified >",
+    // END Persian-DnnSoftware
     withIcon: true,
     withBorder: true,
     closeOnBlur: true,
     enabled: true,
     className: "",
-    placeholderText: "Search pages..",
+    // START Persian-DnnSoftware
+    placeholderText: window.parent["personaBarSettings"]["culture"] === "fa-IR" ? "جستجوی صفحات..": "Search pages..",
+    // END Persian-DnnSoftware
     style: {
         width: 300
     },

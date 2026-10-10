@@ -276,3 +276,101 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+    .dnn-folder-selector {
+        float: right;
+
+        &:after {
+            right: auto;
+            left: 8px;
+        }
+
+        .selected-item {
+            float: right;
+            padding-right: 7px;
+            padding-left: 20px;
+        }
+
+        .folder-selector-container {
+            left: auto;
+            right: -1px;
+
+            .inner-box {
+                float: right;
+
+                .search {
+                    float: right;
+
+                    .clear-button {
+                        right: auto;
+                        left: 32px;
+                    }
+
+                    .search-icon {
+                        right: auto;
+                        left: 0;
+                    }
+
+                    input[type="text"] {
+                        float: right;
+                    }
+                }
+
+                .items {
+                    float: right;
+                }
+            }
+        }
+    }
+
+    .dnn-folders-component {
+        ul {
+            padding-left: 0;
+            padding-right: 20px;
+
+            li {
+                float: right;
+
+                & > div {
+                    float: right;
+                }
+
+                & > ul {
+                    float: right;
+                }
+                
+                &.open {
+                    & > .has-children {
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                .icon {
+                    float: left;
+                    margin-right: 0;
+                    margin-left: 5px;
+                }
+
+                .item-name {
+                    float: left;
+                }
+
+                .has-children {
+                    left: auto;
+                    right: -15px;
+
+                    &:after {
+                        left: auto;
+                        right: 4px;
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid var(--dnn-color-neutral, #787878);
+                    }
+                }
+            }
+        }
+    }
+}
+// END Persian-DnnSoftware

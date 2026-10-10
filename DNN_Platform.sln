@@ -329,8 +329,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selectize", "Selectize", "{
 		DNN Platform\JavaScript Libraries\Selectize\Selectize (Apache).txt = DNN Platform\JavaScript Libraries\Selectize\Selectize (Apache).txt
 		DNN Platform\JavaScript Libraries\Selectize\selectize.css = DNN Platform\JavaScript Libraries\Selectize\selectize.css
 		DNN Platform\JavaScript Libraries\Selectize\selectize.default.css = DNN Platform\JavaScript Libraries\Selectize\selectize.default.css
+		DNN Platform\JavaScript Libraries\Selectize\selectize.default.rtl.css = DNN Platform\JavaScript Libraries\Selectize\selectize.default.rtl.css
 		DNN Platform\JavaScript Libraries\Selectize\Selectize.dnn = DNN Platform\JavaScript Libraries\Selectize\Selectize.dnn
 		DNN Platform\JavaScript Libraries\Selectize\selectize.min.js = DNN Platform\JavaScript Libraries\Selectize\selectize.min.js
+		DNN Platform\JavaScript Libraries\Selectize\selectize.rtl.css = DNN Platform\JavaScript Libraries\Selectize\selectize.rtl.css
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnn.Modules.Console", "DNN Platform\Admin Modules\Dnn.Modules.Console\Dnn.Modules.Console.csproj", "{946F0EA1-6187-4878-A32F-B7BF70E13CE5}"

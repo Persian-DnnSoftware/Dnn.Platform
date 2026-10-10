@@ -59,3 +59,36 @@
         float: left;
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.moduleContainer) {
+  .module-title {
+    text-align: left;
+    float: left;
+    .sectionTitle {
+      float: right;
+    }
+    .module-icon svg {
+      float: right;
+      margin-right: unset;
+      margin-left: 5px;
+    }
+  }
+  .module-table {
+    float: right;
+    border-left: none;
+    border-right: 1px solid @alto;
+  }
+  .no-modules {
+    float: right;
+    text-align: center;
+  }
+  .header-row {
+    float: right;
+  }
+  .add-setting-editor {
+    float: right;
+  }
+}
+// END Persian-DnnSoftware

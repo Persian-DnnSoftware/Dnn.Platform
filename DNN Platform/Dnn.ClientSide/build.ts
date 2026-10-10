@@ -27,6 +27,13 @@ const files: FileConfig[] = [
       ? path.relative(process.cwd(), path.resolve("../../Website/Resources/Shared/stylesheets/dnndefault/10.0.0/default.css"))
       : path.resolve(settings.WebsitePath, "Resources/Shared/stylesheets/dnndefault/10.0.0/default.css"),
   },
+  {/* START persian-dnnsoftware */
+    input: "src/styles/default-css/10.0.0/default.rtl.scss",
+    output:
+      mode === "build"
+      ? path.relative(process.cwd(), path.resolve("../../Website/Resources/Shared/stylesheets/dnndefault/10.0.0/default.rtl.css"))
+      : path.resolve(settings.WebsitePath, "Resources/Shared/stylesheets/dnndefault/10.0.0/default.rtl.css"),
+  },/* END persian-dnnsoftware */
   {
     input: "src/styles/install/install.scss",
     output:

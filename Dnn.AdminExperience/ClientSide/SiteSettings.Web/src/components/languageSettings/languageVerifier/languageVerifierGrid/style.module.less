@@ -48,3 +48,33 @@
         }
     }
 }
+
+
+// START Persian-DnnSoftware
+.rtl :local(.verifierItems) {
+  float: right;
+  .verifier-items-grid {
+    float: right;
+    .verifier-grid {
+      float: right;
+      .language-flag {
+        float: right;
+      }
+      .language-name {
+        float: right;
+        margin-left: unset;
+        margin-right: 10px;
+      }
+      .default-language {
+        /* Already floating right, consistent with RTL layout */
+      }
+    }
+    .verifier-grid-body {
+      float: right;
+      .resx-files {
+        /* No directional changes needed for padding and word-break */
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware

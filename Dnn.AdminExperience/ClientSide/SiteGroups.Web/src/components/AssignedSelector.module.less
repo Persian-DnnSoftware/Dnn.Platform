@@ -51,3 +51,19 @@
     }
   }
 }
+
+
+// START Persian-DnnSoftware
+.rtl .sitegroup-details-editor {
+  :local(.assignedSelector) {
+    .selector-controls {
+      padding: 0 22px; /* Symmetric padding, no change needed */
+      .move-item {
+        &.double-right {
+          transform: rotate(180deg); /* Rotates the arrow to point left */
+        }
+      }
+    }
+  }
+}
+// END Persian-DnnSoftware
