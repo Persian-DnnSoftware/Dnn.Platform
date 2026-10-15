@@ -34,6 +34,7 @@ namespace DotNetNuke.Modules.Admin.Modules
     using DotNetNuke.UI.Modules;
     using DotNetNuke.UI.Skins;
     using DotNetNuke.UI.Skins.Controls;
+    using DotNetNuke.Web.Client.ResourceManager;
     using DotNetNuke.Website;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
