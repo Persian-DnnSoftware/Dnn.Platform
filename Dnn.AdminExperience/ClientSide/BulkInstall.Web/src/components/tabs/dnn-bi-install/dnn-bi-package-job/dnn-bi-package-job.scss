@@ -9,3 +9,13 @@
 .success .icon {
   fill: var(--dnn-color-success, green);
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+  direction: rtl;
+  text-align: right;
+
+  // Status icons are not directional and must not be mirrored.
+}
+// END Persian-DnnSoftware

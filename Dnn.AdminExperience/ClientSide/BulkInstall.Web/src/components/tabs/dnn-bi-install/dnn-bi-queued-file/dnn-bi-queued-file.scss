@@ -48,3 +48,18 @@
     fill: var(--dnn-color-success, green);
   }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+  .container {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .container .progress .progress-bar {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+// END Persian-DnnSoftware

@@ -21,7 +21,7 @@ class Root extends Component {
         return (
             <div className="roles-app">
                 <PersonaBarPage isOpen={true}>
-                    <PersonaBarPageHeader title={resx.get("Roles") }>
+                    <PersonaBarPageHeader title={resx.get("nav_Roles") }>
                         {canEdit &&
                             <Button type="primary" size="large" onClick={this.onCreate.bind(this) }>{resx.get("Create") }</Button>
                         }

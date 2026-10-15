@@ -85,3 +85,24 @@
     }
   }
 }
+
+
+// START Persian-DnnSoftware
+.rtl {
+  .panel,
+  form.create-ip {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .panel-heading dnn-button {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .table th,
+  .table td {
+    text-align: right;
+  }
+}
+// END Persian-DnnSoftware

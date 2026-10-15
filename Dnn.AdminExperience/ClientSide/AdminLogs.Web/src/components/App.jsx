@@ -49,7 +49,7 @@ class App extends Component {
 
         return (
             <GridCell>
-                <PersonaBarPageHeader title={("Admin Logs") }>
+                <PersonaBarPageHeader title={Localization.get("nav_AdminLogs")}>
                 </PersonaBarPageHeader>
                 <PersonaBarPageBody>
                     <Tabs onSelect={this.handleSelect.bind(this) }

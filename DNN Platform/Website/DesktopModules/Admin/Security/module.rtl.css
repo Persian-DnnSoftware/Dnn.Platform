@@ -1,14 +1,40 @@
 /* Persian-DnnSoftware */
-.ContentPane * {
-    zoom: 1;
-}
-/* Trigger quirks mode for IE */
 
-.dnnSecurityRoles, .dnnManageUsers, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings {
+.dnnSecurityRoles,
+.dnnManageUsers,
+#dnnManageUsers,
+#dnnUsers,
+#dnnEditUser,
+.dnnUser,
+.dnnProfileProperties,
+.dnnEditProfileDef,
+.dnnPassword,
+.dnnProfile,
+.dnnProfileDetails,
+.dnnRoleDetails,
+.dnnManageSecurityRoles,
+.dnnUserSettings,
+.dnnEditRole,
+.dnnRegistrationForm,
+.dnnSocialRegistration {
+    direction: rtl;
+    text-align: right;
+}
+
+.dnnSecurityRoles,
+.dnnManageUsers,
+.dnnProfileProperties,
+.dnnEditProfileDef,
+.dnnPassword,
+.dnnProfile,
+.dnnRoleDetails,
+.dnnManageSecurityRoles,
+.dnnUserSettings {
     margin: 1em auto 2.5em;
 }
 
-    .dnnSecurityRoles .dnnGrid td, .dnnGrid.dnnSecurityRoles td {
+    .dnnSecurityRoles .dnnGrid td,
+    .dnnGrid.dnnSecurityRoles td {
         padding: 12px 10px;
     }
 
@@ -25,7 +51,8 @@
     margin-bottom: 1em;
 }
 
-    .dnnGrid.dnnSecurityRolesGrid .rgRow td, .dnnGrid.dnnSecurityRolesGrid .rgAltRow td {
+    .dnnGrid.dnnSecurityRolesGrid .rgRow td,
+    .dnnGrid.dnnSecurityRolesGrid .rgAltRow td {
         max-width: 200px;
         word-wrap: break-word;
     }
@@ -47,7 +74,7 @@
         margin-right: 4px;
     }
 
-.dnnFormItem input.dnnUserSearchInput {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .dnnFormItem input.dnnUserSearchInput {
     width: 40%;
 }
 
@@ -63,14 +90,14 @@
     padding-right: 1em;
 }
 
-.uLetterSearch {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .uLetterSearch {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
 }
 
-#dnnManageUsers .dnnUser, #dnnManageUsers .dnnMembership {
-    /*width: 45%;*/
+#dnnManageUsers .dnnUser,
+#dnnManageUsers .dnnMembership {
     float: right;
     margin-left: 10px;
 }
@@ -80,7 +107,6 @@
     padding: 15px 25px 0 0;
     background-color: #eaeaea;
 }
-
 
 #dnnEditUser .dnnUserVanityUrl {
     width: 35%;
@@ -102,7 +128,6 @@
     width: 100px;
 }
 
-
 .dnnUserSettings .dnnFormItem input[type="radio"] {
     float: none;
 }
@@ -119,7 +144,7 @@
     margin-left: 10px;
 }
 
-.erasContent .dnnFormMessage {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .erasContent .dnnFormMessage {
     display: block;
 }
 
@@ -132,35 +157,42 @@
     font-weight: normal;
 }
 
-.dnnSecurityRoles .dnnFormItem label, .dnnUser .dnnFormItem .dnnFormLabel {
+.dnnSecurityRoles .dnnFormItem label,
+.dnnUser .dnnFormItem .dnnFormLabel {
     width: 100%;
 }
 
-p.dnnFormRequired span {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) p.dnnFormRequired span {
     border-right: 5px #F00 solid;
     padding-right: 0.5em;
 }
 
-.dnnUser a.dnnPrimaryAction, .dnnUser a.dnnPrimaryAction:link, .dnnUser a.dnnPrimaryAction:visited {
+.dnnUser a.dnnPrimaryAction,
+.dnnUser a.dnnPrimaryAction:link,
+.dnnUser a.dnnPrimaryAction:visited {
     color: White;
 }
 
-.dnnPassword a.dnnPrimaryAction, .dnnPassword a.dnnPrimaryAction:link, .dnnPassword a.dnnPrimaryAction:visited {
+.dnnPassword a.dnnPrimaryAction,
+.dnnPassword a.dnnPrimaryAction:link,
+.dnnPassword a.dnnPrimaryAction:visited {
     color: White;
 }
 
 .dnnProfile .dnnFormRadioButtons input {
     float: none;
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 .dnnProfile .dnnFormRadioButtons select {
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
-.dnnProfile .dnnFormItem input[type="text"], .dnnProfile .dnnFormItem select, .dnnProfile .dnnFormItem textarea {
+.dnnProfile .dnnFormItem input[type="text"],
+.dnnProfile .dnnFormItem select,
+.dnnProfile .dnnFormItem textarea {
     margin-left: 10px;
 }
 
@@ -195,6 +227,10 @@ p.dnnFormRequired span {
     padding: 4px;
 }
 
+    .dnnProfileDetails .dnnFormItem > span.dnnRadiobutton {
+        background-color: #dbdbdb;
+    }
+
 .dnnProfileDetails .dnnFormItem .dnnDropDownList input[type="text"] {
     float: none;
 }
@@ -207,7 +243,7 @@ p.dnnFormRequired span {
     width: 315px;
 }
 
-.dnnLeft {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .dnnLeft {
     margin-bottom: 20px;
 }
 
@@ -233,64 +269,11 @@ p.dnnFormRequired span {
         width: auto !important;
     }
 
-/*
-#dnn_ctr_ManageUsers_Profile_ProfileProperties_Photo_PhotoFileControl input[type="file"]{
-    width: auto !important;
-    margin: 0 10px 10px 0;
-}
-*/
-/*
-.dnnProfileDetails .dnnForm .dnnFormVisibility ul li
-{
-    list-style-type: none;
-}
-.dnnProfileDetails .dnnFormItem .dnnFormVisibility input[type="radio"]
-{
-    width: 8%;
-    float: none;
-}
-.dnnProfileDetails .dnnFormItem .dnnFormVisibility input[type="checkbox"]
-{
-    width: 8%;
-    float: none;
-    margin-left: 30px;
-}
-.dnnProfileDetails .dnnFormItem .dnnFormVisibility > ul
-{
-    z-index: 200;
-    position: absolute;
-    background-color: white;
-    border: turquoise 1px solid;
-    padding: 5px;
-    width: 200px;
-}
-.dnnProfileDetails .dnnFormItem .dnnFormVisibility > a
-{
-    padding-top: 8px;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-}
-.dnnProfileDetails .dnnFormItem .dnnFormVisibility > a.dnnFormActive
-{
-    border: turquoise 1px solid;
-}
-*/
-
 .dnnProfileDetails .dnnFormItem .dnnFormInput input[type="radio"] {
     width: 8%;
     float: none;
 }
 
-/*.dnnManageUsers .dnnFormItem span.dnnFormMessage.dnnFormError
-{
-    position: absolute;
-    left: 68%;
-    top: 0;
-    z-index: 9999;
-}
-*/
 .dnnEditProfileDef .dnnFormMessage {
     display: block;
 }
@@ -318,7 +301,7 @@ div.dnnRegistrationForm {
         width: 60%;
     }
 
-span.dnnFormMessage.dnnFormError.dnnCaptcha {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) span.dnnFormMessage.dnnFormError.dnnCaptcha {
     bottom: -55px;
 }
 
@@ -327,35 +310,35 @@ span.dnnFormMessage.dnnFormError.dnnCaptcha {
     width: 35%;
 }
 
-div.dnnCaptcha {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) div.dnnCaptcha {
     min-width: 50px;
     width: 70%;
 }
 
-span.dnnFormMessage.dnnFormError.dnnCaptcha {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) span.dnnFormMessage.dnnFormError.dnnCaptcha {
     top: auto;
 }
 
-#mainContainer {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) #mainContainer {
     position: relative;
     margin: 0 auto;
     padding-bottom: 25px;
     padding-left: 25px;
 }
 
-ul.buttonList {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList {
     list-style: none;
 }
 
-    ul.buttonList li {
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList li {
         float: none;
         line-height: normal;
         list-style: none;
         width: 250px;
         margin-bottom: 7px;
     }
-        /* SET DEFUALT BUTTON STYLE */
-        ul.buttonList li a {
+
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList li a {
             clear: both;
             overflow: auto;
             position: relative;
@@ -363,7 +346,7 @@ ul.buttonList {
             text-decoration: none;
             text-shadow: 0px 1px 0px #fff;
             font-weight: bold;
-            font-family: Tahoma, Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             background: #e7e7e7 url(images/socialLoginbuttons-repeatingbg.png) repeat-x 0 -601px;
             border: 1px solid #c9c9c9;
@@ -374,25 +357,25 @@ ul.buttonList {
             -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.7);
             box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.7);
         }
-            /* Use span to set dimensions; a and li will inherit */
-            ul.buttonList li a img {
+
+            :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList li a img {
                 float: right;
             }
 
-            ul.buttonList li a span {
+            :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList li a span {
                 float: right;
                 display: block;
                 padding: 10px 15px;
             }
 
-            ul.buttonList li a:hover {
+            :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList li a:hover {
                 border-color: #a8a8a8;
                 text-shadow: 0px 1px 0px #e1e1e1;
                 background-position: 0 -650px;
                 background-color: #cacbcd;
             }
 
-            ul.buttonList li a:active {
+            :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList li a:active {
                 color: #fff;
                 text-shadow: 0px -1px 0px #666;
                 border-color: #a3a3a3;
@@ -402,13 +385,19 @@ ul.buttonList {
                 -moz-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
                 box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
             }
-    /* SET SOCIAL SPECIFIC STYLES */
-    ul.buttonList .facebook a span, ul.buttonList .twitter a span, ul.buttonList .googleplus a span, ul.buttonList .windowslive a span {
+
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .facebook a span,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a span,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a span,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a span {
         padding-right: 45px;
         background: url(images/socialLoginbuttons-icons.png) no-repeat 12px 7px;
     }
 
-    ul.buttonList .facebook a:after, ul.buttonList .twitter a:after, ul.buttonList .googleplus a:after, ul.buttonList .windowslive a:after {
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .facebook a:after,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a:after,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a:after,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a:after {
         position: absolute;
         right: 35px;
         top: 0;
@@ -418,123 +407,119 @@ ul.buttonList {
         border-right: 1px solid rgba(0,0,0,0.2);
         border-left: 1px solid rgba(255,255,255,0.3);
     }
-    /*FACEBOOK*/
-    ul.buttonList .facebook a {
+
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .facebook a {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-        border-color: #286c93; /* dark blue */
+        border-color: #286c93;
         background-position: 0 0;
         background-color: #5581bb;
     }
 
-        ul.buttonList .facebook a:hover {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .facebook a:hover {
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-            border-color: #286c93; /* dark blue */
+            border-color: #286c93;
             background-position: 0 -50px;
             background-color: #729dcd;
         }
 
-        ul.buttonList .facebook a:active {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .facebook a:active {
             background-position: 0 -100px;
-            border-color: #286c93; /* dark blue */
+            border-color: #286c93;
             background-color: #537fba;
         }
 
-    /*TWITTER*/
-    ul.buttonList .twitter a {
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-        border-color: #3d82a0; /* dark teal blue */
+        border-color: #3d82a0;
         background-position: 0 -150px;
         background-color: #11a2d6;
     }
 
-        ul.buttonList .twitter a:hover {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a:hover {
             color: #fff;
-            border-color: #3d82a0; /* dark teal blue */
+            border-color: #3d82a0;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
             background-position: 0 -200px;
             background-color: #43c1e3;
         }
 
-        ul.buttonList .twitter a:active {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a:active {
             background-position: 0 -250px;
-            border-color: #3d82a0; /* dark teal blue */
+            border-color: #3d82a0;
             background-color: #0597cc;
         }
 
-        ul.buttonList .twitter a span {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a span {
             background-position: 9px -40px;
         }
 
-    /*GOOGLE PLUS*/
-    ul.buttonList .googleplus a {
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-        border-color: #821e16; /* dark red */
+        border-color: #821e16;
         background-position: 0 -300px;
         background-color: #b12e1e;
     }
 
-        ul.buttonList .googleplus a:hover {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a:hover {
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-            border-color: #821e16; /* dark red */
+            border-color: #821e16;
             background-position: 0 -350px;
             background-color: #cc3633;
         }
 
-        ul.buttonList .googleplus a:active {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a:active {
             background-position: 0 -400px;
-            border-color: #821e16; /* dark red */
+            border-color: #821e16;
             background-color: #a5281a;
         }
 
-        ul.buttonList .googleplus a span {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a span {
             background-position: 10px -90px;
         }
 
-    /*WINDOWS LIVE ID*/
-    ul.buttonList .windowslive a {
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a {
         color: #fff;
         text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-        border-color: #7a7a7a; /* dark grey*/
+        border-color: #7a7a7a;
         background-position: 0 -450px;
         background-color: #8f8f8f;
     }
 
-        ul.buttonList .windowslive a:hover {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a:hover {
             color: #fff;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
-            border-color: #7a7a7a; /* dark grey*/
+            border-color: #7a7a7a;
             background-position: 0 -500px;
             background-color: #b3b3b3;
         }
 
-        ul.buttonList .windowslive a:active {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a:active {
             background-position: 0 -550px;
-            border-color: #7a7a7a; /* dark grey*/
+            border-color: #7a7a7a;
             background-color: #808080;
         }
 
-        ul.buttonList .windowslive a span {
+        :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a span {
             background-position: 9px -141px;
         }
 
-.dnnButtonIcon {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .dnnButtonIcon {
     background: transparent url(../../../images/visibility.png) no-repeat center;
 }
 
-.PagingTable {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .PagingTable {
     width: 100%;
 }
 
-    .PagingTable td {
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .PagingTable td {
         padding: 3px;
     }
 
-/* Biography */
 #dnn_ctr_ManageUsers_Profile_ProfileProperties_Biography_Biography_Label + .dnnLeft {
     margin-top: 5px;
     width: 69%;
@@ -542,7 +527,7 @@ ul.buttonList {
     clear: right;
 }
 
-.dnnLeft #dnn_ctr_ManageUsers_Profile_ProfileProperties_Biography_Biographyedit {
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .dnnLeft #dnn_ctr_ManageUsers_Profile_ProfileProperties_Biography_Biographyedit {
     width: 100% !important;
 }
 
@@ -558,23 +543,23 @@ ul.buttonList {
     display: none;
 }
 
-/*  fixed profile image upload */
 .dnnProfile .dnnFileUploadScope {
     display: inline-block;
     background-color: #F0F0F0;
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 0;
-    width: 475px;
+    width: 85%;
+    max-width: 445px;
 }
 
     .dnnProfile .dnnFileUploadScope > div:first-child {
         float: left;
-        width: 250px;
+        width: 220px;
     }
 
     .dnnProfile .dnnFileUploadScope .dnnLeft .dnnFormItem {
-        width: 250px;
+        width: 220px;
     }
 
         .dnnProfile .dnnFileUploadScope .dnnLeft .dnnFormItem .dnnDropDownList {
@@ -589,13 +574,67 @@ ul.buttonList {
             display: none !important;
         }
 
-/*DNN Profile Page Manage Services Tab Table(DNN-9321)*/
+@media screen and (max-width: 860px) {
+    .dnnProfile .dnnLabel {
+        width: 20% !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dnnProfile .dnnButtonDropdown-ul {
+        right: -150px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .dnnProfile .dnnLabel {
+        float: none !important;
+        width: 100% !important;
+        text-align: right;
+    }
+
+        .dnnProfile .dnnLabel label {
+            margin-left: .3em;
+        }
+
+    .dnnProfile .dnnFormHelp {
+        position: relative !important;
+        width: 20px;
+    }
+
+    .dnnProfile .dnnTooltip {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .dnnProfile .dnnFileUploadScope {
+        width: auto;
+    }
+
+        .dnnProfile .dnnFileUploadScope > div:first-child {
+            float: none;
+            width: 100%;
+        }
+
+    .dnnProfile .RadEditor,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) .RadEditor.reWrapper {
+        width: auto !important;
+        min-width: inherit !important;
+    }
+}
+
 @media only screen and (max-width: 570px) {
     #dnn_ctr_EditUser_MemberServices_grdServices {
         margin: 1em auto;
     }
 
-        #dnn_ctr_EditUser_MemberServices_grdServices table, #dnn_ctr_EditUser_MemberServices_grdServices thead, #dnn_ctr_EditUser_MemberServices_grdServices tbody, #dnn_ctr_EditUser_MemberServices_grdServices th, #dnn_ctr_EditUser_MemberServices_grdServices td, #dnn_ctr_EditUser_MemberServices_grdServices tr {
+        #dnn_ctr_EditUser_MemberServices_grdServices table,
+        #dnn_ctr_EditUser_MemberServices_grdServices thead,
+        #dnn_ctr_EditUser_MemberServices_grdServices tbody,
+        #dnn_ctr_EditUser_MemberServices_grdServices th,
+        #dnn_ctr_EditUser_MemberServices_grdServices td,
+        #dnn_ctr_EditUser_MemberServices_grdServices tr {
             display: block;
         }
 
@@ -669,4 +708,263 @@ ul.buttonList {
             content: "Expiry Date";
             font-weight: bold;
         }
+}
+
+.dnnProfileDetails .dnnFormItem > .dnnLeft,
+.dnnProfile .dnnFileUploadScope .dnnLeft {
+    float: right;
+}
+
+.dnnUser input[type="email"],
+.dnnUser input[type="url"],
+.dnnProfile input[type="email"],
+.dnnProfile input[type="url"],
+.dnnRegistrationForm input[type="email"],
+.dnnRegistrationForm input[type="url"],
+#dnnEditUser .dnnUserVanityUrl {
+    direction: ltr;
+    text-align: left;
+}
+
+:where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList {
+    direction: rtl;
+}
+
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .facebook a span,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a span,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a span,
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a span {
+        text-align: right;
+        background-position: right 12px top 7px;
+    }
+
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .twitter a span {
+        background-position: right 9px top -40px;
+    }
+
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .googleplus a span {
+        background-position: right 10px top -90px;
+    }
+
+    :where(.dnnSecurityRoles, .dnnManageUsers, #dnnManageUsers, #dnnUsers, #dnnEditUser, .dnnUser, .dnnProfileProperties, .dnnEditProfileDef, .dnnPassword, .dnnProfile, .dnnProfileDetails, .dnnRoleDetails, .dnnManageSecurityRoles, .dnnUserSettings, .dnnEditRole, .dnnRegistrationForm, .dnnSocialRegistration) ul.buttonList .windowslive a span {
+        background-position: right 9px top -141px;
+    }
+
+@media only screen and (max-width: 800px) {
+    .dnnProfile .dnnButtonDropdown-ul {
+        left: auto;
+        right: -150px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .dnnProfile .dnnTooltip {
+        left: auto;
+        right: 20%;
+    }
+}
+
+/* Use the base RTL utility float rather than reversing it a second time. */
+.dnnProfileDetails .dnnFormItem > .dnnLeft,
+.dnnProfile .dnnFileUploadScope .dnnLeft {
+    float: right;
+}
+/* Align labels with the controls; retain the base help icon's left-hand space. */
+.dnnProfileDetails .dnnLabel,
+.dnnProfileDetails .dnnFormLabel {
+    box-sizing: border-box;
+}
+/* The base stylesheet anchors this menu on the right: clear the opposite edge. */
+.dnnProfile .dnnButtonDropdown-ul {
+    left: auto;
+}
+/* Preserve platform theme colors and the inherited Persian font. */
+.dnnUser a.dnnPrimaryAction,
+.dnnUser a.dnnPrimaryAction:link,
+.dnnUser a.dnnPrimaryAction:visited,
+.dnnPassword a.dnnPrimaryAction,
+.dnnPassword a.dnnPrimaryAction:link,
+.dnnPassword a.dnnPrimaryAction:visited {
+    color: var(--dnn-color-primary-contrast, #efefef);
+}
+
+:where(.dnnSocialRegistration, .dnnRegistrationForm) ul.buttonList li a {
+    font-family: inherit;
+}
+
+/* Profile properties: markup emits control, visibility, then label.
+   Explicit grid placement fixes the order independently of float rules. */
+.dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) {
+    display: grid;
+    direction: rtl;
+    grid-template-columns: minmax(120px, 24%) minmax(0, 445px) 50px;
+    gap: 0 10px;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 18px;
+}
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > .dnnLabel {
+        grid-column: 1;
+        grid-row: 1;
+        float: none !important;
+        width: 100% !important;
+        min-width: 0;
+        margin: 5px 0 0;
+        padding: 0 0 0 24px;
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > input[type="text"],
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > textarea,
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > select {
+        grid-column: 2;
+        grid-row: 1;
+        float: none;
+        width: 100%;
+        min-width: 0;
+        max-width: 445px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > .dnnFormVisibility {
+        grid-column: 3;
+        grid-row: 1;
+        float: none;
+        width: 50px;
+        min-width: 0;
+        margin: 0;
+    }
+
+        .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > .dnnFormVisibility > .dnnButtonDropdown-ul {
+            right: auto;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            min-width: 180px;
+            text-align: right;
+        }
+
+@media screen and (max-width: 725px) {
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) {
+        grid-template-columns: minmax(0, 1fr) 50px;
+        row-gap: 6px;
+    }
+
+        .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > .dnnLabel {
+            grid-column: 1 / -1;
+            grid-row: 1;
+            margin: 0;
+        }
+
+        .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > input[type="text"],
+        .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > textarea,
+        .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > select {
+            grid-column: 1;
+            grid-row: 2;
+            max-width: none;
+        }
+
+        .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility):has(> input[type="text"], > textarea, > select, > [data-name="Region"], > .dnnLeft, > .dnnFileUploadScope) > .dnnFormVisibility {
+            grid-column: 2;
+            grid-row: 2;
+        }
+}
+
+/* Wrapped profile editors share the same grid cell as simple fields.
+   Do not change display on Region controls: DNN switches text/select inline. */
+.dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility) > :is([data-name="Region"], .dnnLeft, .dnnFileUploadScope) {
+    grid-column: 2;
+    grid-row: 1;
+    float: none;
+    width: 100%;
+    max-width: 445px;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dnnFormItem[id*="_Profile_ProfileProperties_"] > [data-name="Region"] > :is(input[type="text"], select),
+.dnnFormItem[id*="_Profile_ProfileProperties_"][id$="_PreferredLocale"] > .dnnLeft > select {
+    float: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dnnFormItem[id*="_Profile_ProfileProperties_"][id$="_PreferredLocale"] > .dnnLeft > br {
+    display: none;
+}
+
+.dnnFormItem[id*="_Profile_ProfileProperties_"][id$="_PreferredLocale"] .dnnFormRadioButtons {
+    display: block;
+    margin-top: 6px;
+    line-height: 2;
+}
+
+.dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--dnn-color-background-dark, #f0f0f0);
+}
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope > .dnnLeft {
+        float: none;
+        flex: 1 1 180px;
+        width: auto;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope .dnnLeft > .dnnFormItem {
+        width: 100%;
+        min-width: 0;
+        margin: 0 0 8px;
+    }
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope .dnnLeft .dnnDropDownList,
+    .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope .dnnLeft input[type="button"] {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope .dnnFileUploadDropZone {
+        width: 100%;
+        max-width: 100%;
+        min-height: 110px;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+        .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope .dnnFileUploadDropZone img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    .dnnFormItem[id*="_Profile_ProfileProperties_"] > .dnnFileUploadScope > :is(.dnnClear, .dnnFormItem) {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+@media screen and (max-width: 725px) {
+    .dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility) > :is([data-name="Region"], .dnnLeft, .dnnFileUploadScope) {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: none;
+    }
+}
+
+/* Anchor each visibility menu to its own button rather than the entire row. */
+.dnnFormItem[id*="_Profile_ProfileProperties_"]:has(> .dnnFormVisibility) > .dnnFormVisibility {
+    position: relative;
 }

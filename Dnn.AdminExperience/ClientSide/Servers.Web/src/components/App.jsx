@@ -7,6 +7,7 @@ import localization from "../localization";
 import { bindActionCreators } from "redux";
 import ServerActions from "../actions/server";
 import utils from "../utils";
+import resx from "../resources";
 
 const restartAppButtonStyle = {
     "marginRight": "10px"
@@ -38,7 +39,7 @@ class App extends Component {
         return (
             <div className="servers-app personaBar-mainContainer">
                 <PersonaBarPage isOpen={true}>
-                    <PersonaBarPageHeader title="Servers">
+                    <PersonaBarPageHeader title={localization.get("nav_Servers")}>
                         {buttonVisible && 
                             <Button type="danger" size="large" 
                                 onClick={props.onClearCacheClicked}>{localization.get("clearCacheButtonLabel")}</Button>
