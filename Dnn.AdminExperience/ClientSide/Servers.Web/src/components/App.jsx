@@ -7,7 +7,7 @@ import localization from "../localization";
 import { bindActionCreators } from "redux";
 import ServerActions from "../actions/server";
 import utils from "../utils";
-import resx from "../resources";
+import resx from "../localization";
 
 const restartAppButtonStyle = {
     "marginRight": "10px"

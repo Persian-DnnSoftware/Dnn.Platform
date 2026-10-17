@@ -133,13 +133,10 @@
 
 
 // START Persian-DnnSoftware
-.rtl {
-  .panel,
-  form.create-user,
-  .credentials {
-    direction: rtl;
-    text-align: right;
-  }
+@mixin rtl-styles {
+  direction: rtl;
+  text-align: right;
+  font-family: Vazirmatn,Tahome;
 
   .panel-heading dnn-button {
     margin-left: 0;
@@ -156,5 +153,16 @@
     unicode-bidi: isolate;
     text-align: left;
   }
+}
+
+:host-context([dir="rtl"]),
+:host-context(.rtl) {
+  @include rtl-styles;
+}
+
+:host([dir="rtl"]),
+:host(.rtl),
+.rtl {
+  @include rtl-styles;
 }
 // END Persian-DnnSoftware

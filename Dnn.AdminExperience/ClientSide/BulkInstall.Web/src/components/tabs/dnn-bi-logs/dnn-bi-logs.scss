@@ -84,15 +84,25 @@
 
 
 // START Persian-DnnSoftware
-.rtl {
-  .panel {
-    direction: rtl;
-    text-align: right;
-  }
+@mixin rtl-styles {
+  direction: rtl;
+  text-align: right;
+  font-family: Vazirmatn,Tahome;
 
   .table th,
   .table td {
     text-align: right;
   }
+}
+
+:host-context([dir="rtl"]),
+:host-context(.rtl) {
+  @include rtl-styles;
+}
+
+:host([dir="rtl"]),
+:host(.rtl),
+.rtl {
+  @include rtl-styles;
 }
 // END Persian-DnnSoftware

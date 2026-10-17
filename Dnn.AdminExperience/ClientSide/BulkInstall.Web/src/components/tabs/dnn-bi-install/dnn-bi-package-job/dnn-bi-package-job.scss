@@ -12,10 +12,22 @@
 
 
 // START Persian-DnnSoftware
-.rtl {
+@mixin rtl-styles {
   direction: rtl;
   text-align: right;
+  font-family: Vazirmatn,Tahome;
 
   // Status icons are not directional and must not be mirrored.
+}
+
+:host-context([dir="rtl"]),
+:host-context(.rtl) {
+  @include rtl-styles;
+}
+
+:host([dir="rtl"]),
+:host(.rtl),
+.rtl {
+  @include rtl-styles;
 }
 // END Persian-DnnSoftware

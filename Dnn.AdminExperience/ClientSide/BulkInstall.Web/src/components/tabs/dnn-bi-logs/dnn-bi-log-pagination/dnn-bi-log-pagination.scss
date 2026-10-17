@@ -27,9 +27,16 @@
 
 
 // START Persian-DnnSoftware
-.rtl {
+:host-context([dir="rtl"]),
+:host-context(.rtl) {
   .pagination {
     direction: rtl;
   }
+}
+
+/* تفکیک برای جلوگیری از خطای نادیده گرفتن کل بلوک در فایرفاکس */
+.rtl .pagination,
+:host([dir="rtl"]) .pagination {
+  direction: rtl;
 }
 // END Persian-DnnSoftware

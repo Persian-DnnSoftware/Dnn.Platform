@@ -88,12 +88,10 @@
 
 
 // START Persian-DnnSoftware
-.rtl {
-  .panel,
-  form.create-ip {
-    direction: rtl;
-    text-align: right;
-  }
+@mixin rtl-styles {
+  direction: rtl;
+  text-align: right;
+  font-family: Vazirmatn,Tahome;
 
   .panel-heading dnn-button {
     margin-left: 0;
@@ -104,5 +102,16 @@
   .table td {
     text-align: right;
   }
+}
+
+:host-context([dir="rtl"]),
+:host-context(.rtl) {
+  @include rtl-styles;
+}
+
+:host([dir="rtl"]),
+:host(.rtl),
+.rtl {
+  @include rtl-styles;
 }
 // END Persian-DnnSoftware

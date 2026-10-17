@@ -26,10 +26,20 @@
 
 
 // START Persian-DnnSoftware
+@mixin rtl-styles {
+  direction: rtl;
+  text-align: right;
+  font-family: Vazirmatn,Tahome;
+}
+
+:host-context([dir="rtl"]),
+:host-context(.rtl) {
+  @include rtl-styles;
+}
+
+:host([dir="rtl"]),
+:host(.rtl),
 .rtl {
-  .container {
-    direction: rtl;
-    text-align: right;
-  }
+  @include rtl-styles;
 }
 // END Persian-DnnSoftware
