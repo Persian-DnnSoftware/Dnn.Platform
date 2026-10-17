@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Modules.ModuleSettingsPage" Codebehind="Modulesettings.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Modules.ModuleSettingsPage" Codebehind="Modulesettings.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/DnnUrlControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Security.Permissions.Controls" Assembly="DotNetNuke" %>
@@ -78,20 +78,22 @@
                     <dnn:label id="plFooter" runat="server" controlname="txtFooter" />
                     <asp:TextBox ID="txtFooter" runat="server" TextMode="MultiLine" Rows="6" />
                 </div>
+                <%-- START persian-dnnsoftware --%>
                 <div class="dnnFormItem">
-                    <dnn:label id="plStartDate" runat="server" controlname="txtStartDate" />
+                    <dnn:label id="plStartDate" runat="server" controlname="startDatePicker" />
                     <asp:TextBox id="startDatePicker" runat="server" TextMode="Date" ViewStateMode="Disabled" />
                 </div>
                 <div class="dnnFormItem">
-                    <dnn:label id="plEndDate" runat="server" controlname="txtEndDate" />
+                    <dnn:label id="plEndDate" runat="server" controlname="endDatePicker" />
                     <asp:TextBox id="endDatePicker" runat="server" TextMode="Date" ViewStateMode="Disabled" />
                     
                 </div>
 				<div class="dnnFormItem">
-					<asp:CustomValidator runat="server" ControlToValidate="endDatePicker" ClientValidationFunction="compareDate" 
+					<asp:CustomValidator runat="server" ControlToValidate="endDatePicker" ClientValidationFunction="compareDate" ValidateEmptyText="true" OnServerValidate="ValidateModuleDates" 
 						Display="Dynamic" resourcekey="valEndDate2.ErrorMessage" CompareControl="startDatePicker"
                         CssClass="dnnFormMessage dnnFormError"></asp:CustomValidator>
 				</div>
+                <%-- EDN persian-dnnsoftware --%>
                 <div class="dnnFormItem">
                     <dnn:label id="plMoniker" runat="server" controlname="txtMoniker" />
                     <asp:TextBox ID="txtMoniker" runat="server" MaxLength="100" />
@@ -329,8 +331,172 @@
             	var compareId = source.getAttribute("CompareControl");
             	var time = $('#' + id).val();
             	var compareTime = $('#' + id.substr(0, id.lastIndexOf("_") + 1) + compareId).val();
-            	arg.IsValid = compareTime == null || time > compareTime;
+            	// START persian-dnnsoftware
+                arg.IsValid = !time || !compareTime || time > compareTime;
+                // EDN persian-dnnsoftware
             };
         });
     } (jQuery, window.Sys));
 </script>
+<%-- START persian-dnnsoftware --%>
+<style>
+    #dnnModuleSettings .pdnn-date { display:inline-block; position:relative; width:45%; max-width:445px; direction:rtl; }
+    #dnnModuleSettings .pdnn-date > input { width:100%; min-width:0; max-width:none; box-sizing:border-box; direction:ltr; text-align:center; cursor:pointer; }
+    #dnnModuleSettings .pdnn-calendar { position:absolute; top:100%; right:0; z-index:10000; width:320px; max-width:calc(100vw - 32px); padding:12px; margin:0; background:#fff; color:#222; border:1px solid #d6dce3; border-radius:8px; box-shadow:0 4px 16px #0002; direction:rtl; text-align:center; }
+    #dnnModuleSettings .pdnn-calendar, #dnnModuleSettings .pdnn-calendar * { box-sizing:border-box; }
+    #dnnModuleSettings .pdnn-calendar[hidden] { display:none !important; }
+    #dnnModuleSettings .pdnn-calendar header { display:grid; grid-template-columns:42px minmax(0,1fr) 76px 42px; align-items:center; gap:5px; width:100%; margin:0; padding:0; float:none; }
+    #dnnModuleSettings .pdnn-calendar button, #dnnModuleSettings .pdnn-calendar select {
+        display:block; float:none !important; position:static; width:100% !important; min-width:0 !important; max-width:none !important;
+        height:36px; min-height:0; margin:0 !important; padding:4px !important; border:1px solid #d6dce3;
+        background:#fff; color:#222; border-radius:4px; font:inherit; font-size:13px; line-height:normal; text-indent:0; text-shadow:none; box-shadow:none; cursor:pointer;
+    }
+    #dnnModuleSettings .pdnn-calendar select { appearance:auto; direction:rtl; }
+    #dnnModuleSettings .pdnn-calendar button:hover { background:#edf5fc; }
+    #dnnModuleSettings .pdnn-calendar button:focus-visible, #dnnModuleSettings .pdnn-calendar select:focus-visible { outline:2px solid #2675bb; outline-offset:1px; }
+    #dnnModuleSettings .pdnn-calendar .pdnn-days { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px; width:100%; min-width:0; margin:10px 0; padding:0; float:none; }
+    #dnnModuleSettings .pdnn-calendar .pdnn-days > span { display:block; float:none; width:auto; min-width:0; margin:0; padding:4px 0; text-align:center; }
+    #dnnModuleSettings .pdnn-calendar .pdnn-days button[aria-pressed="true"] { background:#2675bb; color:#fff; }
+    #dnnModuleSettings .pdnn-calendar footer { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; width:100%; margin:0; padding:0; float:none; }
+</style>
+<script type="text/javascript">
+// START persian-dnnsoftware
+(function () {
+    'use strict';
+    // Register once, including when this control is refreshed by an UpdatePanel.
+    if (window.pdnnModuleDates) { window.pdnnModuleDates(); return; }
+    var enabled = <%= System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "fa" ? "true" : "false" %>;
+    var formatter;
+    try {
+        formatter = new Intl.DateTimeFormat('en-US-u-ca-persian-nu-latn', {
+            year:'numeric', month:'numeric', day:'numeric', timeZone:'UTC'
+        });
+        if (formatter.resolvedOptions().calendar !== 'persian') return;
+    } catch (e) { return; } // Native date controls remain usable if Intl is unavailable.
+    var dayMs = 86400000;
+    var months = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+    function parts(date) {
+        var result = {};
+        formatter.formatToParts(date).forEach(function (p) { if (/^(year|month|day)$/.test(p.type)) result[p.type] = Number(p.value); });
+        return result;
+    }
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function iso(d) { return d.getUTCFullYear() + '-' + pad(d.getUTCMonth()+1) + '-' + pad(d.getUTCDate()); }
+    function today() { var d = new Date(); return new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())); }
+    // Locate the first day using the browser's Persian calendar, including leap years.
+    function firstDay(year, month) {
+        var low = Math.floor(Date.UTC(year+621,0,1)/dayMs);
+        var high = Math.floor(Date.UTC(year+622,11,31)/dayMs);
+        while (low < high) {
+            var mid = Math.floor((low+high)/2), p = parts(new Date(mid*dayMs));
+            if (p.year < year || (p.year === year && p.month < month)) low = mid+1;
+            else high = mid;
+        }
+        return new Date(low*dayMs);
+    }
+    function setup(input) {
+        if (input.dataset.pdnnReady || input.disabled) return;
+        var selected = input.value ? new Date(input.value+'T00:00:00Z') : today();
+        if (isNaN(selected.getTime())) return;
+        var current = parts(selected), year=current.year, month=current.month;
+        var wrap=document.createElement('span'), display=document.createElement('input'), panel=document.createElement('div');
+        wrap.className='pdnn-date'; panel.className='pdnn-calendar'; panel.hidden=true;
+        panel.id=input.id+'_persianCalendar'; panel.setAttribute('role','group'); panel.setAttribute('aria-label','تقویم شمسی');
+        display.type='text'; display.readOnly=true; display.id=input.id+'_persian';
+        display.placeholder='انتخاب تاریخ شمسی'; display.setAttribute('aria-label', /startDatePicker$/.test(input.id) ? 'تاریخ شروع شمسی' : 'تاریخ پایان شمسی');
+        display.setAttribute('aria-controls',panel.id); display.setAttribute('aria-expanded','false');
+        input.parentNode.insertBefore(wrap,input.nextSibling); wrap.appendChild(display); wrap.appendChild(panel);
+        function sync() {
+            if (!input.value) { display.value=''; return; }
+            var p=parts(new Date(input.value+'T00:00:00Z'));
+            display.value=p.year+'/'+pad(p.month)+'/'+pad(p.day);
+        }
+        function close() { panel.hidden=true; display.setAttribute('aria-expanded','false'); }
+        function choose(d) {
+            input.value=d ? iso(d) : ''; sync(); close(); display.focus();
+            input.dispatchEvent(new Event('input',{bubbles:true}));
+            input.dispatchEvent(new Event('change',{bubbles:true}));
+        }
+        function button(text, action, parent) {
+            var b=document.createElement('button'); b.type='button'; b.textContent=text;
+            b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); action(); }); parent.appendChild(b); return b;
+        }
+        function render() {
+            var focused=document.activeElement;
+            var focusLabel=panel.contains(focused) ? focused.getAttribute('aria-label') : null;
+            var focusText=panel.contains(focused) && focused.tagName==='BUTTON' ? focused.textContent : null;
+            panel.textContent=''; var header=document.createElement('header'); panel.appendChild(header);
+            button('قبلی',function () { if (--month===0) {month=12;year--;} render(); },header);
+            var monthSelect=document.createElement('select'); monthSelect.setAttribute('aria-label','ماه');
+            months.forEach(function (name,i) { var o=document.createElement('option'); o.value=i+1; o.textContent=name; monthSelect.appendChild(o); });
+            monthSelect.value=month; monthSelect.onchange=function (e) {e.stopPropagation();month=Number(this.value);render();}; header.appendChild(monthSelect);
+            var yearSelect=document.createElement('select'); yearSelect.setAttribute('aria-label','سال');
+            for (var y=Math.max(1,year-100);y<=year+100;y++) { var option=document.createElement('option'); option.value=y;option.textContent=y;yearSelect.appendChild(option); }
+            yearSelect.value=year; yearSelect.onchange=function (e) {e.stopPropagation();year=Number(this.value);render();}; header.appendChild(yearSelect);
+            button('بعدی',function () {if (++month===13) {month=1;year++;} render();},header);
+            var grid=document.createElement('div'); grid.className='pdnn-days';panel.appendChild(grid);
+            ['ش','ی','د','س','چ','پ','ج'].forEach(function (label) {var s=document.createElement('span');s.textContent=label;grid.appendChild(s);});
+            var first=firstDay(year,month), offset=(first.getUTCDay()+1)%7;
+            for(var k=0;k<offset;k++) grid.appendChild(document.createElement('span'));
+            for(var n=0;n<31;n++) {
+                var date=new Date(first.getTime()+n*dayMs), p=parts(date);
+                if(p.month!==month || p.year!==year) break;
+                (function (d, day) {
+                    var b=button(String(day),function () {choose(d);},grid);
+                    b.setAttribute('aria-label',year+'/'+pad(month)+'/'+pad(day));
+                    b.setAttribute('aria-pressed',input.value===iso(d) ? 'true':'false');
+                })(date,p.day);
+            }
+            var footer=document.createElement('footer'); panel.appendChild(footer);
+            button('امروز',function () {choose(today());},footer);
+            button('پاک کردن',function () {choose(null);},footer);
+            button('بستن',function () {close();display.focus();},footer);
+            // Restore focus after rebuilding the month; rebuilding is not an outside click.
+            if (focusLabel || focusText) {
+                Array.prototype.some.call(panel.querySelectorAll('button,select'),function (el) {
+                    if ((focusLabel && el.getAttribute('aria-label')===focusLabel) || (!focusLabel && el.textContent===focusText)) {
+                        el.focus(); return true;
+                    }
+                    return false;
+                });
+            }
+        }
+        function open() {
+            var p=parts(input.value ? new Date(input.value+'T00:00:00Z') : today());year=p.year;month=p.month;
+            render();panel.hidden=false;display.setAttribute('aria-expanded','true');
+        }
+        display.addEventListener('click',function () {if(panel.hidden) open();else close();});
+        display.addEventListener('keydown',function (e) {
+            if(e.key==='Enter' || e.key===' ' || e.key==='ArrowDown') {e.preventDefault();open();panel.querySelector('button').focus();}
+            if(e.key==='Delete' || e.key==='Backspace') {e.preventDefault();choose(null);}
+        });
+        wrap.addEventListener('keydown',function (e) {if(e.key==='Escape') {e.preventDefault();close();display.focus();}});
+        // Closing is handled by actual outside pointer/focus events, never by focusout during render.
+        input.addEventListener('change',sync);
+        sync(); input.style.display='none'; input.dataset.pdnnReady='true';
+        var label=document.querySelector('label[for="'+input.id+'"]'); if(label) label.htmlFor=display.id;
+    }
+    window.pdnnModuleDates=function () {
+        if(!enabled) return;
+        document.querySelectorAll('input[id$="_startDatePicker"],input[id$="_endDatePicker"]').forEach(function (input) {
+            if(input.closest('.dnnModuleSettings')) setup(input);
+        });
+    };
+    function closeOutside(e) {
+        document.querySelectorAll('#dnnModuleSettings .pdnn-date').forEach(function (wrap) {
+            if (!wrap.contains(e.target)) {
+                wrap.querySelector('.pdnn-calendar').hidden=true;
+                wrap.querySelector('input').setAttribute('aria-expanded','false');
+            }
+        });
+    }
+    document.addEventListener('pointerdown',closeOutside,true);
+    document.addEventListener('focusin',closeOutside,true);
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',window.pdnnModuleDates);
+    else window.pdnnModuleDates();
+    if(window.Sys && Sys.Application) Sys.Application.add_load(window.pdnnModuleDates);
+})();
+// EDN persian-dnnsoftware
+</script>
+<%-- EDN persian-dnnsoftware --%>
+

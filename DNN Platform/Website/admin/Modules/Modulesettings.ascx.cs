@@ -186,20 +186,10 @@ namespace DotNetNuke.Modules.Admin.Modules
                 this.cmdDelete.Click += this.OnDeleteClick;
                 this.cmdUpdate.Click += this.OnUpdateClick;
 
-                // START Persian-DnnSoftware
-                if (CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft)
-                {
-                    this.clientResourceController.CreateStylesheet("~/Resources/Shared/components/DatePicker/persian.datepicker.css")
-                        .SetNameAndVersion("persian.datepicker.css", "1.0.5", false)
-                        .SetPriority(FileOrder.Css.DefaultCss)
-                        .Register();
-
-                    this.clientResourceController.CreateScript("~/Resources/Shared/components/DatePicker/persian.datepicker.js")
-                        .SetNameAndVersion("persian.datepicker.js", "1.0.5", false)
-                        .Register();
-                }
-
-                // ENN Persian-DnnSoftware
+                // START persian-dnnsoftware
+                // The Persian calendar is self-contained in Modulesettings.ascx.
+                // No legacy persian.datepicker script or stylesheet is required.
+                // EDN persian-dnnsoftware
                 this.javaScript.RequestRegistration(CommonJs.DnnPlugins);
 
                 // get ModuleId
@@ -425,6 +415,20 @@ namespace DotNetNuke.Modules.Admin.Modules
             this.dgPermissions.InheritViewPermissionsFromTab = this.chkInheritPermissions.Checked;
         }
 
+        // START persian-dnnsoftware
+        protected void ValidateModuleDates(object source, System.Web.UI.WebControls.ServerValidateEventArgs args)
+        {
+            DateTime start;
+            DateTime end;
+            bool hasStart = !string.IsNullOrEmpty(this.startDatePicker.Text);
+            bool hasEnd = !string.IsNullOrEmpty(this.endDatePicker.Text);
+            bool validStart = DateTime.TryParseExact(this.startDatePicker.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out start);
+            bool validEnd = DateTime.TryParseExact(this.endDatePicker.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out end);
+            args.IsValid = (!hasStart || validStart) && (!hasEnd || validEnd)
+                && (!hasStart || !hasEnd || end > start);
+        }
+
+        // EDN persian-dnnsoftware
         protected void OnUpdateClick(object sender, EventArgs e)
         {
             try
