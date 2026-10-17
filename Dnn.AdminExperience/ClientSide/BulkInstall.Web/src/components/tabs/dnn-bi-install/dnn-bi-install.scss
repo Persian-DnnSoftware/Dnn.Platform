@@ -83,5 +83,11 @@
 :host(.rtl),
 .rtl {
   @include rtl-styles;
+  button{
+    font-family: Vazirmatn,Tahome;
+  }
+  dnn-button {
+    font-family: Vazirmatn,Tahome;
+  }
 }
 // END Persian-DnnSoftware

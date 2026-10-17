@@ -35,11 +35,30 @@
 :host-context([dir="rtl"]),
 :host-context(.rtl) {
   @include rtl-styles;
+
+  .container {
+    button{
+      font-family: Vazirmatn,Tahome;
+    }
+  }
+
+  button{
+    font-family: Vazirmatn,Tahome;
+  }
 }
 
 :host([dir="rtl"]),
 :host(.rtl),
 .rtl {
   @include rtl-styles;
+  .container {
+    button{
+      font-family: Vazirmatn,Tahome;
+    }
+  }
+
+  button{
+    font-family: Vazirmatn,Tahome;
+  }
 }
 // END Persian-DnnSoftware
