@@ -98,6 +98,29 @@ class SchedulerEditor extends Component {
         return !date || new Date(date).getFullYear() < 1970;
     }
 
+    // START persian-dnnsoftware
+    getScheduleStartDate(value) {
+        if (!value) {
+            return null;
+        }
+
+        const date = value instanceof Date ? new Date(value.getTime()) : new Date(value);
+        if (!Number.isNaN(date.getTime()) && date.getFullYear() >= 1970) {
+            return date;
+        }
+
+        try {
+            if (window.parent && window.parent["personaBarSettings"]
+                && window.parent["personaBarSettings"]["culture"] === "fa-IR") {
+                return value.toString();
+            }
+        } catch (error) {
+            return null;
+        }
+        return null;
+    }
+    // END persian-dnnsoftware
+
     getDefaultIfNull(obj, key, defaultValue) {
         if (obj && key && obj[key]) {
             return obj[key].toString();
@@ -118,13 +141,10 @@ class SchedulerEditor extends Component {
                 return this.getDefaultIfNull(props.scheduleItemDetail, "Servers", "");
             case "ObjectDependencies":
                 return this.getDefaultIfNull(props.scheduleItemDetail, "ObjectDependencies", "");
+            // START persian-dnnsoftware
             case "ScheduleStartDate":
-                if (!this.isEmptyDate(this.getDefaultIfNull(props.scheduleItemDetail, "ScheduleStartDate", null))) {
-                    return new Date(props.scheduleItemDetail.ScheduleStartDate);
-                }
-                else {
-                    return null;
-                }
+                return this.getScheduleStartDate(props.scheduleItemDetail.ScheduleStartDate);
+            // END persian-dnnsoftware
             case "TimeLapse":
                 return this.getDefaultIfNull(props.scheduleItemDetail, "TimeLapse", "");
             case "TimeLapseMeasurement":

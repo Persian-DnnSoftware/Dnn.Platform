@@ -1,6 +1,5 @@
 // START persian-dnnsoftware
 import React from "react";
-import * as dayjs from "dayjs";
 import { GregorianDatePicker } from "../DatePicker";
 import TimePicker from "../DatePicker/TimePicker";
 import TimezonePicker from "../DatePicker/TimezonePicker";
@@ -10,6 +9,7 @@ import CalendarStartIcon from "../DatePicker/img/calendar_start.svg";
 import PersianDayPicker from "./PersianDayPicker";
 import PersianDateInput from "./PersianDateInput";
 import { formatJalaliDate, isSameDay } from "./calendarUtils";
+import { applyTime, formatGregorianDate, formatTime } from "./timeUtils";
 import "./style.less";
 
 const clearButtonStyleVisible = { transition: "300ms", marginRight: 0, opacity: 1 };
@@ -25,8 +25,34 @@ class PersianDatePicker extends GregorianDatePicker {
     renderDateInput(date, updateDate) {
         return <div style={{ float: "right" }}>
             <PersianDateInput date={date} onUpdateDate={updateDate} />
-            {this.props.hasTimePicker && date && <span>&nbsp;{dayjs(date).format("LT")}</span>}
+            {this.props.hasTimePicker && date && <span>&nbsp;{formatTime(date)}</span>}
         </div>;
+    }
+
+    formatDate(date, format = "dddd, MMMM, Do, YYYY") {
+        if (format === "L") {
+            return formatGregorianDate(date);
+        }
+        if (format === "LT") {
+            return formatTime(date);
+        }
+        return super.formatDate(date, format);
+    }
+
+    updateFirstTime(time) {
+        const date = applyTime(this.date || new Date(), time);
+        if (!date) {
+            return;
+        }
+        this.updateDate(date, this.secondDate, { preventUpdateTime: true });
+    }
+
+    updateSecondTime(time) {
+        const date = applyTime(this.secondDate || new Date(), time);
+        if (!date) {
+            return;
+        }
+        this.updateDate(this.date, date, { preventUpdateTime: true });
     }
 
     render() {
@@ -37,8 +63,8 @@ class PersianDatePicker extends GregorianDatePicker {
         let displayFirstDate = firstDate ? formatJalaliDate(new Date(firstDate)) : "";
         let displaySecondDate = secondDate ? formatJalaliDate(new Date(secondDate)) : "";
         if (this.props.hasTimePicker) {
-            displayFirstDate += displayFirstDate ? ` ${dayjs(firstDate).format("LT")}` : "";
-            displaySecondDate += displaySecondDate ? ` ${dayjs(secondDate).format("LT")}` : "";
+            displayFirstDate += displayFirstDate ? ` ${formatTime(firstDate)}` : "";
+            displaySecondDate += displaySecondDate ? ` ${formatTime(secondDate)}` : "";
         }
         let displayDate = displayFirstDate;
         if (this.props.isDateRange && secondDate) {

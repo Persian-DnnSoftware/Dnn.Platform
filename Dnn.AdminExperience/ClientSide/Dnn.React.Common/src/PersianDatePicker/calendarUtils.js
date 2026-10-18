@@ -117,7 +117,11 @@ export function toJalali(date) {
     if (!(date instanceof Date) || Number.isNaN(date.getTime())) {
         return null;
     }
-    return d2j(g2d(date.getFullYear(), date.getMonth() + 1, date.getDate()));
+    try {
+        return d2j(g2d(date.getFullYear(), date.getMonth() + 1, date.getDate()));
+    } catch (error) {
+        return null;
+    }
 }
 
 export function toGregorianDate(jy, jm, jd, sourceDate) {
@@ -140,14 +144,20 @@ export function isLeapJalaliYear(year) {
 }
 
 export function getJalaliMonthLength(year, month) {
+    const numericYear = Number(year);
     const numericMonth = Number(month);
+    if (!Number.isInteger(numericYear) || numericYear < breaks[0]
+        || numericYear >= breaks[breaks.length - 1] || !Number.isInteger(numericMonth)
+        || numericMonth < 1 || numericMonth > 12) {
+        return 0;
+    }
     if (numericMonth <= 6) {
         return 31;
     }
     if (numericMonth <= 11) {
         return 30;
     }
-    return isLeapJalaliYear(year) ? 30 : 29;
+    return isLeapJalaliYear(numericYear) ? 30 : 29;
 }
 
 export function isValidJalaliDate(year, month, day) {
@@ -167,18 +177,67 @@ export function formatJalaliDate(date) {
     return `${value.jy}/${String(value.jm).padStart(2, "0")}/${String(value.jd).padStart(2, "0")}`;
 }
 
+export function parseJalaliDateTime(value) {
+    if (typeof value !== "string") {
+        return null;
+    }
+
+    const normalizedValue = value
+        .replace(/[۰-۹]/g, digit => String("۰۱۲۳۴۵۶۷۸۹".indexOf(digit)))
+        .replace(/[٠-٩]/g, digit => String("٠١٢٣٤٥٦٧٨٩".indexOf(digit)))
+        .replace(/[\u200e\u200f\u202a-\u202e]/g, "")
+        .replace(/[٫،]/g, ".")
+        .trim();
+    const match = normalizedValue.match(/^(\d{3,4})[\/.\-](\d{1,2})[\/.\-](\d{1,2})(?:[T\s]+(\d{1,2}):(\d{2})(?::(\d{2})(?:[.,](\d{1,3}))?)?\s*(AM|PM|ق\.?\s*ظ|ب\.?\s*ظ)?)?$/i);
+    if (!match) {
+        return null;
+    }
+
+    const year = Number(match[1]);
+    const month = Number(match[2]);
+    const day = Number(match[3]);
+    let hours = match[4] === undefined ? 0 : Number(match[4]);
+    const minutes = match[5] === undefined ? 0 : Number(match[5]);
+    const seconds = match[6] === undefined ? 0 : Number(match[6]);
+    const milliseconds = match[7] === undefined ? 0 : Number(match[7].padEnd(3, "0"));
+    const period = match[8] ? match[8].replace(/\s|\./g, "").toUpperCase() : "";
+
+    if (year < 1200 || year > 1600 || !isValidJalaliDate(year, month, day)
+        || minutes > 59 || seconds > 59
+        || milliseconds > 999 || hours > (period ? 12 : 23) || (period && hours < 1)) {
+        return null;
+    }
+    if (period === "AM" || period === "قظ") {
+        hours = hours === 12 ? 0 : hours;
+    } else if (period === "PM" || period === "بظ") {
+        hours = hours === 12 ? 12 : hours + 12;
+    }
+
+    return toGregorianDate(year, month, day,
+        new Date(2000, 0, 1, hours, minutes, seconds, milliseconds));
+}
+
 export function addJalaliMonths(date, amount) {
-    const value = toJalali(date || new Date());
-    let monthIndex = value.jy * 12 + value.jm - 1 + amount;
+    const source = date || new Date();
+    const value = toJalali(source);
+    const numericAmount = Number(amount);
+    if (!value || !Number.isInteger(numericAmount)) {
+        return null;
+    }
+    const monthIndex = value.jy * 12 + value.jm - 1 + numericAmount;
     const jy = Math.floor(monthIndex / 12);
     const jm = mod(monthIndex, 12) + 1;
+    if (jy < breaks[0] || jy >= breaks[breaks.length - 1]) {
+        return null;
+    }
     const jd = Math.min(value.jd, getJalaliMonthLength(jy, jm));
-    return toGregorianDate(jy, jm, jd, date);
+    return toGregorianDate(jy, jm, jd, source);
 }
 
 export function startOfJalaliMonth(date) {
-    const value = toJalali(date || new Date());
-    return toGregorianDate(value.jy, value.jm, 1, date);
+    const source = date || new Date();
+    const value = toJalali(source);
+    return value ? toGregorianDate(value.jy, value.jm, 1, source) : null;
 }
 
 export function isSameDay(first, second) {
