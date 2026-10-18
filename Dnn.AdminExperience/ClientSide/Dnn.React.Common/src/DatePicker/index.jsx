@@ -496,3 +496,8 @@ DatePicker.defaultProps = {
 
 export default DatePicker;
 export { timeZones };
+// START persian-dnnsoftware
+// Named export lets the localized adapter extend the stable Gregorian
+// implementation without changing its default export or public behavior.
+export { DatePicker as GregorianDatePicker };
+// END persian-dnnsoftware

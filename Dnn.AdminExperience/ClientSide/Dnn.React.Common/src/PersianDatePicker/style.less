@@ -1,0 +1,20 @@
+// START persian-dnnsoftware
+.persian-day-picker {
+    .DayPicker-Week::after,
+    .DayPicker-Body::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .DayPicker-NavButton:disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .persian-date-input {
+        direction: ltr;
+        unicode-bidi: isolate;
+    }
+}
+// END persian-dnnsoftware

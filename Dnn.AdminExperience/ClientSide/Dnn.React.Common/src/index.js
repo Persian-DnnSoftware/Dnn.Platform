@@ -4,7 +4,10 @@ import Checkbox from "./Checkbox";
 import Collapsible from "./Collapsible";
 import CollapsibleRow from "./CollapsibleRow";
 import ContentLoadWrapper from "./ContentLoadWrapper";
-import DatePicker from "./DatePicker";
+// START persian-dnnsoftware
+import DatePicker from "./LocalizedDatePicker";
+import PersianDatePicker, { PersianDayPicker } from "./PersianDatePicker";
+// END persian-dnnsoftware
 import DayPicker from "./DayPicker";
 import DnnTabs from "./DnnTabs";
 import Draggable from "./Draggable";
@@ -56,6 +59,10 @@ export {
     CollapsibleRow,
     ContentLoadWrapper,
     DatePicker,
+    // START persian-dnnsoftware
+    PersianDatePicker,
+    PersianDayPicker,
+    // END persian-dnnsoftware
     DayPicker,
     DnnTabs,
     Draggable,
