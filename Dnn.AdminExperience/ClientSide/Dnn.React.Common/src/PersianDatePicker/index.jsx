@@ -18,6 +18,8 @@ const clearButtonStyleInvisible = { transition: "300ms", marginRight: 0, opacity
 /**
  * Jalali UI adapter for the stable DatePicker API. Public values remain native
  * Gregorian Date instances; only presentation and manual entry are Jalali.
+ * مبدل رابط کاربری جلالی برای API پایدار DatePicker است. مقادیر عمومی همچنان
+ * نمونه‌های Date میلادی هستند و فقط نمایش و ورود دستی تاریخ به‌صورت جلالی است.
  */
 class PersianDatePicker extends GregorianDatePicker {
     renderDateInput(date, updateDate) {

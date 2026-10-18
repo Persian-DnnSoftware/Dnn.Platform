@@ -29,6 +29,9 @@
 @mixin rtl-styles {
   direction: rtl;
   text-align: right;
+  // START persian-dnnsoftware
+  --bulk-install-font-family: Vazirmatn, Tahoma;
+  // END persian-dnnsoftware
   font-family: Vazirmatn,Tahome;
 }
 
@@ -37,6 +40,12 @@
   @include rtl-styles;
 
   .container {
+    // START persian-dnnsoftware
+    dnn-tabs {
+      --bulk-install-tabs-font-family: Vazirmatn, Tahoma;
+    }
+    // END persian-dnnsoftware
+
     button{
       font-family: Vazirmatn,Tahome;
     }
@@ -52,6 +61,12 @@
 .rtl {
   @include rtl-styles;
   .container {
+    // START persian-dnnsoftware
+    dnn-tabs {
+      --bulk-install-tabs-font-family: Vazirmatn, Tahoma;
+    }
+    // END persian-dnnsoftware
+
     button{
       font-family: Vazirmatn,Tahome;
     }

@@ -2,6 +2,9 @@
 // Jalali conversion routines are based on the well-tested algorithm used by
 // jalaali-js (MIT). Keeping the small conversion layer local avoids changing
 // the public DatePicker contract or adding a runtime dependency to Persona Bar.
+// توابع تبدیل جلالی بر اساس الگوریتم آزموده‌شده jalaali-js با مجوز MIT هستند.
+// محلی نگه‌داشتن این لایه کوچک تبدیل، از تغییر قرارداد عمومی DatePicker یا
+// افزودن وابستگی زمان اجرا به Persona Bar جلوگیری می‌کند.
 
 const breaks = [-61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181, 1210,
     1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178];

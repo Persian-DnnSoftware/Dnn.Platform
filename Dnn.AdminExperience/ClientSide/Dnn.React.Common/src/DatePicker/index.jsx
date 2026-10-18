@@ -499,5 +499,7 @@ export { timeZones };
 // START persian-dnnsoftware
 // Named export lets the localized adapter extend the stable Gregorian
 // implementation without changing its default export or public behavior.
+// خروجی نام‌دار به مبدل بومی‌سازی‌شده اجازه می‌دهد پیاده‌سازی پایدار میلادی را
+// بدون تغییر خروجی پیش‌فرض یا رفتار عمومی آن توسعه دهد.
 export { DatePicker as GregorianDatePicker };
 // END persian-dnnsoftware
